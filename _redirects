@@ -1,16 +1,1 @@
-# Cloudflare _redirects: FIXED version
-# Keep all real content, remove 410s from internal links, add useful redirect map
-
-/*
-# 410 OFF-NICHE CONTENT - moved to /tools/ or real content
-/old-calculator/ /nutrition-tips-for-a-healthy-pregnancy/ 301
-/old-nutrition-value-mango/ /nutrition-tips-for-a-healthy-pregnancy/ 301
-
-/*
-# High-value redirects for popular pages
-/should-i-wake-a-sleeping-newborn-to-feed/ /sleep-training-timeline/ 301
-/the-dangers-of-mrsa-in-newborns/ /mrsa-in-newborn-babies/ 301
-
-/*
-# Catch-all for old URLs
-/old-* /404.html 404
+/nonexistent / 301!
