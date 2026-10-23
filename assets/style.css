@@ -1,0 +1,337 @@
+
+:root {
+  --primary: #2b6cb0;
+  --primary-hover: #2c5282;
+  --accent: #319795;
+  --text: #2d3748;
+  --text-muted: #718096;
+  --bg: #f7fafc;
+  --card-bg: #ffffff;
+  --border: #e2e8f0;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #2b6cb0;
+  letter-spacing: -0.5px;
+}
+
+.site-logo span { color: #ed64a6; }
+
+nav.main-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav.main-nav a {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 15px;
+}
+
+nav.main-nav a:hover { color: var(--primary); }
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 336px;
+  gap: 40px;
+}
+
+main.content-area {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  min-width: 0; /* Prevents grid blowout */
+}
+
+article.single-post header.entry-header {
+  margin-bottom: 25px;
+}
+
+h1.entry-title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 15px;
+  color: #1a202c;
+}
+
+.entry-meta {
+  font-size: 14px;
+  color: var(--text-muted);
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.featured-img-container {
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.featured-img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.entry-content {
+  font-size: 18px;
+  color: #2d3748;
+}
+
+.entry-content p { margin-bottom: 22px; }
+.entry-content h2 { font-size: 24px; margin: 38px 0 16px; color: #2d3748; border-bottom: 2px solid #edf2f7; padding-bottom: 8px; }
+.entry-content h3 { font-size: 20px; margin: 28px 0 14px; color: #2d3748; }
+.entry-content ul, .entry-content ol { margin: 0 0 22px 25px; }
+.entry-content li { margin-bottom: 8px; }
+.entry-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 20px 0; }
+
+/* AdSense High-RPM Layout Optimization */
+.ad-slot-wrapper {
+  margin: 28px auto;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  background: #fbfcfe;
+  padding: 10px 0;
+  border: 1px solid #edf2f7;
+}
+
+.ad-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #a0aec0;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.top-banner-ad {
+  min-height: 90px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.in-article-ad {
+  min-height: 250px;
+  margin: 35px 0;
+  background: #f8fafc;
+  border-left: 3px solid #2b6cb0;
+}
+
+.bottom-post-ad {
+  min-height: 250px;
+  margin-top: 45px;
+  border-top: 2px solid #e2e8f0;
+  padding-top: 20px;
+}
+
+aside.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sidebar-ad-widget {
+  min-height: 300px;
+  text-align: center;
+  background: #fbfcfe;
+  padding: 16px 10px;
+}
+
+.widget {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.widget h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 6px;
+  color: #1a202c;
+}
+
+.widget ul { list-style: none; }
+.widget li { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #edf2f7; }
+.widget li:last-child { border: none; margin: 0; padding: 0; }
+
+/* Grid for home/category */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.post-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.post-card-excerpt {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+footer.site-footer {
+  background: #1a202c;
+  color: #a0aec0;
+  padding: 50px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-widget h4 {
+  color: #ffffff;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.footer-widget ul { list-style: none; }
+.footer-widget li { margin-bottom: 8px; }
+.footer-widget a { color: #cbd5e0; }
+.footer-widget a:hover { color: #ffffff; }
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #2d3748;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Baby Name Generator Interactive Tool */
+.tool-box {
+  background: #ebf8ff;
+  border: 1px solid #bee3f8;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 25px 0;
+}
+
+.tool-controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.tool-controls select, .tool-controls button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+  font-size: 15px;
+}
+
+.tool-controls button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tool-controls button:hover { background: var(--primary-hover); }
+
+.tool-result {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2b6cb0;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .container { grid-template-columns: 1fr; }
+  main.content-area { padding: 25px 18px; }
+  .sidebar-ad-widget { display: none; } /* On mobile, auto-ads handles mid/bottom placements smoothly */
+}
