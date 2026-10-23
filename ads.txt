@@ -1,2 +1,1 @@
-# Google AdSense ads.txt for babieblue.com
-google.com, ca-pub-4453876229797223, DIRECT, f08c47fec0942fa0
+google.com, pub-4453876229797223, DIRECT, f08c47fec0942fa0
