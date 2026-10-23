@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://babieblue.com/sitemap.xml
-Sitemap: https://babieblue.com/tools/sitemap-index.xml

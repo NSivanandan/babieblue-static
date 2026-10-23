@@ -1,3 +1,2 @@
 # Google AdSense ads.txt for babieblue.com
-# Replace XXXXXXXXXX with your real publisher ID (Google AdSense dashboard)
 google.com, ca-pub-4453876229797223, DIRECT, f08c47fec0942fa0
