@@ -53,6 +53,98 @@
     <!-- Top Content Leaderboard Ad Slot -->
     <div class="ad-slot-wrapper top-banner-ad">
       <div class="ad-label">Advertisement</div>
+
+<section class="bb-interactive-scorecard" id="kReadyScore" style="margin:28px 0;padding:24px;background:#ffffff;border:2px solid #0284c7;border-radius:12px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);font-family:system-ui,-apple-system,sans-serif;">
+  <div style="border-bottom:2px solid #e2e8f0;padding-bottom:12px;margin-bottom:16px;">
+    <h3 style="margin:0 0 4px 0;color:#0f172a;font-size:20px;">📊 Kindergarten Clinical Readiness 10-Point Assessment</h3>
+    <span style="font-size:13px;color:#64748b;">Interactive 10-Point Evidence-Based Evaluation • Tap all that apply</span>
+  </div>
+
+  <div style="display:grid;gap:10px;font-size:14px;color:#1e293b;">
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="kReadyScore-cb" onchange="calckReadyScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Manages bathroom needs and handwashing completely independently without teacher prompts.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="kReadyScore-cb" onchange="calckReadyScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Separates from parents/caregivers at drop-off without prolonged extreme distress (under 10 minutes).</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="kReadyScore-cb" onchange="calckReadyScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Follows multi-step oral instructions (e.g. 'Hang your coat, put your folder in the bin, and sit down').</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="kReadyScore-cb" onchange="calckReadyScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Expresses feelings, wants, and needs in clear 5-to-6 word sentences that unfamiliar adults can understand.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="kReadyScore-cb" onchange="calckReadyScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Demonstrates pencil grip control (tripod or pincer grip) and basic scissor snipping ability.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="kReadyScore-cb" onchange="calckReadyScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Shares and takes turns with peers during structured play with minimal adult intervention.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="kReadyScore-cb" onchange="calckReadyScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Recognizes and names basic upper-case letters and their own written first name.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="kReadyScore-cb" onchange="calckReadyScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Counts 10 physical objects one-by-one using 1-to-1 correspondence.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="kReadyScore-cb" onchange="calckReadyScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Sits and maintains focused attention during an interactive 15-minute story or circle time.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="kReadyScore-cb" onchange="calckReadyScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Attempts to solve peer conflicts with words before turning to physical reactions.</span>
+    </label>
+
+  </div>
+
+  <div id="kReadyScore-result" style="margin-top:18px;padding:14px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;display:none;">
+    <div style="font-size:16px;font-weight:700;color:#166534;" id="kReadyScore-score-text"></div>
+    <p style="margin:6px 0 0 0;font-size:14px;color:#1e293b;" id="kReadyScore-guidance-text"></p>
+  </div>
+
+  <script>
+    function calckReadyScore() {
+      var checked = document.querySelectorAll('.kReadyScore-cb:checked').length;
+      var out = document.getElementById('kReadyScore-result');
+      var scoreTxt = document.getElementById('kReadyScore-score-text');
+      var guideTxt = document.getElementById('kReadyScore-guidance-text');
+      out.style.display = 'block';
+      scoreTxt.textContent = 'Score: ' + checked + ' of 10 Milestones Confirmed (' + (checked * 10) + '%)';
+      
+      if (checked >= 8) {
+        guideTxt.innerHTML = '<strong>Strong Developmental Readiness:</strong> Your child demonstrates robust self-regulation, communication, and motor foundations for kindergarten success.';
+        out.style.background = '#f0fdf4';
+        out.style.borderColor = '#86efac';
+      } else if (checked >= 5) {
+        guideTxt.innerHTML = '<strong>Developing Baseline Readiness:</strong> Target remaining fine-motor and independent transition milestones over the summer months.';
+        out.style.background = '#fefce8';
+        out.style.borderColor = '#fde047';
+      } else {
+        guideTxt.innerHTML = '<strong>Emerging Foundations:</strong> Consult your pediatrician or preschool educator regarding developmental readiness vs. an extra transitional preschool year.';
+        out.style.background = '#f8fafc';
+        out.style.borderColor = '#cbd5e1';
+      }
+    }
+  </script>
+</section>
+
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-4453876229797223"

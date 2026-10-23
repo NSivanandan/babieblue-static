@@ -53,6 +53,98 @@
     <!-- Top Content Leaderboard Ad Slot -->
     <div class="ad-slot-wrapper top-banner-ad">
       <div class="ad-label">Advertisement</div>
+
+<section class="bb-interactive-scorecard" id="pregScore" style="margin:28px 0;padding:24px;background:#ffffff;border:2px solid #0284c7;border-radius:12px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);font-family:system-ui,-apple-system,sans-serif;">
+  <div style="border-bottom:2px solid #e2e8f0;padding-bottom:12px;margin-bottom:16px;">
+    <h3 style="margin:0 0 4px 0;color:#0f172a;font-size:20px;">📊 Early Pregnancy Conception Probability 10-Point Scorecard</h3>
+    <span style="font-size:13px;color:#64748b;">Interactive 10-Point Evidence-Based Evaluation • Tap all that apply</span>
+  </div>
+
+  <div style="display:grid;gap:10px;font-size:14px;color:#1e293b;">
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="pregScore-cb" onchange="calcpregScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Missed expected menstrual period by at least 1–3 days.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="pregScore-cb" onchange="calcpregScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Light, faint pink or brownish spotting 6–12 days post-ovulation ('Implantation Spotting').</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="pregScore-cb" onchange="calcpregScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Sustained elevated basal body temperature for 18+ consecutive days past ovulation.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="pregScore-cb" onchange="calcpregScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Marked breast tenderness, fullness, or heaviness with heightened nipple sensitivity.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="pregScore-cb" onchange="calcpregScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Darkening of the areolas and pronounced appearance of Montgomery tubercles (tiny glands).</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="pregScore-cb" onchange="calcpregScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Sudden unshakeable exhaustion or drowsiness (progesterone elevation effect).</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="pregScore-cb" onchange="calcpregScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Heightened sensitivity to scents (hyperosmia) or sudden metallic taste in mouth (dysgeusia).</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="pregScore-cb" onchange="calcpregScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Mild uterine cramping or stretching sensations without full menstrual flow.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="pregScore-cb" onchange="calcpregScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Increased urinary frequency without painful burning or infection signs.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="pregScore-cb" onchange="calcpregScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Mild morning, afternoon, or evening nausea triggered by previously favored foods.</span>
+    </label>
+
+  </div>
+
+  <div id="pregScore-result" style="margin-top:18px;padding:14px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;display:none;">
+    <div style="font-size:16px;font-weight:700;color:#166534;" id="pregScore-score-text"></div>
+    <p style="margin:6px 0 0 0;font-size:14px;color:#1e293b;" id="pregScore-guidance-text"></p>
+  </div>
+
+  <script>
+    function calcpregScore() {
+      var checked = document.querySelectorAll('.pregScore-cb:checked').length;
+      var out = document.getElementById('pregScore-result');
+      var scoreTxt = document.getElementById('pregScore-score-text');
+      var guideTxt = document.getElementById('pregScore-guidance-text');
+      out.style.display = 'block';
+      scoreTxt.textContent = 'Score: ' + checked + ' of 10 Milestones Confirmed (' + (checked * 10) + '%)';
+      
+      if (checked >= 7) {
+        guideTxt.innerHTML = '<strong>High Clinical Probability:</strong> Multiple hormonal secondary markers confirmed. Take a first-morning urine hCG pregnancy test for definitive confirmation.';
+        out.style.background = '#f0fdf4';
+        out.style.borderColor = '#86efac';
+      } else if (checked >= 4) {
+        guideTxt.innerHTML = '<strong>Moderate Hormonal Indicators:</strong> Symptoms overlap with luteal phase progesterone surge. Test with a high-sensitivity pregnancy test on the day of your missed period.';
+        out.style.background = '#fefce8';
+        out.style.borderColor = '#fde047';
+      } else {
+        guideTxt.innerHTML = '<strong>Low / Non-Specific Signs:</strong> Monitor for a missed menstrual cycle before testing to avoid false negatives.';
+        out.style.background = '#f8fafc';
+        out.style.borderColor = '#cbd5e1';
+      }
+    }
+  </script>
+</section>
+
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-4453876229797223"

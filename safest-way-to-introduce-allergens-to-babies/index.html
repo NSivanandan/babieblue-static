@@ -53,6 +53,90 @@
     <!-- Top Content Leaderboard Ad Slot -->
     <div class="ad-slot-wrapper top-banner-ad">
       <div class="ad-label">Advertisement</div>
+
+<section class="printable-nursery-sheet" style="margin:30px 0;padding:24px;background:#ffffff;border:2px solid #cbd5e1;border-radius:12px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);font-family:system-ui,-apple-system,sans-serif;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-bottom:2px solid #e2e8f0;padding-bottom:12px;margin-bottom:16px;">
+    <div>
+      <h3 style="margin:0;color:#0f172a;font-size:20px;">📋 Top-9 Infant Allergen Introduction Schedule & Dosage Guide</h3>
+      <span style="font-size:13px;color:#64748b;">Clinical Pediatric Safety Reference • AAP Standards</span>
+    </div>
+    <button onclick="window.print()" class="print-btn" style="background:#0284c7;color:#fff;border:none;padding:8px 16px;border-radius:6px;font-weight:600;font-size:14px;cursor:pointer;display:flex;align-items:center;gap:6px;">
+      🖨️ Print Fridge Reference Sheet
+    </button>
+  </div>
+
+  <div style="margin-bottom:14px;display:flex;gap:8px;flex-wrap:wrap;">
+    <button onclick="filterTable('all')" class="tb-filter-btn" style="padding:6px 12px;border:1px solid #cbd5e1;background:#f1f5f9;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;">Show All</button>
+    <button onclick="filterTable('choking')" class="tb-filter-btn" style="padding:6px 12px;border:1px solid #fca5a5;background:#fef2f2;color:#991b1b;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;">Choking Hazards Only</button>
+    <button onclick="filterTable('allergen')" class="tb-filter-btn" style="padding:6px 12px;border:1px solid #fde68a;background:#fffbeb;color:#92400e;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;">Top-9 Allergens</button>
+    <button onclick="filterTable('toxic')" class="tb-filter-btn" style="padding:6px 12px;border:1px solid #e9d5ff;background:#faf5ff;color:#6b21a8;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;">Infant Toxicity Risks</button>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table id="nursery-safety-table" style="width:100%;border-collapse:collapse;font-size:14px;text-align:left;">
+      <thead>
+        <tr style="background:#f8fafc;border-bottom:2px solid #cbd5e1;color:#1e293b;">
+          <th style="padding:10px 12px;">Food / Item</th>
+          <th style="padding:10px 12px;">Age Rule</th>
+          <th style="padding:10px 12px;">Risk Type</th>
+          <th style="padding:10px 12px;">Clinical Preparation / Safe Alternative</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr data-category="allergen" style="border-bottom:1px solid #e2e8f0;">
+          <td style="padding:10px 12px;font-weight:700;color:#0f172a;">Peanut Butter</td>
+          <td style="padding:10px 12px;color:#0369a1;font-weight:600;">Start at 4–6 Months</td>
+          <td style="padding:10px 12px;"><span style="background:#fffbeb;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:700;">Anaphylaxis</span></td>
+          <td style="padding:10px 12px;color:#475569;">Mix 2 tsp smooth peanut butter with 2–3 tsp warm water or breastmilk until watery puree. Feed 1 tiny tip of spoon first.</td>
+        </tr>
+
+        <tr data-category="allergen" style="border-bottom:1px solid #e2e8f0;">
+          <td style="padding:10px 12px;font-weight:700;color:#0f172a;">Well-Cooked Egg</td>
+          <td style="padding:10px 12px;color:#0369a1;font-weight:600;">Start at 4–6 Months</td>
+          <td style="padding:10px 12px;"><span style="background:#fffbeb;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:700;">Egg Albumin / Yolk</span></td>
+          <td style="padding:10px 12px;color:#475569;">Hard-boil egg for 10 minutes; mash yolk and white together thoroughly with puree. Never serve runny raw yolk.</td>
+        </tr>
+
+        <tr data-category="allergen" style="border-bottom:1px solid #e2e8f0;">
+          <td style="padding:10px 12px;font-weight:700;color:#0f172a;">Cow's Milk Protein (Yogurt)</td>
+          <td style="padding:10px 12px;color:#0369a1;font-weight:600;">Start at 6 Months</td>
+          <td style="padding:10px 12px;"><span style="background:#fffbeb;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:700;">Casein / Whey</span></td>
+          <td style="padding:10px 12px;color:#475569;">Introduce unsweetened plain whole-milk Greek yogurt (1–2 spoonfuls). Do not offer liquid milk as drink.</td>
+        </tr>
+
+        <tr data-category="allergen" style="border-bottom:1px solid #e2e8f0;">
+          <td style="padding:10px 12px;font-weight:700;color:#0f172a;">Fish (Salmon, Cod)</td>
+          <td style="padding:10px 12px;color:#0369a1;font-weight:600;">Start at 6 Months</td>
+          <td style="padding:10px 12px;"><span style="background:#fffbeb;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:700;">Parvalbumin</span></td>
+          <td style="padding:10px 12px;color:#475569;">Debone twice, steam thoroughly, and puree into fine flakes. Choose low-mercury fish (wild salmon, cod, haddock).</td>
+        </tr>
+
+        <tr data-category="allergen" style="border-bottom:1px solid #e2e8f0;">
+          <td style="padding:10px 12px;font-weight:700;color:#0f172a;">Sesame (Tahini)</td>
+          <td style="padding:10px 12px;color:#0369a1;font-weight:600;">Start at 6 Months</td>
+          <td style="padding:10px 12px;"><span style="background:#fffbeb;color:#92400e;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:700;">Oleosin Protein</span></td>
+          <td style="padding:10px 12px;color:#475569;">Thin a pea-sized drop of pure tahini into warm puree or oatmeal. Monitor for oral hives or lip swelling.</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function filterTable(cat) {
+      var rows = document.querySelectorAll('#nursery-safety-table tbody tr');
+      for (var i = 0; i < rows.length; i++) {
+        var rowCat = rows[i].getAttribute('data-category');
+        if (cat === 'all' || rowCat === cat) {
+          rows[i].style.display = '';
+        } else {
+          rows[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+</section>
+
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-4453876229797223"

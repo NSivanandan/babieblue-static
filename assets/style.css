@@ -335,3 +335,50 @@ footer.site-footer {
   main.content-area { padding: 25px 18px; }
   .sidebar-ad-widget { display: none; } /* On mobile, auto-ads handles mid/bottom placements smoothly */
 }
+
+
+/* Zero-CLS AdSense Layout Reservations */
+.ad-slot-leaderboard, .top-banner-ad {
+  min-height: 90px;
+  margin: 1.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+.ad-slot-incontent, .in-article-ad {
+  min-height: 280px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+}
+.bottom-post-ad {
+  min-height: 250px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+}
+@media (min-width: 1024px) {
+  .sticky-sidebar-ad, .sidebar-ad-widget {
+    position: sticky;
+    top: 5rem;
+    min-height: 600px;
+  }
+}
+
+/* Print Styles for Nursery Reference Tables & Fridge Sheets */
+@media print {
+  body { background: #fff !important; color: #000 !important; font-size: 12pt !important; }
+  header.site-header, aside.sidebar-area, footer.site-footer, .ad-slot-wrapper, .tool-controls, .print-btn, .bb-eeat-bar, .bb-interactive-triage { display: none !important; }
+  .container { display: block !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+  main.content-area { border: none !important; box-shadow: none !important; padding: 0 !important; }
+  .printable-nursery-sheet { border: 2px solid #000 !important; page-break-inside: avoid !important; }
+  table { width: 100% !important; border-collapse: collapse !important; }
+  th, td { border: 1px solid #333 !important; padding: 8px !important; }
+}

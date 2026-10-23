@@ -57,6 +57,98 @@
     <!-- Top Content Leaderboard Ad Slot -->
     <div class="ad-slot-wrapper top-banner-ad">
       <div class="ad-label">Advertisement</div>
+
+<section class="bb-interactive-scorecard" id="laborScore" style="margin:28px 0;padding:24px;background:#ffffff;border:2px solid #0284c7;border-radius:12px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);font-family:system-ui,-apple-system,sans-serif;">
+  <div style="border-bottom:2px solid #e2e8f0;padding-bottom:12px;margin-bottom:16px;">
+    <h3 style="margin:0 0 4px 0;color:#0f172a;font-size:20px;">📊 True vs. False Labor Clinical Triage 10-Point Meter</h3>
+    <span style="font-size:13px;color:#64748b;">Interactive 10-Point Evidence-Based Evaluation • Tap all that apply</span>
+  </div>
+
+  <div style="display:grid;gap:10px;font-size:14px;color:#1e293b;">
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="laborScore-cb" onchange="calclaborScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Contractions occur in a strict, predictable rhythm (e.g. exactly every 5 minutes).</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="laborScore-cb" onchange="calclaborScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Contraction frequency increases and interval shortens over a 2-hour observation window.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="laborScore-cb" onchange="calclaborScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Each individual contraction lasts at least 45 to 60 seconds from onset to relaxation.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="laborScore-cb" onchange="calclaborScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Contraction intensity steadily increases and cannot be talked through or slept through.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="laborScore-cb" onchange="calclaborScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Contraction pain originates in the lower back and radiates forward wrap-around to lower abdomen.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="laborScore-cb" onchange="calclaborScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Changing body position, walking, or warm showers do NOT decrease contraction strength.</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="laborScore-cb" onchange="calclaborScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Passing of the mucus plug with pink or brownish tinged discharge ('Bloody Show').</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="laborScore-cb" onchange="calclaborScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Spontaneous rupture of amniotic membranes (clear trickle or sudden warm fluid gush).</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="laborScore-cb" onchange="calclaborScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Noticeable downward drop of the fetal head into the pelvic cavity ('Lightening').</span>
+    </label>
+
+    <label style="display:flex;gap:12px;align-items:flex-start;cursor:pointer;padding:10px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;">
+      <input type="checkbox" class="laborScore-cb" onchange="calclaborScore()" style="width:18px;height:18px;margin-top:2px;accent-color:#0284c7;" />
+      <span>Accompanied by gastrointestinal clearing (frequent loose bowel movements or nausea).</span>
+    </label>
+
+  </div>
+
+  <div id="laborScore-result" style="margin-top:18px;padding:14px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;display:none;">
+    <div style="font-size:16px;font-weight:700;color:#166534;" id="laborScore-score-text"></div>
+    <p style="margin:6px 0 0 0;font-size:14px;color:#1e293b;" id="laborScore-guidance-text"></p>
+  </div>
+
+  <script>
+    function calclaborScore() {
+      var checked = document.querySelectorAll('.laborScore-cb:checked').length;
+      var out = document.getElementById('laborScore-result');
+      var scoreTxt = document.getElementById('laborScore-score-text');
+      var guideTxt = document.getElementById('laborScore-guidance-text');
+      out.style.display = 'block';
+      scoreTxt.textContent = 'Score: ' + checked + ' of 10 Milestones Confirmed (' + (checked * 10) + '%)';
+      
+      if (checked >= 7) {
+        guideTxt.innerHTML = '<strong>Active Labor Triage Triggered:</strong> If contractions follow the 5-1-1 rule (every 5 minutes, lasting 1 minute, for 1 hour), call your L&D triage or midwife immediately.';
+        out.style.background = '#f0fdf4';
+        out.style.borderColor = '#86efac';
+      } else if (checked >= 4) {
+        guideTxt.innerHTML = '<strong>Early / Latent Labor Signs:</strong> Cervical effacement is underway. Hydrate, rest, and time contractions from the start of one to the start of the next.';
+        out.style.background = '#fefce8';
+        out.style.borderColor = '#fde047';
+      } else {
+        guideTxt.innerHTML = '<strong>Likely Braxton Hicks / False Labor:</strong> Irregular contractions that fade with hydration or rest indicate uterine toning rather than active labor.';
+        out.style.background = '#f8fafc';
+        out.style.borderColor = '#cbd5e1';
+      }
+    }
+  </script>
+</section>
+
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-4453876229797223"

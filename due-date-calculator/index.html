@@ -141,32 +141,67 @@ display: block;
         margin-top: 50px;
       }
     </style>
+    
     <script>
       function calculateDueDate() {
-        // Get input values
-        var lastMenstrualPeriod = document.getElementById("lastMenstrualPeriod").value;
-        var cycleLength = document.getElementById("cycleLength").value;
+        var lmpVal = document.getElementById("lastMenstrualPeriod").value;
+        var cycleVal = document.getElementById("cycleLength").value || 28;
 
-        // Validate input values
-        if (lastMenstrualPeriod === "" || cycleLength === "") {
-          alert("Please fill in all fields.");
-          return;
-        }
-        if (isNaN(Date.parse(lastMenstrualPeriod))) {
-          alert("Please enter a valid date in the format yyyy-mm-dd.");
-          return;
-        }
-        if (isNaN(cycleLength) || cycleLength <= 0) {
-          alert("Please enter a valid number for cycle length.");
+        if (!lmpVal) {
+          alert("Please select the date of your last menstrual period.");
           return;
         }
 
-        // Calculate estimated due date
-        var dueDate = new Date(lastMenstrualPeriod);
-        dueDate.setDate(dueDate.getDate() + 280);
-        document.getElementById("dueDate").innerHTML = dueDate.toDateString();
+        var lmp = new Date(lmpVal);
+        if (isNaN(lmp.getTime())) {
+          alert("Please enter a valid date.");
+          return;
+        }
+
+        var cycleAdj = parseInt(cycleVal) - 28;
+        var totalDays = 280 + cycleAdj;
+        var dueDate = new Date(lmp.getTime());
+        dueDate.setDate(dueDate.getDate() + totalDays);
+
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById("dueDate").innerHTML = dueDate.toLocaleDateString(undefined, options);
+
+        function fmtDate(offsetDays) {
+          var d = new Date(lmp.getTime());
+          d.setDate(d.getDate() + offsetDays);
+          return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+
+        var milestones = [
+          { week: "Weeks 6–8", title: "First Viability Ultrasound & Heartbeat", dates: fmtDate(42) + " – " + fmtDate(56), desc: "Confirms intrauterine implantation and measures gestational sac & fetal pole." },
+          { week: "Weeks 11–14", title: "Nuchal Translucency (NT) & Early Genetic Screening", dates: fmtDate(77) + " – " + fmtDate(98), desc: "Measures fluid at baby's neck to assess chromosomal probabilities alongside blood markers." },
+          { week: "Weeks 18–22", title: "Comprehensive Mid-Pregnancy Anatomy Scan", dates: fmtDate(126) + " – " + fmtDate(154), desc: "Detailed head-to-toe organ, spine, limb, and placenta location evaluation." },
+          { week: "Weeks 24–28", title: "Gestational Diabetes Glucose Screening", dates: fmtDate(168) + " – " + fmtDate(196), desc: "1-hour glucose challenge test assessing placental insulin resistance." },
+          { week: "Weeks 35–37", title: "Group B Strep (GBS) Clinical Screening", dates: fmtDate(245) + " – " + fmtDate(259), desc: "Routine vagino-rectal swab to prevent neonatal transmission during delivery. <a href='/group-b-strep-in-pregnancy/' style='color:#0284c7;text-decoration:underline;'>Read GBS Protocol &rarr;</a>" },
+          { week: "Week 37", title: "Early Full Term Milestone", dates: fmtDate(259), desc: "Baby's lungs and autonomic nervous system are functionally mature." },
+          { week: "Week 40", title: "Estimated Due Date (40 Weeks)", dates: dueDate.toLocaleDateString(undefined, options), desc: "Average milestone; normal spontaneous labor occurs between 37 and 42 weeks." }
+        ];
+
+        var timelineHtml = '<div style="margin-top:28px;background:#ffffff;border:1px solid #cbd5e1;border-radius:12px;padding:24px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);">';
+        timelineHtml += '<h3 style="margin-top:0;color:#0f172a;font-size:20px;border-bottom:2px solid #e2e8f0;padding-bottom:10px;">📅 Your Personalized Clinical Milestone Timeline</h3>';
+        timelineHtml += '<div style="display:grid;gap:14px;margin-top:16px;">';
+
+        for (var i = 0; i < milestones.length; i++) {
+          var m = milestones[i];
+          timelineHtml += '<div style="border-left:4px solid #0284c7;padding:10px 14px;background:#f8fafc;border-radius:4px 8px 8px 4px;">';
+          timelineHtml += '<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center;">';
+          timelineHtml += '<span style="font-weight:700;color:#0369a1;font-size:14px;">' + m.week + ' • ' + m.title + '</span>';
+          timelineHtml += '<span style="font-size:13px;background:#e0f2fe;color:#0369a1;padding:2px 8px;border-radius:999px;font-weight:600;">' + m.dates + '</span>';
+          timelineHtml += '</div>';
+          timelineHtml += '<p style="margin:6px 0 0 0;font-size:14px;color:#475569;line-height:1.5;">' + m.desc + '</p>';
+          timelineHtml += '</div>';
+        }
+
+        timelineHtml += '</div></div>';
+        document.getElementById("milestone-timeline-container").innerHTML = timelineHtml;
       }
     </script>
+    
   
   
     <h1>Due Date Calculator</h1>
@@ -178,6 +213,7 @@ display: block;
       <input type="button" value="Calculate" onclick="calculateDueDate()">
     </form>
    <p><font-color: #a31acb="">Your estimated due date is: <span id="dueDate"></span></font-color:></p>
+<div id="milestone-timeline-container"></div>
 
 
 
