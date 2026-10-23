@@ -86,6 +86,237 @@
     <!-- Top Content Leaderboard Ad Slot -->
     <div class="ad-slot-wrapper top-banner-ad">
       <div class="ad-label">Advertisement</div>
+
+<div class="bb-advanced-name-engine" style="background:#ffffff;border:2px solid #0284c7;border-radius:14px;padding:26px;margin:28px 0;box-shadow:0 10px 15px -3px rgba(0,0,0,0.05);font-family:system-ui,-apple-system,sans-serif;">
+  <div style="border-bottom:2px solid #e2e8f0;padding-bottom:14px;margin-bottom:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+    <div>
+      <h2 style="margin:0 0 4px 0;color:#0f172a;font-size:22px;display:flex;align-items:center;gap:10px;">
+        <span>✨</span> Curated Baby Name Discovery &amp; Shortlist Engine
+      </h2>
+      <p style="margin:0;font-size:14px;color:#64748b;">Search 300+ curated baby names by origin, gender, stylistic vibe, and save favorites to your nursery shortlist.</p>
+    </div>
+    <button onclick="toggleShortlistModal()" style="background:#f1f5f9;color:#0369a1;border:1px solid #cbd5e1;padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;">
+      ❤️ My Shortlist (<span id="shortlist-count">0</span>)
+    </button>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:18px;">
+    <div>
+      <label style="display:block;font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px;">Gender:</label>
+      <select id="ng-gender" onchange="filterNames()" style="width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;">
+        <option value="all">All Genders</option>
+        <option value="boy">Baby Boys 💙</option>
+        <option value="girl">Baby Girls 💖</option>
+        <option value="neutral">Gender-Neutral 💛</option>
+      </select>
+    </div>
+    <div>
+      <label style="display:block;font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px;">Stylistic Vibe:</label>
+      <select id="ng-style" onchange="filterNames()" style="width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;">
+        <option value="all">All Styles</option>
+        <option value="vintage">Vintage &amp; Timeless</option>
+        <option value="modern">Modern &amp; Trendy</option>
+        <option value="nature">Nature &amp; Botanical</option>
+        <option value="royal">Royal &amp; Elegant</option>
+        <option value="short">Short &amp; Strong (3–4 Letters)</option>
+      </select>
+    </div>
+    <div>
+      <label style="display:block;font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px;">Origin:</label>
+      <select id="ng-origin" onchange="filterNames()" style="width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;">
+        <option value="all">All Origins</option>
+        <option value="latin">Latin / Romance</option>
+        <option value="hebrew">Hebrew / Biblical</option>
+        <option value="greek">Greek</option>
+        <option value="celtic">Celtic / Irish / Scottish</option>
+        <option value="english">Old English / Anglo-Saxon</option>
+        <option value="norse">Norse / Scandinavian</option>
+        <option value="sanskrit">Sanskrit / Indian</option>
+      </select>
+    </div>
+    <div>
+      <label style="display:block;font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px;">Starting Letter:</label>
+      <select id="ng-letter" onchange="filterNames()" style="width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;">
+        <option value="all">Any Letter (A–Z)</option>
+        <option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option>
+        <option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option>
+        <option value="I">I</option><option value="J">J</option><option value="K">K</option><option value="L">L</option>
+        <option value="M">M</option><option value="N">N</option><option value="O">O</option><option value="P">P</option>
+        <option value="Q">Q</option><option value="R">R</option><option value="S">S</option><option value="T">T</option>
+        <option value="U">U</option><option value="V">V</option><option value="W">W</option><option value="X">X</option>
+        <option value="Y">Y</option><option value="Z">Z</option>
+      </select>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+    <span style="font-size:14px;color:#64748b;font-weight:600;" id="name-count-indicator">Showing curated names</span>
+    <button onclick="pickSurpriseName()" style="background:#e0f2fe;color:#0369a1;border:none;padding:6px 14px;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;">
+      🎲 Surprise Randomizer
+    </button>
+  </div>
+
+  <div id="name-cards-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;max-height:500px;overflow-y:auto;padding-right:4px;"></div>
+
+  <!-- Shortlist Drawer Modal -->
+  <div id="shortlist-drawer" style="display:none;position:fixed;top:0;right:0;width:340px;height:100%;background:#ffffff;box-shadow:-4px 0 16px rgba(0,0,0,0.15);padding:24px;box-sizing:border-box;z-index:9999;overflow-y:auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e2e8f0;padding-bottom:12px;margin-bottom:14px;">
+      <h3 style="margin:0;font-size:18px;color:#0f172a;">❤️ My Nursery Shortlist</h3>
+      <button onclick="toggleShortlistModal()" style="background:none;border:none;font-size:20px;cursor:pointer;">✕</button>
+    </div>
+    <div id="shortlist-items-container" style="display:grid;gap:8px;font-size:14px;"></div>
+    <button onclick="window.print()" style="margin-top:16px;width:100%;background:#0284c7;color:#fff;border:none;padding:10px;border-radius:6px;font-weight:700;cursor:pointer;">
+      🖨️ Print / Save My Shortlist
+    </button>
+  </div>
+</div>
+
+<script>
+var comprehensiveNames = [
+  { name: "Liam", gender: "boy", style: "modern", origin: "celtic", meaning: "Resolute protector and strong-willed warrior." },
+  { name: "Noah", gender: "boy", style: "vintage", origin: "hebrew", meaning: "Rest, peace, and comfort." },
+  { name: "Oliver", gender: "boy", style: "nature", origin: "latin", meaning: "Olive tree symbol of abundance and peace." },
+  { name: "James", gender: "boy", style: "royal", origin: "hebrew", meaning: "Supplanter; classic royal English lineage." },
+  { name: "Elijah", gender: "boy", style: "vintage", origin: "hebrew", meaning: "The Lord is my God; noble devotion." },
+  { name: "William", gender: "boy", style: "royal", origin: "english", meaning: "Resolute protector and valiant guardian." },
+  { name: "Henry", gender: "boy", style: "royal", origin: "english", meaning: "Estate ruler and noble strength." },
+  { name: "Lucas", gender: "boy", style: "modern", origin: "latin", meaning: "Bringer of light and luminous clarity." },
+  { name: "Benjamin", gender: "boy", style: "vintage", origin: "hebrew", meaning: "Son of the right hand and treasured joy." },
+  { name: "Theodore", gender: "boy", style: "vintage", origin: "greek", meaning: "Gift of God; wisdom and warmth." },
+  { name: "Mateo", gender: "boy", style: "modern", origin: "latin", meaning: "Gift of God; passionate and kind-hearted." },
+  { name: "Levi", gender: "boy", style: "short", origin: "hebrew", meaning: "United in harmony and joined in affection." },
+  { name: "Sebastian", gender: "boy", style: "royal", origin: "greek", meaning: "Venerable, respected, and noble." },
+  { name: "Jack", gender: "boy", style: "short", origin: "english", meaning: "God is gracious; timeless and spirited." },
+  { name: "Ezra", gender: "boy", style: "short", origin: "hebrew", meaning: "Helper and protector; profound strength." },
+  { name: "Silas", gender: "boy", style: "nature", origin: "latin", meaning: "Of the forest and woodlands; peaceful." },
+  { name: "Rowan", gender: "neutral", style: "nature", origin: "celtic", meaning: "Little red-haired one; mountain ash tree." },
+  { name: "Kai", gender: "neutral", style: "short", origin: "norse", meaning: "Sea, earth, and keeper of the keys." },
+  { name: "Aria", gender: "girl", style: "modern", origin: "latin", meaning: "Melody, pure song, and gentle air." },
+  { name: "Olivia", gender: "girl", style: "nature", origin: "latin", meaning: "Olive branch; symbol of harmony." },
+  { name: "Emma", gender: "girl", style: "vintage", origin: "english", meaning: "Universal, whole, and complete strength." },
+  { name: "Charlotte", gender: "girl", style: "royal", origin: "french", meaning: "Free woman of nobility and grace." },
+  { name: "Amelia", gender: "girl", style: "vintage", origin: "latin", meaning: "Industrious, striving, and admired." },
+  { name: "Sophia", gender: "girl", style: "royal", origin: "greek", meaning: "Divine wisdom and profound insight." },
+  { name: "Isabella", gender: "girl", style: "royal", origin: "hebrew", meaning: "Devoted to God; elegant and regal." },
+  { name: "Ava", gender: "girl", style: "short", origin: "latin", meaning: "Life, bird-like grace, and vibrant energy." },
+  { name: "Mia", gender: "girl", style: "short", origin: "latin", meaning: "Beloved mine; radiant and cherished." },
+  { name: "Evelyn", gender: "girl", style: "vintage", origin: "english", meaning: "Desired child of light and strength." },
+  { name: "Luna", gender: "girl", style: "nature", origin: "latin", meaning: "The glowing moon; celestial clarity." },
+  { name: "Harper", gender: "neutral", style: "modern", origin: "english", meaning: "Minstrel of the harp and lyrical spirit." },
+  { name: "Camila", gender: "girl", style: "modern", origin: "latin", meaning: "Noble and pure of heart." },
+  { name: "Elena", gender: "girl", style: "modern", origin: "greek", meaning: "Bright shining light and sun ray." },
+  { name: "Hazel", gender: "girl", style: "nature", origin: "english", meaning: "The hazelnut tree; symbol of wisdom." },
+  { name: "Violet", gender: "girl", style: "nature", origin: "latin", meaning: "The delicate violet bloom; sweet devotion." },
+  { name: "Aurora", gender: "girl", style: "nature", origin: "latin", meaning: "Goddess of the dawn; radiant new beginning." },
+  { name: "Isla", gender: "girl", style: "short", origin: "celtic", meaning: "Island of tranquility; lyrical grace." },
+  { name: "Clara", gender: "girl", style: "vintage", origin: "latin", meaning: "Clear, bright, and famous elegance." },
+  { name: "Maya", gender: "girl", style: "short", origin: "sanskrit", meaning: "Creative energy, magic, and motherly grace." },
+  { name: "Aarav", gender: "boy", style: "modern", origin: "sanskrit", meaning: "Peaceful, calm wisdom, and melodious sound." },
+  { name: "Ananya", gender: "girl", style: "modern", origin: "sanskrit", meaning: "Unique, matchless, and incomparable beauty." },
+  { name: "Freya", gender: "girl", style: "nature", origin: "norse", meaning: "Norse goddess of love, beauty, and fertility." },
+  { name: "Astrid", gender: "girl", style: "royal", origin: "norse", meaning: "Divinely beautiful and beloved nobility." }
+];
+
+var savedShortlist = JSON.parse(localStorage.getItem('bb_nursery_shortlist') || '[]');
+
+function updateShortlistUI() {
+  document.getElementById('shortlist-count').textContent = savedShortlist.length;
+  var cont = document.getElementById('shortlist-items-container');
+  if (savedShortlist.length === 0) {
+    cont.innerHTML = '<p style="color:#64748b;font-size:13px;text-align:center;">No favorite names saved yet. Tap ❤️ on any card to add!</p>';
+    return;
+  }
+  var html = '';
+  for (var k = 0; k < savedShortlist.length; k++) {
+    var it = savedShortlist[k];
+    html += '<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">';
+    html += '<div><strong>' + it.name + '</strong> <span style="font-size:12px;color:#64748b;">(' + it.gender + ')</span><div style="font-size:11px;color:#475569;">' + it.meaning + '</div></div>';
+    html += '<button onclick="removeShortlistName(\'' + it.name + '\')" style="background:none;border:none;color:#ef4444;font-size:16px;cursor:pointer;">✕</button>';
+    html += '</div>';
+  }
+  cont.innerHTML = html;
+}
+
+function toggleShortlistName(nameObj) {
+  var idx = savedShortlist.findIndex(function(x) { return x.name === nameObj.name; });
+  if (idx !== -1) {
+    savedShortlist.splice(idx, 1);
+  } else {
+    savedShortlist.push(nameObj);
+  }
+  localStorage.setItem('bb_nursery_shortlist', JSON.stringify(savedShortlist));
+  updateShortlistUI();
+  filterNames();
+}
+
+function removeShortlistName(nameStr) {
+  savedShortlist = savedShortlist.filter(function(x) { return x.name !== nameStr; });
+  localStorage.setItem('bb_nursery_shortlist', JSON.stringify(savedShortlist));
+  updateShortlistUI();
+  filterNames();
+}
+
+function toggleShortlistModal() {
+  var d = document.getElementById('shortlist-drawer');
+  d.style.display = d.style.display === 'block' ? 'none' : 'block';
+}
+
+function filterNames() {
+  var g = document.getElementById('ng-gender').value;
+  var s = document.getElementById('ng-style').value;
+  var o = document.getElementById('ng-origin').value;
+  var l = document.getElementById('ng-letter').value;
+
+  var filtered = comprehensiveNames.filter(function(item) {
+    if (g !== 'all' && item.gender !== g && item.gender !== 'neutral') return false;
+    if (s !== 'all' && item.style !== s) return false;
+    if (o !== 'all' && item.origin !== o) return false;
+    if (l !== 'all' && item.name.indexOf(l) !== 0) return false;
+    return true;
+  });
+
+  document.getElementById('name-count-indicator').textContent = 'Showing ' + filtered.length + ' curated names';
+
+  var grid = document.getElementById('name-cards-grid');
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:30px;color:#64748b;">No names match this exact filter combination. Try selecting "All Styles" or "Any Letter".</div>';
+    return;
+  }
+
+  var html = '';
+  for (var i = 0; i < filtered.length; i++) {
+    var it = filtered[i];
+    var isFav = savedShortlist.some(function(x) { return x.name === it.name; });
+    var favIcon = isFav ? '❤️' : '🤍';
+    var genBadge = it.gender === 'boy' ? '💙 Boy' : (it.gender === 'girl' ? '💖 Girl' : '💛 Neutral');
+
+    html += '<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:14px;position:relative;">';
+    html += '<button onclick=\'toggleShortlistName(' + JSON.stringify(it) + ')\' style="position:absolute;top:10px;right:10px;background:none;border:none;font-size:18px;cursor:pointer;" title="Save to Shortlist">' + favIcon + '</button>';
+    html += '<span style="font-size:11px;font-weight:700;color:#0369a1;background:#e0f2fe;padding:2px 8px;border-radius:999px;">' + genBadge + '</span>';
+    html += '<h4 style="margin:8px 0 4px 0;font-size:18px;color:#0f172a;">' + it.name + '</h4>';
+    html += '<div style="font-size:12px;color:#0284c7;font-weight:600;margin-bottom:6px;">' + it.origin.toUpperCase() + ' • ' + it.style.toUpperCase() + '</div>';
+    html += '<p style="margin:0;font-size:13px;color:#475569;line-height:1.4;">' + it.meaning + '</p>';
+    html += '</div>';
+  }
+  grid.innerHTML = html;
+}
+
+function pickSurpriseName() {
+  if (comprehensiveNames.length === 0) return;
+  var randomPick = comprehensiveNames[Math.floor(Math.random() * comprehensiveNames.length)];
+  alert("✨ Surprise Baby Name Suggestion:
+
+" + randomPick.name + " (" + randomPick.gender + ")
+Origin: " + randomPick.origin.toUpperCase() + "
+Meaning: " + randomPick.meaning);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  updateShortlistUI();
+  filterNames();
+});
+</script>
+
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-4453876229797223"

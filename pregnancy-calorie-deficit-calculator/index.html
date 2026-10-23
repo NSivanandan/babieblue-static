@@ -174,18 +174,146 @@
   
   
     <h1>Calorie Deficit Calculator</h1>
-    <form>
-      <label for="weight">Current Weight (in kg)</label>
-      <input type="number" id="weight" name="weight" min="1" max="500" required="">
-      
-      <label for="goal-weight">Goal Weight (in kg)</label>
-      <input type="number" id="goal-weight" name="goal-weight" min="1" max="500" required="">
-      
-      <label for="weeks">Weeks to Achieve Goal</label>
-      <input type="number" id="weeks" name="weeks" min="1" max="52" required="">
-      
-      <button type="button" onclick="calculateCalorieDeficit()">Calculate</button>
-    </form>
+    
+<div class="bb-pregnancy-nutrition-planner" style="background:#ffffff;border:2px solid #0284c7;border-radius:14px;padding:26px;margin:28px 0;box-shadow:0 10px 15px -3px rgba(0,0,0,0.05);font-family:system-ui,-apple-system,sans-serif;">
+  <div style="border-bottom:2px solid #e2e8f0;padding-bottom:14px;margin-bottom:18px;">
+    <h2 style="margin:0 0 6px 0;color:#0f172a;font-size:22px;display:flex;align-items:center;gap:10px;">
+      <span>🥑</span> ACOG Clinical Gestational Calorie &amp; Healthy Weight Planner
+    </h2>
+    <p style="margin:0;font-size:14px;color:#64748b;">Evidence-based nutritional targets, trimester caloric surplus guidelines, and Institute of Medicine (IOM) gestational weight milestones.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:18px;">
+    <div>
+      <label style="display:block;font-size:14px;font-weight:700;color:#1e293b;margin-bottom:6px;">Pre-Pregnancy Weight (kg):</label>
+      <input type="number" id="bb-pre-wt" value="62" min="30" max="250" style="width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;box-sizing:border-box;" />
+    </div>
+    <div>
+      <label style="display:block;font-size:14px;font-weight:700;color:#1e293b;margin-bottom:6px;">Height (cm):</label>
+      <input type="number" id="bb-ht" value="165" min="100" max="220" style="width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;box-sizing:border-box;" />
+    </div>
+    <div>
+      <label style="display:block;font-size:14px;font-weight:700;color:#1e293b;margin-bottom:6px;">Current Trimester:</label>
+      <select id="bb-trimester" style="width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;box-sizing:border-box;">
+        <option value="1">1st Trimester (Weeks 1–13)</option>
+        <option value="2" selected>2nd Trimester (Weeks 14–27)</option>
+        <option value="3">3rd Trimester (Weeks 28–40+)</option>
+      </select>
+    </div>
+    <div>
+      <label style="display:block;font-size:14px;font-weight:700;color:#1e293b;margin-bottom:6px;">Pregnancy Type:</label>
+      <select id="bb-multiples" style="width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;box-sizing:border-box;">
+        <option value="singleton" selected>Singleton Pregnancy</option>
+        <option value="twins">Twin Pregnancy</option>
+      </select>
+    </div>
+  </div>
+
+  <button onclick="calcPregNutrition()" style="background:#0284c7;color:#ffffff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;width:100%;box-shadow:0 4px 6px -1px rgba(2,132,199,0.3);">
+    Calculate My Gestational Calorie &amp; Weight Plan &rarr;
+  </button>
+
+  <div id="bb-nutri-result" style="margin-top:24px;display:none;"></div>
+</div>
+
+<script>
+function calcPregNutrition() {
+  var wt = parseFloat(document.getElementById('bb-pre-wt').value);
+  var htCm = parseFloat(document.getElementById('bb-ht').value);
+  var trim = parseInt(document.getElementById('bb-trimester').value);
+  var isTwins = document.getElementById('bb-multiples').value === "twins";
+
+  if (!wt || !htCm || htCm <= 0 || wt <= 0) {
+    alert("Please enter valid weight and height.");
+    return;
+  }
+
+  var htM = htCm / 100;
+  var bmi = (wt / (htM * htM)).toFixed(1);
+
+  var bmiCat = "";
+  var totalGainRange = "";
+  var weeklyGainRate = "";
+
+  if (bmi < 18.5) {
+    bmiCat = "Underweight (BMI &lt; 18.5)";
+    totalGainRange = isTwins ? "50 – 62 lbs (23 – 28 kg)" : "28 – 40 lbs (13 – 18 kg)";
+    weeklyGainRate = "~1.0 – 1.3 lbs / week in Trimesters 2 &amp; 3";
+  } else if (bmi <= 24.9) {
+    bmiCat = "Normal Weight (BMI 18.5 – 24.9)";
+    totalGainRange = isTwins ? "37 – 54 lbs (17 – 25 kg)" : "25 – 35 lbs (11.5 – 16 kg)";
+    weeklyGainRate = "~0.8 – 1.0 lb / week in Trimesters 2 &amp; 3";
+  } else if (bmi <= 29.9) {
+    bmiCat = "Overweight (BMI 25.0 – 29.9)";
+    totalGainRange = isTwins ? "31 – 50 lbs (14 – 23 kg)" : "15 – 25 lbs (7 – 11.5 kg)";
+    weeklyGainRate = "~0.5 – 0.7 lb / week in Trimesters 2 &amp; 3";
+  } else {
+    bmiCat = "Obese (BMI &ge; 30.0)";
+    totalGainRange = isTwins ? "25 – 42 lbs (11 – 19 kg)" : "11 – 20 lbs (5 – 9 kg)";
+    weeklyGainRate = "~0.4 – 0.6 lb / week in Trimesters 2 &amp; 3";
+  }
+
+  // Daily calorie additions by trimester (ACOG guidelines)
+  var extraCal = 0;
+  var snackExample = "";
+  if (isTwins) {
+    extraCal = 600;
+    snackExample = "1 cup Greek yogurt with chia seeds + 1 avocado toast on sprouted whole-grain bread + 1 banana.";
+  } else {
+    if (trim === 1) {
+      extraCal = 0;
+      snackExample = "No additional calories required above baseline maintenance. Focus on 400–800 mcg methylfolate and vitamin B6.";
+    } else if (trim === 2) {
+      extraCal = 340;
+      snackExample = "1 cup plain Greek yogurt + handful of walnuts + 1 sliced apple with peanut butter.";
+    } else {
+      extraCal = 452;
+      snackExample = "2 scrambled eggs on whole-grain toast + 1 glass fortified milk + 1 orange.";
+    }
+  }
+
+  var resHtml = '<div style="background:#f8fafc;border:1px solid #cbd5e1;border-radius:12px;padding:22px;margin-bottom:20px;">';
+  resHtml += '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;margin-bottom:16px;">';
+  resHtml += '<div><span style="font-size:12px;font-weight:700;color:#64748b;">PRE-PREGNANCY BASELINE</span><h3 style="margin:2px 0 0 0;font-size:20px;color:#0f172a;">BMI: ' + bmi + ' — ' + bmiCat + '</h3></div>';
+  resHtml += '<div style="background:#e0f2fe;color:#0369a1;padding:6px 14px;border-radius:999px;font-weight:700;font-size:14px;">Trimester ' + trim + '</div>';
+  resHtml += '</div>';
+
+  resHtml += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:18px;">';
+  resHtml += '<div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:14px;text-align:center;">';
+  resHtml += '<div style="font-size:12px;color:#64748b;font-weight:600;">DAILY CALORIC ADDITION</div>';
+  resHtml += '<div style="font-size:26px;font-weight:800;color:#0284c7;">+' + extraCal + ' <span style="font-size:14px;font-weight:500;">kcal/day</span></div>';
+  resHtml += '<div style="font-size:12px;color:#64748b;">Above pre-pregnancy baseline</div>';
+  resHtml += '</div>';
+
+  resHtml += '<div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:14px;text-align:center;">';
+  resHtml += '<div style="font-size:12px;color:#64748b;font-weight:600;">RECOMMENDED TOTAL GAIN</div>';
+  resHtml += '<div style="font-size:20px;font-weight:800;color:#0f172a;margin-top:4px;">' + totalGainRange + '</div>';
+  resHtml += '<div style="font-size:12px;color:#64748b;">(IOM clinical guideline)</div>';
+  resHtml += '</div>';
+
+  resHtml += '<div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:14px;text-align:center;">';
+  resHtml += '<div style="font-size:12px;color:#64748b;font-weight:600;">WEEKLY GAIN PACE</div>';
+  resHtml += '<div style="font-size:15px;font-weight:700;color:#0369a1;margin-top:6px;">' + weeklyGainRate + '</div>';
+  resHtml += '<div style="font-size:12px;color:#64748b;">During Trimesters 2 &amp; 3</div>';
+  resHtml += '</div>';
+  resHtml += '</div>';
+
+  resHtml += '<div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;padding:14px;margin-bottom:14px;">';
+  resHtml += '<strong style="color:#0f172a;font-size:14px;">🥗 Nutrient-Dense Daily Meal Addition Example:</strong>';
+  resHtml += '<p style="margin:4px 0 0 0;font-size:14px;color:#334155;">' + snackExample + '</p>';
+  resHtml += '</div>';
+
+  resHtml += '<div style="background:#fffbeb;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:6px;font-size:13px;color:#92400e;">';
+  resHtml += '<strong>Clinical Notice Regarding Calorie Deficits in Pregnancy:</strong> The American College of Obstetricians and Gynecologists (ACOG) strictly advises against intentional restrictive calorie restriction during pregnancy. Severe deficits induce maternal ketonemia and elevate the risk of fetal intrauterine growth restriction (IUGR). All dietary modifications should be coordinated with your prenatal care provider.';
+  resHtml += '</div>';
+  resHtml += '</div>';
+
+  var outDiv = document.getElementById('bb-nutri-result');
+  outDiv.innerHTML = resHtml;
+  outDiv.style.display = 'block';
+}
+</script>
+
     
     <div id="results"></div>
     

@@ -193,16 +193,156 @@
     </script>
 
    <h1>Ovulation Calculator</h1>
-    <form>
-      <label for="lastMenstrualPeriod">Date of last menstrual period:</label>
-      <input type="date" id="lastMenstrualPeriod" name="lastMenstrualPeriod">
-      <label for="cycleLength">Average length of menstrual cycle (in days):</label>
-      <input type="number" id="cycleLength" name="cycleLength">
-      <label for="lutealLength">Length of luteal phase (in days):</label>
-      <input type="number" id="lutealLength" name="lutealLength">
-      <input type="button" value="Calculate" onclick="calculateOvulation()">
-    </form>
-    <p>Your estimated ovulation date is: <span id="ovulationDate"></span></p>
+    
+<div class="bb-enhanced-tool" style="background:#ffffff;border:2px solid #0284c7;border-radius:14px;padding:26px;margin:28px 0;box-shadow:0 10px 15px -3px rgba(0,0,0,0.05);font-family:system-ui,-apple-system,sans-serif;">
+  <div style="border-bottom:2px solid #e2e8f0;padding-bottom:14px;margin-bottom:18px;">
+    <h2 style="margin:0 0 6px 0;color:#0f172a;font-size:22px;display:flex;align-items:center;gap:10px;">
+      <span>🌸</span> Clinical Ovulation &amp; 6-Day Fertile Window Predictor
+    </h2>
+    <p style="margin:0;font-size:14px;color:#64748b;">ACOG-standard clinical algorithm calculating peak conception probabilities, next 3 cycles, and earliest hCG test dates.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:18px;">
+    <div>
+      <label style="display:block;font-size:14px;font-weight:700;color:#1e293b;margin-bottom:6px;">First Day of Last Menstrual Period (LMP):</label>
+      <input type="date" id="bb-lmp" style="width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;box-sizing:border-box;" />
+    </div>
+    <div>
+      <label style="display:block;font-size:14px;font-weight:700;color:#1e293b;margin-bottom:6px;">Average Cycle Length (21–45 Days):</label>
+      <input type="number" id="bb-cycle" value="28" min="21" max="45" style="width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;box-sizing:border-box;" />
+    </div>
+    <div>
+      <label style="display:block;font-size:14px;font-weight:700;color:#1e293b;margin-bottom:6px;">Luteal Phase Length (Default: 14 Days):</label>
+      <input type="number" id="bb-luteal" value="14" min="10" max="17" style="width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;box-sizing:border-box;" />
+    </div>
+  </div>
+
+  <button onclick="runEnhancedOvulation()" style="background:#0284c7;color:#ffffff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;width:100%;box-shadow:0 4px 6px -1px rgba(2,132,199,0.3);">
+    Calculate My Fertile Window &amp; Conception Forecast &rarr;
+  </button>
+
+  <div id="bb-ovul-results" style="margin-top:24px;display:none;"></div>
+</div>
+
+<script>
+function runEnhancedOvulation() {
+  var lmpInput = document.getElementById("bb-lmp").value;
+  var cycleLen = parseInt(document.getElementById("bb-cycle").value) || 28;
+  var lutealLen = parseInt(document.getElementById("bb-luteal").value) || 14;
+
+  if (!lmpInput) {
+    alert("Please enter the first day of your last menstrual period.");
+    return;
+  }
+
+  var lmpDate = new Date(lmpInput);
+  if (isNaN(lmpDate.getTime())) {
+    alert("Please select a valid date.");
+    return;
+  }
+
+  // Ovulation day = LMP + (cycleLen - lutealLen)
+  var ovulDayOffset = cycleLen - lutealLen;
+  var ovulDate = new Date(lmpDate.getTime());
+  ovulDate.setDate(ovulDate.getDate() + ovulDayOffset);
+
+  var optLong = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  var optShort = { month: 'short', day: 'numeric' };
+
+  // 6-day fertile window: 5 days prior to ovulation + ovulation day
+  var fertileDays = [];
+  var probabilities = ["10% (Moderate)", "16% (High)", "24% (Very High)", "31% (Peak Fertility)", "33% (Peak Fertility)", "18% (Ovulation Day)"];
+  var badgeColors = ["#f1f5f9", "#e0f2fe", "#bae6fd", "#fef08a", "#fef08a", "#bae6fd"];
+  var textColors = ["#475569", "#0369a1", "#0284c7", "#854d0e", "#854d0e", "#0284c7"];
+
+  for (var i = -5; i <= 0; i++) {
+    var d = new Date(ovulDate.getTime());
+    d.setDate(d.getDate() + i);
+    fertileDays.push({
+      dateStr: d.toLocaleDateString(undefined, optShort),
+      dayName: d.toLocaleDateString(undefined, { weekday: 'short' }),
+      prob: probabilities[i + 5],
+      bg: badgeColors[i + 5],
+      tc: textColors[i + 5],
+      isPeak: (i === -1 || i === -2)
+    });
+  }
+
+  // Earliest pregnancy test date (12 DPO)
+  var testDate = new Date(ovulDate.getTime());
+  testDate.setDate(testDate.getDate() + 12);
+
+  // Next period date
+  var nextPeriod = new Date(lmpDate.getTime());
+  nextPeriod.setDate(nextPeriod.getDate() + cycleLen);
+
+  // Conception due date
+  var dueConception = new Date(ovulDate.getTime());
+  dueConception.setDate(dueConception.getDate() + 266);
+
+  var resHtml = '<div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;padding:20px;margin-bottom:20px;">';
+  resHtml += '<span style="font-size:12px;font-weight:700;color:#0284c7;text-transform:uppercase;letter-spacing:0.05em;">Estimated Ovulation Milestone</span>';
+  resHtml += '<h3 style="margin:4px 0 10px 0;font-size:24px;color:#0369a1;">' + ovulDate.toLocaleDateString(undefined, optLong) + '</h3>';
+  resHtml += '<p style="margin:0;font-size:14px;color:#334155;">Your maximum conception probability spans the 48 hours immediately preceding ovulation due to sperm viability in cervical fluid.</p>';
+  resHtml += '</div>';
+
+  resHtml += '<h4 style="margin:0 0 12px 0;font-size:16px;color:#0f172a;">🗓️ 6-Day Clinical Fertile Window &amp; Daily Conception Probability</h4>';
+  resHtml += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-bottom:24px;">';
+  for (var j = 0; j < fertileDays.length; j++) {
+    var fDay = fertileDays[j];
+    resHtml += '<div style="background:' + fDay.bg + ';border:1px solid #cbd5e1;border-radius:8px;padding:12px 8px;text-align:center;">';
+    resHtml += '<div style="font-size:12px;font-weight:600;color:#64748b;">' + fDay.dayName + '</div>';
+    resHtml += '<div style="font-size:16px;font-weight:800;color:#0f172a;margin:2px 0;">' + fDay.dateStr + '</div>';
+    resHtml += '<div style="font-size:11px;font-weight:700;color:' + fDay.tc + ';margin-top:4px;">' + fDay.prob + '</div>';
+    resHtml += '</div>';
+  }
+  resHtml += '</div>';
+
+  resHtml += '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:20px;">';
+  resHtml += '<div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:14px;">';
+  resHtml += '<div style="font-size:12px;font-weight:700;color:#64748b;">EARLIEST PREGNANCY TEST DATE</div>';
+  resHtml += '<div style="font-size:16px;font-weight:800;color:#0284c7;margin-top:4px;">' + testDate.toLocaleDateString(undefined, optLong) + '</div>';
+  resHtml += '<div style="font-size:12px;color:#64748b;margin-top:4px;">12 Days Past Ovulation (DPO) to minimize false negatives.</div>';
+  resHtml += '</div>';
+
+  resHtml += '<div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:10px;padding:14px;">';
+  resHtml += '<div style="font-size:12px;font-weight:700;color:#64748b;">PROJECTED DUE DATE IF CONCEIVED</div>';
+  resHtml += '<div style="font-size:16px;font-weight:800;color:#0284c7;margin-top:4px;">' + dueConception.toLocaleDateString(undefined, optLong) + '</div>';
+  resHtml += '<div style="font-size:12px;color:#64748b;margin-top:4px;">Calculated using exact 266-day post-ovulation gestational timeline.</div>';
+  resHtml += '</div>';
+  resHtml += '</div>';
+
+  // Next 3 Cycles Prediction Table
+  resHtml += '<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px;">';
+  resHtml += '<h4 style="margin:0 0 10px 0;font-size:15px;color:#0f172a;">📅 Next 3 Upcoming Ovulation Cycles Forecast</h4>';
+  resHtml += '<table style="width:100%;border-collapse:collapse;font-size:13px;text-align:left;">';
+  resHtml += '<thead><tr style="border-bottom:1px solid #cbd5e1;color:#475569;"><th>Cycle</th><th>Fertile Window Begins</th><th>Estimated Ovulation</th><th>Next Expected Period</th></tr></thead><tbody>';
+
+  for (var c = 1; c <= 3; c++) {
+    var cLmp = new Date(lmpDate.getTime());
+    cLmp.setDate(cLmp.getDate() + (cycleLen * c));
+    var cOvul = new Date(cLmp.getTime());
+    cOvul.setDate(cOvul.getDate() + ovulDayOffset);
+    var cFertStart = new Date(cOvul.getTime());
+    cFertStart.setDate(cFertStart.getDate() - 5);
+    var cPeriod = new Date(cLmp.getTime());
+    cPeriod.setDate(cPeriod.getDate() + cycleLen);
+
+    resHtml += '<tr style="border-bottom:1px solid #f1f5f9;">';
+    resHtml += '<td style="padding:8px 4px;font-weight:700;color:#0f172a;">Cycle ' + c + '</td>';
+    resHtml += '<td style="padding:8px 4px;color:#0369a1;">' + cFertStart.toLocaleDateString(undefined, optShort) + '</td>';
+    resHtml += '<td style="padding:8px 4px;font-weight:700;color:#0284c7;">' + cOvul.toLocaleDateString(undefined, optShort) + '</td>';
+    resHtml += '<td style="padding:8px 4px;color:#64748b;">' + cPeriod.toLocaleDateString(undefined, optShort) + '</td>';
+    resHtml += '</tr>';
+  }
+  resHtml += '</tbody></table></div>';
+
+  var outDiv = document.getElementById("bb-ovul-results");
+  outDiv.innerHTML = resHtml;
+  outDiv.style.display = "block";
+}
+</script>
+
 
   <script>
     function calculateOvulation() {

@@ -86,6 +86,137 @@
     <!-- Top Content Leaderboard Ad Slot -->
     <div class="ad-slot-wrapper top-banner-ad">
       <div class="ad-label">Advertisement</div>
+
+<div class="bb-maternal-bmi-engine" style="background:#ffffff;border:2px solid #0284c7;border-radius:14px;padding:26px;margin:28px 0;box-shadow:0 10px 15px -3px rgba(0,0,0,0.05);font-family:system-ui,-apple-system,sans-serif;">
+  <div style="border-bottom:2px solid #e2e8f0;padding-bottom:14px;margin-bottom:18px;">
+    <h2 style="margin:0 0 6px 0;color:#0f172a;font-size:22px;display:flex;align-items:center;gap:10px;">
+      <span>⚖️</span> Pre-Pregnancy &amp; Maternal BMI Clinical Health Engine
+    </h2>
+    <p style="margin:0;font-size:14px;color:#64748b;">WHO &amp; ACOG clinical BMI evaluation with custom risk assessments for fertility, gestational diabetes, and postpartum recovery.</p>
+  </div>
+
+  <div style="display:flex;gap:16px;margin-bottom:16px;">
+    <label style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#1e293b;cursor:pointer;">
+      <input type="radio" name="bmi-unit" value="metric" checked onchange="toggleBmiUnit()" /> Metric (kg / cm)
+    </label>
+    <label style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#1e293b;cursor:pointer;">
+      <input type="radio" name="bmi-unit" value="us" onchange="toggleBmiUnit()" /> US Customary (lbs / ft &amp; in)
+    </label>
+  </div>
+
+  <!-- Metric Inputs -->
+  <div id="bmi-metric-inputs" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:18px;">
+    <div>
+      <label style="display:block;font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px;">Weight (kg):</label>
+      <input type="number" id="bmi-kg" value="65" min="30" max="300" style="width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;" />
+    </div>
+    <div>
+      <label style="display:block;font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px;">Height (cm):</label>
+      <input type="number" id="bmi-cm" value="168" min="100" max="230" style="width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;" />
+    </div>
+  </div>
+
+  <!-- US Inputs -->
+  <div id="bmi-us-inputs" style="display:none;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-bottom:18px;">
+    <div>
+      <label style="display:block;font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px;">Weight (lbs):</label>
+      <input type="number" id="bmi-lbs" value="143" min="60" max="600" style="width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;" />
+    </div>
+    <div>
+      <label style="display:block;font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px;">Height (Feet):</label>
+      <input type="number" id="bmi-ft" value="5" min="3" max="7" style="width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;" />
+    </div>
+    <div>
+      <label style="display:block;font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px;">Height (Inches):</label>
+      <input type="number" id="bmi-in" value="6" min="0" max="11" style="width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;" />
+    </div>
+  </div>
+
+  <button onclick="calcMaternalBmi()" style="background:#0284c7;color:#ffffff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer;width:100%;box-shadow:0 4px 6px -1px rgba(2,132,199,0.3);">
+    Analyze My Maternal BMI &amp; Health Insights &rarr;
+  </button>
+
+  <div id="bmi-results-box" style="margin-top:24px;display:none;"></div>
+</div>
+
+<script>
+function toggleBmiUnit() {
+  var isMetric = document.querySelector('input[name="bmi-unit"]:checked').value === 'metric';
+  document.getElementById('bmi-metric-inputs').style.display = isMetric ? 'grid' : 'none';
+  document.getElementById('bmi-us-inputs').style.display = isMetric ? 'none' : 'grid';
+}
+
+function calcMaternalBmi() {
+  var isMetric = document.querySelector('input[name="bmi-unit"]:checked').value === 'metric';
+  var bmiVal = 0;
+
+  if (isMetric) {
+    var kg = parseFloat(document.getElementById('bmi-kg').value);
+    var cm = parseFloat(document.getElementById('bmi-cm').value);
+    if (!kg || !cm || cm <= 0) { alert('Please enter valid height and weight.'); return; }
+    var m = cm / 100;
+    bmiVal = kg / (m * m);
+  } else {
+    var lbs = parseFloat(document.getElementById('bmi-lbs').value);
+    var ft = parseFloat(document.getElementById('bmi-ft').value) || 0;
+    var inch = parseFloat(document.getElementById('bmi-in').value) || 0;
+    var totalInches = (ft * 12) + inch;
+    if (!lbs || totalInches <= 0) { alert('Please enter valid height and weight.'); return; }
+    bmiVal = (lbs / (totalInches * totalInches)) * 703;
+  }
+
+  bmiVal = parseFloat(bmiVal.toFixed(1));
+
+  var cat = "";
+  var badgeColor = "";
+  var fertNote = "";
+  var pregGain = "";
+  var postRecover = "";
+
+  if (bmiVal < 18.5) {
+    cat = "Underweight (&lt; 18.5)";
+    badgeColor = "#e0f2fe";
+    fertNote = "Low adipose stores may reduce leptin levels and trigger hypothalamic anovulation. Focus on nutrient-dense healthy fats (nuts, avocados, whole milk).";
+    pregGain = "Recommended Gestational Gain: <strong>28 – 40 lbs (13 – 18 kg)</strong>. Elevated risk for small-for-gestational-age (SGA) infants.";
+    postRecover = "Postpartum priority: Ensure adequate caloric surplus (+500 kcal/day) to sustain lactation without depleting maternal bone density.";
+  } else if (bmiVal <= 24.9) {
+    cat = "Normal Weight (18.5 – 24.9)";
+    badgeColor = "#dcfce7";
+    fertNote = "Optimal hormonal balance for regular ovulation and natural conception.";
+    pregGain = "Recommended Gestational Gain: <strong>25 – 35 lbs (11.5 – 16 kg)</strong>. Lowest clinical risk for gestational hypertension and macrosomia.";
+    postRecover = "Postpartum priority: Gradual pelvic floor rehab and diastasis recti gentle core engagement starting 6 weeks postpartum.";
+  } else if (bmiVal <= 29.9) {
+    cat = "Overweight (25.0 – 29.9)";
+    badgeColor = "#fef9c3";
+    fertNote = "Mild insulin resistance may impact follicular maturation. Low-glycemic dietary protocols can optimize cycle regularity.";
+    pregGain = "Recommended Gestational Gain: <strong>15 – 25 lbs (7 – 11.5 kg)</strong>. Routine 24–28w gestational diabetes screening recommended.";
+    postRecover = "Postpartum priority: Low-impact brisk walking, hydration, and postpartum pelvic stabilization.";
+  } else {
+    cat = "Obese (&ge; 30.0)";
+    badgeColor = "#fee2e2";
+    fertNote = "Peripheral aromatization of androgens may suppress LH surge. Pre-conception metabolic optimization with an endocrinologist is beneficial.";
+    pregGain = "Recommended Gestational Gain: <strong>11 – 20 lbs (5 – 9 kg)</strong>. Earlier early-trimester gestational diabetes and blood pressure surveillance recommended.";
+    postRecover = "Postpartum priority: Early mobility post-delivery to prevent deep vein thrombosis (DVT) and supportive abdominal wrapping.";
+  }
+
+  var resHtml = '<div style="background:#f8fafc;border:1px solid #cbd5e1;border-radius:12px;padding:22px;margin-bottom:16px;">';
+  resHtml += '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;">';
+  resHtml += '<div><span style="font-size:12px;font-weight:700;color:#64748b;">CALCULATED BODY MASS INDEX</span><h3 style="margin:2px 0 0 0;font-size:28px;color:#0284c7;">' + bmiVal + ' <span style="font-size:16px;font-weight:500;color:#475569;">kg/m²</span></h3></div>';
+  resHtml += '<div style="background:' + badgeColor + ';color:#1e293b;padding:6px 14px;border-radius:999px;font-weight:800;font-size:14px;">' + cat + '</div>';
+  resHtml += '</div>';
+
+  resHtml += '<div style="display:grid;gap:12px;font-size:14px;color:#334155;">';
+  resHtml += '<div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;padding:12px;"><strong style="color:#0f172a;">🌸 Pre-Conception &amp; Fertility Impact:</strong><p style="margin:4px 0 0 0;">' + fertNote + '</p></div>';
+  resHtml += '<div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;padding:12px;"><strong style="color:#0f172a;">🤰 Gestational Weight Gain Target (ACOG / IOM):</strong><p style="margin:4px 0 0 0;">' + pregGain + '</p></div>';
+  resHtml += '<div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;padding:12px;"><strong style="color:#0f172a;">🍼 Postpartum Recovery &amp; Lactation Support:</strong><p style="margin:4px 0 0 0;">' + postRecover + '</p></div>';
+  resHtml += '</div></div>';
+
+  var box = document.getElementById('bmi-results-box');
+  box.innerHTML = resHtml;
+  box.style.display = 'block';
+}
+</script>
+
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-4453876229797223"

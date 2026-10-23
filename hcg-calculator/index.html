@@ -570,3 +570,117 @@
   </script>
 </body>
 </html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('hcg-form');
+    if (!form) return;
+
+    form.onsubmit = function(e) {
+        e.preventDefault();
+        const hcg1 = parseFloat(document.getElementById('hcg1').value);
+        const date1 = new Date(document.getElementById('date1').value);
+        const hcg2 = parseFloat(document.getElementById('hcg2').value);
+        const date2 = new Date(document.getElementById('date2').value);
+
+        const diffHours = (date2 - date1) / (1000 * 60 * 60);
+
+        if (isNaN(hcg1) || isNaN(hcg2) || isNaN(diffHours) || diffHours <= 0 || hcg1 <= 0 || hcg2 <= 0) {
+            alert("Please enter valid positive hCG numbers and ensure Test 2 is later than Test 1.");
+            return;
+        }
+
+        // Doubling time formula: T2 - T1 * [ ln(2) / ln(hCG2 / hCG1) ]
+        const doublingHours = diffHours * Math.log(2) / Math.log(hcg2 / hcg1);
+        const doublingDays = doublingHours / 24;
+        const twoDayIncrease = ((Math.pow(hcg2 / hcg1, 48 / diffHours) - 1) * 100).toFixed(1);
+
+        let statusBg = "#f0fdf4";
+        let statusBorder = "#86efac";
+        let statusColor = "#166534";
+        let statusTitle = "Normal Expected hCG Rise";
+        let statusMsg = "Your doubling time falls within the expected clinical physiological range for early intrauterine pregnancy.";
+
+        if (doublingHours < 0) {
+            statusBg = "#fef2f2";
+            statusBorder = "#fca5a5";
+            statusColor = "#991b1b";
+            statusTitle = "Declining hCG Levels Observed";
+            statusMsg = "hCG levels decreased between tests. Contact your OB-GYN or healthcare provider promptly for clinical correlation.";
+        } else if (doublingHours < 30) {
+            statusBg = "#fefce8";
+            statusBorder = "#fde047";
+            statusColor = "#854d0e";
+            statusTitle = "Rapid hCG Rise (Under 30 Hours)";
+            statusMsg = "Rapid hCG acceleration is commonly observed in multiple gestations (twins/triplets) or molar pregnancy.";
+        } else if (doublingHours <= 72) {
+            statusBg = "#f0fdf4";
+            statusBorder = "#86efac";
+            statusColor = "#166534";
+            statusTitle = "Normal Expected Doubling Time (30–72 Hours)";
+            statusMsg = "hCG levels are doubling appropriately for pregnancies under 1,200–6,000 mIU/mL.";
+        } else if (doublingHours <= 96) {
+            statusBg = "#f8fafc";
+            statusBorder = "#cbd5e1";
+            statusColor = "#334155";
+            statusTitle = "Moderate Doubling Time (72–96 Hours)";
+            statusMsg = "Normal physiological slowing occurs as baseline hCG crosses 1,200–6,000 mIU/mL.";
+        } else {
+            statusBg = "#fff7ed";
+            statusBorder = "#fed7aa";
+            statusColor = "#9a3412";
+            statusTitle = "Extended Doubling Time (>96 Hours)";
+            statusMsg = "Doubling times over 96 hours require clinical correlation with transvaginal ultrasound once hCG exceeds 1,500–2,000 mIU/mL.";
+        }
+
+        let outHtml = `
+        <div style="background:${statusBg};border:2px solid ${statusBorder};border-radius:12px;padding:22px;margin:24px 0;box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);">
+          <span style="font-size:12px;font-weight:700;color:${statusColor};text-transform:uppercase;letter-spacing:0.05em;">Clinical Doubling Assessment</span>
+          <h3 style="margin:4px 0 10px 0;font-size:22px;color:${statusColor};">${statusTitle}</h3>
+          
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:16px 0;">
+            <div style="background:#ffffff;border:1px solid #cbd5e1;border-radius:8px;padding:12px;text-align:center;">
+              <div style="font-size:12px;color:#64748b;font-weight:600;">DOUBLING TIME</div>
+              <div style="font-size:24px;font-weight:800;color:#0284c7;">${doublingHours.toFixed(1)} <span style="font-size:14px;font-weight:500;">Hours</span></div>
+              <div style="font-size:12px;color:#64748b;">(${doublingDays.toFixed(1)} Days)</div>
+            </div>
+            <div style="background:#ffffff;border:1px solid #cbd5e1;border-radius:8px;padding:12px;text-align:center;">
+              <div style="font-size:12px;color:#64748b;font-weight:600;">2-DAY (48H) INCREASE</div>
+              <div style="font-size:24px;font-weight:800;color:#0284c7;">${twoDayIncrease}%</div>
+              <div style="font-size:12px;color:#64748b;">(Normal baseline: &gt;35–53%)</div>
+            </div>
+          </div>
+          <p style="margin:0;font-size:14px;color:#334155;line-height:1.6;">${statusMsg}</p>
+        </div>
+
+        <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin-bottom:20px;">
+          <h4 style="margin:0 0 12px 0;font-size:16px;color:#0f172a;">🩺 Clinical Ultrasound Milestones by Quantitative hCG</h4>
+          <div style="display:grid;gap:10px;font-size:14px;">
+            <div style="display:flex;justify-content:space-between;padding:8px;background:#f8fafc;border-radius:6px;">
+              <span><strong>1,500 – 2,000 mIU/mL</strong> (Discriminatory Zone)</span>
+              <span style="color:#0284c7;font-weight:600;">Gestational Sac Detectable</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:8px;background:#f8fafc;border-radius:6px;">
+              <span><strong>5,000+ mIU/mL</strong></span>
+              <span style="color:#0284c7;font-weight:600;">Yolk Sac Appears</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:8px;background:#f8fafc;border-radius:6px;">
+              <span><strong>10,000+ mIU/mL</strong></span>
+              <span style="color:#0284c7;font-weight:600;">Fetal Pole &amp; Cardiac Activity</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#fef2f2;border-left:4px solid #ef4444;padding:14px 16px;border-radius:6px;font-size:13px;color:#991b1b;">
+          <strong>⚠️ Triage Emergency Warning:</strong> Beta hCG calculations are statistical estimates. If you experience unilateral sharp pelvic pain, shoulder tip pain, dizziness, or heavy bleeding, seek emergency medical triage immediately to rule out ectopic pregnancy.
+        </div>
+        `;
+
+        const resCont = document.getElementById('result-container') || document.createElement('div');
+        resCont.id = 'result-container';
+        resCont.innerHTML = outHtml;
+        resCont.style.display = 'block';
+        form.parentNode.insertBefore(resCont, form.nextSibling);
+    };
+});
+</script>
