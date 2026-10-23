@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://babieblue.com/sitemap.xml
+
+# AI content signals — allow reference for AEO/GEO
+# search: yes | ai-train: yes (for AI search visibility) | ai-input: yes | use: immediate
