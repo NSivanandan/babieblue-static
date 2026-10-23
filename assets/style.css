@@ -65,12 +65,10 @@ nav.main-nav a {
 nav.main-nav a:hover { color: var(--primary); }
 
 .container {
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: 1fr 336px;
-  gap: 40px;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: block;
 }
 
 main.content-area {
