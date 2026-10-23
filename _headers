@@ -1,24 +1,8 @@
 /*
-# Proper AdSense Headers for Cloudflare Pages
-# Key fix: Remove X-Robots-Tag: noindex from root pages
-*/
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: public, max-age=14400
 
-/* Root domain - MUST be indexable for AdSense */
-https://babieblue.com/
-https://babieblue.pages.dev/ 301 https://babieblue.com/
-
-/* Prevent clickjacking, enhance security */
-/*
-/*
-/* Core security headers */
-X-Frame-Options: SAMEORIGIN
-X-Content-Type-Options: nosniff
-Referrer-Policy: strict-origin-when-cross-origin
-Permissions-Policy: geolocation=(), microphone=(), camera=()
-
-/* Long-term caching for assets - CRITICAL for ad delivery */
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/wp-content/uploads/*
-  Cache-Control: public, max-age=31536000, immutable
+/ads.txt
+  Cache-Control: public, max-age=86400, immutable
