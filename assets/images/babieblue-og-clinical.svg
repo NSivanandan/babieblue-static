@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0F172A"/>
+  <rect x="48" y="48" width="1104" height="534" rx="16" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+  <text x="96" y="140" font-family="Plus Jakarta Sans, sans-serif" font-size="18" font-weight="800" fill="#2DD4BF" letter-spacing="3">BABIE BLUE • PHYSICIAN-REVIEWED CLINICAL PROTOCOLS</text>
+  <text x="96" y="250" font-family="Georgia, serif" font-size="56" font-weight="700" fill="#F8FAFC">Evidence-Based Maternal &amp;</text>
+  <text x="96" y="325" font-family="Georgia, serif" font-size="56" font-weight="700" fill="#F8FAFC">Pediatric Healthcare</text>
+  <text x="96" y="410" font-family="Plus Jakarta Sans, sans-serif" font-size="24" fill="#94A3B8">Interactive Clinical Calculators, Triage Protocols &amp; ACOG / AAP Guidelines</text>
+  <line x1="96" y1="475" x2="1104" y2="475" stroke="#334155" stroke-width="1.5"/>
+  <text x="96" y="525" font-family="Plus Jakarta Sans, sans-serif" font-size="20" font-weight="600" fill="#E2E8F0">Reviewed by Dr. Anagha Nawal, MD (OB-GYN) &amp; Dr. Mangala Devi, MBBS, MS</text>
+</svg>

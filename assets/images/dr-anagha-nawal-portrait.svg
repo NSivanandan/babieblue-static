@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="480" viewBox="0 0 420 480">
+  <rect width="420" height="480" rx="18" fill="#0F172A"/>
+  <rect x="16" y="16" width="388" height="448" rx="12" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+  <circle cx="210" cy="175" r="78" fill="#0F766E" stroke="#2DD4BF" stroke-width="3"/>
+  <text x="210" y="196" text-anchor="middle" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#FFFFFF">AN</text>
+  <rect x="70" y="282" width="280" height="28" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="210" y="301" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="800" fill="#2DD4BF" letter-spacing="1.5">MBBS, MD, MCE, FRM</text>
+  <text x="210" y="352" text-anchor="middle" font-family="Georgia, serif" font-size="23" font-weight="700" fill="#F8FAFC">Dr. Anagha Nawal</text>
+  <text x="210" y="382" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">OB-GYN • Monash • Kiel Germany</text>
+  <line x1="60" y1="410" x2="360" y2="410" stroke="#334155" stroke-width="1"/>
+  <text x="210" y="436" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="700" fill="#CBD5E1" letter-spacing="1">BABIE BLUE MEDICAL REVIEW BOARD</text>
+</svg>

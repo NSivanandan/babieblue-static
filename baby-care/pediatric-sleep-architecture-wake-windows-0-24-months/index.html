@@ -4,12 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Pediatric Sleep Architecture Protocol: Wake Windows, Cortisol Rhythms &amp; Nap Consolidation (0-24 Months) - Babie Blue</title>
-  <meta name="description" content="Evidence-based pediatric sleep protocol from birth to 24 months. Features interactive wake window schedules, 3 AM anomaly triage, overtiredness diagnostic gauge, and safe nap consolidation.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="description" content="Infant sleep is governed by two opposing neurological drivers: Process S (homeostatic sleep pressure driven by adenosine accumulation) and Process C.">
   <link rel="canonical" href="https://babieblue.com/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/flagship-protocol.css">
   
   <meta property="og:title" content="The Pediatric Sleep Architecture Protocol: Wake Windows &amp; Cortisol Rhythms (0-24 Months)">
-  <meta property="og:description" content="Pediatrician-reviewed infant sleep guide: Interactive wake window scheduler, False Start vs Split Night triage, and clinical nap consolidation protocols.">
+  <meta property="og:description" content="Infant sleep is governed by two opposing neurological drivers: Process S (homeostatic sleep pressure driven by adenosine accumulation) and Process C.">
   <meta property="og:url" content="https://babieblue.com/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/">
   <meta property="og:site_name" content="Babie Blue">
   <meta property="og:type" content="article">
@@ -137,550 +142,7 @@
   }
   </script>
 
-  <style>
-    /* Clinical Visual Theme & Interactive Styles for BabieBlue Flagship Guides */
-    :root {
-      --bb-primary: #0284c7;
-      --bb-primary-dark: #0369a1;
-      --bb-primary-light: #e0f2fe;
-      --bb-accent: #0d9488;
-      --bb-accent-light: #ccfbf1;
-      --bb-slate: #0f172a;
-      --bb-muted: #475569;
-      --bb-bg-soft: #f8fafc;
-      --bb-border: #e2e8f0;
-      --bb-alert-red: #ef4444;
-      --bb-alert-bg: #fef2f2;
-      --bb-amber: #f59e0b;
-      --bb-green: #10b981;
-    }
-    
-    .bb-article-container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 16px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-      color: #1e293b;
-      line-height: 1.7;
-    }
-
-    .bb-article-header {
-      margin-top: 24px;
-      margin-bottom: 24px;
-      border-bottom: 1px solid var(--bb-border);
-      padding-bottom: 20px;
-    }
-
-    .bb-hub-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--bb-primary-light);
-      color: var(--bb-primary-dark);
-      font-weight: 700;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 4px 12px;
-      border-radius: 9999px;
-      margin-bottom: 12px;
-      text-decoration: none;
-    }
-
-    .bb-article-title {
-      font-size: 2.1rem;
-      font-weight: 800;
-      line-height: 1.25;
-      color: var(--bb-slate);
-      margin: 8px 0 16px 0;
-    }
-
-    @media (min-width: 768px) {
-      .bb-article-title {
-        font-size: 2.6rem;
-      }
-    }
-
-    /* Trust & E-E-A-T Reviewer Badge */
-    .bb-eeat-badge {
-      background: #f1f5f9;
-      border-left: 4px solid var(--bb-primary);
-      padding: 12px 16px;
-      border-radius: 0 8px 8px 0;
-      font-size: 13px;
-      color: var(--bb-muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .bb-eeat-badge strong {
-      color: var(--bb-slate);
-    }
-
-    /* BLUF Summary Card */
-    .bb-bluf-box {
-      background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
-      border: 1px solid #bae6fd;
-      border-radius: 12px;
-      padding: 22px 24px;
-      margin: 24px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-    }
-
-    .bb-bluf-box h2 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 1.25rem;
-      color: #0369a1;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .bb-bluf-box ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    .bb-bluf-box li {
-      margin-bottom: 8px;
-      font-size: 15px;
-    }
-
-    /* Navigation Pills */
-    .bb-toc-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 20px 0 32px 0;
-      padding: 14px;
-      background: var(--bb-bg-soft);
-      border-radius: 10px;
-      border: 1px solid var(--bb-border);
-    }
-
-    .bb-toc-pill {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--bb-primary-dark);
-      background: #fff;
-      padding: 6px 14px;
-      border-radius: 20px;
-      border: 1px solid #cbd5e1;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .bb-toc-pill:hover {
-      background: var(--bb-primary);
-      color: #fff;
-      border-color: var(--bb-primary);
-    }
-
-    /* Key Metric Highlight Cards */
-    .bb-metric-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin: 24px 0;
-    }
-
-    .bb-metric-card {
-      background: #fff;
-      border: 1px solid var(--bb-border);
-      border-radius: 10px;
-      padding: 16px;
-      text-align: center;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-      transition: transform 0.2s ease;
-    }
-
-    .bb-metric-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 6px rgba(0,0,0,0.06);
-    }
-
-    .bb-metric-num {
-      font-size: 1.7rem;
-      font-weight: 800;
-      color: var(--bb-primary-dark);
-      line-height: 1.1;
-    }
-
-    .bb-metric-label {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--bb-slate);
-      margin-top: 6px;
-    }
-
-    .bb-metric-sub {
-      font-size: 11px;
-      color: var(--bb-muted);
-      margin-top: 2px;
-    }
-
-    /* Interactive Component Containers */
-    .bb-interactive-tool {
-      background: #ffffff;
-      border: 2px solid #bae6fd;
-      border-radius: 14px;
-      padding: 24px;
-      margin: 32px 0;
-      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
-    }
-
-    .bb-tool-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-bottom: 2px solid var(--bb-primary-light);
-      padding-bottom: 14px;
-      margin-bottom: 18px;
-    }
-
-    .bb-tool-header h3 {
-      margin: 0;
-      font-size: 1.35rem;
-      color: var(--bb-slate);
-    }
-
-    .bb-tool-badge {
-      background: var(--bb-primary);
-      color: #fff;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 6px;
-      text-transform: uppercase;
-    }
-
-    .bb-tool-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    @media (min-width: 640px) {
-      .bb-tool-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .bb-input-group label {
-      display: block;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--bb-slate);
-      margin-bottom: 6px;
-    }
-
-    .bb-input-group select,
-    .bb-input-group input[type="time"],
-    .bb-input-group input[type="number"],
-    .bb-input-group input[type="range"] {
-      width: 100%;
-      padding: 10px 14px;
-      border: 1px solid #cbd5e1;
-      border-radius: 8px;
-      font-size: 14px;
-      background: #f8fafc;
-      color: var(--bb-slate);
-      box-sizing: border-box;
-    }
-
-    .bb-calc-btn {
-      background: var(--bb-primary);
-      color: #fff;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      width: 100%;
-      margin-top: 16px;
-      transition: background 0.2s ease;
-    }
-
-    .bb-calc-btn:hover {
-      background: var(--bb-primary-dark);
-    }
-
-    .bb-schedule-results {
-      margin-top: 20px;
-      background: var(--bb-bg-soft);
-      border-radius: 10px;
-      padding: 18px;
-      border: 1px solid var(--bb-border);
-    }
-
-    .bb-schedule-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .bb-timeline-block {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-size: 14px;
-    }
-
-    .bb-block-wake {
-      background: #e0f2fe;
-      border-left: 4px solid var(--bb-primary);
-      color: #0369a1;
-    }
-
-    .bb-block-sleep {
-      background: #ede9fe;
-      border-left: 4px solid #8b5cf6;
-      color: #5b21b6;
-    }
-
-    .bb-block-feed {
-      background: #fef3c7;
-      border-left: 4px solid #f59e0b;
-      color: #92400e;
-    }
-
-    /* 3 AM Diagnostic Matrix Tabs */
-    .bb-tab-bar {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--bb-border);
-      margin-bottom: 16px;
-    }
-
-    .bb-tab-btn {
-      background: #f1f5f9;
-      border: 1px solid #cbd5e1;
-      border-radius: 8px;
-      padding: 8px 14px;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--bb-muted);
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.2s ease;
-    }
-
-    .bb-tab-btn.active {
-      background: var(--bb-primary);
-      color: #fff;
-      border-color: var(--bb-primary);
-    }
-
-    .bb-diag-card {
-      background: #f8fafc;
-      border-radius: 10px;
-      border: 1px solid var(--bb-border);
-      padding: 18px;
-    }
-
-    .bb-diag-meta {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-
-    @media (min-width: 640px) {
-      .bb-diag-meta {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .bb-meta-box {
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-size: 13px;
-    }
-
-    .bb-meta-cause {
-      background: #fee2e2;
-      color: #991b1b;
-      border: 1px solid #fca5a5;
-    }
-
-    .bb-meta-fix {
-      background: #dcfce7;
-      color: #166534;
-      border: 1px solid #86efac;
-    }
-
-    /* 10-Point Diagnostic Checklist & Gauge */
-    .bb-checklist-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 10px 12px;
-      background: #f8fafc;
-      border: 1px solid var(--bb-border);
-      border-radius: 8px;
-      margin-bottom: 8px;
-      cursor: pointer;
-      transition: background 0.15s ease;
-    }
-
-    .bb-checklist-item:hover {
-      background: #f1f5f9;
-    }
-
-    .bb-checklist-item input[type="checkbox"] {
-      margin-top: 4px;
-      width: 18px;
-      height: 18px;
-      cursor: pointer;
-    }
-
-    .bb-gauge-container {
-      margin-top: 18px;
-      background: #e2e8f0;
-      border-radius: 9999px;
-      height: 18px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .bb-gauge-fill {
-      height: 100%;
-      width: 0%;
-      background: var(--bb-green);
-      transition: width 0.3s ease, background-color 0.3s ease;
-    }
-
-    /* Tables */
-    .bb-table-wrapper {
-      overflow-x: auto;
-      margin: 24px 0;
-      border-radius: 10px;
-      border: 1px solid var(--bb-border);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-    }
-
-    .bb-clinical-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
-      text-align: left;
-    }
-
-    .bb-clinical-table th {
-      background: #f1f5f9;
-      color: var(--bb-slate);
-      font-weight: 700;
-      padding: 14px 16px;
-      border-bottom: 2px solid var(--bb-border);
-    }
-
-    .bb-clinical-table td {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--bb-border);
-      vertical-align: top;
-    }
-
-    .bb-clinical-table tr:hover td {
-      background: #f8fafc;
-    }
-
-    /* Clinical Callout Blocks */
-    .bb-callout {
-      border-radius: 10px;
-      padding: 18px 20px;
-      margin: 24px 0;
-      border-left: 5px solid;
-    }
-
-    .bb-callout-clinical {
-      background: #eff6ff;
-      border-color: #3b82f6;
-      color: #1e3a8a;
-    }
-
-    .bb-callout-warning {
-      background: #fffbeb;
-      border-color: #f59e0b;
-      color: #78350f;
-    }
-
-    .bb-callout-danger {
-      background: #fef2f2;
-      border-color: #ef4444;
-      color: #7f1d1d;
-    }
-
-    .bb-callout h4 {
-      margin-top: 0;
-      margin-bottom: 8px;
-      font-size: 15px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* AdSense Anchor Box (Zero CLS) */
-    .bb-ad-anchor {
-      min-height: 280px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 32px 0;
-      background: #f8fafc;
-      border: 1px dashed #cbd5e1;
-      border-radius: 8px;
-    }
-
-    /* Age Card Layout */
-    .bb-age-card {
-      background: #ffffff;
-      border: 1px solid var(--bb-border);
-      border-top: 4px solid var(--bb-primary);
-      border-radius: 12px;
-      padding: 22px;
-      margin: 28px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-    }
-
-    .bb-age-badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 14px;
-    }
-
-    .bb-tag {
-      font-size: 12px;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 6px;
-    }
-
-    .bb-tag-wake {
-      background: #e0f2fe;
-      color: #0369a1;
-    }
-
-    .bb-tag-nap {
-      background: #ede9fe;
-      color: #5b21b6;
-    }
-
-    .bb-tag-night {
-      background: #dcfce7;
-      color: #15803d;
-    }
-  </style>
+  
   <!-- Google Analytics 4 (GA4: 355423347) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-355423347"></script>
   <script>
@@ -690,11 +152,16 @@
     gtag("config", "G-355423347", {link_ad_clicks: true, send_page_view: true});
     gtag("config", "355423347");
   </script>
+  <meta property="og:image" content="https://babieblue.com/assets/images/babieblue-og-clinical.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Pediatric Sleep Architecture Protocol: Wake Windows, Cortisol Rhythms & Nap Consolidation (0&ndash;24 Months)">
+  <meta name="twitter:description" content="Infant sleep is governed by two opposing neurological drivers: Process S (homeostatic sleep pressure driven by adenosine accumulation) and Process C.">
 </head>
 <body>
 
   <!-- Site Navigation Header -->
-  <header class="site-header">
+  
+    <header class="site-header">
     <div class="header-inner">
       <a href="/" class="site-logo">Babie<span>Blue</span></a>
       <nav class="main-nav">
@@ -708,6 +175,7 @@
       </nav>
     </div>
   </header>
+  
 
   <div class="container">
     <main class="content-area">
@@ -720,7 +188,7 @@
           <span style="color: #0f172a; font-weight: 600;">Pediatric Sleep Architecture &amp; Wake Windows</span>
         </nav>
 
-        <header class="bb-article-header">
+        
           <a href="/baby-care/" class="bb-hub-badge">&#x1F476; Clinical Pediatric Care</a>
           <h1 class="bb-article-title">The Pediatric Sleep Architecture Protocol: Wake Windows, Cortisol Rhythms &amp; Nap Consolidation (0&ndash;24 Months)</h1>
           
@@ -729,7 +197,7 @@
             <div><strong>Medical Reviewers:</strong> Dr. Anagha Nawal (Consultant OB/GYN) &amp; Dr. Mangala Devi (Senior Clinical Approver)</div>
             <div><strong>Protocol Status:</strong> Evidence-Based Clinical Guideline &bull; AAP Compliant &bull; Updated October 2026</div>
           </div>
-        </header>
+        
 
         <!-- BLUF (Bottom Line Up Front) Summary Box for Google GEO/AEO Rich Extracts -->
         <section aria-label="Clinical Summary" class="bb-bluf-box">
@@ -1331,29 +799,7 @@
   </div>
 
   <!-- Site Footer -->
-  <footer class="site-footer" style="background:#0f172a; color:#94a3b8; padding:40px 16px; margin-top:60px;">
-    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:32px;">
-      <div>
-        <h4 style="color:#fff; margin-top:0;">Babie<span style="color:#38bdf8;">Blue</span></h4>
-        <p style="font-size:13px; line-height:1.6;">Clinical evidence-based guidance for maternal wellness, neonatal care, and child development.</p>
-      </div>
-      <div>
-        <h4 style="color:#fff; margin-top:0;">Clinical Hubs</h4>
-        <ul style="list-style:none; padding:0; margin:0; font-size:13px; line-height:2;">
-          <li><a href="/pregnancy/" style="color:#94a3b8; text-decoration:none;">Pregnancy</a></li>
-          <li><a href="/baby-care/" style="color:#94a3b8; text-decoration:none;">Baby Care</a></li>
-          <li><a href="/maternal-health/" style="color:#94a3b8; text-decoration:none;">Maternal Health</a></li>
-          <li><a href="/parenting/" style="color:#94a3b8; text-decoration:none;">Parenting</a></li>
-          <li><a href="/calculators/" style="color:#94a3b8; text-decoration:none;">Calculators</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 style="color:#fff; margin-top:0;">Medical Review Board</h4>
-        <p style="font-size:13px; line-height:1.6;">All pediatric guides are authored by healthcare specialists and reviewed by board-certified physicians.</p>
-        <div style="font-size:12px; color:#64748b; margin-top:8px;">&copy; 2026 BabieBlue. All rights reserved. Medical Disclaimer: For informational purposes only.</div>
-      </div>
-    </div>
-  </footer>
+  
 
   <!-- Pure Vanilla JavaScript Engine for Interactive Clinical Tools (Zero external dependencies) -->
   <script>
@@ -1559,7 +1005,7 @@
                  '<div class="bb-meta-box bb-meta-fix"><strong>Emergency Triage (Tonight):</strong> ' + item.immediateFix + '</div>' +
                  '</div>' +
                  '<p style="font-size:14px; color:#334155;"><strong>Neurological Mechanism:</strong> ' + item.mechanism + '</p>' +
-                 '<div style="background:#fff; border-left:4px solid #10b981; padding:12px 14px; border-radius:0 8px 8px 0; font-size:13px; color:#1e293b;">' +
+                 '<div style="background:#fff;  padding:12px 14px; border-radius:0 8px 8px 0; font-size:13px; color:#1e293b;">' +
                  '<strong>48-Hour Protocol Correction:</strong> ' + item.protocolTomorrow +
                  '</div>';
 
@@ -1674,5 +1120,71 @@
       calculateTOGSafety();
     });
   </script>
+  <script src="/assets/flagship-tools.js" defer></script>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-widget">
+        <h4>About Babie Blue</h4>
+        <p>Babie Blue is an independent maternal health, reproductive medicine, and pediatric clinical publication empowering families with physician-reviewed protocols and interactive calculators.</p>
+        <div class="footer-social-row">
+          <a href="https://www.linkedin.com/in/sivanandan-n-shaynly" class="footer-social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.instagram.com/shaynly_babieblue/" class="footer-social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/Shaynly.BabieBlue" class="footer-social-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://in.pinterest.com/Shaynly_BabieBlue" class="footer-social-link" target="_blank" rel="noopener noreferrer">Pinterest</a>
+          <a href="https://www.youtube.com/@BabieBlue_BB" class="footer-social-link" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-widget">
+        <h4>Medical Review Board</h4>
+        <ul>
+          <li><a href="/dr-mangala-devi/">Dr. Mangala Devi K.R., MS (OBG)</a><span class="footer-role-tag">Secretary (IFS KA) &bull; Past President (BSOG)</span></li>
+          <li><a href="/dr-anagha-nawal/">Dr. Anagha Nawal, MD, MCE</a><span class="footer-role-tag">Consultant OB-GYN &amp; Embryologist</span></li>
+          <li><a href="/madhuri-b/">Madhuri B</a><span class="footer-role-tag">Lead Healthcare &amp; Billing Specialist</span></li>
+          <li><a href="/sivanandan-n/">Sivanandan N</a><span class="footer-role-tag">Founder &amp; Publisher</span></li>
+          <li><a href="/about-us/">Editorial Review Protocol &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-widget">
+        <h4>Specialty Clinical Hubs</h4>
+        <ul>
+          <li><a href="/pregnancy/">Pregnancy &amp; Prenatal Guide</a></li>
+          <li><a href="/baby-care/">Newborn &amp; Infant Care</a></li>
+          <li><a href="/parenting/">Toddler &amp; Child Development</a></li>
+          <li><a href="/maternal-health/">Maternal &amp; Postpartum Health</a></li>
+          <li><a href="/calculators/">Interactive Clinical Calculators</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-widget">
+        <h4>Flagship Protocols &amp; Tools</h4>
+        <ul>
+          <li><a href="/baby-care/wake-windows-nap-transitions-by-age/">Wake Windows &amp; Sleep Planner</a></li>
+          <li><a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/">Infant Fever mL Dosing Chart</a></li>
+          <li><a href="/maternal-health/postpartum-blood-work-panel-ferritin-thyroiditis-vitamin-d/">Postpartum Blood Work Panel</a></li>
+          <li><a href="/pregnancy/cord-blood-cord-tissue-banking-costs-public-vs-private/">Cord Blood Banking Cost ROI</a></li>
+          <li><a href="/calculators/due-date-calculator/">Due Date &amp; Gestation Calculator</a></li>
+          <li><a href="/calculators/hcg-calculator/">Beta-hCG Doubling Calculator</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-widget">
+        <h4>Governance &amp; Legal</h4>
+        <ul>
+          <li><a href="/about-us/">About Babie Blue &amp; Ethics</a></li>
+          <li><a href="/contact-us/">Contact &amp; Clinical Feedback</a></li>
+          <li><a href="/privacy-policy/">Privacy &amp; Data Policy</a></li>
+          <li><a href="/terms-and-conditions/">Terms &amp; Medical Disclaimer</a></li>
+          <li><a href="/affiliate-links.html">Affiliate &amp; Ad Disclosure</a></li>
+          <li><a href="/sitemap.xml">XML Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Babie Blue (BabieBlue.com). All rights reserved. Content is for educational reference and does not replace individualized medical advice.</p>
+    </div>
+  </footer>
 </body>
 </html>
