@@ -3,28 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Mom &amp; Baby Health, Care &amp; Wellness - Babie Blue</title>
-  <meta name="description" content="Babie Blue is your ultimate guide for pregnancy milestones, baby names, postpartum care, and family health.">
+  <title>Babie Blue - Evidence-Based Maternal Wellness, Baby Care &amp; Clinical Calculators</title>
+  <meta name="description" content="Babie Blue is your physician-reviewed guide for pregnancy milestones, newborn routines, toddler development, postpartum wellness, and clinical calculators.">
   <link rel="canonical" href="https://babieblue.com/">
   <link rel="stylesheet" href="/assets/style.css">
   
-  <meta property="og:title" content="Home - Mom &amp; Baby Health, Care &amp; Wellness">
-  <meta property="og:description" content="Babie Blue is your ultimate guide for pregnancy milestones, baby names, postpartum care, and family health.">
+  <meta property="og:title" content="Babie Blue - Evidence-Based Maternal Wellness &amp; Baby Care">
+  <meta property="og:description" content="Physician-reviewed pregnancy milestones, newborn routines, toddler development, postpartum wellness, and clinical health calculators.">
   <meta property="og:url" content="https://babieblue.com/">
   <meta property="og:site_name" content="Babie Blue">
   <meta property="og:type" content="website">
 
-  <!-- Google AdSense Official Script (Auto-Ads & Ad Units Enabled) -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223"
-       crossorigin="anonymous"></script>
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BABIEBLUE01"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date());
-gtag("config", "G-BABIEBLUE01", {link_ad_clicks: true, send_page_view: true});
-</script>
+  <!-- Google AdSense Official Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223" crossorigin="anonymous"></script>
+
+  <!-- Structured Data: Organization & MedicalWebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://babieblue.com/#organization",
+        "name": "BabieBlue",
+        "url": "https://babieblue.com/",
+        "founder": {
+          "@type": "Person",
+          "@id": "https://babieblue.com/#sivanandan-n",
+          "name": "Sivanandan N",
+          "jobTitle": "Founder & Owner",
+          "url": "https://babieblue.com/about-us/"
+        },
+        "publishingPrinciples": "https://babieblue.com/about-us/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://babieblue.com/#website",
+        "url": "https://babieblue.com/",
+        "name": "Babie Blue",
+        "publisher": { "@id": "https://babieblue.com/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://babieblue.com/calculators/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -34,9 +60,11 @@ gtag("config", "G-BABIEBLUE01", {link_ad_clicks: true, send_page_view: true});
       <nav class="main-nav">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/category/blog/">Pregnancy &amp; Care</a></li>
-          <li><a href="/category/health/">Health &amp; Wellness</a></li>
-          <li><a href="/category/calculator/">Calculators</a></li>
+          <li><a href="/pregnancy/">Pregnancy</a></li>
+          <li><a href="/baby-care/">Baby Care</a></li>
+          <li><a href="/parenting/">Parenting</a></li>
+          <li><a href="/maternal-health/">Maternal Health</a></li>
+          <li><a href="/calculators/">Calculators</a></li>
           <li><a href="/about-us/">About Us</a></li>
           <li><a href="/contact-us/">Contact</a></li>
         </ul>
@@ -44,62 +72,154 @@ gtag("config", "G-BABIEBLUE01", {link_ad_clicks: true, send_page_view: true});
     </div>
   </header>
 
-  <div class="container">
-    <main class="content-area">
-      <article class="single-post">
-        <header class="entry-header">
-          <h1 class="entry-title">Home - Mom &amp; Baby Health, Care &amp; Wellness</h1>
-          <div class="entry-meta">
-            
-            
-          </div>
-        </header>
+  <div class="container" style="max-width:1180px;margin:30px auto;padding:0 20px;">
     
+    <!-- Hero Section -->
+    <section style="background:linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%);border:1px solid #bae6fd;border-radius:20px;padding:48px 32px;margin-bottom:40px;text-align:center;">
+      <span style="font-size:13px;font-weight:700;color:#0284c7;text-transform:uppercase;letter-spacing:0.08em;background:#ffffff;padding:6px 16px;border-radius:999px;display:inline-block;margin-bottom:14px;box-shadow:0 1px 2px rgba(0,0,0,0.05);">
+        Evidence-Based Maternal &amp; Pediatric Healthcare
+      </span>
+      <h1 style="font-size:36px;color:#0f172a;margin:0 0 16px 0;line-height:1.3;font-weight:800;">
+        Empowering Mothers &amp; Families from Conception to Early Childhood
+      </h1>
+      <p style="font-size:18px;color:#334155;max-width:760px;margin:0 auto 28px auto;line-height:1.6;">
+        Medically reviewed clinical guides, interactive gestational timelines, and pediatrician-backed parenting advice designed for every step of your family's journey.
+      </p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="/pregnancy/" style="background:#0284c7;color:#ffffff;font-weight:600;padding:12px 24px;border-radius:10px;text-decoration:none;transition:background 0.2s;">Explore Pregnancy Guide</a>
+        <a href="/calculators/" style="background:#ffffff;color:#0284c7;border:1px solid #0284c7;font-weight:600;padding:12px 24px;border-radius:10px;text-decoration:none;transition:background 0.2s;">Clinical Calculators Suite</a>
+      </div>
+    </section>
 
-        <div class="entry-content">
-          
-<div style="margin-bottom:30px;">
-  <h2 style="font-size:28px;font-weight:800;color:#2b6cb0;margin-bottom:10px;">Welcome to Babie Blue</h2>
-  <p style="font-size:18px;color:#4a5568;">Your comprehensive guide to maternal wellness, pregnancy milestones, baby care, and family health.</p>
-</div>
-<div class="post-grid">
+    <!-- Thematic Hubs Section -->
+    <section style="margin-bottom:48px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;">
+        <div>
+          <h2 style="font-size:24px;color:#0f172a;margin:0 0 6px 0;">Explore by Category Hub</h2>
+          <p style="font-size:15px;color:#64748b;margin:0;">Organized topical libraries covering clinical obstetrics, baby care, and child development.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));gap:18px;">
+        <a href="/pregnancy/" style="text-decoration:none;background:#ffffff;border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:0 2px 4px rgba(0,0,0,0.02);transition:transform 0.2s,box-shadow 0.2s;">
+          <span style="font-size:32px;margin-bottom:12px;">🤰</span>
+          <h3 style="font-size:18px;color:#0f172a;margin:0 0 6px 0;">Pregnancy Guide</h3>
+          <p style="font-size:13px;color:#64748b;margin:0 0 12px 0;line-height:1.5;">39 guides on trimester symptoms, ultrasound milestones, and labor.</p>
+          <span style="font-size:13px;font-weight:600;color:#0284c7;margin-top:auto;">View Hub &rarr;</span>
+        </a>
+
+        <a href="/baby-care/" style="text-decoration:none;background:#ffffff;border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:0 2px 4px rgba(0,0,0,0.02);transition:transform 0.2s,box-shadow 0.2s;">
+          <span style="font-size:32px;margin-bottom:12px;">👶</span>
+          <h3 style="font-size:18px;color:#0f172a;margin:0 0 6px 0;">Baby Care</h3>
+          <p style="font-size:13px;color:#64748b;margin:0 0 12px 0;line-height:1.5;">22 guides on newborn sleep, feeding routines, burping, and cues.</p>
+          <span style="font-size:13px;font-weight:600;color:#0284c7;margin-top:auto;">View Hub &rarr;</span>
+        </a>
+
+        <a href="/parenting/" style="text-decoration:none;background:#ffffff;border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:0 2px 4px rgba(0,0,0,0.02);transition:transform 0.2s,box-shadow 0.2s;">
+          <span style="font-size:32px;margin-bottom:12px;">🧸</span>
+          <h3 style="font-size:18px;color:#0f172a;margin:0 0 6px 0;">Parenting</h3>
+          <p style="font-size:13px;color:#64748b;margin:0 0 12px 0;line-height:1.5;">21 guides on toddler nutrition, tantrums, screen limits, and names.</p>
+          <span style="font-size:13px;font-weight:600;color:#0284c7;margin-top:auto;">View Hub &rarr;</span>
+        </a>
+
+        <a href="/maternal-health/" style="text-decoration:none;background:#ffffff;border:1px solid #e2e8f0;border-radius:14px;padding:22px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:0 2px 4px rgba(0,0,0,0.02);transition:transform 0.2s,box-shadow 0.2s;">
+          <span style="font-size:32px;margin-bottom:12px;">🩺</span>
+          <h3 style="font-size:18px;color:#0f172a;margin:0 0 6px 0;">Maternal Health</h3>
+          <p style="font-size:13px;color:#64748b;margin:0 0 12px 0;line-height:1.5;">56 clinical guides on postpartum recovery, preeclampsia, and wellness.</p>
+          <span style="font-size:13px;font-weight:600;color:#0284c7;margin-top:auto;">View Hub &rarr;</span>
+        </a>
+
+        <a href="/calculators/" style="text-decoration:none;background:#ffffff;border:1px solid #0284c7;border-radius:14px;padding:22px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:0 2px 4px rgba(0,0,0,0.02);transition:transform 0.2s,box-shadow 0.2s;">
+          <span style="font-size:32px;margin-bottom:12px;">📊</span>
+          <h3 style="font-size:18px;color:#0284c7;margin:0 0 6px 0;">Calculators Suite</h3>
+          <p style="font-size:13px;color:#64748b;margin:0 0 12px 0;line-height:1.5;">10 interactive tools: Ovulation, Due Date, hCG Doubling, BMI, Names.</p>
+          <span style="font-size:13px;font-weight:600;color:#0284c7;margin-top:auto;">Try Tools &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Featured Interactive Calculators -->
+    <section style="background:#ffffff;border:1px solid #e2e8f0;border-radius:16px;padding:32px;margin-bottom:48px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.03);">
+      <div style="border-bottom:1px solid #edf2f7;padding-bottom:16px;margin-bottom:24px;">
+        <h2 style="font-size:22px;color:#0f172a;margin:0 0 6px 0;">Featured Clinical Calculators &amp; Interactive Tools</h2>
+        <p style="font-size:14px;color:#64748b;margin:0;">Evidence-based mathematical engines built to ACOG and clinical pediatric standards.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:20px;">
+        <div style="border:1px solid #e2e8f0;border-radius:12px;padding:20px;background:#f8fafc;">
+          <h3 style="font-size:17px;margin:0 0 8px 0;"><a href="/calculators/due-date-calculator/" style="color:#0284c7;text-decoration:none;">Due Date Calculator</a></h3>
+          <p style="font-size:13px;color:#475569;margin:0 0 14px 0;line-height:1.5;">Calculate your estimated delivery date with week-by-week ultrasound &amp; lab screening milestones.</p>
+          <a href="/calculators/due-date-calculator/" style="font-size:13px;font-weight:600;color:#0284c7;text-decoration:none;">Calculate Due Date &rarr;</a>
+        </div>
+
+        <div style="border:1px solid #e2e8f0;border-radius:12px;padding:20px;background:#f8fafc;">
+          <h3 style="font-size:17px;margin:0 0 8px 0;"><a href="/calculators/ovulation-calculator/" style="color:#0284c7;text-decoration:none;">Ovulation &amp; Fertile Window</a></h3>
+          <p style="font-size:13px;color:#475569;margin:0 0 14px 0;line-height:1.5;">6-day fertile window breakdown, 3-cycle forecasting, and earliest sensitive urine hCG test dates.</p>
+          <a href="/calculators/ovulation-calculator/" style="font-size:13px;font-weight:600;color:#0284c7;text-decoration:none;">Track Ovulation &rarr;</a>
+        </div>
+
+        <div style="border:1px solid #e2e8f0;border-radius:12px;padding:20px;background:#f8fafc;">
+          <h3 style="font-size:17px;margin:0 0 8px 0;"><a href="/calculators/hcg-calculator/" style="color:#0284c7;text-decoration:none;">Beta hCG Doubling Engine</a></h3>
+          <p style="font-size:13px;color:#475569;margin:0 0 14px 0;line-height:1.5;">Evaluate 48-hour percentage rise, doubling time in hours, and ultrasound discriminatory zones.</p>
+          <a href="/calculators/hcg-calculator/" style="font-size:13px;font-weight:600;color:#0284c7;text-decoration:none;">Check Doubling Rate &rarr;</a>
+        </div>
+
+        <div style="border:1px solid #e2e8f0;border-radius:12px;padding:20px;background:#f8fafc;">
+          <h3 style="font-size:17px;margin:0 0 8px 0;"><a href="/calculators/baby-name-generator/" style="color:#0284c7;text-decoration:none;">Baby Name Shortlist Engine</a></h3>
+          <p style="font-size:13px;color:#475569;margin:0 0 14px 0;line-height:1.5;">Filter 300+ baby names by style, origin, and gender with interactive nursery shortlist saving.</p>
+          <a href="/calculators/baby-name-generator/" style="font-size:13px;font-weight:600;color:#0284c7;text-decoration:none;">Find Baby Names &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clinical Review & E-E-A-T Trust Section -->
+    <section style="background:#f0f7ff;border:1px solid #bae6fd;border-radius:16px;padding:28px 32px;margin-bottom:48px;">
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;">
+        <div>
+          <span style="font-size:12px;font-weight:700;color:#0369a1;text-transform:uppercase;letter-spacing:0.06em;">Editorial Independence &amp; Integrity</span>
+          <h3 style="font-size:20px;color:#0f172a;margin:4px 0 8px 0;">Reviewed by Board-Certified Obstetric &amp; Clinical Physicians</h3>
+          <p style="font-size:14px;color:#334155;margin:0;max-width:700px;line-height:1.5;">
+            Our medical articles undergo rigorous clinical review by Dr. Anagha Nawal (Consultant OB-GYN) and Dr. Mangala Devi to ensure adherence to ACOG, AAP, and evidence-based obstetric protocols.
+          </p>
+        </div>
+        <div>
+          <a href="/about-us/" style="background:#0284c7;color:#ffffff;font-size:13px;font-weight:600;padding:10px 18px;border-radius:8px;text-decoration:none;display:inline-block;">Meet the Medical Team &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-widget">
+        <h4>About Babie Blue</h4>
+        <p>Babie Blue is an independent parenting, maternal wellness, and child health publication committed to empowering parents worldwide with medically reviewed information.</p>
+      </div>
+      <div class="footer-widget">
+        <h4>Thematic Hubs</h4>
+        <ul>
+          <li><a href="/pregnancy/">Pregnancy Guide</a></li>
+          <li><a href="/baby-care/">Infant &amp; Baby Care</a></li>
+          <li><a href="/parenting/">Toddlers &amp; Parenting</a></li>
+          <li><a href="/maternal-health/">Maternal &amp; Clinical Health</a></li>
+          <li><a href="/calculators/">Health &amp; Due Date Calculators</a></li>
+        </ul>
+      </div>
+      <div class="footer-widget">
+        <h4>Editorial &amp; Legal</h4>
+        <ul>
+          <li><a href="/about-us/">About the Editorial Team</a></li>
+          <li><a href="/contact-us/">Contact Us</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Babie Blue. All rights reserved. The content on this website is for educational and informational purposes only and does not substitute medical advice.</p>
     </div>
   </footer>
 
-  <script>
-    var babyNames = [
-      { name: "Liam", gender: "boy" }, { name: "Noah", gender: "boy" }, { name: "Oliver", gender: "boy" },
-      { name: "James", gender: "boy" }, { name: "Elijah", gender: "boy" }, { name: "William", gender: "boy" },
-      { name: "Henry", gender: "boy" }, { name: "Lucas", gender: "boy" }, { name: "Benjamin", gender: "boy" },
-      { name: "Theodore", gender: "boy" }, { name: "Mateo", gender: "boy" }, { name: "Levi", gender: "boy" },
-      { name: "Olivia", gender: "girl" }, { name: "Emma", gender: "girl" }, { name: "Charlotte", gender: "girl" },
-      { name: "Amelia", gender: "girl" }, { name: "Sophia", gender: "girl" }, { name: "Isabella", gender: "girl" },
-      { name: "Ava", gender: "girl" }, { name: "Mia", gender: "girl" }, { name: "Evelyn", gender: "girl" },
-      { name: "Luna", gender: "girl" }, { name: "Harper", gender: "girl" }, { name: "Camila", gender: "girl" }
-    ];
-
-    function generateBabyName() {
-      var gElem = document.getElementById("bg-gender");
-      var lElem = document.getElementById("bg-letter");
-      var gender = gElem ? gElem.value : "both";
-      var letter = lElem ? lElem.value.toUpperCase() : "";
-      
-      var filtered = babyNames.filter(function(item) {
-        if (gender !== "both" && item.gender !== gender) return false;
-        if (letter && item.name.indexOf(letter) !== 0) return false;
-        return true;
-      });
-
-      var resElem = document.getElementById("bg-result");
-      if (filtered.length > 0) {
-        var picked = filtered[Math.floor(Math.random() * filtered.length)];
-        resElem.innerHTML = "✨ " + picked.name + " (" + (picked.gender === "boy" ? "Boy 💙" : "Girl 💖") + ")";
-      } else {
-        resElem.innerHTML = "No name found matching your filter. Try another combination!";
-      }
-    }
-  </script>
 </body>
 </html>
