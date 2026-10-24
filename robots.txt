@@ -1,3 +1,8 @@
-# TEMPORARY MIGRATION LOCK: Disallowing all crawlers during site architecture restructuring
+# Official robots.txt for BabieBlue.com
+User-agent: Mediapartners-Google
+Allow: /
+
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://babieblue.com/sitemap.xml
