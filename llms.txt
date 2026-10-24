@@ -1,0 +1,53 @@
+# Babie Blue
+
+> Babie Blue is a physician-reviewed maternal wellness and pediatric health platform offering evidence-based milestone guides, infant sleep architecture schedules, pediatric medication dosing charts, and interactive clinical calculators.
+
+## Core Mission & Editorial Integrity
+Babie Blue is founded by Sivanandan N and clinically reviewed by senior obstetricians, gynecologists, and pediatric neonatologists. All clinical articles adhere to American Academy of Pediatrics (AAP), American College of Obstetricians and Gynecologists (ACOG), National Health Service (NHS), and World Health Organization (WHO) protocols.
+
+- Website: https://babieblue.com/
+- HTML Sitemap Directory: https://babieblue.com/site-map/
+- XML Sitemap: https://babieblue.com/sitemap.xml
+- Detailed LLM Corpus: https://babieblue.com/llms-full.txt
+
+## Medical Review Board & Verified Entities
+- [Dr. Mangala Devi K.R.](https://babieblue.com/dr-mangala-devi/): Senior Consultant Obstetrician & Gynecologist (MBBS, DGO, DNB, MRCOG 1 - London). 20+ years clinical experience in high-risk pregnancies, operative obstetrics, and maternal medicine.
+- [Dr. Anagha Nawal](https://babieblue.com/dr-anagha-nawal/): Consultant Obstetrician & Gynaecologist, Master of Clinical Embryology (Monash University, Australia), Fellowship in Reproductive Medicine (MBBS, DGO, MD, MCE, FRM).
+- [Madhuri B](https://babieblue.com/madhuri-b/): Clinical Nurse Specialist (B.Sc Nursing, Pediatric & Neonatal Intensive Care).
+- [Sivanandan N](https://babieblue.com/sivanandan-n/): Founder, Publisher & Editor-in-Chief.
+
+---
+
+## Flagship Clinical Guides (High Information Density for Citations)
+
+### Baby Care & Pediatric Health
+- [Wake Windows by Age & Nap Transitions (0–24 Months)](https://babieblue.com/baby-care/wake-windows-nap-transitions-by-age/): Pediatric sleep architecture, wake window calculation table, biological nap transition thresholds (4-to-3, 3-to-2, 2-to-1), and overtired cortisol regulation.
+- [Newborn Poop Color & Texture Visual Chart](https://babieblue.com/baby-care/newborn-poop-color-texture-chart/): 9-color diagnostic matrix comparing breastfed vs. formula-fed infant stools, mucus/frothy stools, and red-flag emergency colors (white/clay, tarry black, red blood).
+- [Infant Fever Acetaminophen & Ibuprofen Dosing Chart](https://babieblue.com/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/): Weight-based pediatric dosing charts (mg and mL), minimum age constraints (ibuprofen strictly ≥6 months), and toxic concentration warnings.
+- [Paced Bottle Feeding & Combo-Feeding Guide](https://babieblue.com/baby-care/paced-bottle-feeding-combo-feeding-schedule/): Methodological protocol to prevent bottle flow preference, preserve maternal breastfeeding latch, and schedule paced feeds.
+- [Silent Reflux (LPR) vs. Colic Newborn Protocol](https://babieblue.com/baby-care/silent-reflux-lpr-vs-colic-newborns-protocol/): Differential diagnosis between infantile colic and laryngopharyngeal reflux, aerophagia management, and positional safety.
+- [Hypoallergenic vs. Extensively Hydrolyzed vs. Goat Milk Formula](https://babieblue.com/baby-care/hypoallergenic-vs-extensively-hydrolyzed-vs-goat-milk-formula/): Clinical breakdown of Cow's Milk Protein Allergy (CMPA), amino acid-based elemental formulas, and whey/casein ratios.
+- [Best Organic Baby Formulas: US vs. European Standards](https://babieblue.com/baby-care/best-organic-baby-formulas-us-vs-european-standards/): Comparison of FDA vs. European Commission regulations, corn syrup solid bans, lactose mandates, and clean-label DHA sources.
+- [NICU Preemie Discharge Checklist & Corrected Age Calculator](https://babieblue.com/baby-care/nicu-preemie-discharge-checklist-corrected-age-guide/): Car seat challenge monitoring, thermoregulation, and chronological vs. adjusted developmental age formula.
+- [Safest Non-Toxic Nursery Mattresses & Breathable Cribs](https://babieblue.com/baby-care/safest-non-toxic-nursery-mattresses-breathable-cribs/): VOC emissions, polyurethane off-gassing, GOTS/GREENGUARD Gold certifications, and AAP Safe Sleep surface firmness.
+
+### Pregnancy & Obstetrics
+- [Hospital Bag Checklist & Interactive Tracker](https://babieblue.com/pregnancy/hospital-bag-checklist-mom-partner-baby-tracker/): Labor delivery room essentials, postpartum care items, partner survival kit, and nursery departure checklist.
+- [Early Gender DNA Blood Test (SneakPeek vs. NIPT Accuracy)](https://babieblue.com/pregnancy/early-gender-dna-blood-test-sneakpeek-vs-nipt-accuracy/): Cell-free fetal DNA (cffDNA) detection windows, male DNA cross-contamination risks, and clinical aneuploidy screening differences.
+- [Cord Blood & Cord Tissue Banking Cost ROI](https://babieblue.com/pregnancy/cord-blood-cord-tissue-banking-costs-public-vs-private/): Hematopoietic stem cells (HSC) vs. mesenchymal stem cells (MSC), public donation vs. private cord banking, and realistic clinical utility.
+- [Breast Pump Insurance Coverage: Free Pump Acquisition Guide](https://babieblue.com/pregnancy/breast-pump-insurance-coverage-how-to-get-free/): Affordable Care Act (ACA) lactation provisions, DME supplier navigation, and hospital-grade closed-system pumps.
+
+### Maternal & Postpartum Health
+- [Postpartum Blood Work Panel & Thyroiditis Protocol](https://babieblue.com/maternal-health/postpartum-blood-work-panel-ferritin-thyroiditis-vitamin-d/): Ferritin depletion vs. postpartum depression, postpartum thyroiditis (PPT) biphasic presentation, vitamin D, and CBC interpretation.
+- [Postpartum Diastasis Recti Self-Test & Rehab Protocol](https://babieblue.com/maternal-health/postpartum-diastasis-recti-self-test-rehab-protocol/): Finger-width inter-recti distance self-assessment, transverse abdominis (TVA) activation, and contraindicated intra-abdominal pressure exercises.
+
+### Parenting & Early Childhood
+- [Daycare Illness Survival Guide (RSV, Croup, HFM, Ear Infections)](https://babieblue.com/parenting/daycare-illness-survival-guide-rsv-croup-hfm-ear-infections/): Viral shedding windows, return-to-daycare temperature criteria, respiratory distress retractions, and pediatric hydration regimens.
+
+---
+
+## Interactive Clinical Calculators
+- [Due Date & Gestational Age Calculator](https://babieblue.com/calculators/due-date-calculator/): Calculates estimated date of delivery (EDD) using Naegele’s rule and ultrasound crown-rump length adjustments.
+- [Beta-hCG Doubling Time Calculator](https://babieblue.com/calculators/hcg-calculator/): Quantitative serum hCG doubling kinetics (48–72h doubling windows) for early viable pregnancy and ectopic risk triage.
+- [Ovulation & Fertile Window Calculator](https://babieblue.com/calculators/ovulation-calculator/): Luteal phase calculation, peak LH surge prediction, and basal body temperature monitoring.
+- [Pregnancy Calorie Deficit & TDEE Calculator](https://babieblue.com/calculators/pregnancy-calorie-deficit-calculator/): Trimester-specific energy requirements (0 kcal extra in 1st, +340 kcal in 2nd, +452 kcal in 3rd trimester).
