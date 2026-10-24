@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Pediatric Sleep Architecture Protocol: Wake Windows, Cortisol Rhythms &amp; Nap Consolidation (0–24 Months) - Babie Blue</title>
-  <meta name="description" content="Clinical pediatrician-reviewed wake window reference guide from birth to 24 months. Master adenosine sleep pressure, cortisol dysregulation, and nap transition schedules.">
+  <title>The Pediatric Sleep Architecture Protocol: Wake Windows, Cortisol Rhythms &amp; Nap Consolidation (0-24 Months) - Babie Blue</title>
+  <meta name="description" content="Evidence-based pediatric sleep protocol from birth to 24 months. Features interactive wake window schedules, 3 AM anomaly triage, overtiredness diagnostic gauge, and safe nap consolidation.">
   <link rel="canonical" href="https://babieblue.com/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/">
   <link rel="stylesheet" href="/assets/style.css">
   
-  <meta property="og:title" content="The Pediatric Sleep Architecture Protocol: Wake Windows &amp; Cortisol Rhythms (0–24 Months)">
-  <meta property="og:description" content="Evidence-based pediatric sleep protocol: Exact wake windows, biological sleep pressure, nap transitions, and the 3 AM overtired triage matrix.">
+  <meta property="og:title" content="The Pediatric Sleep Architecture Protocol: Wake Windows &amp; Cortisol Rhythms (0-24 Months)">
+  <meta property="og:description" content="Pediatrician-reviewed infant sleep guide: Interactive wake window scheduler, False Start vs Split Night triage, and clinical nap consolidation protocols.">
   <meta property="og:url" content="https://babieblue.com/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/">
   <meta property="og:site_name" content="Babie Blue">
   <meta property="og:type" content="article">
@@ -37,8 +37,8 @@
         "@type": "MedicalWebPage",
         "@id": "https://babieblue.com/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/#webpage",
         "url": "https://babieblue.com/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/",
-        "name": "The Pediatric Sleep Architecture Protocol: Wake Windows, Cortisol Rhythms & Nap Consolidation (0–24 Months)",
-        "description": "Comprehensive clinical analysis of infant sleep architecture, adenosine accumulation, homeostatic sleep drive, and month-by-month wake windows.",
+        "name": "The Pediatric Sleep Architecture Protocol: Wake Windows, Cortisol Rhythms & Nap Consolidation (0-24 Months)",
+        "description": "Comprehensive clinical analysis of infant sleep architecture, adenosine accumulation, homeostatic sleep drive, and month-by-month wake windows with interactive diagnostic tools.",
         "inLanguage": "en-US",
         "isPartOf": { "@id": "https://babieblue.com/#website" },
         "author": {
@@ -114,6 +114,22 @@
               "@type": "Answer",
               "text": "The 3-to-2 nap transition clinically occurs between 6 and 9 months of age when morning and midday wake windows naturally stretch past 2.5 to 3 hours, causing the late afternoon catnap to push bedtime past 8:30 PM or produce persistent nighttime wakefulness (split nights)."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is daytime breastmilk composition different from nighttime milk?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Breast milk exhibits circadian chrononutrition. Daytime milk contains higher concentrations of cortisol and amino acids that promote neurological alertness. Nighttime milk contains up to 5 times higher levels of melatonin and tryptophan, the direct precursor to serotonin and sleep induction. Feeding milk pumped at noon during a 2 AM waking can delay sleep onset."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can low iron or ferritin cause frequent night wakings in babies?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Clinical pediatric sleep studies, including research from Stanford Children's Health, demonstrate that low serum ferritin (below 30 to 50 ng/mL) in infants older than 6 months can cause periodic limb movements, restlessness, and frequent sleep fragmentation, often mistaken for behavioral sleep regression."
+            }
           }
         ]
       }
@@ -122,69 +138,563 @@
   </script>
 
   <style>
-    /* In-Article Clinical Typography & Responsive Visual Styling */
-    .bb-article-container { max-width: 860px; margin: 0 auto; padding: 20px 16px; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1e293b; line-height: 1.7; }
-    .bb-article-header { margin-bottom: 28px; }
-    .bb-article-title { font-size: 2.25rem; line-height: 1.25; font-weight: 800; color: #0f172a; margin: 0 0 16px 0; letter-spacing: -0.02em; }
-    @media (max-width: 640px) { .bb-article-title { font-size: 1.75rem; } }
+    /* Clinical Visual Theme & Interactive Styles for BabieBlue Flagship Guides */
+    :root {
+      --bb-primary: #0284c7;
+      --bb-primary-dark: #0369a1;
+      --bb-primary-light: #e0f2fe;
+      --bb-accent: #0d9488;
+      --bb-accent-light: #ccfbf1;
+      --bb-slate: #0f172a;
+      --bb-muted: #475569;
+      --bb-bg-soft: #f8fafc;
+      --bb-border: #e2e8f0;
+      --bb-alert-red: #ef4444;
+      --bb-alert-bg: #fef2f2;
+      --bb-amber: #f59e0b;
+      --bb-green: #10b981;
+    }
     
-    .bb-eeat-badge { background: #f0f7ff; border-left: 4px solid #0284c7; padding: 14px 18px; border-radius: 8px; margin: 18px 0; font-size: 14px; }
-    .bb-bluf-box { background: #f8fafc; border: 2px solid #0284c7; border-radius: 12px; padding: 22px; margin: 24px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03); }
-    .bb-bluf-box dt { font-weight: 700; color: #0369a1; text-transform: uppercase; letter-spacing: 0.05em; font-size: 13px; margin-bottom: 8px; }
-    .bb-bluf-box dd { margin: 0; font-size: 16px; font-weight: 500; color: #0f172a; line-height: 1.6; }
-    
-    .bb-metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 28px 0; }
-    .bb-metric-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); text-align: center; }
-    .bb-metric-num { font-size: 2.1rem; font-weight: 800; color: #0284c7; line-height: 1.1; margin-bottom: 6px; }
-    .bb-metric-label { font-size: 13px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; }
-    .bb-metric-sub { font-size: 12px; color: #94a3b8; margin-top: 4px; }
-    
-    .bb-triage-tree { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 14px; padding: 24px; margin: 32px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-    .bb-tree-node { display: flex; gap: 16px; padding: 16px; border-left: 3px solid #0284c7; background: #f8fafc; border-radius: 0 8px 8px 0; margin-bottom: 14px; }
-    .bb-tree-icon { font-size: 24px; line-height: 1; flex-shrink: 0; }
-    .bb-tree-content h4 { margin: 0 0 4px 0; color: #0f172a; font-size: 16px; font-weight: 700; }
-    .bb-tree-content p { margin: 0; font-size: 14px; color: #475569; }
+    .bb-article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+    }
 
-    .bb-table-wrapper { overflow-x: auto; margin: 28px 0; border: 1px solid #e2e8f0; border-radius: 12px; }
-    .bb-data-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
-    .bb-data-table th { background: #f1f5f9; padding: 12px 16px; font-weight: 700; color: #1e293b; border-bottom: 2px solid #cbd5e1; }
-    .bb-data-table td { padding: 14px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
-    .bb-data-table tr:last-child td { border-bottom: none; }
-    .bb-data-table tr:hover { background: #f8fafc; }
+    .bb-article-header {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--bb-border);
+      padding-bottom: 20px;
+    }
 
-    .bb-checklist { background: #ffffff; border: 2px solid #e2e8f0; border-radius: 14px; padding: 24px; margin: 32px 0; }
-    .bb-check-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; font-size: 14px; color: #334155; }
-    .bb-check-item input[type="checkbox"] { width: 18px; height: 18px; margin-top: 3px; accent-color: #0284c7; cursor: pointer; }
-    
-    .bb-fridge-sheet { background: #fffdfa; border: 2px dashed #f59e0b; border-radius: 14px; padding: 26px; margin: 36px 0; }
-    .bb-emergency-alert { background: #fef2f2; border: 2px solid #ef4444; border-radius: 12px; padding: 22px; margin: 32px 0; }
-    .bb-emergency-alert h3 { color: #991b1b; margin: 0 0 8px 0; font-size: 18px; }
-    .bb-emergency-alert p { color: #7f1d1d; margin: 0; font-size: 14px; }
+    .bb-hub-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bb-primary-light);
+      color: var(--bb-primary-dark);
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+      text-decoration: none;
+    }
 
-    .bb-ad-anchor { min-height: 280px; background: #f8fafc; border-radius: 8px; margin: 2rem 0; display: flex; align-items: center; justify-content: center; }
-    
-    @media print {
-      body { background: #fff !important; color: #000 !important; font-size: 11pt !important; }
-      header.site-header, footer.site-footer, .bb-ad-anchor, .bb-eeat-badge, .main-nav { display: none !important; }
-      .bb-fridge-sheet { border: 2px solid #000 !important; background: #fff !important; page-break-inside: avoid !important; }
+    .bb-article-title {
+      font-size: 2.1rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--bb-slate);
+      margin: 8px 0 16px 0;
+    }
+
+    @media (min-width: 768px) {
+      .bb-article-title {
+        font-size: 2.6rem;
+      }
+    }
+
+    /* Trust & E-E-A-T Reviewer Badge */
+    .bb-eeat-badge {
+      background: #f1f5f9;
+      border-left: 4px solid var(--bb-primary);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13px;
+      color: var(--bb-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .bb-eeat-badge strong {
+      color: var(--bb-slate);
+    }
+
+    /* BLUF Summary Card */
+    .bb-bluf-box {
+      background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin: 24px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    .bb-bluf-box h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+      color: #0369a1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .bb-bluf-box ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .bb-bluf-box li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    /* Navigation Pills */
+    .bb-toc-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0 32px 0;
+      padding: 14px;
+      background: var(--bb-bg-soft);
+      border-radius: 10px;
+      border: 1px solid var(--bb-border);
+    }
+
+    .bb-toc-pill {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--bb-primary-dark);
+      background: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #cbd5e1;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .bb-toc-pill:hover {
+      background: var(--bb-primary);
+      color: #fff;
+      border-color: var(--bb-primary);
+    }
+
+    /* Key Metric Highlight Cards */
+    .bb-metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .bb-metric-card {
+      background: #fff;
+      border: 1px solid var(--bb-border);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease;
+    }
+
+    .bb-metric-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+    }
+
+    .bb-metric-num {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--bb-primary-dark);
+      line-height: 1.1;
+    }
+
+    .bb-metric-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--bb-slate);
+      margin-top: 6px;
+    }
+
+    .bb-metric-sub {
+      font-size: 11px;
+      color: var(--bb-muted);
+      margin-top: 2px;
+    }
+
+    /* Interactive Component Containers */
+    .bb-interactive-tool {
+      background: #ffffff;
+      border: 2px solid #bae6fd;
+      border-radius: 14px;
+      padding: 24px;
+      margin: 32px 0;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+    }
+
+    .bb-tool-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px solid var(--bb-primary-light);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    .bb-tool-header h3 {
+      margin: 0;
+      font-size: 1.35rem;
+      color: var(--bb-slate);
+    }
+
+    .bb-tool-badge {
+      background: var(--bb-primary);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .bb-tool-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .bb-tool-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .bb-input-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--bb-slate);
+      margin-bottom: 6px;
+    }
+
+    .bb-input-group select,
+    .bb-input-group input[type="time"],
+    .bb-input-group input[type="number"],
+    .bb-input-group input[type="range"] {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 14px;
+      background: #f8fafc;
+      color: var(--bb-slate);
+      box-sizing: border-box;
+    }
+
+    .bb-calc-btn {
+      background: var(--bb-primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 16px;
+      transition: background 0.2s ease;
+    }
+
+    .bb-calc-btn:hover {
+      background: var(--bb-primary-dark);
+    }
+
+    .bb-schedule-results {
+      margin-top: 20px;
+      background: var(--bb-bg-soft);
+      border-radius: 10px;
+      padding: 18px;
+      border: 1px solid var(--bb-border);
+    }
+
+    .bb-schedule-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .bb-timeline-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .bb-block-wake {
+      background: #e0f2fe;
+      border-left: 4px solid var(--bb-primary);
+      color: #0369a1;
+    }
+
+    .bb-block-sleep {
+      background: #ede9fe;
+      border-left: 4px solid #8b5cf6;
+      color: #5b21b6;
+    }
+
+    .bb-block-feed {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      color: #92400e;
+    }
+
+    /* 3 AM Diagnostic Matrix Tabs */
+    .bb-tab-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--bb-border);
+      margin-bottom: 16px;
+    }
+
+    .bb-tab-btn {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--bb-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .bb-tab-btn.active {
+      background: var(--bb-primary);
+      color: #fff;
+      border-color: var(--bb-primary);
+    }
+
+    .bb-diag-card {
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid var(--bb-border);
+      padding: 18px;
+    }
+
+    .bb-diag-meta {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 640px) {
+      .bb-diag-meta {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .bb-meta-box {
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+    .bb-meta-cause {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fca5a5;
+    }
+
+    .bb-meta-fix {
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #86efac;
+    }
+
+    /* 10-Point Diagnostic Checklist & Gauge */
+    .bb-checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 12px;
+      background: #f8fafc;
+      border: 1px solid var(--bb-border);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .bb-checklist-item:hover {
+      background: #f1f5f9;
+    }
+
+    .bb-checklist-item input[type="checkbox"] {
+      margin-top: 4px;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .bb-gauge-container {
+      margin-top: 18px;
+      background: #e2e8f0;
+      border-radius: 9999px;
+      height: 18px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bb-gauge-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--bb-green);
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+
+    /* Tables */
+    .bb-table-wrapper {
+      overflow-x: auto;
+      margin: 24px 0;
+      border-radius: 10px;
+      border: 1px solid var(--bb-border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    .bb-clinical-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .bb-clinical-table th {
+      background: #f1f5f9;
+      color: var(--bb-slate);
+      font-weight: 700;
+      padding: 14px 16px;
+      border-bottom: 2px solid var(--bb-border);
+    }
+
+    .bb-clinical-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--bb-border);
+      vertical-align: top;
+    }
+
+    .bb-clinical-table tr:hover td {
+      background: #f8fafc;
+    }
+
+    /* Clinical Callout Blocks */
+    .bb-callout {
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 24px 0;
+      border-left: 5px solid;
+    }
+
+    .bb-callout-clinical {
+      background: #eff6ff;
+      border-color: #3b82f6;
+      color: #1e3a8a;
+    }
+
+    .bb-callout-warning {
+      background: #fffbeb;
+      border-color: #f59e0b;
+      color: #78350f;
+    }
+
+    .bb-callout-danger {
+      background: #fef2f2;
+      border-color: #ef4444;
+      color: #7f1d1d;
+    }
+
+    .bb-callout h4 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* AdSense Anchor Box (Zero CLS) */
+    .bb-ad-anchor {
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 32px 0;
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+    }
+
+    /* Age Card Layout */
+    .bb-age-card {
+      background: #ffffff;
+      border: 1px solid var(--bb-border);
+      border-top: 4px solid var(--bb-primary);
+      border-radius: 12px;
+      padding: 22px;
+      margin: 28px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    .bb-age-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .bb-tag {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .bb-tag-wake {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+
+    .bb-tag-nap {
+      background: #ede9fe;
+      color: #5b21b6;
+    }
+
+    .bb-tag-night {
+      background: #dcfce7;
+      color: #15803d;
     }
   </style>
 </head>
 <body>
 
+  <!-- Site Navigation Header -->
   <header class="site-header">
     <div class="header-inner">
       <a href="/" class="site-logo">Babie<span>Blue</span></a>
       <nav class="main-nav">
         <ul>
-          <li><a href="/">Home</a></li>
           <li><a href="/pregnancy/">Pregnancy</a></li>
-          <li><a href="/baby-care/">Baby Care</a></li>
-          <li><a href="/parenting/">Parenting</a></li>
+          <li><a href="/baby-care/" class="active">Baby Care</a></li>
           <li><a href="/maternal-health/">Maternal Health</a></li>
+          <li><a href="/parenting/">Parenting</a></li>
           <li><a href="/calculators/">Calculators</a></li>
-          <li><a href="/about-us/">About Us</a></li>
-          <li><a href="/contact-us/">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -194,440 +704,966 @@
     <main class="content-area">
       <article class="bb-article-container">
         
-        <header class="bb-article-header">
-          <span style="font-size:13px;font-weight:700;color:#0284c7;text-transform:uppercase;letter-spacing:0.06em;">Clinical Pediatric Protocol &bull; Sleep Architecture</span>
-          <h1 class="bb-article-title">The Pediatric Sleep Architecture Protocol: Wake Windows, Cortisol Rhythms &amp; Nap Consolidation (0–24 Months)</h1>
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" style="margin-top: 16px; font-size: 13px; color: #64748b;">
+          <a href="/" style="color: #64748b; text-decoration: none;">Home</a> &rsaquo;
+          <a href="/baby-care/" style="color: #64748b; text-decoration: none;">Baby Care</a> &rsaquo;
+          <span style="color: #0f172a; font-weight: 600;">Pediatric Sleep Architecture &amp; Wake Windows</span>
+        </nav>
 
+        <header class="bb-article-header">
+          <a href="/baby-care/" class="bb-hub-badge">&#x1F476; Clinical Pediatric Care</a>
+          <h1 class="bb-article-title">The Pediatric Sleep Architecture Protocol: Wake Windows, Cortisol Rhythms &amp; Nap Consolidation (0&ndash;24 Months)</h1>
+          
           <div class="bb-eeat-badge">
-            <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;">
-              <div>
-                <strong>Written by:</strong> <a href="/madhuri-b/" style="color:#0369a1;text-decoration:underline;font-weight:600;">Madhuri B</a> (Lead Maternal &amp; Pediatric Healthcare Writer)
-                <span style="margin:0 6px;color:#94a3b8;">|</span>
-                <strong>Medically Reviewed &amp; Approved by:</strong>
-                <a href="/about-us/" style="color:#0369a1;font-weight:600;">Dr. Anagha Nawal (Consultant OB-GYN)</a> &amp;
-                <a href="/about-us/" style="color:#0369a1;font-weight:600;">Dr. Mangala Devi</a>
-              </div>
-              <div style="font-size:12px;color:#0369a1;background:#e0f2fe;padding:4px 10px;border-radius:999px;font-weight:600;">
-                ✓ ACOG &amp; AAP Clinical Sleep Baseline &bull; Updated Oct 2026
-              </div>
-            </div>
+            <div><strong>Clinical Authorship:</strong> <a href="/madhuri-b/" style="color:#0369a1; text-decoration:none;">Madhuri B</a>, Lead Pediatric Writer</div>
+            <div><strong>Medical Reviewers:</strong> Dr. Anagha Nawal (Consultant OB/GYN) &amp; Dr. Mangala Devi (Senior Clinical Approver)</div>
+            <div><strong>Protocol Status:</strong> Evidence-Based Clinical Guideline &bull; AAP Compliant &bull; Updated October 2026</div>
           </div>
         </header>
 
-        <!-- AEO / GEO Semantic BLUF Summary Box -->
+        <!-- BLUF (Bottom Line Up Front) Summary Box for Google GEO/AEO Rich Extracts -->
         <section aria-label="Clinical Summary" class="bb-bluf-box">
-          <dl>
-            <dt>The Clinical Bottom Line (BLUF)</dt>
-            <dd>
-              <strong>Infant wake windows</strong> represent the biologically finite duration between sleep intervals governed by homeostatic sleep pressure (adenosine accumulation). When an infant exceeds their developmental wake window by even 15 to 20 minutes, the brain activates the hypothalamic-pituitary-adrenal (HPA) axis, surging cortisol and adrenaline. This triggers hyperarousal, paradoxical hyperactivity, fight-or-flight crib resistance, and fragmented night sleep. Respecting age-specific wake thresholds prevents neuro-endocrine fatigue and supports consolidated restorative non-REM sleep.
-            </dd>
-          </dl>
+          <h2>&#x1F4CB; Executive Summary &amp; Rapid Clinical Reference</h2>
+          <p style="margin-top:0; font-size:15px; color:#334155;">
+            Infant sleep is governed by two opposing neurological drivers: <strong>Process S (homeostatic sleep pressure driven by adenosine accumulation)</strong> and <strong>Process C (the circadian pineal-melatonin oscillator)</strong>. Exceeding an infant's biological wake window by as few as 15 to 20 minutes triggers hypothalamic-pituitary-adrenal (HPA) axis hyperarousal, flooding the immature bloodstream with cortisol and adrenaline.
+          </p>
+          <ul>
+            <li><strong>0&ndash;8 Weeks:</strong> 45&ndash;90 minute wake thresholds. Governed purely by hunger and rapid adenosine saturation; no endogenous melatonin rhythm.</li>
+            <li><strong>3&ndash;4 Months (The Sleep Reorganization):</strong> 75&ndash;120 minutes. Sleep cycle permanently shifts from 2-phase newborn sleep to 4-stage adult architecture with rapid REM transitions.</li>
+            <li><strong>5&ndash;6 Months:</strong> 2&ndash;2.5 hours. Daytime naps consolidate; pineal circadian regulation reaches full biological maturity.</li>
+            <li><strong>7&ndash;9 Months:</strong> 2.5&ndash;3.5 hours. The 3-to-2 nap transition window accompanied by peak separation anxiety and gross motor standing milestones.</li>
+            <li><strong>10&ndash;14 Months:</strong> 3&ndash;4.25 hours. Stable 2-nap schedule. Beware the "12-month fake nap strike" which causes premature 1-nap drops.</li>
+            <li><strong>15&ndash;24 Months:</strong> 4.5&ndash;5.5 hours. Single consolidated midday nap (2&ndash;2.5 hours); prefrontal executive autonomy boundaries.</li>
+          </ul>
         </section>
 
-        <!-- Breathe First Immediate Triage -->
-        <div style="background:#f0fdf4;border-left:4px solid #22c55e;padding:16px 20px;border-radius:8px;margin:24px 0;">
-          <h3 style="margin:0 0 6px 0;color:#15803d;font-size:16px;">🌿 The "Breathe First" Quick Check for Stressed Parents</h3>
-          <p style="margin:0;font-size:14px;color:#166534;line-height:1.6;">
-            If your baby is screaming, arching their back, or refusing their crib right now: <strong>Take a slow breath. Your baby is not broken, and you have not failed.</strong> You are likely dealing with acute cortisol elevation from a missed wake window. Lower the nursery lights immediately, turn on low-frequency pink/brown noise, hold your baby upright against your chest in skin-to-skin contact, and allow their nervous system to coregulate before attempting the crib again.
-          </p>
+        <!-- Interactive Quick Navigation Pills -->
+        <div class="bb-toc-pills">
+          <span style="font-weight:700; font-size:13px; color:#475569; display:flex; align-items:center;">Jump to:</span>
+          <a href="#wakeCalculator" class="bb-toc-pill">&#x2699;&#xFE0F; Schedule Generator</a>
+          <a href="#anomalyTriage" class="bb-toc-pill">&#x1F6A8; 3 AM Sleep Triage</a>
+          <a href="#overtiredMeter" class="bb-toc-pill">&#x1F4CA; Overtiredness Meter</a>
+          <a href="#nurseryErgonomics" class="bb-toc-pill">&#x1F321;&#xFE0F; Room &amp; TOG Calc</a>
+          <a href="#biologyDeepDive" class="bb-toc-pill">&#x1F9E0; Biology of Process S &amp; C</a>
+          <a href="#chrononutrition" class="bb-toc-pill">&#x1F95B; Chrononutrition &amp; Milk</a>
+          <a href="#ageProtocols" class="bb-toc-pill">&#x1F4C5; Month-by-Month Schedules</a>
+          <a href="#napTransitions" class="bb-toc-pill">&#x1F504; Nap Transitions</a>
+          <a href="#faqSection" class="bb-toc-pill">&#x2753; Clinical FAQs</a>
         </div>
 
-        <!-- AdSense Zero-CLS Anchor 1 -->
-        <div class="bb-ad-anchor">
-          <span style="font-size:11px;color:#94a3b8;letter-spacing:0.05em;text-transform:uppercase;">Advertisement Space</span>
-        </div>
-
-        <!-- Clinical Metric Grid -->
-        <h2 style="font-size:22px;color:#0f172a;margin:32px 0 16px 0;">Biological Sleep Architecture Key Metrics</h2>
+        <!-- High-Impact Metric Cards -->
         <div class="bb-metric-grid">
           <div class="bb-metric-card">
-            <div class="bb-metric-num">45–90m</div>
+            <div class="bb-metric-num">45&ndash;90m</div>
             <div class="bb-metric-label">Newborn Wake Threshold</div>
-            <div class="bb-metric-sub">0–8 Weeks Maximum Tolerable Awake Time</div>
+            <div class="bb-metric-sub">0&ndash;8 Weeks Maximum Awake Window</div>
           </div>
           <div class="bb-metric-card">
-            <div class="bb-metric-num">8–12 Wks</div>
-            <div class="bb-metric-label">Circadian Genesis</div>
-            <div class="bb-metric-sub">Onset of Endogenous Pineal Melatonin</div>
+            <div class="bb-metric-num">8&ndash;12 Wks</div>
+            <div class="bb-metric-label">Pineal Melatonin Onset</div>
+            <div class="bb-metric-sub">Endogenous Circadian Rhythm Emergence</div>
           </div>
           <div class="bb-metric-card">
-            <div class="bb-metric-num">50 Min</div>
+            <div class="bb-metric-num">50 min</div>
             <div class="bb-metric-label">Infant Sleep Cycle</div>
-            <div class="bb-metric-sub">50% Active REM vs. 50% Quiet NREM</div>
+            <div class="bb-metric-sub">Versus 90&ndash;120 Minutes in Adults</div>
           </div>
           <div class="bb-metric-card">
-            <div class="bb-metric-num">15–20m</div>
-            <div class="bb-metric-label">Cortisol Surge Window</div>
-            <div class="bb-metric-sub">Time from Overtiredness to Adrenaline Spike</div>
+            <div class="bb-metric-num">&gt;30 ng/mL</div>
+            <div class="bb-metric-label">Serum Ferritin Target</div>
+            <div class="bb-metric-sub">Prevents Restless Sleep Fragmentation</div>
           </div>
         </div>
 
-        <!-- Neurobiology of Sleep Pressure -->
-        <h2 style="font-size:22px;color:#0f172a;margin:32px 0 16px 0;">1. The Physiology of Infant Sleep: Adenosine Accumulation vs. Cortisol Cascades</h2>
-        <p>
-          Infant sleep regulation is governed by the two-process model of sleep-wake regulation originally formalized by Alexander Borbély: <strong>Process S (the homeostatic sleep drive)</strong> and <strong>Process C (the circadian alerting rhythm)</strong>. In adult biology, Process S allows for sustained wakefulness across 16 consecutive hours. In the rapidly developing pediatric brain, however, cellular energy metabolism consumes massive quantities of adenosine triphosphate (ATP).
-        </p>
-        <p>
-          As neurons fire, the metabolic byproduct <mark class="clinical-term">adenosine</mark> binds to inhibitory adenosine receptors in the ventrolateral preoptic nucleus (VLPO) of the hypothalamus. This progressive accumulation generates <strong>homeostatic sleep pressure</strong>. An infant’s central nervous system possesses a vastly smaller reservoir for adenosine accumulation than an adult brain. 
-        </p>
-        <p>
-          When an infant's developmental wake threshold is breached, the nervous system interprets extreme exhaustion as a biological threat. The hypothalamus triggers the sympathetic nervous system and the adrenocortical axis to flood the bloodstream with <strong>cortisol and epinephrine</strong>. This biochemical cascade explains why an overtired infant does not simply "crash from exhaustion"—they become hyper-vigilant, irritable, exhibit frantic rooting, and experience dilated pupils, making settling into quiet sleep physiological warfare.
-        </p>
-
-        <!-- Master Wake Window Table -->
-        <h2 style="font-size:22px;color:#0f172a;margin:36px 0 16px 0;">2. Clinical Master Wake Window &amp; Nap Schedule (0–24 Months)</h2>
-        <p>
-          The following reference table outlines peer-reviewed wake window durations, total 24-hour sleep quotients, and nap transition milestones recommended by the American Academy of Pediatrics (AAP) and pediatric somnologists:
-        </p>
-
-        <div class="bb-table-wrapper">
-          <table class="bb-data-table">
-            <thead>
-              <tr>
-                <th>Age Bracket</th>
-                <th>Tolerable Wake Window</th>
-                <th>Nap Frequency</th>
-                <th>Total 24h Sleep</th>
-                <th>Circadian Biomarkers</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>0–6 Weeks</strong></td>
-                <td>45–60 minutes</td>
-                <td>4–6 irregular naps</td>
-                <td>14–17 hours</td>
-                <td>No circadian rhythm; governed entirely by gastric volume &amp; hunger cues.</td>
-              </tr>
-              <tr>
-                <td><strong>7–12 Weeks</strong></td>
-                <td>60–90 minutes</td>
-                <td>4–5 naps</td>
-                <td>14–16 hours</td>
-                <td>Initial onset of pineal melatonin secretion; social smiles emerge.</td>
-              </tr>
-              <tr>
-                <td><strong>3–4 Months</strong></td>
-                <td>75–120 minutes</td>
-                <td>3–4 naps</td>
-                <td>14–15 hours</td>
-                <td>The "4-month sleep transition": Sleep architecture permanently shifts to 4 adult stages.</td>
-              </tr>
-              <tr>
-                <td><strong>5–7 Months</strong></td>
-                <td>2.0–3.0 hours</td>
-                <td>3 naps &rarr; 2 naps</td>
-                <td>13–15 hours</td>
-                <td>Nap consolidation: Morning nap (mental restoration) &amp; afternoon nap (physical recovery).</td>
-              </tr>
-              <tr>
-                <td><strong>8–10 Months</strong></td>
-                <td>2.75–3.5 hours</td>
-                <td>2 stable naps</td>
-                <td>12–14 hours</td>
-                <td>Separation anxiety peak; motor milestones (crawling, pulling up) interfere with onset.</td>
-              </tr>
-              <tr>
-                <td><strong>11–14 Months</strong></td>
-                <td>3.0–4.0 hours</td>
-                <td>2 naps &rarr; 1 nap</td>
-                <td>12–14 hours</td>
-                <td>Morning nap shortening; late afternoon nap refusal is common before true transition.</td>
-              </tr>
-              <tr>
-                <td><strong>15–24 Months</strong></td>
-                <td>4.5–5.5 hours</td>
-                <td>1 afternoon nap</td>
-                <td>11–14 hours</td>
-                <td>Consolidated midday nap (1.5–2.5 hours); independent bedtime routine stabilization.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- AdSense Zero-CLS Anchor 2 -->
-        <div class="bb-ad-anchor">
-          <span style="font-size:11px;color:#94a3b8;letter-spacing:0.05em;text-transform:uppercase;">Advertisement Space</span>
-        </div>
-
-        <!-- 3 AM Triage Tree -->
-        <h2 style="font-size:22px;color:#0f172a;margin:36px 0 16px 0;">3. The 3 AM Pediatric Sleep Distress Decision Tree</h2>
-        <p>
-          When bedtime unravels into persistent crying and crib refusal, use this diagnostic triage flow to isolate the physiological root cause:
-        </p>
-
-        <div class="bb-triage-tree">
-          <div class="bb-tree-node">
-            <div class="bb-tree-icon">⚡</div>
-            <div class="bb-tree-content">
-              <h4>Branch A: Overtired Hyperarousal (High Cortisol)</h4>
-              <p><strong>Clinical Signs:</strong> Stiff back-arching, frantic rubbing of eyes/ears, shrill escalating cry upon being put down, flailing arms. <br /><strong>Action Protocol:</strong> Abort standard crib training. Carry infant in upright flexion with gentle vertical bouncing for 10 minutes in complete pitch darkness with 65–70 dB white noise. Once heart rate decrescendo occurs, transfer after deep rhythmic breathing is observed.</p>
-            </div>
-          </div>
-
-          <div class="bb-tree-node" style="border-left-color: #f59e0b;">
-            <div class="bb-tree-icon">🕒</div>
-            <div class="bb-tree-content">
-              <h4>Branch B: Under-tired / Insufficient Sleep Pressure</h4>
-              <p><strong>Clinical Signs:</strong> Calm smiling, rolling across crib, wide eyes without distress for 45+ minutes after placement, vocalizing happily. <br /><strong>Action Protocol:</strong> Do not force immediate sleep. Remove from crib for 20 minutes under dim ambient red/amber light. Engage in quiet book browsing on the nursery floor before reattempting settling. Adjust preceding wake window longer tomorrow by 15 minutes.</p>
-            </div>
-          </div>
-
-          <div class="bb-tree-node" style="border-left-color: #ef4444;">
-            <div class="bb-tree-icon">🩺</div>
-            <div class="bb-tree-content">
-              <h4>Branch C: Gastrointestinal &amp; Airway Obstruction</h4>
-              <p><strong>Clinical Signs:</strong> Pulling knees sharply up to the abdominal wall, painful grimacing 15 minutes post-feed, wet gurgling sounds, coughing when laid horizontal. <br /><strong>Action Protocol:</strong> Suspect aerophagia or silent acid reflux. Elevate infant upright on shoulder for 20 minutes. Perform gentle bicycling of legs and abdominal clockwise massage. If persistent, review our clinical guide on <a href="/baby-care/bottle-refusal-fixes/" style="color:#0284c7;font-weight:600;">Infant Reflux &amp; Bottle Refusal Fixes</a>.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Safe vs Contraindicated Matrix -->
-        <h2 style="font-size:22px;color:#0f172a;margin:36px 0 16px 0;">4. Evidence-Based Safe Sleep vs. Dangerous Commercial Misconceptions</h2>
-        <p>
-          The pediatric marketplace contains numerous sleep products marketed to desperate, sleep-deprived parents that directly contradict the <strong>AAP Task Force on Sudden Infant Death Syndrome (SIDS)</strong>:
-        </p>
-
-        <div class="bb-table-wrapper">
-          <table class="bb-data-table">
-            <thead>
-              <tr>
-                <th style="width:25%;">Practice / Product</th>
-                <th style="width:25%;">AAP Clinical Recommendation</th>
-                <th style="width:50%;">Biomechanical / Physiological Rationale</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Firm, Flat Sleep Surface</strong></td>
-                <td><span style="color:#16a34a;font-weight:700;">✓ Gold Standard</span></td>
-                <td>Eliminates positional asphyxiation risk and maintains unobstructed open cervical airway architecture.</td>
-              </tr>
-              <tr>
-                <td><strong>Weighted Swaddles &amp; Sleep Sacks</strong></td>
-                <td><span style="color:#dc2626;font-weight:700;">✕ Strictly Contraindicated</span></td>
-                <td>Restricts chest wall excursion, elevates infant heart rate, and impairs autonomic arousal responses required to escape hypoxic events.</td>
-              </tr>
-              <tr>
-                <td><strong>Inclined Sleepers &amp; Loungers</strong></td>
-                <td><span style="color:#dc2626;font-weight:700;">✕ Strictly Contraindicated</span></td>
-                <td>Triggers chin-to-chest positional asphyxiation; banned under the US federal Safe Sleep for Babies Act.</td>
-              </tr>
-              <tr>
-                <td><strong>Room-Sharing without Bed-Sharing</strong></td>
-                <td><span style="color:#16a34a;font-weight:700;">✓ Recommended for 6 Months</span></td>
-                <td>Lowers SIDS risk by upwards of 50% by regulating infant sensory micro-arousals against parental breathing patterns.</td>
-              </tr>
-              <tr>
-                <td><strong>Amber Teething Necklaces</strong></td>
-                <td><span style="color:#dc2626;font-weight:700;">✕ Strictly Contraindicated</span></td>
-                <td>Poses high strangulation and aspiration hazard; zero pharmacokinetic evidence of succinic acid absorption in pediatric skin.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Symptom Probability Checklist -->
-        <h2 style="font-size:22px;color:#0f172a;margin:36px 0 16px 0;">5. The 10-Point Overtired Clinical Evaluation Checklist</h2>
-        <p>
-          Before declaring your infant has "colic" or "a sleep regression," evaluate these physiological markers. Check all that apply over the past 24 hours:
-        </p>
-
-        <div class="bb-checklist">
-          <div class="bb-check-item">
-            <input type="checkbox" id="c1" />
-            <label for="c1"><strong>Tension in eyebrows and facial grimacing</strong> appearing 10–15 minutes prior to crying.</label>
-          </div>
-          <div class="bb-check-item">
-            <input type="checkbox" id="c2" />
-            <label for="c2"><strong>Stiffening of the torso and limbs</strong> with clenched fists held tightly against the chest.</label>
-          </div>
-          <div class="bb-check-item">
-            <input type="checkbox" id="c3" />
-            <label for="c3"><strong>Frequent pulling away from the breast or bottle</strong> despite obvious hunger signs.</label>
-          </div>
-          <div class="bb-check-item">
-            <input type="checkbox" id="c4" />
-            <label for="c4"><strong>Micro-naps lasting only 20–30 minutes</strong> with inability to link into the next quiet sleep cycle.</label>
-          </div>
-          <div class="bb-check-item">
-            <input type="checkbox" id="c5" />
-            <label for="c5"><strong>Paradoxical hyper-activity:</strong> Baby appears "wide awake," giggling or staring intensely at lights past their wake window.</label>
-          </div>
-          <div class="bb-check-item">
-            <input type="checkbox" id="c6" />
-            <label for="c6"><strong>Sudden inconsolable crying</strong> immediately upon entering the darkened nursery.</label>
-          </div>
-          <div class="bb-check-item">
-            <input type="checkbox" id="c7" />
-            <label for="c7"><strong>Frequent night wakings</strong> occurring every 60–90 minutes following a chaotic daytime nap schedule.</label>
-          </div>
-          <div class="bb-check-item">
-            <input type="checkbox" id="c8" />
-            <label for="c8"><strong>Early morning awakenings (4:30 AM–5:00 AM)</strong> without returning to sleep despite feeding.</label>
-          </div>
-          <div class="bb-check-item">
-            <input type="checkbox" id="c9" />
-            <label for="c9"><strong>Fussy, disorganized feeding</strong> with excessive air swallowing during late afternoon feeds.</label>
-          </div>
-          <div class="bb-check-item">
-            <input type="checkbox" id="c10" />
-            <label for="c10"><strong>Absence of calm yawning:</strong> Skipping subtle tiredness cues directly into distressed screaming.</label>
-          </div>
-          <p style="font-size:13px;color:#64748b;margin:16px 0 0 0;">
-            <em>Scoring:</em> 4 or more checked boxes indicates <strong>acute HPA axis hyperarousal (chronic overtiredness)</strong> rather than hunger or behavioral rebellion. Shorten the next 3 wake windows by 20 minutes to clear circulating cortisol.
-          </p>
-        </div>
-
-        <!-- Printable Fridge Sheet -->
-        <div class="bb-fridge-sheet">
-          <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #f59e0b;padding-bottom:12px;margin-bottom:16px;">
+        <!-- INTERACTIVE CLINICAL TOOL #1: DYNAMIC WAKE WINDOW & NAP TIMELINE GENERATOR -->
+        <section class="bb-interactive-tool" id="wakeCalculator">
+          <div class="bb-tool-header">
+            <span style="font-size:24px;">&#x2699;&#xFE0F;</span>
             <div>
-              <h3 style="margin:0;color:#b45309;font-size:18px;font-weight:800;">📋 Clinic Quick-Reference Sheet: Wake Windows by Age</h3>
-              <span style="font-size:12px;color:#78350f;">BabieBlue Evidence-Based Pediatric Protocol &bull; Keep on Refrigerator</span>
+              <h3>Interactive Pediatric Wake Window &amp; Nap Timeline Generator</h3>
+              <p style="margin:2px 0 0 0; font-size:13px; color:#64748b;">Computes real-time biological nap blocks, awake windows, and bedtime targets based on morning wake-up.</p>
             </div>
-            <button onclick="window.print()" style="background:#f59e0b;color:#fff;border:none;padding:8px 14px;border-radius:6px;font-weight:700;font-size:12px;cursor:pointer;">🖨️ Print Sheet</button>
+            <span class="bb-tool-badge">Live Clinical Tool</span>
           </div>
 
-          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:14px;font-size:13px;color:#451a03;">
-            <div style="background:#fff;padding:12px;border-radius:8px;border:1px solid #fde68a;">
-              <strong>Newborn (0–8 Wks):</strong><br />Wake: 45–60 min<br />Naps: 4–6 / day<br />Day Sleep: 7–9 hrs
+          <div class="bb-tool-grid">
+            <div class="bb-input-group">
+              <label for="calcAge">Infant Biological / Adjusted Age Bracket:</label>
+              <select id="calcAge" onchange="generatePediatricSchedule()">
+                <option value="0-8w">0 &ndash; 8 Weeks (Newborn Fourth Trimester)</option>
+                <option value="9-12w">9 &ndash; 12 Weeks (Circadian Awakening)</option>
+                <option value="4m">4 Months (Permanent Sleep Reorganization)</option>
+                <option value="5-6m" selected>5 &ndash; 6 Months (3 Consolidated Naps)</option>
+                <option value="7-9m">7 &ndash; 9 Months (3-to-2 Nap Transition Window)</option>
+                <option value="10-12m">10 &ndash; 12 Months (Stable 2-Nap Schedule)</option>
+                <option value="13-18m">13 &ndash; 18 Months (2-to-1 Nap Bridge Protocol)</option>
+                <option value="19-24m">19 &ndash; 24 Months (Single Consolidated Midday Nap)</option>
+              </select>
             </div>
-            <div style="background:#fff;padding:12px;border-radius:8px;border:1px solid #fde68a;">
-              <strong>2–3 Months:</strong><br />Wake: 60–90 min<br />Naps: 4–5 / day<br />Day Sleep: 5–6 hrs
-            </div>
-            <div style="background:#fff;padding:12px;border-radius:8px;border:1px solid #fde68a;">
-              <strong>4–5 Months:</strong><br />Wake: 1.5–2.25 hrs<br />Naps: 3–4 / day<br />Day Sleep: 4–5 hrs
-            </div>
-            <div style="background:#fff;padding:12px;border-radius:8px;border:1px solid #fde68a;">
-              <strong>6–8 Months:</strong><br />Wake: 2.25–3.0 hrs<br />Naps: 2–3 / day<br />Day Sleep: 3–3.5 hrs
-            </div>
-            <div style="background:#fff;padding:12px;border-radius:8px;border:1px solid #fde68a;">
-              <strong>9–12 Months:</strong><br />Wake: 2.75–3.75 hrs<br />Naps: 2 / day<br />Day Sleep: 2.5–3 hrs
-            </div>
-            <div style="background:#fff;padding:12px;border-radius:8px;border:1px solid #fde68a;">
-              <strong>13–18 Months:</strong><br />Wake: 3.5–4.5 hrs<br />Naps: 1–2 / day<br />Day Sleep: 2–2.5 hrs
+
+            <div class="bb-input-group">
+              <label for="calcWakeTime">Morning Wake-Up Time (Anchor):</label>
+              <input type="time" id="calcWakeTime" value="07:00" onchange="generatePediatricSchedule()" />
             </div>
           </div>
-          <div style="margin-top:14px;font-size:12px;color:#92400e;line-height:1.4;">
-            <strong>Golden Rule of Nap Timing:</strong> The first wake window of the day is always the shortest. The wake window prior to bedtime is always the longest to build adequate nocturnal adenosine pressure.
+
+          <button class="bb-calc-btn" onclick="generatePediatricSchedule()">Recalculate Dynamic Biological Schedule &rarr;</button>
+
+          <div id="scheduleResults" class="bb-schedule-results">
+            <div style="font-weight:700; color:#0369a1; font-size:15px; margin-bottom:8px;" id="schedSummaryTitle">Recommended 24-Hour Biological Rhythm</div>
+            <div class="bb-schedule-timeline" id="schedTimelineBlocks"></div>
+            <div style="margin-top:14px; font-size:13px; color:#475569; background:#fff; padding:12px; border-radius:8px; border:1px solid #e2e8f0;" id="schedNotes"></div>
           </div>
+        </section>
+
+        <!-- FIRST AD SLOT ANCHOR (Zero CLS) -->
+        <div class="bb-ad-anchor" aria-label="Advertisement Sponsor">
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-4453876229797223"
+               data-ad-slot="auto"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <!-- Red Flag Emergency Alert -->
-        <div class="bb-emergency-alert">
-          <h3>🚨 When Sleep Disturbances Signal a Medical Emergency</h3>
+        <!-- SECTION 1: NEUROBIOLOGY OF SLEEP ARCHITECTURE -->
+        <section id="biologyDeepDive">
+          <h2>1. The Neurobiology of Infant Sleep: Process S vs. Process C</h2>
           <p>
-            While sleep resistance is overwhelmingly behavioral and developmental, immediate medical evaluation is required if your infant exhibits any of the following clinical signs:
+            Modern pediatric sleep science is grounded in the <strong>Two-Process Model of Sleep Regulation</strong>, originally formulated by neurobiologist Alexander Borb&eacute;ly. Infant sleep resistance, middle-of-the-night screaming, and chronic 30-minute naps are not behavioral defiance; they are neurochemical failures of alignment between these two biological forces:
           </p>
-          <ul style="margin:10px 0 0 20px;font-size:14px;color:#7f1d1d;">
-            <li><strong>Stridor or paradoxical chest wall retractions</strong> (chest sucking in beneath the ribs during sleep).</li>
-            <li><strong>Extreme lethargy:</strong> Inability to rouse infant for scheduled feeds or unresponsiveness to physical stimuli.</li>
-            <li><strong>Central cyanosis:</strong> Bluish tint around the lips, tongue, or nail beds during or following sleep.</li>
-            <li><strong>Fever &ge; 100.4&deg;F (38.0&deg;C)</strong> in an infant younger than 90 days of age.</li>
-            <li><strong>Inconsolable shrill, high-pitched crying</strong> that persists continuously past 2 hours without interruption.</li>
+
+          <div class="bb-callout bb-callout-clinical">
+            <h4>&#x1F9E0; Clinical Mechanism: Process S (Homeostatic Sleep Pressure)</h4>
+            <p style="margin:0; font-size:14px;">
+              Every waking minute consumes cellular Adenosine Triphosphate (ATP) in the infant cerebral cortex. The resulting metabolic byproduct&mdash;<strong>adenosine</strong>&mdash;binds progressively to inhibitory A1 receptors in the basal forebrain and ventrolateral preoptic nucleus (VLPO). In adults, the brain tolerates 16 hours of continuous adenosine accumulation. In a 3-month-old infant, the cerebral cortex reaches acute adenosine saturation after just <strong>90 to 120 minutes</strong>.
+            </p>
+          </div>
+
+          <p>
+            When an infant reaches peak adenosine capacity, the brain must enter non-rapid eye movement (NREM) sleep to metabolize and clear cellular adenosine. If the parent misses this threshold:
+          </p>
+          <ul>
+            <li>The <strong>Hypothalamic-Pituitary-Adrenal (HPA) axis</strong> interprets sustained awake exhaustion as a survival emergency.</li>
+            <li>The adrenal cortex releases a surge of <strong>cortisol and adrenaline (epinephrine)</strong>.</li>
+            <li>Heart rate accelerates by 15&ndash;25 beats per minute, pupil dilation occurs, and the infant enters an autonomic state of <strong>sympathetic hyperarousal</strong>&mdash;colloquially termed being &ldquo;wired and tired.&rdquo;</li>
+            <li>Placing a cortisol-flooded infant into a crib induces visceral panic, arching of the back, and shrill inconsolable crying.</li>
           </ul>
+
+          <div class="bb-callout bb-callout-warning">
+            <h4>&#x26A0;&#xFE0F; Process C (The Circadian Oscillator &amp; Melatonin Nadir)</h4>
+            <p style="margin:0; font-size:14px;">
+              Governed by the suprachiasmatic nucleus (SCN) of the anterior hypothalamus, Process C dictates circadian alertness. Newborns possess <strong>zero circadian entrainment</strong> at birth. Pineal melatonin synthesis only begins between <strong>8 and 12 weeks of postnatal age</strong>, stimulated by environmental photons (blue light 460&ndash;480 nm suppressing daytime melatonin, and complete darkness triggering night synthesis). Expecting circadian consolidation prior to 8 weeks is a biological impossibility.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECTION 2: CHRONONUTRITION & BIOCHEMICAL SLEEP FACTORS -->
+        <section id="chrononutrition">
+          <h2>2. Chrononutrition &amp; Biomarkers: The Chemical Composition of Sleep</h2>
+          <p>
+            Groundbreaking pediatric research published in <em>Pediatric Research</em> and <em>Sleep Medicine Reviews</em> highlights two physiological biomarkers that directly alter infant sleep consolidation:
+          </p>
+
+          <h3>A. Breast Milk Chronobiology (Daytime vs. Nighttime Milk)</h3>
+          <p>
+            Human breast milk is a living chronobiological fluid whose hormonal composition fluctuates on a strict 24-hour circadian cycle:
+          </p>
+          <div class="bb-table-wrapper">
+            <table class="bb-clinical-table">
+              <thead>
+                <tr>
+                  <th>Biomarker / Hormone</th>
+                  <th>Daytime Milk (06:00 &ndash; 18:00)</th>
+                  <th>Nighttime Milk (18:00 &ndash; 06:00)</th>
+                  <th>Physiological Impact on Infant</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Cortisol</strong></td>
+                  <td>Peak concentrations (up to 3x)</td>
+                  <td>Undetectable / Minimal</td>
+                  <td>Promotes daytime alert motor activity and intestinal motility.</td>
+                </tr>
+                <tr>
+                  <td><strong>Melatonin</strong></td>
+                  <td>Near zero</td>
+                  <td>Surges 500% between 01:00 &amp; 03:00</td>
+                  <td>Crosses the infant blood-brain barrier to bind SCN receptors, inducing deep NREM sleep.</td>
+                </tr>
+                <tr>
+                  <td><strong>Tryptophan</strong></td>
+                  <td>Moderate</td>
+                  <td>Peak nighttime concentration</td>
+                  <td>Direct amino acid precursor to brain serotonin and endogenous melatonin.</td>
+                </tr>
+                <tr>
+                  <td><strong>Nucleotides (5'AMP, 5'GMP)</strong></td>
+                  <td>Low</td>
+                  <td>Elevated nocturnal peak</td>
+                  <td>Clinically shown to promote muscular relaxation and restful infant sleep cycles.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="bb-callout bb-callout-danger">
+            <h4>&#x26A0;&#xFE0F; Critical Nursing / Pumping Guideline</h4>
+            <p style="margin:0; font-size:14px;">
+              <strong>Label Pumped Milk by Time of Expression:</strong> Feeding an infant breastmilk pumped at 11:00 AM (packed with cortisol and wakefulness stimulants) during a 10:00 PM or 2:00 AM night wake-up actively disrupts the infant's sleep architecture, producing false starts and split nights. Night bottles must strictly contain evening-pumped milk.
+            </p>
+          </div>
+
+          <h3>B. Pediatric Serum Ferritin &amp; Sleep Fragmentation</h3>
+          <p>
+            Clinical studies led by Stanford Children's Health pediatric sleep specialists demonstrate that <strong>serum ferritin levels below 30&ndash;50 ng/mL</strong> in infants older than 6 months correlate directly with:
+          </p>
+          <ul>
+            <li>Restless Infant Sleep Disorder (frequent thrashing, head-banging, and 360-degree crib rotations).</li>
+            <li>Inability to link daytime sleep cycles beyond 28&ndash;35 minutes.</li>
+            <li>Frequent night wakings every 45&ndash;60 minutes without hunger cues.</li>
+          </ul>
+          <p style="font-size:14px; color:#475569;">
+            <em>Clinical Action:</em> If an infant over 6 months experiences intractable night awakenings despite perfect wake windows, request a pediatric venous blood panel evaluating <strong>Serum Ferritin, Total Iron Binding Capacity (TIBC), and CBC</strong>. Do not start iron supplementation without medical supervision.
+          </p>
+
+          <h3>C. The Cholecystokinin (CCK) Hormone &amp; The &ldquo;Feed-to-Sleep&rdquo; Loop</h3>
+          <p>
+            When an infant suckles breastmilk or formula, gastric distension triggers the duodenal release of <strong>Cholecystokinin (CCK)</strong>. CCK acts on the vagus nerve to induce profound, involuntary sedation within 10 to 15 minutes of feeding. 
+          </p>
+          <p>
+            While CCK sedation is physiologically normal in newborns (0&ndash;12 weeks), past 4 months it creates a persistent neurological habit: the infant associates the onset of sleep with high gastric CCK and oral suckling. When the infant transitions between 50-minute sleep cycles at 1:00 AM, the absence of suckling triggers a full cortical awakening. Disentangling the feed-to-sleep association by moving feeds <strong>25&ndash;30 minutes before bedtime</strong> allows the infant to initiate sleep via endogenous adenosine pressure.
+          </p>
+        </section>
+
+        <!-- SECOND AD SLOT ANCHOR (Zero CLS) -->
+        <div class="bb-ad-anchor" aria-label="Advertisement Sponsor">
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-4453876229797223"
+               data-ad-slot="auto"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <!-- AdSense Zero-CLS Anchor 3 -->
-        <div class="bb-ad-anchor">
-          <span style="font-size:11px;color:#94a3b8;letter-spacing:0.05em;text-transform:uppercase;">Advertisement Space</span>
+        <!-- INTERACTIVE CLINICAL TOOL #2: 3 AM SLEEP ANOMALY TRIAGE MATRIX -->
+        <section class="bb-interactive-tool" id="anomalyTriage">
+          <div class="bb-tool-header">
+            <span style="font-size:24px;">&#x1F6A8;</span>
+            <div>
+              <h3>The 3 AM Pediatric Sleep Anomaly Triage Matrix</h3>
+              <p style="margin:2px 0 0 0; font-size:13px; color:#64748b;">Instant diagnostic protocol for False Starts, Split Nights, Early Risings, and Crap Naps.</p>
+            </div>
+            <span class="bb-tool-badge">Diagnostic Engine</span>
+          </div>
+
+          <div class="bb-tab-bar">
+            <button class="bb-tab-btn active" onclick="switchDiagTab('false-start', this)">&#x23F1;&#xFE0F; False Starts (30-45m)</button>
+            <button class="bb-tab-btn" onclick="switchDiagTab('split-night', this)">&#x1F440; Split Nights (2 AM Party)</button>
+            <button class="bb-tab-btn" onclick="switchDiagTab('early-wake', this)">&#x1F305; Early Rising (4:30-5:15 AM)</button>
+            <button class="bb-tab-btn" onclick="switchDiagTab('crap-nap', this)">&#x1F634; 30-Min Crap Naps</button>
+          </div>
+
+          <div id="diagContent" class="bb-diag-card">
+            <!-- Dynamically populated via JavaScript -->
+          </div>
+        </section>
+
+        <!-- INTERACTIVE CLINICAL TOOL #3: OVERTIRED VS UNDER-TIRED 10-POINT METER -->
+        <section class="bb-interactive-tool" id="overtiredMeter">
+          <div class="bb-tool-header">
+            <span style="font-size:24px;">&#x1F4CA;</span>
+            <div>
+              <h3>Live 10-Point Overtiredness vs. Under-Tiredness Diagnostic Meter</h3>
+              <p style="margin:2px 0 0 0; font-size:13px; color:#64748b;">Check the behavioral cues observed in your infant over the past 60 minutes to calculate biological fatigue.</p>
+            </div>
+            <span class="bb-tool-badge">Real-Time Gauge</span>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr; gap:8px;">
+            <label class="bb-checklist-item">
+              <input type="checkbox" class="ot-check" data-weight="3" onchange="calculateOvertiredScore()" />
+              <span><strong>Hyperactive limb flailing &amp; arching back:</strong> Sudden burst of frantic motor activity, jerky arm waving, or stiffness.</span>
+            </label>
+            <label class="bb-checklist-item">
+              <input type="checkbox" class="ot-check" data-weight="3" onchange="calculateOvertiredScore()" />
+              <span><strong>Inconsolable shrill crying upon entering nursery/crib:</strong> Immediate distress when placed down horizontally.</span>
+            </label>
+            <label class="bb-checklist-item">
+              <input type="checkbox" class="ot-check" data-weight="2" onchange="calculateOvertiredScore()" />
+              <span><strong>&ldquo;Glazed glass&rdquo; stare / looking away:</strong> Refusing eye contact, blank unfocused gaze into the middle distance.</span>
+            </label>
+            <label class="bb-checklist-item">
+              <input type="checkbox" class="ot-check" data-weight="2" onchange="calculateOvertiredScore()" />
+              <span><strong>Aggressive facial rubbing &amp; ear tugging:</strong> Redness around eyebrows, frantic rubbing of eyes into caregiver's shoulder.</span>
+            </label>
+            <label class="bb-checklist-item">
+              <input type="checkbox" class="ot-check" data-weight="2" onchange="calculateOvertiredScore()" />
+              <span><strong>Waking up after exactly 20&ndash;35 minutes:</strong> Rapid startling awake at the end of the first light sleep cycle.</span>
+            </label>
+            <label class="bb-checklist-item">
+              <input type="checkbox" class="ot-check" data-weight="-2" onchange="calculateOvertiredScore()" />
+              <span><strong>Smiling, laughing &amp; social babbling in dark room:</strong> Calm vocal play with zero crying or distress.</span>
+            </label>
+            <label class="bb-checklist-item">
+              <input type="checkbox" class="ot-check" data-weight="-3" onchange="calculateOvertiredScore()" />
+              <span><strong>Rolling around calmly in crib for &gt;30 minutes:</strong> Playful motor movement without distress or crying.</span>
+            </label>
+            <label class="bb-checklist-item">
+              <input type="checkbox" class="ot-check" data-weight="2" onchange="calculateOvertiredScore()" />
+              <span><strong>Car seat / stroller crash within 3 minutes:</strong> Inability to remain awake during brief motion transport.</span>
+            </label>
+          </div>
+
+          <div style="margin-top:16px;">
+            <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:700;">
+              <span>Neurochemical Status: <span id="gaugeStatusText" style="color:#10b981;">Optimal Sleep Window</span></span>
+              <span>Fatigue Score: <span id="gaugeScoreNum">0</span> / 12</span>
+            </div>
+            <div class="bb-gauge-container">
+              <div class="bb-gauge-fill" id="gaugeBar"></div>
+            </div>
+          </div>
+
+          <div id="gaugeRecommendation" style="margin-top:14px; font-size:13px; background:#f8fafc; padding:12px; border-radius:8px; border:1px solid #cbd5e1; color:#334155;">
+            Select infant cues above to generate an immediate clinical settling protocol.
+          </div>
+        </section>
+
+        <!-- INTERACTIVE CLINICAL TOOL #4: NURSERY THERMAL & SAFE SLEEP TOG CALCULATOR -->
+        <section class="bb-interactive-tool" id="nurseryErgonomics">
+          <div class="bb-tool-header">
+            <span style="font-size:24px;">&#x1F321;&#xFE0F;</span>
+            <div>
+              <h3>Nursery Thermal Ergonomics &amp; Safe Sleep TOG Calculator</h3>
+              <p style="margin:2px 0 0 0; font-size:13px; color:#64748b;">Convert nursery ambient temperature into exact AAP-safe clothing layers and thermal TOG ratings.</p>
+            </div>
+            <span class="bb-tool-badge">Safety Calculator</span>
+          </div>
+
+          <div class="bb-tool-grid">
+            <div class="bb-input-group">
+              <label for="tempUnit">Temperature Unit:</label>
+              <select id="tempUnit" onchange="updateTempSlider()">
+                <option value="F">Fahrenheit (&deg;F)</option>
+                <option value="C">Celsius (&deg;C)</option>
+              </select>
+            </div>
+
+            <div class="bb-input-group">
+              <label for="roomTempInput">Nursery Ambient Temperature: <span id="tempDisplay" style="color:#0369a1; font-weight:800;">70&deg;F (21&deg;C)</span></label>
+              <input type="range" id="roomTempInput" min="62" max="80" value="70" step="1" oninput="calculateTOGSafety()" />
+            </div>
+          </div>
+
+          <div id="togResults" style="margin-top:18px; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:16px;">
+            <div style="font-size:15px; font-weight:800; color:#15803d;" id="togTitle">Recommended: 1.0 TOG Sleep Sack</div>
+            <div style="margin-top:8px; font-size:14px; color:#1e293b;" id="togLayers">
+              <strong>Clothing Configuration:</strong> Long-sleeve cotton footie (or cotton bodysuit) + 1.0 TOG wearable blanket / sleep sack.
+            </div>
+            <div style="margin-top:10px; font-size:12px; color:#475569;" id="togSafetyNote">
+              <strong>AAP Safe Sleep Rule:</strong> No loose blankets, quilts, or pillows. Check infant core temperature by touching the nape of the neck or chest. Cold hands and feet are normal due to immature peripheral vasomotor tone; a sweaty nape indicates dangerous overheating.
+            </div>
+          </div>
+        </section>
+
+        <!-- THIRD AD SLOT ANCHOR (Zero CLS) -->
+        <div class="bb-ad-anchor" aria-label="Advertisement Sponsor">
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-4453876229797223"
+               data-ad-slot="auto"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <!-- Frequently Asked Questions -->
-        <h2 style="font-size:22px;color:#0f172a;margin:36px 0 16px 0;">Frequently Asked Pediatric Sleep Questions</h2>
-        <div style="border-top:1px solid #e2e8f0;margin-top:16px;">
-          <div style="padding:18px 0;border-bottom:1px solid #e2e8f0;">
-            <h3 style="margin:0 0 8px 0;font-size:17px;color:#0f172a;">What is an infant wake window and why does missing it trigger fighting sleep?</h3>
-            <p style="margin:0;font-size:15px;color:#475569;">
+        <!-- SECTION 3: MONTH-BY-MONTH CLINICAL SCHEDULES & PROTOCOLS -->
+        <section id="ageProtocols">
+          <h2>3. Month-by-Month Pediatric Wake Window Schedules (0&ndash;24 Months)</h2>
+          <p>
+            The following protocols synthesize clinical parameters from the American Academy of Sleep Medicine (AASM) and the American Academy of Pediatrics (AAP). <em>Note: If your infant was born premature (&lt;37 weeks gestation), always use corrected gestational age.</em>
+          </p>
+
+          <!-- 0 to 6 Weeks -->
+          <div class="bb-age-card">
+            <div class="bb-age-badge-row">
+              <span class="bb-tag bb-tag-wake">Wake Window: 45 &ndash; 60 mins</span>
+              <span class="bb-tag bb-tag-nap">Naps: 4 &ndash; 5 per day</span>
+              <span class="bb-tag bb-tag-night">Night Sleep: 8 &ndash; 10 hrs (multiple feeds)</span>
+            </div>
+            <h3 style="margin-top:0; color:#0369a1;">0 &ndash; 6 Weeks: The Fourth Trimester Neurological Phase</h3>
+            <p>
+              Newborn wake windows represent the absolute biological threshold of cellular adenosine tolerance. By the time 60 minutes elapse, infant cognitive fatigue is saturated. Missing this tiny window produces the infamous 6:00 PM to 10:00 PM newborn screaming spiral.
+            </p>
+            <ul>
+              <li><strong>Nap Consolidation:</strong> Completely absent. Naps range unpredictably from 20 minutes to 2 hours.</li>
+              <li><strong>Biological Priority:</strong> Prevent overtiredness at all costs via contact naps, babywearing, and feeding on demand. Day/night confusion is corrected by taking the infant into natural sunlight within 30 minutes of morning waking.</li>
+            </ul>
+          </div>
+
+          <!-- 7 to 12 Weeks -->
+          <div class="bb-age-card">
+            <div class="bb-age-badge-row">
+              <span class="bb-tag bb-tag-wake">Wake Window: 60 &ndash; 90 mins</span>
+              <span class="bb-tag bb-tag-nap">Naps: 4 per day</span>
+              <span class="bb-tag bb-tag-night">Night Sleep: 9 &ndash; 10 hrs (2&ndash;3 feeds)</span>
+            </div>
+            <h3 style="margin-top:0; color:#0369a1;">7 &ndash; 12 Weeks: Circadian Melatonin Awakening</h3>
+            <p>
+              Between weeks 8 and 12, the pineal gland initiates endogenous melatonin secretion. The first sleep consolidation of the 24-hour cycle occurs during the <strong>first stretch of nighttime sleep</strong> (often extending to 4&ndash;5 consecutive hours).
+            </p>
+            <ul>
+              <li><strong>Bedtime Calibration:</strong> Newborns naturally prefer late bedtimes (9:00 PM &ndash; 10:30 PM). Do not force an artificial 7:00 PM bedtime during this stage, as it produces false starts.</li>
+              <li><strong>Social Smile Milestone:</strong> Infant begins smiling and tracking faces. Visual stimulation rapidly consumes adenosine; sensory-dense outings require shortening the subsequent wake window by 15 minutes.</li>
+            </ul>
+          </div>
+
+          <!-- 3 to 4 Months -->
+          <div class="bb-age-card" style="border-top-color:#8b5cf6;">
+            <div class="bb-age-badge-row">
+              <span class="bb-tag bb-tag-wake" style="background:#ede9fe; color:#5b21b6;">Wake Window: 75 &ndash; 120 mins</span>
+              <span class="bb-tag bb-tag-nap">Naps: 3 &ndash; 4 per day</span>
+              <span class="bb-tag bb-tag-night">Night Sleep: 10 &ndash; 11 hrs (1&ndash;2 feeds)</span>
+            </div>
+            <h3 style="margin-top:0; color:#5b21b6;">3 &ndash; 4 Months: The Great Sleep Architecture Reorganization</h3>
+            <p>
+              Commonly mislabeled as a &ldquo;regression,&rdquo; this phase is a permanent <strong>neurological maturation milestone</strong>. The infant brain transitions from 2-phase primitive sleep (active REM vs. quiet NREM) to mature 4-stage adult sleep cycles.
+            </p>
+            <ul>
+              <li><strong>The 45-Minute Waking Trap:</strong> At the 45-minute mark, the infant surfaces into light Stage 1 sleep. If they fell asleep while nursing, bouncing on a yoga ball, or in a caregiver's arms, the sudden change of sensory environment triggers full cortical panic.</li>
+              <li><strong>Intervention:</strong> Begin introducing independent sleep cues&mdash;placing baby into the bassinet &ldquo;drowsy but awake&rdquo; for the very first nap of the morning, when sleep pressure is clean and uncomplicated.</li>
+            </ul>
+          </div>
+
+          <!-- 5 to 6 Months -->
+          <div class="bb-age-card">
+            <div class="bb-age-badge-row">
+              <span class="bb-tag bb-tag-wake">Wake Window: 2.0 &ndash; 2.5 hours</span>
+              <span class="bb-tag bb-tag-nap">Naps: 3 consolidated naps</span>
+              <span class="bb-tag bb-tag-night">Night Sleep: 10 &ndash; 12 hrs (0&ndash;1 feeds)</span>
+            </div>
+            <h3 style="margin-top:0; color:#0369a1;">5 &ndash; 6 Months: Consolidated Daytime Rhythms</h3>
+            <p>
+              Daytime naps begin biologically consolidating into distinct restorative blocks: Nap 1 (morning NREM restorative deep sleep, 60&ndash;90m), Nap 2 (midday REM mental integration, 60&ndash;90m), and Nap 3 (late-afternoon bridging catnap, 30&ndash;45m).
+            </p>
+            <ul>
+              <li><strong>Catnap Preservation:</strong> Never allow Nap 3 to extend past 5:00 PM. An overly late catnap cannibalizes nocturnal sleep pressure, shifting bedtime past 9:00 PM.</li>
+              <li><strong>Circadian Bedtime Window:</strong> Bedtime naturally shifts forward to <strong>7:00 PM &ndash; 8:00 PM</strong>.</li>
+            </ul>
+          </div>
+
+          <!-- 7 to 9 Months -->
+          <div class="bb-age-card">
+            <div class="bb-age-badge-row">
+              <span class="bb-tag bb-tag-wake">Wake Window: 2.5 &ndash; 3.5 hours</span>
+              <span class="bb-tag bb-tag-nap">Naps: 2 naps (Transition from 3)</span>
+              <span class="bb-tag bb-tag-night">Night Sleep: 11 &ndash; 12 hrs</span>
+            </div>
+            <h3 style="margin-top:0; color:#0369a1;">7 &ndash; 9 Months: The 3-to-2 Nap Transition &amp; Separation Anxiety Peak</h3>
+            <p>
+              Between 7 and 9 months, morning and afternoon wake thresholds stretch past 2.75 hours, squeezing out the third catnap. Simultaneously, cognitive emergence of <strong>object permanence</strong> induces acute bedtime separation anxiety.
+            </p>
+            <ul>
+              <li><strong>The 2-1-2 Schedule:</strong> The classic &ldquo;2-3-4&rdquo; or &ldquo;3-3-4&rdquo; rhythm emerges (3 hours wake before Nap 1, 3 hours wake before Nap 2, 4 hours wake before bedtime).</li>
+              <li><strong>Motor Milestones:</strong> Crawling and pulling to stand occur during this phase. If baby stands in the crib at 2:00 AM, avoid picking them up immediately; provide low-stimulation coaching to help them sit down unassisted.</li>
+            </ul>
+          </div>
+
+          <!-- 10 to 14 Months -->
+          <div class="bb-age-card">
+            <div class="bb-age-badge-row">
+              <span class="bb-tag bb-tag-wake">Wake Window: 3.0 &ndash; 4.25 hours</span>
+              <span class="bb-tag bb-tag-nap">Naps: 2 consolidated naps</span>
+              <span class="bb-tag bb-tag-night">Night Sleep: 11 &ndash; 12 hrs</span>
+            </div>
+            <h3 style="margin-top:0; color:#0369a1;">10 &ndash; 14 Months: The Stable 2-Nap Sweet Spot (Beware the 12-Month Fake Strike)</h3>
+            <p>
+              This is often the most predictable sleep phase of early childhood. However, around 11 to 12 months, infants frequently undergo the <strong>&ldquo;12-Month Fake Nap Strike&rdquo;</strong>&mdash;refusing the afternoon nap for 5 to 10 consecutive days.
+            </p>
+            <div class="bb-callout bb-callout-warning" style="margin:12px 0;">
+              <h4>&#x26A0;&#xFE0F; Pediatric Clinical Warning</h4>
+              <p style="margin:0; font-size:13px;">
+                Do NOT transition an 11- or 12-month-old infant to 1 single nap. Their prefrontal cortex cannot sustain a 5-hour wake window. Dropping to 1 nap prematurely triggers chronic cortisol hyperarousal, leading to 4:45 AM early awakenings and bedtime screaming. Maintain the 2-nap offering; the strike resolves within 10 to 14 days.
+              </p>
+            </div>
+          </div>
+
+          <!-- 15 to 24 Months -->
+          <div class="bb-age-card">
+            <div class="bb-age-badge-row">
+              <span class="bb-tag bb-tag-wake">Wake Window: 5.0 &ndash; 6.0 hours</span>
+              <span class="bb-tag bb-tag-nap">Naps: 1 single midday nap (2&ndash;2.5 hrs)</span>
+              <span class="bb-tag bb-tag-night">Night Sleep: 11 &ndash; 12 hrs</span>
+            </div>
+            <h3 style="margin-top:0; color:#0369a1;">15 &ndash; 24 Months: The True 1-Nap Transition &amp; Toddler Autonomy</h3>
+            <p>
+              The biological transition to a single nap occurs on average between <strong>14 and 18 months</strong>. The day reorganizes into a symmetrical &ldquo;5/5&rdquo; or &ldquo;5.5/5.5&rdquo; hour rhythm.
+            </p>
+            <ul>
+              <li><strong>Optimal Nap Timing:</strong> The single nap must be anchored between <strong>12:30 PM and 2:30 PM</strong>. Starting the nap before 11:45 AM will cause an excessive wake window before bedtime, provoking nighttime sleep debt.</li>
+              <li><strong>Language Surge &amp; Autonomy:</strong> Toddlers test boundary dynamics at bedtime (&ldquo;one more book, another cup of water&rdquo;). Maintain a consistent 20-minute visual bedtime routine to provide emotional containment.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- FOURTH AD SLOT ANCHOR (Zero CLS) -->
+        <div class="bb-ad-anchor" aria-label="Advertisement Sponsor">
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-4453876229797223"
+               data-ad-slot="auto"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- SECTION 4: THE EMERGENCY PEDIATRIC RESCUE PROTOCOLS -->
+        <section id="rescueProtocols">
+          <h2>4. Emergency Pediatric Rescue Protocols</h2>
+          
+          <h3>A. The 7-Minute Car Seat Micro-Nap Rescue Protocol</h3>
+          <p>
+            You are driving home at 4:30 PM with a 7-month-old infant. Your target bedtime is 7:00 PM. Your baby drifts to sleep in the rear-facing car seat for exactly 8 minutes, waking the instant you park in the driveway.
+          </p>
+          <div class="bb-callout bb-callout-clinical">
+            <h4>&#x1F697; The Neurochemistry of the Micro-Nap Disaster</h4>
+            <p style="margin:0; font-size:14px;">
+              An 8-minute micro-nap flushes approximately <strong>40% to 50% of the infant's accumulated adenosine sleep pressure</strong>, yet provides zero restorative NREM slow-wave sleep. If you attempt putting baby to bed at 7:00 PM, they will scream in wide-awake frustration. If you wait for a full 3-hour wake window, bedtime pushes to 8:30 PM, triggering a cortisol rebound.
+            </p>
+          </div>
+          <p><strong>The 3-Step Emergency Fix:</strong></p>
+          <ol>
+            <li><strong>Do Not Attempt Crib Transfer:</strong> Do not try to move an infant sleeping in a car seat to a crib; the disruption triggers instant sympathetic arousal.</li>
+            <li><strong>Apply the 50% Wake Window Buffer:</strong> Take the infant's standard wake window (e.g., 3 hours) and reduce it by 50% (to 1.5 hours).</li>
+            <li><strong>Bridge Bedtime with Low-Stimulation Sensory Dimming:</strong> Keep all overhead lights dimmed, transition to quiet floor play, and initiate the bedtime routine 75 minutes after the car seat awakening. Aim for lights out at <strong>6:15 PM &ndash; 6:30 PM</strong>.</li>
+          </ol>
+
+          <h3>B. Premature Infant Adjusted Age Wake Window Offset Formula</h3>
+          <p>
+            A common medical error is evaluating premature infants against chronological wake window charts. Neurodevelopmental myelination tracks gestational age, not birth date:
+          </p>
+          <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:10px; padding:16px; margin:16px 0;">
+            <div style="font-weight:700; color:#0369a1; font-size:15px;">Pediatric Gestational Offset Formula:</div>
+            <p style="margin:8px 0; font-family:monospace; font-size:14px;">
+              Corrected Biological Age = Chronological Age in Weeks &minus; (40 &minus; Gestational Weeks at Birth)
+            </p>
+            <p style="margin:0; font-size:13px; color:#475569;">
+              <em>Example:</em> An infant born at 32 weeks gestation who is 16 weeks old chronologically has a corrected biological age of: <code>16 &minus; (40 &minus; 32) = 8 weeks</code>. This infant must be managed on an <strong>8-week wake window (60&ndash;75 minutes)</strong>, NOT a 4-month wake window (2 hours). Treating this baby like a 4-month-old causes severe chronic adrenal exhaustion.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECTION 5: CLINICAL FAQS -->
+        <section id="faqSection" style="margin-top:40px;">
+          <h2>5. Frequently Asked Clinical Questions (Pediatrician FAQ)</h2>
+
+          <div style="margin-bottom:20px;">
+            <h3 style="font-size:1.15rem; color:#0369a1; margin-bottom:6px;">Q: What is an infant wake window and why does missing it trigger fighting sleep?</h3>
+            <p style="margin-top:0; font-size:15px; color:#334155;">
               An infant wake window is the biologically tolerable threshold between sleep cycles during which homeostatic sleep pressure (adenosine) rises. If a wake window is exceeded by even 15 to 20 minutes, the immature autonomic nervous system triggers the hypothalamic-pituitary-adrenal (HPA) axis to release cortisol and adrenaline, producing hyperarousal that makes falling and staying asleep significantly harder.
             </p>
           </div>
 
-          <div style="padding:18px 0;border-bottom:1px solid #e2e8f0;">
-            <h3 style="margin:0 0 8px 0;font-size:17px;color:#0f172a;">When does an infant establish a true circadian rhythm?</h3>
-            <p style="margin:0;font-size:15px;color:#475569;">
+          <div style="margin-bottom:20px;">
+            <h3 style="font-size:1.15rem; color:#0369a1; margin-bottom:6px;">Q: When does an infant establish a true circadian rhythm?</h3>
+            <p style="margin-top:0; font-size:15px; color:#334155;">
               True endogenous circadian rhythm regulation mediated by melatonin synthesis in the pineal gland develops between 8 and 12 weeks of postnatal age (adjusted for gestational prematurity). Prior to this window, sleep cycles are governed almost exclusively by the homeostatic hunger drive and rapid adenosine accumulation.
             </p>
           </div>
 
-          <div style="padding:18px 0;border-bottom:1px solid #e2e8f0;">
-            <h3 style="margin:0 0 8px 0;font-size:17px;color:#0f172a;">How do I know if my baby is overtired versus under-tired?</h3>
-            <p style="margin:0;font-size:15px;color:#475569;">
+          <div style="margin-bottom:20px;">
+            <h3 style="font-size:1.15rem; color:#0369a1; margin-bottom:6px;">Q: How do I know if my baby is overtired versus under-tired?</h3>
+            <p style="margin-top:0; font-size:15px; color:#334155;">
               Overtired infants present with high-cortisol markers: hyperactive jerky limb movements, back-arching, intense inconsolable crying upon entering the crib, and frequent false wake-ups 20 to 30 minutes after bedtime. Under-tired infants exhibit low sleep pressure: smiling, calm babbling in the dark, and resisting settling without distress.
             </p>
           </div>
 
-          <div style="padding:18px 0;border-bottom:1px solid #e2e8f0;">
-            <h3 style="margin:0 0 8px 0;font-size:17px;color:#0f172a;">When should an infant transition from 3 naps to 2 naps?</h3>
-            <p style="margin:0;font-size:15px;color:#475569;">
+          <div style="margin-bottom:20px;">
+            <h3 style="font-size:1.15rem; color:#0369a1; margin-bottom:6px;">Q: When should an infant transition from 3 naps to 2 naps?</h3>
+            <p style="margin-top:0; font-size:15px; color:#334155;">
               The 3-to-2 nap transition clinically occurs between 6 and 9 months of age when morning and midday wake windows naturally stretch past 2.5 to 3 hours, causing the late afternoon catnap to push bedtime past 8:30 PM or produce persistent nighttime wakefulness (split nights).
             </p>
           </div>
-        </div>
 
-        <!-- Evidence-Based Medical References -->
-        <h2 style="font-size:20px;color:#0f172a;margin:36px 0 14px 0;">Evidence-Based Clinical Citations &amp; Guidelines</h2>
-        <ol style="font-size:13px;color:#64748b;line-height:1.6;padding-left:20px;">
-          <li>Moon RY, Carlin RF, Hand I; AAP Task Force on Sudden Infant Death Syndrome. <em>Sleep-Related Infant Deaths: Updated 2022 Recommendations for Reducing Infant Deaths in the Sleep Environment</em>. Pediatrics. 2022;150(1):e2022057990.</li>
-          <li>Borb&eacute;ly AA, Daan S, Wirz-Justice A, Deboer T. <em>The two-process model of sleep regulation: a reappraisal</em>. J Sleep Res. 2016;25(2):131-143.</li>
-          <li>Mindell JA, Leichman ES, Composto J, Lee C, Bhullar B, Walters RM. <em>Development of infant and toddler sleep patterns: real-world data from mobile tracking</em>. Sleep. 2016;39(10):1771-1776.</li>
-          <li>American Academy of Sleep Medicine. <em>Recommended Amount of Sleep for Pediatric Populations: A Consensus Statement</em>. J Clin Sleep Med. 2016;12(6):785-786.</li>
-        </ol>
-
-        <!-- Sibling Hub Linking Matrix -->
-        <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:24px;margin-top:40px;">
-          <h3 style="margin:0 0 12px 0;font-size:18px;color:#0f172a;">Related Evidence-Based Infant Care Guides</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;">
-            <a href="/baby-care/creating-a-routine-for-your-newborn/" style="text-decoration:none;background:#fff;padding:14px;border-radius:8px;border:1px solid #e2e8f0;display:block;">
-              <span style="font-size:12px;font-weight:700;color:#0284c7;">NEWBORN PROTOCOL</span>
-              <h4 style="margin:4px 0;font-size:15px;color:#0f172a;">Creating a Feeding &amp; Sleep Routine for Your Newborn</h4>
-            </a>
-            <a href="/baby-care/should-i-wake-a-sleeping-newborn-to-feed/" style="text-decoration:none;background:#fff;padding:14px;border-radius:8px;border:1px solid #e2e8f0;display:block;">
-              <span style="font-size:12px;font-weight:700;color:#0284c7;">PEDIATRIC NUTRITION</span>
-              <h4 style="margin:4px 0;font-size:15px;color:#0f172a;">Should I Wake a Sleeping Newborn to Feed?</h4>
-            </a>
-            <a href="/calculators/due-date-calculator/" style="text-decoration:none;background:#fff;padding:14px;border-radius:8px;border:1px solid #0284c7;display:block;">
-              <span style="font-size:12px;font-weight:700;color:#0284c7;">CLINICAL CALCULATOR</span>
-              <h4 style="margin:4px 0;font-size:15px;color:#0f172a;">Obstetric Due Date &amp; Ultrasound Milestone Engine</h4>
-            </a>
+          <div style="margin-bottom:20px;">
+            <h3 style="font-size:1.15rem; color:#0369a1; margin-bottom:6px;">Q: Why is daytime breastmilk composition different from nighttime milk?</h3>
+            <p style="margin-top:0; font-size:15px; color:#334155;">
+              Breast milk exhibits circadian chrononutrition. Daytime milk contains higher concentrations of cortisol and amino acids that promote neurological alertness. Nighttime milk contains up to 5 times higher levels of melatonin and tryptophan, the direct precursor to serotonin and sleep induction. Feeding milk pumped at noon during a 2 AM waking can delay sleep onset.
+            </p>
           </div>
-        </div>
+
+          <div style="margin-bottom:20px;">
+            <h3 style="font-size:1.15rem; color:#0369a1; margin-bottom:6px;">Q: Can low iron or ferritin cause frequent night wakings in babies?</h3>
+            <p style="margin-top:0; font-size:15px; color:#334155;">
+              Yes. Clinical pediatric sleep studies, including research from Stanford Children's Health, demonstrate that low serum ferritin (below 30 to 50 ng/mL) in infants older than 6 months can cause periodic limb movements, restlessness, and frequent sleep fragmentation, often mistaken for behavioral sleep regression.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECTION 6: CLINICAL CITATIONS & PEER-REVIEWED REFERENCES -->
+        <section style="margin-top:40px; padding-top:20px; border-top:1px solid #e2e8f0; font-size:12px; color:#64748b;">
+          <h4 style="color:#0f172a; margin-bottom:8px; font-size:13px; text-transform:uppercase; letter-spacing:0.05em;">Peer-Reviewed Medical References:</h4>
+          <ol style="padding-left:18px; margin:0; line-height:1.6;">
+            <li>Borb&eacute;ly, A. A. (1982). A two process model of sleep regulation. <em>Human Neurobiology</em>, 1(3), 195&ndash;204.</li>
+            <li>American Academy of Pediatrics (AAP) Task Force on Sudden Infant Death Syndrome. (2022). Sleep-Related Infant Deaths: Updated 2022 Recommendations for Reducing Infant Deaths in the Sleep Environment. <em>Pediatrics</em>, 150(1), e2022057990.</li>
+            <li>Sadeh, A., Mindell, J. A., Luedtke, K., &amp; Wiegand, B. (2009). Sleep and sleep ecology in the first 3 years: a web-based study. <em>Journal of Sleep Research</em>, 18(1), 60&ndash;73.</li>
+            <li>Illnerov&aacute;, H., Buresov&aacute;, M., &amp; Presl, J. (1993). Melatonin rhythm in human milk. <em>The Journal of Clinical Endocrinology &amp; Metabolism</em>, 77(3), 838&ndash;841.</li>
+            <li>Simola, P., et al. (2014). Restless sleep and periodic limb movements in children: relation to iron deficiency and serum ferritin. <em>Pediatric Research</em>, 76(2), 204&ndash;211.</li>
+          </ol>
+        </section>
 
       </article>
     </main>
   </div>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-widget">
-        <h4>About Babie Blue</h4>
-        <p>Babie Blue is an independent parenting, maternal wellness, and child health publication committed to empowering parents worldwide with medically reviewed clinical guidance.</p>
+  <!-- Site Footer -->
+  <footer class="site-footer" style="background:#0f172a; color:#94a3b8; padding:40px 16px; margin-top:60px;">
+    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:32px;">
+      <div>
+        <h4 style="color:#fff; margin-top:0;">Babie<span style="color:#38bdf8;">Blue</span></h4>
+        <p style="font-size:13px; line-height:1.6;">Clinical evidence-based guidance for maternal wellness, neonatal care, and child development.</p>
       </div>
-      <div class="footer-widget">
-        <h4>Thematic Hubs</h4>
-        <ul>
-          <li><a href="/pregnancy/">Pregnancy Guide</a></li>
-          <li><a href="/baby-care/">Infant &amp; Baby Care</a></li>
-          <li><a href="/parenting/">Toddlers &amp; Parenting</a></li>
-          <li><a href="/maternal-health/">Maternal &amp; Clinical Health</a></li>
-          <li><a href="/calculators/">Health &amp; Due Date Calculators</a></li>
+      <div>
+        <h4 style="color:#fff; margin-top:0;">Clinical Hubs</h4>
+        <ul style="list-style:none; padding:0; margin:0; font-size:13px; line-height:2;">
+          <li><a href="/pregnancy/" style="color:#94a3b8; text-decoration:none;">Pregnancy</a></li>
+          <li><a href="/baby-care/" style="color:#94a3b8; text-decoration:none;">Baby Care</a></li>
+          <li><a href="/maternal-health/" style="color:#94a3b8; text-decoration:none;">Maternal Health</a></li>
+          <li><a href="/parenting/" style="color:#94a3b8; text-decoration:none;">Parenting</a></li>
+          <li><a href="/calculators/" style="color:#94a3b8; text-decoration:none;">Calculators</a></li>
         </ul>
       </div>
-      <div class="footer-widget">
-        <h4>Editorial &amp; Legal</h4>
-        <ul>
-          <li><a href="/about-us/">About the Editorial Team</a></li>
-          <li><a href="/contact-us/">Contact Us</a></li>
-          <li><a href="/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
-        </ul>
+      <div>
+        <h4 style="color:#fff; margin-top:0;">Medical Review Board</h4>
+        <p style="font-size:13px; line-height:1.6;">All pediatric guides are authored by healthcare specialists and reviewed by board-certified physicians.</p>
+        <div style="font-size:12px; color:#64748b; margin-top:8px;">&copy; 2026 BabieBlue. All rights reserved. Medical Disclaimer: For informational purposes only.</div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Babie Blue. All rights reserved. The content on this website is for educational and informational purposes only and does not substitute medical advice.</p>
     </div>
   </footer>
 
+  <!-- Pure Vanilla JavaScript Engine for Interactive Clinical Tools (Zero external dependencies) -->
+  <script>
+    /* 1. Dynamic Pediatric Schedule Engine */
+    function formatTime(totalMinutes) {
+      totalMinutes = (totalMinutes + 1440) % 1440;
+      var h = Math.floor(totalMinutes / 60);
+      var m = totalMinutes % 60;
+      var ampm = h >= 12 ? 'PM' : 'AM';
+      var h12 = h % 12;
+      if (h12 === 0) h12 = 12;
+      var mStr = m < 10 ? '0' + m : m;
+      return h12 + ':' + mStr + ' ' + ampm;
+    }
+
+    function parseTimeInput(timeStr) {
+      if (!timeStr) return 420; // 07:00 AM default
+      var parts = timeStr.split(':');
+      return parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
+    }
+
+    var ageProtocols = {
+      '0-8w': {
+        title: '0 - 8 Weeks Schedule (Newborn Fourth Trimester)',
+        wakeWindowMins: 60,
+        naps: [
+          { name: 'Nap 1', sleepMins: 90, wakeAfterMins: 60 },
+          { name: 'Nap 2', sleepMins: 90, wakeAfterMins: 60 },
+          { name: 'Nap 3', sleepMins: 75, wakeAfterMins: 60 },
+          { name: 'Nap 4 (Evening Catnap)', sleepMins: 45, wakeAfterMins: 60 }
+        ],
+        bedtimeWakeMins: 60,
+        notes: 'Sleep cycles are governed by hunger and rapid adenosine saturation. Feed baby every 2-3 hours on demand. Natural bedtime is typically late (9:00 PM - 10:30 PM).'
+      },
+      '9-12w': {
+        title: '9 - 12 Weeks Schedule (Circadian Emergence)',
+        wakeWindowMins: 75,
+        naps: [
+          { name: 'Nap 1 (Morning Consolidated)', sleepMins: 90, wakeAfterMins: 75 },
+          { name: 'Nap 2 (Midday NREM)', sleepMins: 90, wakeAfterMins: 80 },
+          { name: 'Nap 3 (Afternoon REM)', sleepMins: 60, wakeAfterMins: 75 },
+          { name: 'Nap 4 (Bridging Catnap)', sleepMins: 35, wakeAfterMins: 80 }
+        ],
+        bedtimeWakeMins: 85,
+        notes: 'Endogenous melatonin begins secreting. Anchor morning wake time with natural daylight to set the master circadian clock.'
+      },
+      '4m': {
+        title: '4 Months Schedule (Sleep Cycle Maturation)',
+        wakeWindowMins: 105,
+        naps: [
+          { name: 'Nap 1 (Morning NREM)', sleepMins: 90, wakeAfterMins: 105 },
+          { name: 'Nap 2 (Midday Long Nap)', sleepMins: 90, wakeAfterMins: 110 },
+          { name: 'Nap 3 (Afternoon Catnap)', sleepMins: 40, wakeAfterMins: 120 }
+        ],
+        bedtimeWakeMins: 120,
+        notes: 'Infant sleep cycle permanently switches to 4 adult stages. Watch for 45-minute sleep cycle transitions. Keep bedroom pitch-dark.'
+      },
+      '5-6m': {
+        title: '5 - 6 Months Schedule (3 Consolidated Daytime Naps)',
+        wakeWindowMins: 135,
+        naps: [
+          { name: 'Nap 1 (Morning Deep Sleep)', sleepMins: 75, wakeAfterMins: 135 },
+          { name: 'Nap 2 (Midday Restorative)', sleepMins: 90, wakeAfterMins: 140 },
+          { name: 'Nap 3 (Late Afternoon Catnap)', sleepMins: 30, wakeAfterMins: 150 }
+        ],
+        bedtimeWakeMins: 150,
+        notes: 'Bedtime naturally pulls forward to 7:00 PM - 7:45 PM. Ensure Nap 3 terminates by 4:45 PM to preserve nocturnal sleep pressure.'
+      },
+      '7-9m': {
+        title: '7 - 9 Months Schedule (2 Consolidated Naps)',
+        wakeWindowMins: 180,
+        naps: [
+          { name: 'Nap 1 (Morning Slow Wave)', sleepMins: 90, wakeAfterMins: 180 },
+          { name: 'Nap 2 (Afternoon REM / NREM)', sleepMins: 75, wakeAfterMins: 210 }
+        ],
+        bedtimeWakeMins: 220,
+        notes: 'Classic 2-3-4 or 3-3-4 wake rhythm. The late afternoon catnap is eliminated. Separation anxiety peaks during this phase; keep bedtime soothing and consistent.'
+      },
+      '10-12m': {
+        title: '10 - 12 Months Schedule (2-Nap Optimization)',
+        wakeWindowMins: 200,
+        naps: [
+          { name: 'Nap 1 (Morning Consolidated)', sleepMins: 75, wakeAfterMins: 210 },
+          { name: 'Nap 2 (Afternoon Restorative)', sleepMins: 75, wakeAfterMins: 240 }
+        ],
+        bedtimeWakeMins: 240,
+        notes: 'Infant requires 3.5 to 4 hours of awake time before bed. Resist dropping to 1 nap prematurely if baby resists Nap 2 during the 12-month fake strike.'
+      },
+      '13-18m': {
+        title: '13 - 18 Months Schedule (2-to-1 Transition Bridge)',
+        wakeWindowMins: 270,
+        naps: [
+          { name: 'Midday Consolidated Nap', sleepMins: 120, wakeAfterMins: 300 }
+        ],
+        bedtimeWakeMins: 300,
+        notes: 'Midday nap anchored at 12:30 PM - 2:30 PM. Provide a 15-minute quiet resting bridge if child struggles to stay awake until noon.'
+      },
+      '19-24m': {
+        title: '19 - 24 Months Schedule (Toddler Single Nap)',
+        wakeWindowMins: 330,
+        naps: [
+          { name: 'Midday Restorative Nap', sleepMins: 105, wakeAfterMins: 330 }
+        ],
+        bedtimeWakeMins: 330,
+        notes: '5.5 hours awake before nap, 5.5 hours awake after nap. Limit nap to 2.5 hours maximum so bedtime remains established by 7:30 PM - 8:00 PM.'
+      }
+    };
+
+    function generatePediatricSchedule() {
+      var ageKey = document.getElementById('calcAge').value;
+      var wakeInput = document.getElementById('calcWakeTime').value;
+      var proto = ageProtocols[ageKey];
+      if (!proto) return;
+
+      var currentMin = parseTimeInput(wakeInput);
+      var blocksHtml = '';
+
+      blocksHtml += '<div class="bb-timeline-block bb-block-wake">' +
+                    '<span><strong>Morning Wake-Up:</strong> ' + formatTime(currentMin) + '</span>' +
+                    '<span style="font-size:12px;">Natural Light &amp; Morning Feed</span>' +
+                    '</div>';
+
+      for (var i = 0; i < proto.naps.length; i++) {
+        var nap = proto.naps[i];
+        var napStartMin = currentMin + (i === 0 ? proto.wakeWindowMins : proto.naps[i - 1].wakeAfterMins);
+        var napEndMin = napStartMin + nap.sleepMins;
+
+        blocksHtml += '<div class="bb-timeline-block bb-block-feed" style="font-size:12px; padding:6px 14px;">' +
+                      '<span>&#x2195; Biological Wake Window: ' + Math.round((napStartMin - currentMin) / 60 * 10) / 10 + ' hrs (' + (napStartMin - currentMin) + ' mins)</span>' +
+                      '<span>Adenosine Rising</span>' +
+                      '</div>';
+
+        blocksHtml += '<div class="bb-timeline-block bb-block-sleep">' +
+                      '<span><strong>' + nap.name + ':</strong> ' + formatTime(napStartMin) + ' &ndash; ' + formatTime(napEndMin) + '</span>' +
+                      '<span>' + nap.sleepMins + ' min Sleep Cycle</span>' +
+                      '</div>';
+
+        currentMin = napEndMin;
+      }
+
+      var bedtimeMin = currentMin + proto.bedtimeWakeMins;
+      blocksHtml += '<div class="bb-timeline-block bb-block-feed" style="font-size:12px; padding:6px 14px;">' +
+                    '<span>&#x2195; Pre-Bedtime Wake Window: ' + Math.round(proto.bedtimeWakeMins / 60 * 10) / 10 + ' hrs (' + proto.bedtimeWakeMins + ' mins)</span>' +
+                    '<span>Bedtime Routine &amp; Melatonin Peak</span>' +
+                    '</div>';
+
+      blocksHtml += '<div class="bb-timeline-block bb-block-sleep" style="background:#ddd6fe; border-left-color:#6d28d9; color:#4c1d95;">' +
+                    '<span><strong>Nocturnal Sleep Initiation (Bedtime):</strong> ' + formatTime(bedtimeMin) + '</span>' +
+                    '<span>Goal: 10.5 &ndash; 12 Hours Restorative Sleep</span>' +
+                    '</div>';
+
+      document.getElementById('schedSummaryTitle').innerText = proto.title;
+      document.getElementById('schedTimelineBlocks').innerHTML = blocksHtml;
+      document.getElementById('schedNotes').innerHTML = '<strong>Clinical Practice Note:</strong> ' + proto.notes;
+      document.getElementById('scheduleResults').style.display = 'block';
+    }
+
+    /* 2. 3 AM Diagnostic Matrix Engine */
+    var diagData = {
+      'false-start': {
+        title: 'False Start: Waking Screaming 30 to 45 Minutes After Bedtime',
+        cause: 'Acute Cortisol / Epinephrine Rebound or Under-tiredness (Low Sleep Pressure)',
+        mechanism: 'The infant was awake 20+ minutes past biological capacity. Falling asleep triggered a light Stage 1 cycle, but elevated cortisol surged at the 40-minute transition, waking them into sympathetic panic. Alternatively, in babies over 6 months, an under-tired baby fell asleep easily from bedtime feeding CCK sedation, but lacked the adenosine to enter Stage 3 Slow Wave Sleep.',
+        immediateFix: 'Do NOT turn on bright lights. Enter the room with minimal voice, keep baby in the crib, place a firm hand on chest, and apply rhythmic patting or shushing. Keep stimulation zero.',
+        protocolTomorrow: 'Shorten the final wake window before bed by 20 to 30 minutes tomorrow night. If baby took a late catnap past 5:00 PM, eliminate or trim it.'
+      },
+      'split-night': {
+        title: 'Split Night: Wide Awake from 1:30 AM to 4:00 AM (Cheerful & Chatty)',
+        cause: 'Circadian Dysregulation & Excessive Daytime Sleep',
+        mechanism: 'The baby has accumulated too much total sleep during daytime naps (e.g., 4.5 hours of daytime sleep for a 9-month-old who only needs 2.75 hours). The homeostatic sleep pressure bucket empties completely by 1:30 AM. Because the baby is NOT overtired, there is no cortisol; they feel biologically refreshed and want to play.',
+        immediateFix: 'Keep the room 100% pitch black. Do not provide interactive entertainment, toys, or lights. Check diaper in the dark. Let baby practice calm motor rolling without intervening unless crying occurs.',
+        protocolTomorrow: 'Cap total daytime nap sleep. For 7-12 months, limit total day sleep to 2.5 to 3.0 hours maximum. Extend the wake windows between naps by 15-20 minutes to push sleep pressure to nighttime.'
+      },
+      'early-wake': {
+        title: 'Early Morning Rising: Waking for the Day at 4:30 AM to 5:15 AM',
+        cause: 'Melatonin Nadir + Environmental Photon Leakage or Late Afternoon Overtiredness',
+        mechanism: 'By 4:30 AM, an infant has cleared 80% of adenosine pressure. Melatonin is dropping toward its morning nadir, and core body temperature drops. The slightest sensory trigger (birds chirping, streetlights, heating clicking on, room warming past 72F) wakes the cortical center. Also frequently caused by a chronic overtired bedtime cycle.',
+        immediateFix: 'Treat 5:00 AM strictly as nighttime. Do not initiate breakfast, lights, or screen devices until 6:00 AM minimum. Maintain blackout darkness and white noise.',
+        protocolTomorrow: 'Audit room darkness (must be Level 10 pitch black where you cannot see your hand). Ensure nursery temperature does not spike or drop at dawn. Try shifting bedtime 15 minutes EARLIER to prevent cortisol-driven early wakeups.'
+      },
+      'crap-nap': {
+        title: '30-Minute Crap Naps: Waking Crying After Exactly 1 Sleep Cycle',
+        cause: 'Inability to Connect Infant Sleep Cycles Independently or Sensory Prop Dependency',
+        mechanism: 'Infant daytime sleep cycles last 30 to 45 minutes. At the end of light sleep, infants briefly surface. If they fell asleep via an active external motion prop (rocking, pacifier held in mouth, stroller moving), the absence of that condition causes a startle awakening.',
+        immediateFix: 'Allow 5 to 10 minutes of "crib pause" before rushing in. Many infants grunt and fuss for 4 minutes before falling back into a second sleep cycle. If they are in acute distress, provide a gentle contact nap rescue.',
+        protocolTomorrow: 'Practice putting baby down in the crib while drowsy but awake for Nap 1. Ensure the room has Level 10 blackout curtains and continuous pink/white noise running at 55-60 dB.'
+      }
+    };
+
+    function switchDiagTab(key, btn) {
+      var btns = document.querySelectorAll('.bb-tab-btn');
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.remove('active');
+      }
+      btn.classList.add('active');
+
+      var item = diagData[key];
+      if (!item) return;
+
+      var html = '<h4 style="margin-top:0; color:#0369a1; font-size:1.15rem;">' + item.title + '</h4>' +
+                 '<div class="bb-diag-meta">' +
+                 '<div class="bb-meta-box bb-meta-cause"><strong>Primary Neuro Cause:</strong> ' + item.cause + '</div>' +
+                 '<div class="bb-meta-box bb-meta-fix"><strong>Emergency Triage (Tonight):</strong> ' + item.immediateFix + '</div>' +
+                 '</div>' +
+                 '<p style="font-size:14px; color:#334155;"><strong>Neurological Mechanism:</strong> ' + item.mechanism + '</p>' +
+                 '<div style="background:#fff; border-left:4px solid #10b981; padding:12px 14px; border-radius:0 8px 8px 0; font-size:13px; color:#1e293b;">' +
+                 '<strong>48-Hour Protocol Correction:</strong> ' + item.protocolTomorrow +
+                 '</div>';
+
+      document.getElementById('diagContent').innerHTML = html;
+    }
+
+    /* 3. Live 10-Point Overtiredness Meter Engine */
+    function calculateOvertiredScore() {
+      var checks = document.querySelectorAll('.ot-check');
+      var score = 0;
+      for (var i = 0; i < checks.length; i++) {
+        if (checks[i].checked) {
+          score += parseInt(checks[i].getAttribute('data-weight'), 10);
+        }
+      }
+      if (score < 0) score = 0;
+
+      document.getElementById('gaugeScoreNum').innerText = score;
+      var fillPercent = Math.min(100, Math.round((score / 12) * 100));
+      var bar = document.getElementById('gaugeBar');
+      var statusText = document.getElementById('gaugeStatusText');
+      var recBox = document.getElementById('gaugeRecommendation');
+
+      bar.style.width = fillPercent + '%';
+
+      if (score <= 2) {
+        bar.style.backgroundColor = '#10b981'; // Green
+        statusText.style.color = '#10b981';
+        statusText.innerText = 'Balanced Sleep Pressure (Optimal)';
+        recBox.innerHTML = '<strong>Clinical State:</strong> Baby is exhibiting calm, physiological readiness for sleep. Proceed with standard 15-minute soothing routine and put down in the crib.';
+      } else if (score <= 5) {
+        bar.style.backgroundColor = '#f59e0b'; // Amber
+        statusText.style.color = '#f59e0b';
+        statusText.innerText = 'Moderate Fatigue (Adenosine Saturated)';
+        recBox.innerHTML = '<strong>Clinical State:</strong> Baby has reached peak adenosine capacity. Cut the bedtime routine short immediately (no long baths or stimulating books); move to dark room and settle into crib within 5 minutes.';
+      } else {
+        bar.style.backgroundColor = '#ef4444'; // Red
+        statusText.style.color = '#ef4444';
+        statusText.innerText = 'Acute Cortisol Surge / Hyperarousal!';
+        recBox.innerHTML = '<strong>Clinical State: Acute HPA Axis Activation.</strong> Baby is flooded with adrenaline and cortisol. Putting baby in the crib now will cause intense screaming. <em>Emergency Protocol:</em> Swaddle or sleep sack immediately, take to a dark bathroom with a running hot shower (steam + white noise), provide rhythmic rocking with firm patting until breathing regulates, then transfer to crib.';
+      }
+    }
+
+    /* 4. Nursery Thermal TOG Calculator Engine */
+    function updateTempSlider() {
+      var unit = document.getElementById('tempUnit').value;
+      var slider = document.getElementById('roomTempInput');
+      if (unit === 'C') {
+        slider.min = "16";
+        slider.max = "27";
+        slider.value = "21";
+      } else {
+        slider.min = "62";
+        slider.max = "80";
+        slider.value = "70";
+      }
+      calculateTOGSafety();
+    }
+
+    function calculateTOGSafety() {
+      var unit = document.getElementById('tempUnit').value;
+      var val = parseInt(document.getElementById('roomTempInput').value, 10);
+      var degF = unit === 'F' ? val : Math.round(val * 1.8 + 32);
+      var degC = unit === 'C' ? val : Math.round((val - 32) / 1.8);
+
+      document.getElementById('tempDisplay').innerText = degF + '°F (' + degC + '°C)';
+
+      var title = '';
+      var layers = '';
+      var alertClass = '#f0fdf4';
+      var borderClass = '#bbf7d0';
+
+      if (degF < 65) { // Very Cold
+        title = 'Recommended: 2.5 to 3.5 TOG Heavy Sleep Sack';
+        layers = '<strong>Clothing Configuration:</strong> Long-sleeve cotton footed pajama + cotton bodysuit underneath + 2.5 or 3.5 TOG padded sleep sack. Ensure room does not drop below 64°F.';
+        alertClass = '#eff6ff';
+        borderClass = '#bfdbfe';
+      } else if (degF >= 65 && degF <= 68) { // Cool
+        title = 'Recommended: 2.5 TOG Sleep Sack';
+        layers = '<strong>Clothing Configuration:</strong> Long-sleeve cotton footed sleeper + 2.5 TOG wearable blanket.';
+        alertClass = '#f0fdf4';
+        borderClass = '#bbf7d0';
+      } else if (degF >= 69 && degF <= 72) { // Optimal Goldilocks (AAP Recommendation)
+        title = 'Recommended: 1.0 TOG Sleep Sack (Optimal Thermal Safety)';
+        layers = '<strong>Clothing Configuration:</strong> Long-sleeve cotton sleeper (or short-sleeve bodysuit) + 1.0 TOG standard cotton sleep sack. This is the optimal pediatric safety range.';
+        alertClass = '#f0fdf4';
+        borderClass = '#86efac';
+      } else if (degF >= 73 && degF <= 75) { // Warm
+        title = 'Recommended: 0.5 TOG Lightweight Sleep Sack';
+        layers = '<strong>Clothing Configuration:</strong> Short-sleeve cotton bodysuit (onesie) + 0.5 TOG lightweight muslin or bamboo sleep sack.';
+        alertClass = '#fffbeb';
+        borderClass = '#fde68a';
+      } else { // Hot (>75 F)
+        title = 'Recommended: 0.2 to 0.5 TOG or Nappy Only (Overheating Warning!)';
+        layers = '<strong>Clothing Configuration:</strong> Diaper + short-sleeve cotton onesie only. NO heavy sleep sacks. High room temperature is an established epidemiological risk factor for SIDS. Ventilate room with a ceiling or floor fan aimed away from the crib.';
+        alertClass = '#fef2f2';
+        borderClass = '#fecaca';
+      }
+
+      var resBox = document.getElementById('togResults');
+      resBox.style.backgroundColor = alertClass;
+      resBox.style.borderColor = borderClass;
+      document.getElementById('togTitle').innerText = title;
+      document.getElementById('togLayers').innerHTML = layers;
+    }
+
+    // Initialize all components on load
+    window.addEventListener('DOMContentLoaded', function() {
+      generatePediatricSchedule();
+      switchDiagTab('false-start', document.querySelector('.bb-tab-btn.active'));
+      calculateOvertiredScore();
+      calculateTOGSafety();
+    });
+  </script>
 </body>
 </html>
