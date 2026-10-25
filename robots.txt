@@ -1,22 +1,37 @@
 # Official robots.txt for BabieBlue.com
 # Evidence-Based Maternal & Pediatric Health Platform
 
-# 1. Google AdSense & Monetization Crawlers
+# 1. Google AdSense & Monetization Crawlers (Full High-Priority Access)
 User-agent: Mediapartners-Google
 Allow: /
 
-# 2. AI Search & Answer Engine Retrieval Bots (AEO / GEO Citations)
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# 2. AI Search & Answer Engine Retrieval Bots (AEO / GEO Citations & Markdown Mirrors)
 User-agent: PerplexityBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: GPTBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: ClaudeBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: Claude-User
 Allow: /
@@ -40,5 +55,7 @@ Allow: /
 User-agent: *
 Allow: /
 
-# Sitemaps & LLM Context Files
+# Sitemaps & Structured LLM Clinical Context Files
 Sitemap: https://babieblue.com/sitemap.xml
+# LLM Index: https://babieblue.com/llms.txt
+# LLM Full Clinical Corpus: https://babieblue.com/llms-full.txt

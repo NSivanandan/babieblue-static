@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Babie Blue Pediatric and Neonatal Care Clinical Protocol Diagram">
+  <defs>
+    <linearGradient id="pedBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <pattern id="pedGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#pedBg)"/>
+  <rect width="1200" height="630" fill="url(#pedGrid)" opacity="0.6"/>
+  <rect x="48" y="48" width="1104" height="534" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="48" y="48" width="1104" height="10" rx="5" fill="#0369a1"/>
+
+  <text x="96" y="112" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="15" font-weight="700" fill="#0369a1" letter-spacing="2">BABIE BLUE PEDIATRIC REFERENCE • AAP &amp; WHO NEONATAL PROTOCOL</text>
+  <text x="96" y="158" font-family="Fraunces, Georgia, serif" font-size="34" font-weight="700" fill="#0f172a">Pediatric &amp; Neonatal Clinical Assessment Pathway</text>
+  <line x1="96" y1="184" x2="1104" y2="184" stroke="#e2e8f0" stroke-width="2"/>
+
+  <g transform="translate(96, 214)">
+    <rect width="312" height="270" rx="14" fill="#f0f9ff" stroke="#bae6fd" stroke-width="2"/>
+    <circle cx="44" cy="44" r="20" fill="#0369a1"/>
+    <text x="44" y="50" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#ffffff">01</text>
+    <text x="80" y="50" font-family="Plus Jakarta Sans, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Physiological Baseline</text>
+    <text x="28" y="96" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Age-adjusted growth &amp; weight curve</text>
+    <text x="28" y="130" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Feeding intake &amp; wet diaper output</text>
+    <text x="28" y="164" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Neuromotor &amp; developmental cues</text>
+    <text x="28" y="198" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Sleep architecture &amp; wake windows</text>
+    <rect x="24" y="220" width="264" height="32" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+    <text x="156" y="241" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#0369a1">DEVELOPMENTAL SURVEILLANCE</text>
+  </g>
+
+  <g transform="translate(444, 214)">
+    <rect width="312" height="270" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="2"/>
+    <circle cx="44" cy="44" r="20" fill="#15803d"/>
+    <text x="44" y="50" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#ffffff">02</text>
+    <text x="80" y="50" font-family="Plus Jakarta Sans, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Supportive Care Plan</text>
+    <text x="28" y="96" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Paced feeding &amp; airway positioning</text>
+    <text x="28" y="130" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Weight-calibrated medication dosing</text>
+    <text x="28" y="164" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• AAP Safe Sleep supine environment</text>
+    <text x="28" y="198" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Evidence-based parent counseling</text>
+    <rect x="24" y="220" width="264" height="32" rx="6" fill="#ffffff" stroke="#bbf7d0"/>
+    <text x="156" y="241" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#15803d">HOME CLINICAL MANAGEMENT</text>
+  </g>
+
+  <g transform="translate(792, 214)">
+    <rect width="312" height="270" rx="14" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+    <circle cx="44" cy="44" r="20" fill="#b91c1c"/>
+    <text x="44" y="50" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#ffffff">03</text>
+    <text x="80" y="50" font-family="Plus Jakarta Sans, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Pediatric Escalation</text>
+    <text x="28" y="96" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Rectal temp ≥ 38.0°C (100.4°F) &lt;90d</text>
+    <text x="28" y="130" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Intercostal retractions or grunting</text>
+    <text x="28" y="164" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• &lt; 4 wet diapers in 24h / sunken fontanel</text>
+    <text x="28" y="198" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Bilious vomiting or acholic/bloody stool</text>
+    <rect x="24" y="220" width="264" height="32" rx="6" fill="#ffffff" stroke="#fecaca"/>
+    <text x="156" y="241" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#b91c1c">URGENT PEDIATRIC EVALUATION</text>
+  </g>
+
+  <text x="96" y="542" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="600" fill="#475569">Medically Reviewed by Dr. Mangala Devi K.R., MS (OBG) &amp; Dr. Anagha Nawal, MD, MCE, FRM • BabieBlue.com</text>
+</svg>

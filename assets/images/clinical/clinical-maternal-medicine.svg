@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Babie Blue Maternal Medicine, Postpartum Recovery and Endocrinology Diagram">
+  <defs>
+    <linearGradient id="matBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="50%" stop-color="#f0fdfa"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+    <pattern id="matGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e5e4de" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#matBg)"/>
+  <rect width="1200" height="630" fill="url(#matGrid)" opacity="0.6"/>
+  <rect x="48" y="48" width="1104" height="534" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="48" y="48" width="1104" height="10" rx="5" fill="#0f766e"/>
+
+  <text x="96" y="112" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="15" font-weight="700" fill="#0f766e" letter-spacing="2">BABIE BLUE MATERNAL MEDICINE • CLINICAL DIAGNOSTIC &amp; RECOVERY MATRIX</text>
+  <text x="96" y="158" font-family="Fraunces, Georgia, serif" font-size="34" font-weight="700" fill="#0f172a">Comprehensive Maternal Health &amp; Therapeutic Protocol</text>
+  <line x1="96" y1="184" x2="1104" y2="184" stroke="#e2e8f0" stroke-width="2"/>
+
+  <g transform="translate(96, 214)">
+    <rect width="312" height="270" rx="14" fill="#f0fdfa" stroke="#99f6e4" stroke-width="2"/>
+    <circle cx="44" cy="44" r="20" fill="#0f766e"/>
+    <text x="44" y="50" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#ffffff">01</text>
+    <text x="80" y="50" font-family="Plus Jakarta Sans, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Etiology &amp; Biomarkers</text>
+    <text x="28" y="96" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Differential clinical evaluation</text>
+    <text x="28" y="130" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Targeted blood &amp; microbiology panels</text>
+    <text x="28" y="164" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Endocrine, vascular &amp; immune status</text>
+    <text x="28" y="198" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Root-cause symptom correlation</text>
+    <rect x="24" y="220" width="264" height="32" rx="6" fill="#ffffff" stroke="#99f6e4"/>
+    <text x="156" y="241" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#0f766e">CLINICAL DIFFERENTIAL</text>
+  </g>
+
+  <g transform="translate(444, 214)">
+    <rect width="312" height="270" rx="14" fill="#fffbeb" stroke="#fde68a" stroke-width="2"/>
+    <circle cx="44" cy="44" r="20" fill="#b45309"/>
+    <text x="44" y="50" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#ffffff">02</text>
+    <text x="80" y="50" font-family="Plus Jakarta Sans, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Evidence-Based Care</text>
+    <text x="28" y="96" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• First-line pharmacotherapy &amp; safety</text>
+    <text x="28" y="130" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Lactation-compatible regimens</text>
+    <text x="28" y="164" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Nutritional &amp; rehabilitative therapy</text>
+    <text x="28" y="198" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Preventive long-term monitoring</text>
+    <rect x="24" y="220" width="264" height="32" rx="6" fill="#ffffff" stroke="#fde68a"/>
+    <text x="156" y="241" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#b45309">STANDARD OF CARE</text>
+  </g>
+
+  <g transform="translate(792, 214)">
+    <rect width="312" height="270" rx="14" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+    <circle cx="44" cy="44" r="20" fill="#b91c1c"/>
+    <text x="44" y="50" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="#ffffff">03</text>
+    <text x="80" y="50" font-family="Plus Jakarta Sans, sans-serif" font-size="19" font-weight="700" fill="#0f172a">Physician Escalation</text>
+    <text x="28" y="96" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Systemic fever, rigors or acute pain</text>
+    <text x="28" y="130" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Cardiorespiratory or DVT symptoms</text>
+    <text x="28" y="164" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Heavy hemorrhage or syncope</text>
+    <text x="28" y="198" font-family="Plus Jakarta Sans, sans-serif" font-size="15" fill="#334155">• Severe mood or neurological shifts</text>
+    <rect x="24" y="220" width="264" height="32" rx="6" fill="#ffffff" stroke="#fecaca"/>
+    <text x="156" y="241" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#b91c1c">ACUTE MEDICAL TRIAGE</text>
+  </g>
+
+  <text x="96" y="542" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="600" fill="#475569">Medically Reviewed by Dr. Mangala Devi K.R., MS (OBG) &amp; Dr. Anagha Nawal, MD, MCE, FRM • BabieBlue.com</text>
+</svg>

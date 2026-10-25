@@ -1203,3 +1203,416 @@ input[type="checkbox"] {
 .bb-callout-warning { background: var(--bb-amber-bg); border-left-color: var(--bb-amber); }
 .bb-callout-clinical { background: var(--bb-teal-bg); border-left-color: var(--bb-teal); }
 
+/* ==========================================================================
+   Unified Clinical Decision Tree, Micro-Widgets, Citation Block & Print Sheet
+   ========================================================================== */
+.bb-decision-tree {
+  margin: 28px 0 !important;
+  padding: 24px !important;
+  background: var(--bb-surface) !important;
+  border: 1.5px solid var(--bb-teal) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px -4px rgba(15, 23, 42, 0.05) !important;
+  font-family: var(--font-sans, 'Plus Jakarta Sans', system-ui, sans-serif) !important;
+}
+
+.bb-decision-tree details {
+  border: 1px solid var(--bb-slate-200) !important;
+  border-radius: 8px !important;
+  padding: 14px 16px !important;
+  background: var(--bb-slate-50) !important;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.bb-decision-tree details:hover {
+  border-color: var(--bb-teal) !important;
+}
+
+.bb-decision-tree summary {
+  font-weight: 700 !important;
+  color: var(--bb-teal-dark) !important;
+  font-size: 15px !important;
+}
+
+body.bb-dim-mode .bb-decision-tree,
+body.bb-dim-mode .clinical-summary-box,
+body.bb-dim-mode .bb-eeat-bar,
+body.bb-dim-mode .single-post,
+body.bb-dim-mode .toc,
+body.bb-dim-mode #rank-math-toc,
+body.bb-dim-mode .info-box,
+body.bb-dim-mode .tip-box,
+body.bb-dim-mode .bb-clinical-pathway,
+body.bb-dim-mode .bb-pathway-step,
+body.bb-dim-mode .bb-age-card,
+body.bb-dim-mode .bb-clinical-table,
+body.bb-dim-mode .bb-micro-widget,
+body.bb-dim-mode .bb-references-block {
+  background-color: #111827 !important;
+  color: #f1f5f9 !important;
+  border-color: #1e293b !important;
+}
+
+body.bb-dim-mode .bb-decision-tree details {
+  background-color: #0b1120 !important;
+  border-color: #1e293b !important;
+}
+
+body.bb-dim-mode .bb-decision-tree summary {
+  color: #5eead4 !important;
+}
+
+/* Interactive Clinical Micro-Widget */
+.bb-micro-widget {
+  margin: 28px 0;
+  padding: 22px 24px;
+  background: var(--bb-teal-bg);
+  border: 1px solid var(--bb-teal-border);
+  border-left: 4px solid var(--bb-teal);
+  border-radius: 12px;
+}
+
+.bb-micro-widget-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.bb-micro-widget-kicker {
+  font-family: var(--font-mono, monospace);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--bb-teal);
+}
+
+.bb-micro-widget h3 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  color: var(--bb-slate-900);
+}
+
+.bb-micro-widget-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+  align-items: end;
+}
+
+.bb-micro-widget label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--bb-slate-700);
+}
+
+.bb-micro-widget input,
+.bb-micro-widget select {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--bb-slate-200);
+  border-radius: 8px;
+  background: var(--bb-surface);
+  color: var(--bb-slate-900);
+  font-size: 14.5px;
+  font-family: var(--font-sans, sans-serif);
+}
+
+.bb-micro-widget-output {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: var(--bb-surface);
+  border: 1px solid var(--bb-slate-200);
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Article Utility Toolbar (Print Fridge Sheet, Copy Summary, Dim Mode) */
+.bb-article-utility-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  margin: 12px 0 20px 0;
+  border-top: 1px solid var(--bb-slate-200);
+  border-bottom: 1px solid var(--bb-slate-200);
+  font-size: 13px;
+  color: var(--bb-slate-600);
+}
+
+.bb-utility-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.bb-utility-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 6px 12px;
+  background: var(--bb-slate-50);
+  border: 1px solid var(--bb-slate-200);
+  border-radius: 6px;
+  color: var(--bb-slate-800);
+  font-family: var(--font-sans, sans-serif);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.bb-utility-btn:hover {
+  border-color: var(--bb-teal);
+  color: var(--bb-teal);
+}
+
+/* Peer-Reviewed Clinical References Block */
+.bb-references-block {
+  margin: 36px 0 24px 0;
+  padding: 20px 24px;
+  background: var(--bb-slate-50);
+  border: 1px solid var(--bb-slate-200);
+  border-radius: 12px;
+}
+
+.bb-references-block summary {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--bb-slate-900);
+  cursor: pointer;
+}
+
+.bb-references-list {
+  margin: 14px 0 0 20px;
+  padding: 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--bb-slate-700);
+}
+
+.bb-references-list li {
+  margin-bottom: 8px;
+}
+
+/* Search Modal Filter Bar */
+.bb-search-filters {
+  display: flex;
+  gap: 6px;
+  padding: 8px 16px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--bb-slate-200);
+  background: var(--bb-slate-50);
+}
+
+body.bb-dim-mode .bb-search-filters {
+  background: #0f172a;
+  border-bottom-color: #1e293b;
+}
+
+.bb-search-filter-btn {
+  padding: 5px 11px;
+  min-height: 32px;
+  border-radius: 6px;
+  border: 1px solid var(--bb-slate-200);
+  background: var(--bb-surface);
+  color: var(--bb-slate-700);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bb-search-filter-btn.active {
+  background: var(--bb-teal);
+  color: #ffffff;
+  border-color: var(--bb-teal);
+}
+
+/* Hide unrendered legacy FontAwesome empty <i> tags gracefully */
+i.fas, i.far, i.fab {
+  display: none !important;
+}
+
+/* Print Fridge-Sheet Stylesheet */
+@media print {
+  header.site-header,
+  footer.site-footer,
+  .bb-jump-bar,
+  .bb-header-actions,
+  .bb-search-modal-backdrop,
+  .ad-slot-wrapper,
+  .in-article-ad,
+  .bottom-post-ad,
+  .bb-utility-actions,
+  .toc,
+  #rank-math-toc {
+    display: none !important;
+  }
+  body,
+  .bb-article-shell,
+  .single-post,
+  .container {
+    background: #ffffff !important;
+    color: #000000 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .clinical-summary-box,
+  .bb-decision-tree,
+  .bb-clinical-table {
+    page-break-inside: avoid;
+    border: 1px solid #000000 !important;
+  }
+}
+
+/* ==========================================================================
+   Top 1% Clinical Audit Trail Drawer, Dual-Unit Toggle & Next-Steps Pathway
+   ========================================================================== */
+.bb-audit-drawer {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: var(--bb-slate-50);
+  border: 1px solid var(--bb-slate-200);
+  border-radius: 8px;
+  font-size: 12.5px;
+  color: var(--bb-slate-700);
+}
+
+.bb-audit-drawer summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--bb-teal-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.bb-audit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--bb-slate-200);
+  line-height: 1.5;
+}
+
+.bb-widget-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--bb-slate-200);
+}
+
+.bb-next-steps-section {
+  margin: 40px 0 28px 0;
+  padding: 26px 24px;
+  background: var(--bb-slate-50);
+  border: 1px solid var(--bb-slate-200);
+  border-top: 3px solid var(--bb-teal);
+  border-radius: 14px;
+}
+
+.bb-next-steps-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.bb-next-steps-kicker {
+  font-family: var(--font-mono, monospace);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--bb-teal);
+}
+
+.bb-next-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 14px;
+}
+
+.bb-next-step-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 18px;
+  background: var(--bb-surface);
+  border: 1px solid var(--bb-slate-200);
+  border-radius: 10px;
+  text-decoration: none !important;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.bb-next-step-card:hover {
+  border-color: var(--bb-teal);
+  transform: translateY(-2px);
+}
+
+.bb-next-step-cat {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--bb-blue);
+  margin-bottom: 6px;
+}
+
+.bb-next-step-title {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--bb-slate-900);
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.bb-next-step-cta {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--bb-teal);
+  margin-top: auto;
+}
+
+body.bb-dim-mode .bb-audit-drawer,
+body.bb-dim-mode .bb-next-steps-section,
+body.bb-dim-mode .bb-next-step-card {
+  background-color: #111827 !important;
+  border-color: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+body.bb-dim-mode .bb-next-step-title {
+  color: #f8fafc !important;
+}
+
+body.bb-dim-mode .bb-audit-drawer summary,
+body.bb-dim-mode .bb-next-step-cta {
+  color: #5eead4 !important;
+}
