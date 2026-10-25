@@ -163,6 +163,20 @@
     if (modal) modal.classList.remove('open');
   };
 
+  window.switchBbStage = function (stageId, tabBtn) {
+    const parent = tabBtn.closest('.bb-quick-navigator');
+    if (!parent) return;
+    parent.querySelectorAll('.bb-stage-tab').forEach((t) => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    parent.querySelectorAll('.bb-stage-panel').forEach((p) => p.classList.remove('active'));
+    tabBtn.classList.add('active');
+    tabBtn.setAttribute('aria-selected', 'true');
+    const panel = parent.querySelector('#' + stageId);
+    if (panel) panel.classList.add('active');
+  };
+
   document.addEventListener('keydown', (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
       e.preventDefault();
