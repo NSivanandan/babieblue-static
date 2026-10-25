@@ -70,7 +70,7 @@
   <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://babieblue.com/assets/images/babieblue-og-clinical.png">
-  <meta name="twitter:title" content="Clinical Protocols, Interactive Calculators &amp; Physician-Reviewed Guides from Conception to Early Childhood">
+  <meta name="twitter:title" content="Clinical Protocols, Interactive Decision Tools &amp; Physician-Reviewed Guides">
   <meta name="twitter:description" content="Babie Blue is your physician-reviewed guide for pregnancy milestones, newborn routines, toddler development, postpartum wellness, and clinical calculators.">
   <link rel="alternate" type="application/rss+xml" title="Babie Blue RSS Feed" href="https://babieblue.com/feed.xml">
 </head>
@@ -98,17 +98,30 @@
     
     <!-- Hero Section -->
     <section class="bb-hero-editorial">
-      <span class="bb-kicker">Evidence-Based Maternal &amp; Pediatric Healthcare</span>
+      <div class="bb-hero-badge">
+        <span>🏥</span> 2026 Physician-Reviewed Protocols &bull; Strict ACOG, AAP &amp; NASPGHAN Standards
+      </div>
       <h1 class="bb-hero-title">
-        Clinical Protocols, Interactive Calculators &amp; Physician-Reviewed Guides from Conception to Early Childhood
+        Clinical Protocols, Interactive Decision Tools &amp; Physician-Reviewed Guides
       </h1>
       <p class="bb-hero-lead">
-        Navigate pregnancy milestones, newborn sleep architecture, infant nutrition, pelvic floor rehabilitation, and acute pediatric triage with interactive decision tools built to 2025–2026 ACOG, AAP, and NASPGHAN guidelines.
+        Expert-verified maternal and pediatric healthcare from conception through early childhood. Navigate trimester screening, infant sleep architecture, acute fever dosing, and pelvic floor rehab with interactive mathematical engines built to latest medical guidelines.
       </p>
       <div class="bb-hero-actions">
-        <a href="/pregnancy/" class="bb-btn bb-btn--primary">Explore Pregnancy Protocols &rarr;</a>
-        <a href="/baby-care/" class="bb-btn bb-btn--outline">Newborn &amp; Infant Care Guides</a>
-        <a href="/calculators/" class="bb-btn bb-btn--accent">Interactive Clinical Calculators</a>
+        <button type="button" class="bb-btn bb-btn--primary" onclick="openBbSearch()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          Search Protocols &amp; Calculators
+          <kbd class="bb-search-kbd" style="margin-left:10px;font-size:11px;background:rgba(255,255,255,0.22);padding:2px 6px;border-radius:4px;">⌘K</kbd>
+        </button>
+        <a href="/calculators/" class="bb-btn bb-btn--outline">Clinical Calculators Suite &rarr;</a>
+        <a href="/about-us/" class="bb-btn bb-btn--accent">Review Board &amp; Ethics</a>
+      </div>
+
+      <div class="bb-trust-pills-row">
+        <span class="bb-trust-pill"><span class="icon-check">✓</span> 100% Board-Certified Medical Review</span>
+        <span class="bb-trust-pill"><span class="icon-check">✓</span> Exact Weight-Based mL Pediatric Dosing</span>
+        <span class="bb-trust-pill"><span class="icon-check">✓</span> 16 Interactive Clinical Decision Engines</span>
+        <span class="bb-trust-pill"><span class="icon-check">✓</span> 2:00 AM Night-Feed Dim Mode</span>
       </div>
     </section>
 
@@ -232,7 +245,7 @@
     </section>
 
     <!-- Thematic Specialty Hubs -->
-    <section class="bb-section">
+    <section class="bb-section" style="margin-bottom:48px;">
       <div class="bb-section-head">
         <div>
           <span class="bb-kicker">Clinical Knowledge Architecture</span>
@@ -243,37 +256,57 @@
 
       <div class="bb-specialty-grid">
         <a href="/pregnancy/" class="bb-specialty-card">
+          <div class="bb-specialty-top">
+            <div class="bb-specialty-icon">🤰</div>
+            <span class="bb-specialty-count">43 Guides</span>
+          </div>
           <span class="bb-kicker">Obstetrics &amp; Prenatal</span>
           <h3>Pregnancy Guide</h3>
-          <p>43 physician-reviewed guides on trimester symptoms, cfDNA NIPT, cord blood banking, ACA breast pumps, and hospital bag checklists.</p>
+          <p>Clinically reviewed guidance on trimester milestones, cfDNA NIPT, cord blood banking ROI, ACA breast pumps, and hospital packing.</p>
           <span class="bb-card-action">Browse Pregnancy Guides &rarr;</span>
         </a>
 
         <a href="/baby-care/" class="bb-specialty-card">
+          <div class="bb-specialty-top">
+            <div class="bb-specialty-icon">🍼</div>
+            <span class="bb-specialty-count">31 Protocols</span>
+          </div>
           <span class="bb-kicker">Neonatology &amp; Pediatrics</span>
           <h3>Baby Care</h3>
-          <p>31 protocols on infant wake windows, exact mL fever dosing, NICU preemie corrected age, silent reflux (LPR), and organic formula standards.</p>
+          <p>Evidence-based protocols on infant wake windows, exact mL fever dosing, NICU preemie corrected age, silent reflux, and formula tiers.</p>
           <span class="bb-card-action">Browse Baby Care Protocols &rarr;</span>
         </a>
 
         <a href="/parenting/" class="bb-specialty-card">
+          <div class="bb-specialty-top">
+            <div class="bb-specialty-icon">🧒</div>
+            <span class="bb-specialty-count">22 Guides</span>
+          </div>
           <span class="bb-kicker">Early Childhood &amp; Immunity</span>
           <h3>Parenting</h3>
-          <p>22 evidence-based guides on daycare viral triage (RSV, croup, HFM), toddler milestones, behavior regulation, and family nutrition.</p>
+          <p>Pediatric guidance on daycare viral triage (RSV, croup, HFM), toddler speech milestones, sensory regulation, and family nutrition.</p>
           <span class="bb-card-action">Browse Parenting Library &rarr;</span>
         </a>
 
         <a href="/maternal-health/" class="bb-specialty-card">
+          <div class="bb-specialty-top">
+            <div class="bb-specialty-icon">🌸</div>
+            <span class="bb-specialty-count">58 Protocols</span>
+          </div>
           <span class="bb-kicker">Postpartum &amp; Women&rsquo;s Health</span>
           <h3>Maternal Health</h3>
-          <p>58 clinical protocols on postpartum diastasis recti rehab, ferritin &amp; thyroiditis blood panels, preeclampsia, and pelvic recovery.</p>
+          <p>Physician protocols on postpartum diastasis recti rehab, ferritin &amp; thyroiditis lab panels, preeclampsia triage, and pelvic recovery.</p>
           <span class="bb-card-action">Browse Maternal Health &rarr;</span>
         </a>
 
         <a href="/calculators/" class="bb-specialty-card">
+          <div class="bb-specialty-top">
+            <div class="bb-specialty-icon">🧮</div>
+            <span class="bb-specialty-count">26 Tools</span>
+          </div>
           <span class="bb-kicker">Interactive Decision Tools</span>
           <h3>Calculators Suite</h3>
-          <p>10 standalone calculators (Due Date, Beta hCG, Ovulation, BMR) + 16 embedded clinical triage and dosing calculators.</p>
+          <p>10 standalone calculators (Due Date, Beta hCG, Ovulation, Calorie Deficit) plus 16 embedded clinical dosing and triage calculators.</p>
           <span class="bb-card-action">Launch Clinical Calculators &rarr;</span>
         </a>
       </div>
@@ -284,45 +317,73 @@
       <div class="bb-section-head">
         <div>
           <span class="bb-kicker">2026 Physician-Reviewed Flagship Series</span>
-          <h2 class="bb-section-title">16 Interactive Clinical Protocols, Triage Engines &amp; Calculators</h2>
+          <h2 class="bb-section-title">Featured Clinical Decision Engines &amp; Flagship Protocols</h2>
           <p class="bb-section-lead">Longform YMYL clinical guides with built-in interactive calculators, 2:00 AM Dim Mode, and AAP / ACOG / NASPGHAN 2025–2026 guidelines.</p>
         </div>
       </div>
 
-      <div class="bb-flagship-grid">
-        <div class="bb-flagship-card">
-          <span class="bb-flagship-card-kicker">Infant Sleep &amp; Circadian Science</span>
-          <h3><a href="/baby-care/wake-windows-nap-transitions-by-age/">Wake Windows by Age &amp; Nap Transitions (0–24 Months)</a></h3>
-          <p>Interactive Daily Sleep Schedule Generator, Adenosine vs. Cortisol curve, and Nap Transition Readiness Quiz.</p>
-          <a href="/baby-care/wake-windows-nap-transitions-by-age/" class="bb-card-action">Launch Sleep Planner &rarr;</a>
+      <!-- Bento Spotlight Showcase (Top 4 Protocols) -->
+      <div class="bb-flagship-spotlight-grid">
+        <div class="bb-spotlight-card bb-spotlight-card--urgent">
+          <div class="bb-spotlight-header">
+            <span class="bb-spotlight-badge">🚨 Acute Pediatric Dosing</span>
+            <span class="bb-spotlight-tag">Emergency Triage</span>
+          </div>
+          <h3><a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/">Infant Fever Guide &amp; Exact Tylenol / Motrin mL Dosing Chart</a></h3>
+          <p>Weight-based mL syringe visualizer (160mg/5mL, 50mg/1.25mL, 100mg/5mL), concentrated drops trap warning, and AAP under-60-day fever emergency triage.</p>
+          <div class="bb-spotlight-footer">
+            <span style="font-size:12px;color:var(--text-muted);">Oral Syringe Visualizer &bull; AAP Locked</span>
+            <a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/" class="bb-spotlight-cta">Calculate Exact mL Dose &rarr;</a>
+          </div>
         </div>
 
+        <div class="bb-spotlight-card">
+          <div class="bb-spotlight-header">
+            <span class="bb-spotlight-badge">🌙 Circadian Science</span>
+            <span class="bb-spotlight-tag">Sleep Engine</span>
+          </div>
+          <h3><a href="/baby-care/wake-windows-nap-transitions-by-age/">Wake Windows by Age &amp; Nap Transitions (0–24 Months)</a></h3>
+          <p>Interactive Daily Sleep Schedule Generator calibrated to adenosine pressure and cortisol curves, plus our 5-point Nap Transition Readiness Quiz.</p>
+          <div class="bb-spotlight-footer">
+            <span style="font-size:12px;color:var(--text-muted);">Clock-Time Generator &bull; 0–24 Mo</span>
+            <a href="/baby-care/wake-windows-nap-transitions-by-age/" class="bb-spotlight-cta">Launch Sleep Planner &rarr;</a>
+          </div>
+        </div>
+
+        <div class="bb-spotlight-card">
+          <div class="bb-spotlight-header">
+            <span class="bb-spotlight-badge">🌸 Pelvic Floor PT</span>
+            <span class="bb-spotlight-tag">Core Rehab</span>
+          </div>
+          <h3><a href="/maternal-health/postpartum-diastasis-recti-self-test-rehab-protocol/">Postpartum Diastasis Recti Self-Test &amp; 12-Week Core Rehab</a></h3>
+          <p>Interactive 3-Zone IRD Finger-Width &amp; Fascial Tension Scorer plus 360° Piston breathing progression tracker to safely restore linea alba integrity.</p>
+          <div class="bb-spotlight-footer">
+            <span style="font-size:12px;color:var(--text-muted);">3-Zone Finger Scorer &bull; 12-Wk Plan</span>
+            <a href="/maternal-health/postpartum-diastasis-recti-self-test-rehab-protocol/" class="bb-spotlight-cta">Run Diastasis Self-Test &rarr;</a>
+          </div>
+        </div>
+
+        <div class="bb-spotlight-card">
+          <div class="bb-spotlight-header">
+            <span class="bb-spotlight-badge">🔍 Newborn GI Triage</span>
+            <span class="bb-spotlight-tag">Visual Decoder</span>
+          </div>
+          <h3><a href="/baby-care/newborn-poop-color-texture-chart/">Newborn Poop Color &amp; Texture Chart: Visual Stool Triage</a></h3>
+          <p>9-swatch visual triage engine from transitional stool to CMPA mucus and pale acholic stool alerts, plus Day 1–7 diaper hydration output tracker.</p>
+          <div class="bb-spotlight-footer">
+            <span style="font-size:12px;color:var(--text-muted);">9-Swatch Palette &bull; Biliary Alert</span>
+            <a href="/baby-care/newborn-poop-color-texture-chart/" class="bb-spotlight-cta">Open Stool Decoder &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional 12 Flagship Protocols Grid -->
+      <div class="bb-flagship-grid">
         <div class="bb-flagship-card">
-          <span class="bb-flagship-card-kicker">Lactation &amp; Infant Nutrition</span>
+          <span class="bb-flagship-card-kicker">Lactation &amp; Feeding</span>
           <h3><a href="/baby-care/paced-bottle-feeding-combo-feeding-schedule/">Paced Bottle Feeding &amp; Combo Feeding Schedule Guide</a></h3>
           <p>Weight-Based 24-Hour Milk &amp; Formula Volume Calculator, Paced Angle Diagram, and Nipple Flow Rate Matrix.</p>
           <a href="/baby-care/paced-bottle-feeding-combo-feeding-schedule/" class="bb-card-action">Calculate Daily Ounces &rarr;</a>
-        </div>
-
-        <div class="bb-flagship-card">
-          <span class="bb-flagship-card-kicker">Postpartum Pelvic Floor PT</span>
-          <h3><a href="/maternal-health/postpartum-diastasis-recti-self-test-rehab-protocol/">Postpartum Diastasis Recti Self-Test &amp; 12-Week Rehab</a></h3>
-          <p>Interactive 3-Zone IRD Finger-Width &amp; Fascial Tension Scorer plus 360° Piston Rehab Progression Tracker.</p>
-          <a href="/maternal-health/postpartum-diastasis-recti-self-test-rehab-protocol/" class="bb-card-action">Run Diastasis Self-Test &rarr;</a>
-        </div>
-
-        <div class="bb-flagship-card">
-          <span class="bb-flagship-card-kicker">Newborn GI &amp; Stool Triage</span>
-          <h3><a href="/baby-care/newborn-poop-color-texture-chart/">Newborn Poop Color &amp; Texture Chart: Visual Decoder</a></h3>
-          <p>9-Swatch Stool Color &amp; Texture Triage Engine, Day 1–7 Wet/Dirty Diaper Output Tracker, and Biliary Atresia Alert.</p>
-          <a href="/baby-care/newborn-poop-color-texture-chart/" class="bb-card-action">Open Stool Decoder &rarr;</a>
-        </div>
-
-        <div class="bb-flagship-card bb-flagship-card--urgent">
-          <span class="bb-flagship-card-kicker">Acute Pediatric Dosing</span>
-          <h3><a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/">Infant Fever Guide &amp; Exact Tylenol / Motrin Dosing Chart</a></h3>
-          <p>Weight-Based mL Syringe Visualizer (160mg/5mL, 50mg/1.25mL, 100mg/5mL) + AAP Under-60-Day Fever Triage.</p>
-          <a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/" class="bb-card-action">Calculate Exact mL Dose &rarr;</a>
         </div>
 
         <div class="bb-flagship-card">
@@ -375,14 +436,14 @@
         </div>
 
         <div class="bb-flagship-card">
-          <span class="bb-flagship-card-kicker">Regulatory Toxicology &amp; Nutrition</span>
+          <span class="bb-flagship-card-kicker">Regulatory Toxicology</span>
           <h3><a href="/baby-care/best-organic-baby-formulas-us-vs-european-standards/">Best Organic Baby Formulas (2026): US vs. EU Standards &amp; Heavy Metals</a></h3>
           <p>US vs. EU Ingredient &amp; Heavy Metal Audit (Operation Stork Speed &amp; 2025 Consumer Reports Data) + Brand Matcher.</p>
           <a href="/baby-care/best-organic-baby-formulas-us-vs-european-standards/" class="bb-card-action">Audit Organic Formulas &rarr;</a>
         </div>
 
         <div class="bb-flagship-card">
-          <span class="bb-flagship-card-kicker">ACA Benefits &amp; Lactation Gear</span>
+          <span class="bb-flagship-card-kicker">ACA Benefits &amp; Lactation</span>
           <h3><a href="/pregnancy/breast-pump-insurance-coverage-how-to-get-free/">How to Get a Free Breast Pump Through Insurance (2026 ACA Guide)</a></h3>
           <p>ACA Insurer &amp; DME Supplier Copay Calculator, 90-Day Replacement Parts Maximizer (A4281–A4286), and Rx Generator.</p>
           <a href="/pregnancy/breast-pump-insurance-coverage-how-to-get-free/" class="bb-card-action">Check Pump Coverage &rarr;</a>
@@ -484,6 +545,38 @@
           <span class="bb-board-bio">Founder of BabieBlue &amp; Shaynly &bull; Former Healthcare Project Head at Ferticare &bull; Lean Six Sigma Clinical Systems Architect</span>
           <span class="bb-board-link">View Founder Profile &rarr;</span>
         </a>
+      </div>
+
+      <!-- Institutional 4-Stage Medical Peer Review Process -->
+      <div class="bb-peer-review-banner">
+        <div class="bb-peer-step">
+          <div class="bb-peer-step-num">1</div>
+          <div class="bb-peer-step-text">
+            <strong>Clinical Mapping</strong>
+            <span>Direct citation of ACOG, AAP, and NASPGHAN medical society bulletins.</span>
+          </div>
+        </div>
+        <div class="bb-peer-step">
+          <div class="bb-peer-step-num">2</div>
+          <div class="bb-peer-step-text">
+            <strong>Physician Peer Review</strong>
+            <span>Verified by practicing OB-GYNs and neonatologists before publication.</span>
+          </div>
+        </div>
+        <div class="bb-peer-step">
+          <div class="bb-peer-step-num">3</div>
+          <div class="bb-peer-step-text">
+            <strong>Dosing Safety Lock</strong>
+            <span>Weight-based mathematical safety locks preventing pediatric dosing errors.</span>
+          </div>
+        </div>
+        <div class="bb-peer-step">
+          <div class="bb-peer-step-num">4</div>
+          <div class="bb-peer-step-text">
+            <strong>90-Day Continuous Audit</strong>
+            <span>Re-verified quarterly against newly released peer-reviewed medical trials.</span>
+          </div>
+        </div>
       </div>
     </section>
 
