@@ -1,8 +1,4 @@
-# Canonical domain redirects (pages.dev -> babieblue.com)
-https://:project.pages.dev/* https://babieblue.com/:splat 301
-https://babieblue.pages.dev/* https://babieblue.com/:splat 301
-
-# 301 Consolidations
+# 301 Consolidations (Domain redirects handled by functions/_middleware.js)
 /2-3-week-pregnancy /pregnancy/10-early-signs-of-pregnancy-every-woman-should-know/ 301
 /2-3-week-pregnancy/ /pregnancy/10-early-signs-of-pregnancy-every-woman-should-know/ 301
 /baby-names-baby-blue /parenting/unique-girl-names-2025/ 301

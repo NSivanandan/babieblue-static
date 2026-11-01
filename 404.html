@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <!-- Canonical Domain Guard: strictly enforce https://babieblue.com -->
+  <script>
+    if (location.hostname !== 'babieblue.com' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      location.replace('https://babieblue.com' + location.pathname + location.search + location.hash);
+    }
+  </script>
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found | Babie Blue Clinical Library</title>
   <meta name="description" content="Explore Babie Blue maternal health, pregnancy, pediatric care protocols, and interactive clinical calculators.">
@@ -23,6 +29,17 @@
   <meta name="twitter:image" content="https://babieblue.com/assets/images/babieblue-og-clinical.png">
   <meta name="twitter:title" content="Clinical Resource Directory & Navigation">
   <meta name="twitter:description" content="Explore Babie Blue maternal health, pregnancy, pediatric care protocols, and interactive clinical calculators.">
+    <!-- Google Consent Mode v2 Default (Unblocks AdSense & GA4 Impression Telemetry) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
+  </script>
   <!-- Google Analytics 4 (GA4: G-7ZRLCL74GN) -->
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZRLCL74GN"></script>
@@ -33,7 +50,7 @@
   gtag('config', 'G-7ZRLCL74GN', { link_ad_clicks: true, send_page_view: true });
 </script>
   <!-- Google AdSense Official Script (Auto-Ads & Ad Units Enabled) -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223" crossorigin="anonymous" data-cfasync="false"></script></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223" crossorigin="anonymous" data-cfasync="false"></script>
   <link rel="alternate" type="application/rss+xml" title="Babie Blue RSS Feed" href="https://babieblue.com/feed.xml">
 </head>
 <body>

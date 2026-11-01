@@ -2,6 +2,12 @@
 
 <html lang="en">
 <head>
+  <!-- Canonical Domain Guard: strictly enforce https://babieblue.com -->
+  <script>
+    if (location.hostname !== 'babieblue.com' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      location.replace('https://babieblue.com' + location.pathname + location.search + location.hash);
+    }
+  </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Daycare Illness Survival Guide: RSV, Croup, HFM &amp; Ear Pain</title>
@@ -22,7 +28,18 @@
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="The Daycare Illness Survival Guide (2026): RSV, Croup, Hand-Foot-and-Mouth &amp; Ear Infections Explained" name="twitter:title"/>
 <meta content="Survive your baby" name="twitter:description"/>
-<!-- Google Analytics 4 (GA4: G-7ZRLCL74GN) -->
+  <!-- Google Consent Mode v2 Default (Unblocks AdSense & GA4 Impression Telemetry) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
+  </script>
+  <!-- Google Analytics 4 (GA4: G-7ZRLCL74GN) -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZRLCL74GN"></script>
 <script>
