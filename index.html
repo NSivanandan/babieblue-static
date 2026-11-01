@@ -20,7 +20,7 @@
   <meta property="og:type" content="website">
 
   <!-- Google AdSense Official Script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223" crossorigin="anonymous" data-cfasync="false"></script></script></script>
 
   <!-- Structured Data: Organization & MedicalWebSite -->
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MedicalOrganization","@id":"https://babieblue.com/#organization","name":"Babie Blue","url":"https://babieblue.com/","founder":{"@type":"Person","@id":"https://babieblue.com/sivanandan-n/#person","name":"Sivanandan N","jobTitle":"Founder & Owner","url":"https://babieblue.com/about-us/"},"publishingPrinciples":"https://babieblue.com/about-us/","logo":"https://babieblue.com/assets/images/babieblue-og-clinical.svg"},{"@type":"WebSite","@id":"https://babieblue.com/#website","url":"https://babieblue.com/","name":"Babie Blue","publisher":{"@id":"https://babieblue.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://babieblue.com/calculators/?q={search_term_string}","query-input":"required name=search_term_string"}}]}</script>
@@ -63,7 +63,7 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="bb-homepage-main">
     
     <!-- Hero Section -->
     <section class="bb-hero-editorial">
@@ -78,9 +78,9 @@
       </p>
       <div class="bb-hero-actions">
         <button type="button" class="bb-btn bb-btn--primary" onclick="openBbSearch()">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <svg class="bb-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           Search Protocols &amp; Calculators
-          <kbd class="bb-search-kbd" style="margin-left:10px;font-size:11px;background:rgba(255,255,255,0.22);padding:2px 6px;border-radius:4px;">⌘K</kbd>
+          <kbd class="bb-search-kbd">⌘K</kbd>
         </button>
         <a href="/calculators/" class="bb-btn bb-btn--outline">Clinical Calculators Suite &rarr;</a>
         <a href="/about-us/" class="bb-btn bb-btn--accent">Review Board &amp; Ethics</a>
@@ -93,6 +93,17 @@
         <span class="bb-trust-pill"><span class="icon-check">✓</span> 2:00 AM Night-Feed Dim Mode</span>
       </div>
     </section>
+
+    <!-- AdSense Leaderboard — above-fold impression unit -->
+    <div class="bb-homepage-ad-leaderboard">
+      <ins class="adsbygoogle"
+           style="display:block;width:100%;max-width:728px;height:90px;"
+           data-ad-client="ca-pub-4453876229797223"
+           data-ad-slot="auto"
+           data-ad-format="horizontal"
+           data-full-width-responsive="true"></ins>
+      <script data-cfasync="false">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
 
     <!-- Interactive Clinical Quick-Navigator / Triage Engine -->
     <section class="bb-quick-navigator" aria-label="Clinical Quick Navigator">
@@ -214,7 +225,7 @@
     </section>
 
     <!-- Thematic Specialty Hubs -->
-    <section class="bb-section" style="margin-bottom:48px;">
+    <section class="bb-section">
       <div class="bb-section-head">
         <div>
           <span class="bb-kicker">Clinical Knowledge Architecture</span>
@@ -281,6 +292,17 @@
       </div>
     </section>
 
+    <!-- AdSense Mid-Page — high-viewability impression unit -->
+    <div class="bb-homepage-ad-mid">
+      <ins class="adsbygoogle"
+           style="display:block;width:100%;max-width:970px;min-height:250px;"
+           data-ad-client="ca-pub-4453876229797223"
+           data-ad-slot="auto"
+           data-ad-format="rectangle"
+           data-full-width-responsive="true"></ins>
+      <script data-cfasync="false">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
     <!-- 2026 Flagship Interactive Clinical Protocols -->
     <section class="bb-section-box">
       <div class="bb-section-head">
@@ -301,7 +323,7 @@
           <h3><a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/">Infant Fever Guide &amp; Exact Tylenol / Motrin mL Dosing Chart</a></h3>
           <p>Weight-based mL syringe visualizer (160mg/5mL, 50mg/1.25mL, 100mg/5mL), concentrated drops trap warning, and AAP under-60-day fever emergency triage.</p>
           <div class="bb-spotlight-footer">
-            <span style="font-size:12px;color:var(--text-muted);">Oral Syringe Visualizer &bull; AAP Locked</span>
+            <span class="bb-spotlight-footer-meta">Oral Syringe Visualizer &bull; AAP Locked</span>
             <a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/" class="bb-spotlight-cta">Calculate Exact mL Dose &rarr;</a>
           </div>
         </div>
@@ -314,7 +336,7 @@
           <h3><a href="/baby-care/wake-windows-nap-transitions-by-age/">Wake Windows by Age &amp; Nap Transitions (0–24 Months)</a></h3>
           <p>Interactive Daily Sleep Schedule Generator calibrated to adenosine pressure and cortisol curves, plus our 5-point Nap Transition Readiness Quiz.</p>
           <div class="bb-spotlight-footer">
-            <span style="font-size:12px;color:var(--text-muted);">Clock-Time Generator &bull; 0–24 Mo</span>
+            <span class="bb-spotlight-footer-meta">Clock-Time Generator &bull; 0–24 Mo</span>
             <a href="/baby-care/wake-windows-nap-transitions-by-age/" class="bb-spotlight-cta">Launch Sleep Planner &rarr;</a>
           </div>
         </div>
@@ -327,7 +349,7 @@
           <h3><a href="/maternal-health/postpartum-diastasis-recti-self-test-rehab-protocol/">Postpartum Diastasis Recti Self-Test &amp; 12-Week Core Rehab</a></h3>
           <p>Interactive 3-Zone IRD Finger-Width &amp; Fascial Tension Scorer plus 360° Piston breathing progression tracker to safely restore linea alba integrity.</p>
           <div class="bb-spotlight-footer">
-            <span style="font-size:12px;color:var(--text-muted);">3-Zone Finger Scorer &bull; 12-Wk Plan</span>
+            <span class="bb-spotlight-footer-meta">3-Zone Finger Scorer &bull; 12-Wk Plan</span>
             <a href="/maternal-health/postpartum-diastasis-recti-self-test-rehab-protocol/" class="bb-spotlight-cta">Run Diastasis Self-Test &rarr;</a>
           </div>
         </div>
@@ -340,7 +362,7 @@
           <h3><a href="/baby-care/newborn-poop-color-texture-chart/">Newborn Poop Color &amp; Texture Chart: Visual Stool Triage</a></h3>
           <p>9-swatch visual triage engine from transitional stool to CMPA mucus and pale acholic stool alerts, plus Day 1–7 diaper hydration output tracker.</p>
           <div class="bb-spotlight-footer">
-            <span style="font-size:12px;color:var(--text-muted);">9-Swatch Palette &bull; Biliary Alert</span>
+            <span class="bb-spotlight-footer-meta">9-Swatch Palette &bull; Biliary Alert</span>
             <a href="/baby-care/newborn-poop-color-texture-chart/" class="bb-spotlight-cta">Open Stool Decoder &rarr;</a>
           </div>
         </div>

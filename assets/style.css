@@ -2916,9 +2916,152 @@ h1 i, h2 i, h3 i, h4 i {
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  content-visibility: auto;
+  content-visibility: visible !important;
+  contain-intrinsic-size: auto !important;
 }
 
 
 
 
+
+/* ================================================================
+   HOMEPAGE LAYOUT SYSTEM — premium editorial full-bleed structure
+   ================================================================ */
+
+/* Homepage hero zone — full-width alabaster strip above card content */
+.bb-homepage-hero-zone {
+  background: var(--surface-subtle);
+  border-bottom: 1px solid var(--border);
+  padding: 52px 20px 44px;
+}
+
+@media (min-width: 768px) {
+  .bb-homepage-hero-zone {
+    padding: 68px 40px 56px;
+  }
+}
+
+.bb-homepage-hero-zone > .bb-hero-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.bb-homepage-hero-zone .bb-hero-editorial {
+  margin-bottom: 0;
+}
+
+/* Homepage main container — full bleed, sections self-contain padding */
+main.bb-homepage-main {
+  padding: 0 !important;
+  max-width: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Inner page gutters for all homepage sections */
+.bb-homepage-main > .bb-section,
+.bb-homepage-main > .bb-section-box,
+.bb-homepage-main > .bb-quick-navigator {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .bb-homepage-main > .bb-section,
+  .bb-homepage-main > .bb-section-box,
+  .bb-homepage-main > .bb-quick-navigator {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* bb-section bare (no card box) — spacing */
+.bb-section {
+  margin-bottom: 48px;
+}
+
+/* Homepage inter-section separator stripe */
+.bb-homepage-main > .bb-section-box,
+.bb-homepage-main > .bb-quick-navigator {
+  margin-bottom: 48px;
+}
+
+/* Spotlight footer meta span — replaces inline style */
+.bb-spotlight-footer-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Search kbd button — replaces inline style */
+.bb-search-kbd {
+  margin-left: 10px;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.22);
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Button icon spacing — replaces SVG inline margin-right */
+.bb-btn-icon {
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* Specialty grid — explicit columns to prevent overflow / wrapping at 5 cards */
+@media (min-width: 1000px) {
+  .bb-specialty-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 999px) and (min-width: 640px) {
+  .bb-specialty-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 639px) {
+  .bb-specialty-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Stage tab scrollbar hidden on narrow screens */
+@media (max-width: 639px) {
+  .bb-stage-tabs {
+    scrollbar-width: none;
+  }
+  .bb-stage-tabs::-webkit-scrollbar { display: none; }
+}
+
+/* Flagship spotlight grid — forced 2-col at desktop */
+@media (min-width: 900px) {
+  .bb-flagship-spotlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Homepage above-fold leaderboard ad slot */
+.bb-homepage-ad-leaderboard {
+  min-height: 90px;
+  width: 100%;
+  max-width: 728px;
+  margin: 32px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Homepage mid-page ad slot */
+.bb-homepage-ad-mid {
+  min-height: 250px;
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto 48px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
