@@ -905,15 +905,10 @@ input[type="text"] {
 .ad-slot-incontent,
 .in-article-ad,
 .bottom-post-ad {
-  margin: 28px auto;
+  margin: 32px auto;
   text-align: center;
-  overflow: hidden;
   position: relative;
-  border-radius: var(--radius-md);
-  background: var(--surface-subtle);
-  padding: 12px;
-  border: 1px solid var(--border);
-  border-left: 1px solid var(--border);
+  clear: both;
 }
 
 .ad-label {
@@ -2900,24 +2895,14 @@ h1 i, h2 i, h3 i, h4 i {
   flex-shrink: 0;
 }
 
-/* Enhanced Zero-CLS Ad Containers (Desktop 280px / Safe Spacing) */
+/* Clean Native Ad Containers - Auto Ads & Active View Optimized */
 .ad-slot-wrapper,
 .in-article-ad,
 .ad-slot-incontent,
 .bottom-post-ad {
-  min-height: 280px !important;
-  margin: 36px auto !important;
-  max-width: 100% !important;
-  background: var(--surface-subtle) !important;
-  border: 1px dashed var(--border-strong) !important;
-  border-radius: var(--radius-md) !important;
-  padding: 16px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  content-visibility: visible !important;
-  contain-intrinsic-size: auto !important;
+  max-width: 100%;
+  margin: 32px auto;
+  text-align: center;
 }
 
 

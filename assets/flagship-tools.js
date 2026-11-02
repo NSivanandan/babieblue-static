@@ -66,64 +66,9 @@
     }
   }
 
-  // 3. AdSense Active-View IntersectionObserver Engine (Maximizes Viewability % & Smart-Bidding eCPM)
+  // 3. AdSense Engine - Handled natively by Google Auto Ads & Official Script
   function initAdSenseViewabilityEngine() {
-    // Inject a mid-article high-viewability slot on long articles (>3 H2s) if only 1 in-article slot exists
-    const entryContent = document.querySelector('.entry-content, .bb-article-shell');
-    if (entryContent) {
-      const h2s = entryContent.querySelectorAll('h2');
-      const existingInArticle = entryContent.querySelectorAll('.in-article-ad');
-      if (h2s.length >= 4 && existingInArticle.length <= 1) {
-        const targetH2 = h2s[Math.floor(h2s.length / 2)];
-        if (targetH2) {
-          const midSlot = document.createElement('div');
-          midSlot.className = 'ad-slot-wrapper in-article-ad';
-          midSlot.innerHTML = `<div class="ad-label">Advertisement</div>`;
-          targetH2.insertAdjacentElement('beforebegin', midSlot);
-        }
-      }
-    }
-
-    const adContainers = document.querySelectorAll('.ad-slot-wrapper, .in-article-ad, .bottom-post-ad');
-    adContainers.forEach((slot) => {
-      if (!slot.querySelector('ins.adsbygoogle')) {
-        const isBottom = slot.classList.contains('bottom-post-ad');
-        const ins = document.createElement('ins');
-        ins.className = 'adsbygoogle';
-        ins.style.display = 'block';
-        ins.style.width = '100%';
-        ins.style.minHeight = '250px';
-        ins.setAttribute('data-ad-client', 'ca-pub-4453876229797223');
-        ins.setAttribute('data-ad-format', isBottom ? 'autorelaxed' : 'auto');
-        ins.setAttribute('data-full-width-responsive', 'true');
-        slot.appendChild(ins);
-      }
-    });
-
-    if (!('IntersectionObserver' in window)) return;
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const ins = entry.target;
-          obs.unobserve(ins);
-          if (ins.getAttribute('data-bb-ad-pushed') === '1' || ins.hasAttribute('data-adsbygoogle-status')) {
-            return;
-          }
-          ins.setAttribute('data-bb-ad-pushed', '1');
-          try {
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-          } catch {}
-        });
-      },
-      { rootMargin: '320px 0px' }
-    );
-
-    document.querySelectorAll('ins.adsbygoogle').forEach((ins) => {
-      if (!ins.hasAttribute('data-adsbygoogle-status') && ins.getAttribute('data-bb-ad-pushed') !== '1') {
-        observer.observe(ins);
-      }
-    });
+    // Native Auto Ads handling to protect Google Active View telemetry and prevent invalid slot errors
   }
 
   function loadFullSearchIndex() {
