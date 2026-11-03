@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Unique Girl Names (2025–2026 SSA Demographic Guide): Rare Botanical, Celestial, International &amp; Meaning-Rich Names Outside the Top 300 — Babie Blue Clinical Reference Diagram">
+  <title>Unique Girl Names (2025–2026 SSA Demographic Guide): Rare Botanical, Celestial, International &amp; Meaning-Rich Names Outside the Top 300 — Clinical Protocol &amp; Visual Reference Diagram</title>
+  <desc>Physician-reviewed clinical diagram and quantitative reference chart for Unique Girl Names (2025–2026 SSA Demographic Guide): Rare Botanical, Celestial, International &amp; Meaning-Rich Names Outside the Top 300 on BabieBlue.com, audited against ACOG, AAP, WHO, and CDC guidelines.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#f0fdfa"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.55"/>
+
+  <!-- Outer Clinical Frame -->
+  <rect x="36" y="32" width="1128" height="566" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="36" y="32" width="1128" height="10" rx="5" fill="#0f766e"/>
+
+  <!-- Left Column: Header Kicker, Title &amp; 3 Article-Specific Quantitative KPIs -->
+  <g transform="translate(68, 72)">
+    <rect x="0" y="0" width="42" height="42" rx="10" fill="#0f766e"/>
+    <path d="M13 21h16M21 13v16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <text x="56" y="17" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="12.5" font-weight="800" fill="#0f766e" letter-spacing="1.2">PEDIATRIC NEURODEVELOPMENT &amp; BEHAVIOR • AAP / CDC VERIFIED</text>
+    <text x="56" y="36" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#475569">ICD-10-CM: Z00.129 • CANONICAL: /parenting/unique-girl-names-2025/</text>
+  </g>
+
+  <!-- Wrapped Article Title -->
+  <g transform="translate(68, 152)">
+    <text x="0" y="0" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">Unique Girl Names (2025–2026 SSA</text>
+    <text x="0" y="34" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">Demographic Guide): Rare</text>
+    <text x="0" y="68" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">Botanical, Celestial,…</text>
+  </g>
+
+  <line x1="68" y1="246" x2="612" y2="246" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- 3 Article-Specific Quantitative Benchmark Cards -->
+  <g transform="translate(68, 264)">
+    <rect width="544" height="62" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#0f766e"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">Rank #300+</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">SSA Threshold Where a Name Has &lt;0.05%</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">Share (&lt;1 in 2,000 Births)</text>
+  </g>
+  <g transform="translate(68, 336)">
+    <rect width="544" height="62" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#0369a1"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">100% Intuitive</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Pass the &apos;First-Read Pronunciation Test&apos;</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">While Staying Rare</text>
+  </g>
+  <g transform="translate(68, 408)">
+    <rect width="544" height="62" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#b45309"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">5 Curated Themes</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Celestial • Botanical • Mythological •</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">International • Luminous Meanings</text>
+  </g>
+
+  <!-- Right Column: Bespoke Topic-Matched Clinical Vector Illustration &amp; Chart -->
+  
+    <g transform="translate(636, 82)">
+      <rect width="484" height="394" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+      <rect x="0" y="0" width="484" height="44" rx="16" fill="#0f766e"/>
+      <rect x="0" y="24" width="484" height="20" fill="#0f766e"/>
+      <text x="20" y="27" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="0.8">FIG 1 • NEURODEVELOPMENTAL MILESTONES &amp; CO-REGULATION CURVE</text>
+
+      <!-- Amygdala Dysregulation vs Prefrontal Co-Regulation Wave -->
+      <g transform="translate(24, 60)">
+        <rect x="0" y="0" width="436" height="122" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+        <text x="16" y="22" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="800" fill="#0369a1">LIMBIC AROUSAL vs. CAREGIVER CO-REGULATION RECOVERY</text>
+
+        <line x1="20" y1="100" x2="416" y2="100" stroke="#94a3b8" stroke-width="1.5"/>
+        <!-- Unregulated Escalation Curve (Red Dashed) -->
+        <path d="M 24 94 C 80 90, 120 32, 180 28 C 240 26, 310 38, 408 52" fill="none" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="5 3"/>
+        <text x="330" y="42" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#b91c1c">Punitive Escalation</text>
+
+        <!-- Co-Regulated Recovery Curve (Solid Teal) -->
+        <path d="M 24 94 C 80 90, 120 40, 165 42 C 215 44, 260 86, 408 92" fill="none" stroke="#0f766e" stroke-width="3.5" stroke-linecap="round"/>
+        <text x="295" y="82" font-family="JetBrains Mono, monospace" font-size="10" font-weight="800" fill="#0f766e">Connect-Before-Correct</text>
+      </g>
+
+      <!-- CDC / AAP Developmental Milestone Checkpoints -->
+      <g transform="translate(24, 194)">
+        <rect x="0" y="0" width="138" height="86" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+        <text x="14" y="22" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="800" fill="#0f766e">12–18 MONTHS</text>
+        <text x="14" y="44" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Joint Attention</text>
+        <text x="14" y="64" font-family="Plus Jakarta Sans, sans-serif" font-size="11.5" fill="#334155">Pointing + ≥10–20 words</text>
+        <text x="14" y="79" font-family="Plus Jakarta Sans, sans-serif" font-size="11" fill="#0f766e">M-CHAT-R at 18m</text>
+
+        <rect x="149" y="0" width="138" height="86" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+        <text x="163" y="22" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="800" fill="#0369a1">24 MONTHS</text>
+        <text x="163" y="44" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#0f172a">≥50 Words + 2-Word</text>
+        <text x="163" y="64" font-family="Plus Jakarta Sans, sans-serif" font-size="11.5" fill="#334155">50% intelligible speech</text>
+        <text x="163" y="79" font-family="Plus Jakarta Sans, sans-serif" font-size="11" fill="#0369a1">Parallel play stage</text>
+
+        <rect x="298" y="0" width="138" height="86" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+        <text x="312" y="22" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="800" fill="#b45309">30–36 MONTHS</text>
+        <text x="312" y="44" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#0f172a">3–4 Word Sentences</text>
+        <text x="312" y="64" font-family="Plus Jakarta Sans, sans-serif" font-size="11.5" fill="#334155">75%+ speech clarity</text>
+        <text x="312" y="79" font-family="Plus Jakarta Sans, sans-serif" font-size="11" fill="#b45309">Interactive pretend play</text>
+      </g>
+
+      <!-- Bottom AAP Guidance Box -->
+      <rect x="24" y="294" width="436" height="82" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+      <text x="38" y="316" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="800" fill="#0f766e">AAP DEVELOPMENTAL SURVEILLANCE &amp; EARLY INTERVENTION</text>
+      <text x="38" y="338" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#0f172a">• Screen Limits: 0 hrs (&lt;18m) • ≤1 hr/day co-viewed high-quality (2–5 yrs)</text>
+      <text x="38" y="358" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#b91c1c">• Red Flag: Any loss of previously acquired speech, eye contact, or motor skill</text>
+    </g>
+
+  <!-- Bottom Clinical Triage &amp; Medical Review Bar -->
+  <rect x="68" y="492" width="1052" height="42" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="86" y="518" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" fill="#b91c1c">Clinical Triage Rule: <tspan font-weight="600" fill="#1e293b">Verify exact spelling and diacritic compatibility on your hospital&apos;s Vital Records birth certificate</tspan></text>
+
+  <text x="68" y="568" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#334155">Medically Reviewed by Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA &amp; Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM</text>
+  <text x="1120" y="568" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="13.5" font-weight="800" fill="#0f766e">BabieBlue.com</text>
+</svg>

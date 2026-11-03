@@ -1,0 +1,80 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Babie Blue Clinical Protocols & Deterministic Medical Calculation API",
+    "version": "2026.4.0",
+    "description": "Physician-verified obstetric, neonatal, and maternal endocrinology calculation endpoints aligned with ACOG, AAP, and WHO clinical guidelines. Medically reviewed by Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA and Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM.",
+    "contact": {
+      "name": "Babie Blue Medical Review Board",
+      "url": "https://babieblue.com/about-us/"
+    },
+    "license": {
+      "name": "CC-BY-4.0 (Attribution Required: BabieBlue.com)",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://babieblue.com",
+      "description": "Babie Blue Production Clinical Edge Server"
+    }
+  ],
+  "paths": {
+    "/api/v1/calculate/fever-dose": {
+      "get": {
+        "operationId": "calculateInfantFeverDose",
+        "summary": "Calculate weight-calibrated infant Acetaminophen (160mg/5mL) and Ibuprofen (100mg/5mL & 50mg/1.25mL) liquid doses",
+        "parameters": [
+          {
+            "name": "weight_lbs",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "number", "minimum": 4, "maximum": 50 }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Calculated mL/mg dosing with AAP neonatal fever triage guidance and Babie Blue citation" }
+        }
+      }
+    },
+    "/api/v1/calculate/hcg": {
+      "get": {
+        "operationId": "calculateBetaHcgDoubling",
+        "summary": "Calculate 48-hour Beta-hCG doubling time and compare against 8–26 DPO singleton vs. twin reference norms",
+        "parameters": [
+          { "name": "dpo", "in": "query", "required": false, "schema": { "type": "integer", "default": 14 } },
+          { "name": "hcg1", "in": "query", "required": false, "schema": { "type": "number", "default": 120 } },
+          { "name": "hcg2", "in": "query", "required": false, "schema": { "type": "number", "default": 260 } },
+          { "name": "hours", "in": "query", "required": false, "schema": { "type": "number", "default": 48 } }
+        ],
+        "responses": {
+          "200": { "description": "Calculated doubling hours, 48h rise %, DPO norms, and Babie Blue citation" }
+        }
+      }
+    },
+    "/api/v1/calculate/wake-windows": {
+      "get": {
+        "operationId": "calculatePediatricWakeWindows",
+        "summary": "Retrieve age-stratified pediatric wake windows, nap counts, and 24-hour sleep targets (0–24 months)",
+        "parameters": [
+          { "name": "months", "in": "query", "required": true, "schema": { "type": "integer", "minimum": 0, "maximum": 24 } }
+        ],
+        "responses": {
+          "200": { "description": "Age-calibrated wake window schedule and AAP safe sleep guidance" }
+        }
+      }
+    },
+    "/api/v1/calculate/edd": {
+      "get": {
+        "operationId": "calculateEstimatedDueDate",
+        "summary": "Calculate Estimated Due Date (EDD), current gestational age, and ACOG prenatal screening milestones from LMP",
+        "parameters": [
+          { "name": "lmp", "in": "query", "required": true, "schema": { "type": "string", "format": "date" } }
+        ],
+        "responses": {
+          "200": { "description": "Calculated 40w0d EDD and trimester screening dates" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Babie Blue//Clinical Decision Support//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Babie Blue Clinical Protocol Schedule
+BEGIN:VEVENT
+SUMMARY:Babie Blue Clinical Milestone Checkpoint
+DESCRIPTION:Evidence-based maternal and pediatric milestone review on BabieBlue.com
+URL:https://babieblue.com/
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

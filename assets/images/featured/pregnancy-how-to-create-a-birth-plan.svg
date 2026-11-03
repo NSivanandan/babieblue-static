@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="How to Create a Birth Plan: Interactive 1-Page ACOG-Aligned Hospital &amp; Midwife Template — Babie Blue Clinical Reference Diagram">
+  <title>How to Create a Birth Plan: Interactive 1-Page ACOG-Aligned Hospital &amp; Midwife Template — Clinical Protocol &amp; Visual Reference Diagram</title>
+  <desc>Physician-reviewed clinical diagram and quantitative reference chart for How to Create a Birth Plan: Interactive 1-Page ACOG-Aligned Hospital &amp; Midwife Template on BabieBlue.com, audited against ACOG, AAP, WHO, and CDC guidelines.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#f0fdfa"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.55"/>
+
+  <!-- Outer Clinical Frame -->
+  <rect x="36" y="32" width="1128" height="566" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="36" y="32" width="1128" height="10" rx="5" fill="#0369a1"/>
+
+  <!-- Left Column: Header Kicker, Title &amp; 3 Article-Specific Quantitative KPIs -->
+  <g transform="translate(68, 72)">
+    <rect x="0" y="0" width="42" height="42" rx="10" fill="#0369a1"/>
+    <path d="M13 21h16M21 13v16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <text x="56" y="17" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="12.5" font-weight="800" fill="#0369a1" letter-spacing="1.2">OBSTETRICS &amp; PRENATAL PROTOCOL • ACOG / WHO VERIFIED</text>
+    <text x="56" y="36" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#475569">ICD-10-CM: Z34.90 • CANONICAL: /pregnancy/how-to-create-a-birth-plan/</text>
+  </g>
+
+  <!-- Wrapped Article Title -->
+  <g transform="translate(68, 152)">
+    <text x="0" y="0" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">How to Create a Birth Plan:</text>
+    <text x="0" y="34" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">Interactive 1-Page ACOG-Aligned</text>
+    <text x="0" y="68" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">Hospital &amp; Midwife Template</text>
+  </g>
+
+  <line x1="68" y1="246" x2="612" y2="246" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- 3 Article-Specific Quantitative Benchmark Cards -->
+  <g transform="translate(68, 264)">
+    <rect width="544" height="62" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#0f766e"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">1 Page Max</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Optimal Length for Fast L&amp;D Shift-Change</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">Nursing Review</text>
+  </g>
+  <g transform="translate(68, 336)">
+    <rect width="544" height="62" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#0369a1"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">32–36 Wks</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Ideal Prenatal Visit Window to Co-Sign Birth</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">Plan with OB/Midwife</text>
+  </g>
+  <g transform="translate(68, 408)">
+    <rect width="544" height="62" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#b45309"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">30–60+ sec</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">ACOG Recommended Delayed Umbilical Cord</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">Clamping Target</text>
+  </g>
+
+  <!-- Right Column: Bespoke Topic-Matched Clinical Vector Illustration &amp; Chart -->
+  
+    <g transform="translate(636, 82)">
+      <rect width="484" height="394" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+      <rect x="0" y="0" width="484" height="44" rx="16" fill="#0f766e"/>
+      <rect x="0" y="24" width="484" height="20" fill="#0f766e"/>
+      <text x="20" y="27" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="0.8">FIG 1 • MATERNAL HEMODYNAMICS, BIOMARKERS &amp; OB TRIAGE</text>
+
+      <!-- 3-Tier Maternal BP &amp; Hemodynamic Gauge Bar -->
+      <g transform="translate(24, 58)">
+        <rect x="0" y="0" width="436" height="96" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+        <text x="16" y="22" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="800" fill="#0f172a">ACOG MATERNAL BLOOD PRESSURE &amp; PREECLAMPSIA ESCALATION ZONES</text>
+
+        <rect x="16" y="34" width="130" height="46" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+        <text x="81" y="54" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="800" fill="#166534">&lt;120 / 80</text>
+        <text x="81" y="70" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="700" fill="#14532d">Normotensive</text>
+
+        <rect x="153" y="34" width="130" height="46" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+        <text x="218" y="54" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="800" fill="#b45309">≥140 / 90</text>
+        <text x="218" y="70" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="700" fill="#92400e">Same-Day OB Lab</text>
+
+        <rect x="290" y="34" width="130" height="46" rx="6" fill="#fef2f2" stroke="#f87171" stroke-width="2"/>
+        <text x="355" y="54" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="800" fill="#b91c1c">≥160 / 110</text>
+        <text x="355" y="70" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="10.5" font-weight="700" fill="#7f1d1d">L&amp;D STAT (&lt;30m)</text>
+      </g>
+
+      <!-- Functional Maternal Biomarker Dials -->
+      <g transform="translate(24, 168)">
+        <rect x="0" y="0" width="210" height="110" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+        <text x="14" y="22" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="800" fill="#0f766e">POSTPARTUM LAB PANEL</text>
+        <text x="14" y="44" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">• Ferritin: ≥50 ng/mL</text>
+        <text x="14" y="66" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">• TSH: 0.45–2.5 mIU/L</text>
+        <text x="14" y="88" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">• 25-OH Vit D: 40–60 ng/mL</text>
+
+        <rect x="226" y="0" width="210" height="110" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+        <text x="240" y="22" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="800" fill="#0369a1">OBSTETRIC SURVEILLANCE</text>
+        <text x="240" y="44" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">• Kick Counts: 10 in ≤2h</text>
+        <text x="240" y="66" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">• Labor Rule: 5-1-1 Pattern</text>
+        <text x="240" y="88" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">• PPH Alert: &gt;1 Pad/hr × 2h</text>
+      </g>
+
+      <!-- Red Flag Escalation Box -->
+      <rect x="24" y="292" width="436" height="84" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+      <text x="38" y="314" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="800" fill="#b91c1c">ACOG FOURTH-TRIMESTER &amp; PERINATAL WARNING SIGNS</text>
+      <text x="38" y="336" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#7f1d1d">• Unrelieved headache, visual scotomata, RUQ epigastric pain, or dyspnea</text>
+      <text x="38" y="356" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#7f1d1d">• Passing clots &gt;golf-ball size, fever ≥100.4°F, unilateral calf swelling, or EPDS ≥13</text>
+    </g>
+
+  <!-- Bottom Clinical Triage &amp; Medical Review Bar -->
+  <rect x="68" y="492" width="1052" height="42" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="86" y="518" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" fill="#b91c1c">Clinical Triage Rule: <tspan font-weight="600" fill="#1e293b">Include a clear &apos;Medical Pivot Clause&apos; acknowledging that if acute fetal distress (Category III</tspan></text>
+
+  <text x="68" y="568" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#334155">Medically Reviewed by Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA &amp; Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM</text>
+  <text x="1120" y="568" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="13.5" font-weight="800" fill="#0369a1">BabieBlue.com</text>
+</svg>

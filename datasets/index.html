@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Clinical Datasets, Medical APIs &amp; Embeddable Widgets | Babie Blue</title>
+  <meta name="description" content="Download open-access pediatric, obstetric, and maternal health datasets (CSV/JSON), explore the Babie Blue OpenAPI 3.1 clinical calculation endpoints, and embed free verified medical calculators.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://babieblue.com/datasets/">
+  <link rel="alternate" hreflang="en-US" href="https://babieblue.com/datasets/">
+  <link rel="alternate" hreflang="x-default" href="https://babieblue.com/datasets/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Babie Blue">
+  <meta property="og:title" content="Open Clinical Datasets, Medical APIs &amp; Embeddable Widgets | Babie Blue">
+  <meta property="og:description" content="Machine-readable ACOG, AAP &amp; WHO aligned clinical reference tables (CSV/JSON) and embeddable calculators reviewed by Dr. Mangala Devi K.R. &amp; Dr. Anagha Nawal.">
+  <meta property="og:url" content="https://babieblue.com/datasets/">
+  <meta property="og:image" content="https://babieblue.com/assets/images/babieblue-og-clinical.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Open Clinical Datasets, Medical APIs &amp; Embeddable Widgets | Babie Blue">
+  <meta name="twitter:description" content="Download open-access CSV/JSON clinical reference datasets and embed free verified obstetric &amp; pediatric calculators by Babie Blue.">
+  <meta name="twitter:image" content="https://babieblue.com/assets/images/babieblue-og-clinical.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css?v=20260421">
+  <link rel="stylesheet" href="/assets/flagship-protocol.css?v=20260421">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalog",
+  "@id": "https://babieblue.com/datasets/#datacatalog",
+  "name": "Babie Blue Open Clinical Reference Datasets (Obstetrics, Pediatrics & Maternal Endocrinology)",
+  "url": "https://babieblue.com/datasets/",
+  "description": "Open-access, physician-reviewed clinical reference datasets in CSV and JSON formats covering AAP weight-based infant antipyretic dosing, 0–24 month pediatric wake windows, singleton vs. twin beta-hCG doubling norms, and postpartum functional biomarker targets.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "publisher": {
+    "@type": "MedicalOrganization",
+    "name": "Babie Blue",
+    "url": "https://babieblue.com/"
+  },
+  "dataset": [
+    {
+      "@type": "Dataset",
+      "name": "Pediatric Wake Windows & Circadian Sleep Consolidation Matrix (0–24 Months)",
+      "description": "Age-stratified pediatric wake window minimums/maximums, nap frequency, total 24-hour sleep requirements, and AAP safe sleep transitions from 1 to 24 months.",
+      "url": "https://babieblue.com/datasets/pediatric-wake-windows-0-24m.json",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@type": "Person",
+        "name": "Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA",
+        "url": "https://babieblue.com/dr-mangala-devi/"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://babieblue.com/datasets/pediatric-wake-windows-0-24m.json"
+        },
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://babieblue.com/datasets/pediatric-wake-windows-0-24m.csv"
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "AAP Weight-Based Infant Antipyretic Dosing Table (Acetaminophen 160mg/5mL & Ibuprofen 100mg/5mL / 50mg/1.25mL)",
+      "description": "Exact weight-calibrated mL and mg dosing matrix from 6 lbs to 36 lbs for infant liquid acetaminophen and ibuprofen suspensions with <60-day neonatal fever triage thresholds.",
+      "url": "https://babieblue.com/datasets/infant-antipyretic-weight-dosing-aap.json",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@type": "Person",
+        "name": "Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA",
+        "url": "https://babieblue.com/dr-mangala-devi/"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://babieblue.com/datasets/infant-antipyretic-weight-dosing-aap.json"
+        },
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://babieblue.com/datasets/infant-antipyretic-weight-dosing-aap.csv"
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "Quantitative Beta-hCG Days Past Ovulation (8–26 DPO) Singleton vs. Twin Reference Norms",
+      "description": "Day-by-day serum beta-hCG median mIU/mL benchmarks, 10th–90th percentile ranges, twin gestation medians, and 48-hour doubling velocity expectations.",
+      "url": "https://babieblue.com/datasets/beta-hcg-dpo-singleton-twin-norms.json",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@type": "Person",
+        "name": "Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM",
+        "url": "https://babieblue.com/dr-anagha-nawal/"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://babieblue.com/datasets/beta-hcg-dpo-singleton-twin-norms.json"
+        },
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://babieblue.com/datasets/beta-hcg-dpo-singleton-twin-norms.csv"
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "Postpartum & Maternal Endocrinology Functional Biomarker Reference Targets",
+      "description": "Comparison of standard laboratory cutoffs vs. optimal functional postpartum recovery targets for Serum Ferritin, TSH, 25-OH Vitamin D, Hemoglobin, and Vitamin B12.",
+      "url": "https://babieblue.com/datasets/postpartum-biomarker-reference-ranges.json",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@type": "Person",
+        "name": "Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM",
+        "url": "https://babieblue.com/dr-anagha-nawal/"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://babieblue.com/datasets/postpartum-biomarker-reference-ranges.json"
+        },
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://babieblue.com/datasets/postpartum-biomarker-reference-ranges.csv"
+        }
+      ]
+    }
+  ],
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".bb-bluf-box",
+      "#clinical-summary",
+      ".archive-header"
+    ]
+  },
+  "reviewedBy": [
+    {
+      "@type": "Person",
+      "name": "Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA",
+      "url": "https://babieblue.com/dr-mangala-devi/"
+    }
+  ]
+}
+</script>
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223" crossorigin="anonymous" data-cfasync="false"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://babieblue.com/datasets/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://babieblue.com/"},{"@type":"ListItem","position":2,"name":"Babie Blue Open Clinical Datasets, REST API & Embeddable Medical Widgets","item":"https://babieblue.com/datasets/"}]}</script>
+</head>
+<body data-page-type="governance">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo">Babie<span>Blue</span><small class="site-logo-tag">Clinical Protocols</small></a>
+      <nav class="main-nav" aria-label="Primary Clinical Navigation">
+        <ul>
+          <li><a href="/pregnancy/">Pregnancy</a></li>
+          <li><a href="/baby-care/">Baby Care</a></li>
+          <li><a href="/parenting/">Parenting</a></li>
+          <li><a href="/maternal-health/">Maternal Health</a></li>
+          <li><a href="/calculators/">Calculators</a></li>
+          <li><a href="/about-us/">Medical Board</a></li>
+        </ul>
+      </nav>
+      <div class="bb-header-actions">
+        <button type="button" class="bb-search-trigger" onclick="openBbSearch()" aria-label="Search Babie Blue clinical guides and calculators">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search Protocols</span>
+          <kbd class="bb-search-kbd">⌘K</kbd>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="bb-article-shell">
+    <nav class="bb-breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span>&rsaquo;</span> <span>Open Clinical Datasets, API &amp; Clinic Widgets</span>
+    </nav>
+
+    <span class="bb-badge">Google Dataset Search &bull; OpenAPI 3.1 &bull; CC-BY-4.0 Attribution License</span>
+    <h1>Babie Blue Open Clinical Datasets, REST API &amp; Embeddable Medical Widgets</h1>
+    <p class="bb-subtitle">Free, machine-readable obstetric, pediatric, and maternal endocrinology datasets (`CSV` &amp; `JSON`), deterministic clinical REST endpoints, and zero-dependency embeddable calculators for OB-GYN clinics, doulas, researchers, and AI agents.</p>
+
+    <div class="bb-trust-strip">
+      <div class="bb-trust-meta">
+        <span><strong>Curated by:</strong> <a href="/madhuri-b/">Madhuri B</a> (Lead Healthcare Content Specialist)</span>
+        <span class="bb-sep">&bull;</span>
+        <span><strong>Medically Verified by:</strong> <a href="/dr-mangala-devi/">Dr. Mangala Devi K.R., MS (OBG)</a> &amp; <a href="/dr-anagha-nawal/">Dr. Anagha Nawal, MD, MCE, FRM</a></span>
+      </div>
+    </div>
+
+    <h2>1. Open-Access Clinical Datasets (CSV &amp; JSON Downloads)</h2>
+    <p>All datasets below are licensed under <strong>Creative Commons Attribution 4.0 (CC-BY-4.0)</strong>. Researchers, health journalists, academic libraries, and AI developers may freely ingest and republish these tables with canonical attribution to <code>https://babieblue.com/</code>.</p>
+
+    <div class="bb-bento-grid bb-bento-grid-2">
+      <div class="bb-bento-card">
+        <span class="bb-badge">Dataset 01 &bull; Pediatrics &amp; Circadian Science</span>
+        <h3>Pediatric Wake Windows &amp; Nap Consolidation Matrix (0–24 Months)</h3>
+        <p>Age-stratified wake window minimums/maximums, nap counts, total 24-hour sleep targets, and AAP safe sleep milestones across 14 developmental stages.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
+          <a href="/datasets/pediatric-wake-windows-0-24m.csv" class="bb-btn-primary" download>Download CSV</a>
+          <a href="/datasets/pediatric-wake-windows-0-24m.json" class="bb-btn-secondary" target="_blank">View JSON</a>
+          <a href="/baby-care/wake-windows-nap-transitions-by-age/" class="bb-btn-secondary">Clinical Guide &rarr;</a>
+        </div>
+      </div>
+
+      <div class="bb-bento-card">
+        <span class="bb-badge">Dataset 02 &bull; Pediatric Pharmacology</span>
+        <h3>AAP Weight-Based Infant Antipyretic Dosing Matrix (6–36 lbs)</h3>
+        <p>Exact weight-calibrated mL and mg dosing for Acetaminophen (<code>160 mg / 5 mL</code>) and Ibuprofen (<code>100 mg / 5 mL</code> &amp; <code>50 mg / 1.25 mL</code> concentrated drops).</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
+          <a href="/datasets/infant-antipyretic-weight-dosing-aap.csv" class="bb-btn-primary" download>Download CSV</a>
+          <a href="/datasets/infant-antipyretic-weight-dosing-aap.json" class="bb-btn-secondary" target="_blank">View JSON</a>
+          <a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/" class="bb-btn-secondary">Clinical Guide &rarr;</a>
+        </div>
+      </div>
+
+      <div class="bb-bento-card">
+        <span class="bb-badge">Dataset 03 &bull; Reproductive Endocrinology</span>
+        <h3>Beta-hCG Days Past Ovulation (8–26 DPO) Singleton vs. Twin Norms</h3>
+        <p>Quantitative serum beta-hCG median mIU/mL benchmarks, 10th–90th percentile boundaries, twin gestation medians, and 48-hour doubling velocity rules.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
+          <a href="/datasets/beta-hcg-dpo-singleton-twin-norms.csv" class="bb-btn-primary" download>Download CSV</a>
+          <a href="/datasets/beta-hcg-dpo-singleton-twin-norms.json" class="bb-btn-secondary" target="_blank">View JSON</a>
+          <a href="/calculators/hcg-calculator/" class="bb-btn-secondary">hCG Calculator &rarr;</a>
+        </div>
+      </div>
+
+      <div class="bb-bento-card">
+        <span class="bb-badge">Dataset 04 &bull; Fourth-Trimester Medicine</span>
+        <h3>Postpartum &amp; Maternal Functional Biomarker Reference Targets</h3>
+        <p>Standard laboratory cutoffs vs. optimal functional postpartum recovery targets for Serum Ferritin (<code>&ge;50 ng/mL</code>), TSH, 25-OH Vitamin D, Hemoglobin, and Vitamin B12.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
+          <a href="/datasets/postpartum-biomarker-reference-ranges.csv" class="bb-btn-primary" download>Download CSV</a>
+          <a href="/datasets/postpartum-biomarker-reference-ranges.json" class="bb-btn-secondary" target="_blank">View JSON</a>
+          <a href="/maternal-health/postpartum-blood-work-panel-ferritin-thyroiditis-vitamin-d/" class="bb-btn-secondary">Lab Panel Guide &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>2. Embed Free Verified Clinical Calculators on Your Clinic or Blog</h2>
+    <p>OB-GYN practices, pediatric clinics, midwifery centers, doulas, and parenting publishers can embed any interactive <strong>Babie Blue Clinical Calculator</strong> with a single copy-paste snippet. The widget loads in under 4 KB with zero external dependencies.</p>
+
+    <div class="bb-tool-card">
+      <div class="bb-tool-head">
+        <span class="bb-tool-kicker">Autonomous Clinic &amp; Publisher Widget Generator</span>
+        <h3>Generate Your Custom Embed Snippet</h3>
+      </div>
+      <div class="bb-form-grid">
+        <div class="bb-field">
+          <label for="embedToolType">Select Clinical Calculator to Embed</label>
+          <select id="embedToolType" onchange="updateEmbedCode()">
+            <option value="fever">Infant Fever Weight-Based Dosing Calculator (Acetaminophen &amp; Ibuprofen)</option>
+            <option value="edd">Pregnancy Due Date &amp; Trimester Milestone Calculator (ACOG)</option>
+            <option value="wake">Pediatric Wake Windows &amp; Nap Schedule Generator (0–24 Months)</option>
+            <option value="hcg">Beta-hCG 48-Hour Doubling Time &amp; Viability Calculator</option>
+          </select>
+        </div>
+      </div>
+      <div class="bb-tool-output">
+        <label style="font-size:12.5px;font-weight:700;display:block;margin-bottom:6px;">Copy &amp; Paste This HTML Snippet Into Your Website (WordPress, Webflow, Squarespace, or Custom HTML):</label>
+        <textarea id="embedCodeSnippet" rows="4" readonly style="width:100%;font-family:monospace;font-size:12.5px;padding:10px;border-radius:8px;border:1px solid #cbd5e1;background:#ffffff;"></textarea>
+        <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;">
+          <button type="button" class="bb-btn-primary" onclick="navigator.clipboard.writeText(document.getElementById('embedCodeSnippet').value);this.textContent='✓ Embed Code Copied!'">Copy Embed Snippet</button>
+          <a href="/openapi.json" class="bb-btn-secondary" target="_blank">View OpenAPI 3.1 Spec (/openapi.json)</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>3. Programmatic Long-Tail Clinical Matrix Directory (Direct Indexation Hub)</h2>
+    <p>Explore pre-calculated, physician-verified reference pages for specific infant weights, gestational weeks, days past ovulation (DPO), and infant age months:</p>
+
+    <h3>Weight-Specific Infant Fever Dosing Pages (6 lbs – 34 lbs)</h3>
+    <div class="bb-toc-pills">
+      <a href="/calculators/infant-fever-dosing/8-lbs/" class="bb-toc-pill">8 lb Baby Fever Dose</a>
+      <a href="/calculators/infant-fever-dosing/10-lbs/" class="bb-toc-pill">10 lb Baby Fever Dose</a>
+      <a href="/calculators/infant-fever-dosing/12-lbs/" class="bb-toc-pill">12 lb Baby Fever Dose</a>
+      <a href="/calculators/infant-fever-dosing/14-lbs/" class="bb-toc-pill">14 lb Baby Fever Dose</a>
+      <a href="/calculators/infant-fever-dosing/16-lbs/" class="bb-toc-pill">16 lb Baby Fever Dose</a>
+      <a href="/calculators/infant-fever-dosing/18-lbs/" class="bb-toc-pill">18 lb Baby Fever Dose</a>
+      <a href="/calculators/infant-fever-dosing/20-lbs/" class="bb-toc-pill">20 lb Baby Fever Dose</a>
+      <a href="/calculators/infant-fever-dosing/22-lbs/" class="bb-toc-pill">22 lb Baby Fever Dose</a>
+      <a href="/calculators/infant-fever-dosing/24-lbs/" class="bb-toc-pill">24 lb Baby Fever Dose</a>
+      <a href="/calculators/infant-fever-dosing/28-lbs/" class="bb-toc-pill">28 lb Toddler Fever Dose</a>
+    </div>
+
+    <h3>Gestational Week-by-Week Clinical Checkpoints (Weeks 4 – 40)</h3>
+    <div class="bb-toc-pills">
+      <a href="/pregnancy/week-by-week/4-weeks/" class="bb-toc-pill">4 Weeks Pregnant</a>
+      <a href="/pregnancy/week-by-week/6-weeks/" class="bb-toc-pill">6 Weeks Pregnant</a>
+      <a href="/pregnancy/week-by-week/8-weeks/" class="bb-toc-pill">8 Weeks Pregnant</a>
+      <a href="/pregnancy/week-by-week/10-weeks/" class="bb-toc-pill">10 Weeks Pregnant</a>
+      <a href="/pregnancy/week-by-week/12-weeks/" class="bb-toc-pill">12 Weeks Pregnant</a>
+      <a href="/pregnancy/week-by-week/16-weeks/" class="bb-toc-pill">16 Weeks Pregnant</a>
+      <a href="/pregnancy/week-by-week/20-weeks/" class="bb-toc-pill">20 Weeks Pregnant</a>
+      <a href="/pregnancy/week-by-week/24-weeks/" class="bb-toc-pill">24 Weeks Pregnant</a>
+      <a href="/pregnancy/week-by-week/28-weeks/" class="bb-toc-pill">28 Weeks Pregnant</a>
+      <a href="/pregnancy/week-by-week/32-weeks/" class="bb-toc-pill">32 Weeks Pregnant</a>
+      <a href="/pregnancy/week-by-week/36-weeks/" class="bb-toc-pill">36 Weeks Pregnant</a>
+      <a href="/pregnancy/week-by-week/40-weeks/" class="bb-toc-pill">40 Weeks Pregnant</a>
+    </div>
+
+    <h3>Age-Specific Pediatric Wake Window Schedules (1 – 24 Months)</h3>
+    <div class="bb-toc-pills">
+      <a href="/calculators/wake-window-matrix/1-months/" class="bb-toc-pill">1 Month Wake Window</a>
+      <a href="/calculators/wake-window-matrix/2-months/" class="bb-toc-pill">2 Month Wake Window</a>
+      <a href="/calculators/wake-window-matrix/3-months/" class="bb-toc-pill">3 Month Wake Window</a>
+      <a href="/calculators/wake-window-matrix/4-months/" class="bb-toc-pill">4 Month Wake Window</a>
+      <a href="/calculators/wake-window-matrix/5-months/" class="bb-toc-pill">5 Month Wake Window</a>
+      <a href="/calculators/wake-window-matrix/6-months/" class="bb-toc-pill">6 Month Wake Window</a>
+      <a href="/calculators/wake-window-matrix/7-months/" class="bb-toc-pill">7 Month Wake Window</a>
+      <a href="/calculators/wake-window-matrix/8-months/" class="bb-toc-pill">8 Month Wake Window</a>
+      <a href="/calculators/wake-window-matrix/9-months/" class="bb-toc-pill">9 Month Wake Window</a>
+      <a href="/calculators/wake-window-matrix/12-months/" class="bb-toc-pill">12 Month Wake Window</a>
+      <a href="/calculators/wake-window-matrix/18-months/" class="bb-toc-pill">18 Month Wake Window</a>
+    </div>
+
+    <h3>Beta-hCG Days Past Ovulation (DPO) Reference Benchmarks (8 – 24 DPO)</h3>
+    <div class="bb-toc-pills">
+      <a href="/calculators/hcg-calculator/9-dpo/" class="bb-toc-pill">9 DPO hCG Levels</a>
+      <a href="/calculators/hcg-calculator/10-dpo/" class="bb-toc-pill">10 DPO hCG Levels</a>
+      <a href="/calculators/hcg-calculator/12-dpo/" class="bb-toc-pill">12 DPO hCG Levels</a>
+      <a href="/calculators/hcg-calculator/14-dpo/" class="bb-toc-pill">14 DPO hCG Levels</a>
+      <a href="/calculators/hcg-calculator/16-dpo/" class="bb-toc-pill">16 DPO hCG Levels</a>
+      <a href="/calculators/hcg-calculator/18-dpo/" class="bb-toc-pill">18 DPO hCG Levels</a>
+      <a href="/calculators/hcg-calculator/20-dpo/" class="bb-toc-pill">20 DPO hCG Levels</a>
+      <a href="/calculators/hcg-calculator/21-dpo/" class="bb-toc-pill">21 DPO hCG Levels</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-widget">
+        <h4>About Babie Blue</h4>
+        <p>Babie Blue is an independent maternal health, reproductive medicine, and pediatric clinical publication empowering families with physician-reviewed protocols and interactive calculators.</p>
+        <div class="footer-social-row">
+          <a href="https://www.linkedin.com/in/sivanandan-n-shaynly" class="footer-social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.instagram.com/shaynly_babieblue/" class="footer-social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/Shaynly.BabieBlue" class="footer-social-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://in.pinterest.com/Shaynly_BabieBlue" class="footer-social-link" target="_blank" rel="noopener noreferrer">Pinterest</a>
+          <a href="https://www.youtube.com/@BabieBlue_BB" class="footer-social-link" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-widget">
+        <h4>Medical Review Board</h4>
+        <ul>
+          <li><a href="/dr-mangala-devi/">Dr. Mangala Devi K.R., MS (OBG)</a><span class="footer-role-tag">Secretary (IFS KA) &bull; Past President (BSOG)</span></li>
+          <li><a href="/dr-anagha-nawal/">Dr. Anagha Nawal, MD, MCE</a><span class="footer-role-tag">Consultant OB-GYN &amp; Embryologist</span></li>
+          <li><a href="/madhuri-b/">Madhuri B</a><span class="footer-role-tag">Lead Healthcare &amp; Billing Specialist</span></li>
+          <li><a href="/sivanandan-n/">Sivanandan N</a><span class="footer-role-tag">Founder &amp; Publisher</span></li>
+          <li><a href="/about-us/">Editorial Review Protocol &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-widget">
+        <h4>Specialty Clinical Hubs</h4>
+        <ul>
+          <li><a href="/pregnancy/">Pregnancy &amp; Prenatal Guide</a></li>
+          <li><a href="/baby-care/">Newborn &amp; Infant Care</a></li>
+          <li><a href="/parenting/">Toddler &amp; Child Development</a></li>
+          <li><a href="/maternal-health/">Maternal &amp; Postpartum Health</a></li>
+          <li><a href="/calculators/">Interactive Clinical Calculators</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-widget">
+        <h4>Flagship Protocols &amp; Tools</h4>
+        <ul>
+          <li><a href="/baby-care/wake-windows-nap-transitions-by-age/">Wake Windows &amp; Sleep Planner</a></li>
+          <li><a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/">Infant Fever mL Dosing Chart</a></li>
+          <li><a href="/maternal-health/postpartum-blood-work-panel-ferritin-thyroiditis-vitamin-d/">Postpartum Blood Work Panel</a></li>
+          <li><a href="/pregnancy/cord-blood-cord-tissue-banking-costs-public-vs-private/">Cord Blood Banking Cost ROI</a></li>
+          <li><a href="/calculators/due-date-calculator/">Due Date &amp; Gestation Calculator</a></li>
+          <li><a href="/calculators/hcg-calculator/">Beta-hCG Doubling Calculator</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-widget">
+        <h4>Governance &amp; Legal</h4>
+        <ul>
+          <li><a href="/about-us/">About Babie Blue &amp; Ethics</a></li>
+          <li><a href="/contact-us/">Contact &amp; Clinical Feedback</a></li>
+          <li><a href="/privacy-policy/">Privacy &amp; Data Policy</a></li>
+          <li><a href="/terms-and-conditions/">Terms &amp; Medical Disclaimer</a></li>
+          <li><a href="/affiliate-links/">Affiliate &amp; Ad Disclosure</a></li>
+          <li><a href="/datasets/">Open Clinical Datasets &amp; API</a></li>
+          <li><a href="/site-map/">Site Directory</a></li>
+          <li><a href="/sitemap.xml">XML Sitemap</a></li>
+          <li><a href="/llms.txt">AI Index (llms.txt)</a></li>
+          <li><a href="/llms-full.txt">AI Corpus (llms-full.txt)</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Babie Blue (BabieBlue.com). All rights reserved. Content is for educational reference and does not replace individualized medical advice.</p>
+    </div>
+  </footer>
+
+  <script>
+    function updateEmbedCode() {
+      var type = document.getElementById('embedToolType').value;
+      var urls = {
+        fever: { url: 'https://babieblue.com/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/', label: 'Infant Fever & Tylenol/Motrin Weight Dosing Calculator by Babie Blue' },
+        edd: { url: 'https://babieblue.com/calculators/due-date-calculator/', label: 'Pregnancy Due Date & Gestational Age Calculator by Babie Blue' },
+        wake: { url: 'https://babieblue.com/baby-care/wake-windows-nap-transitions-by-age/', label: 'Pediatric Wake Windows & Nap Schedule Calculator by Babie Blue' },
+        hcg: { url: 'https://babieblue.com/calculators/hcg-calculator/', label: 'Beta-hCG Doubling Time & Viability Calculator by Babie Blue' }
+      };
+      var sel = urls[type] || urls.fever;
+      document.getElementById('embedCodeSnippet').value =
+        '<div class="babieblue-clinical-widget" data-tool="' + type + '"></div>\n' +
+        '<p style="font-size:12px;margin-top:6px;">Clinical Engine: <a href="' + sel.url + '" rel="dofollow">' + sel.label + '</a></p>\n' +
+        '<script async src="https://babieblue.com/embed/clinical-widget.js"><\/script>';
+    }
+    updateEmbedCode();
+  </script>
+  <script src="/assets/flagship-tools.js?v=20260421" defer></script>
+</body>
+</html>

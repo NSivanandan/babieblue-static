@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Beta-hCG Doubling Time Calculator: Early Pregnancy Viability, DPO Percentiles &amp; Ultrasound Zone — Babie Blue Clinical Reference Diagram">
+  <title>Beta-hCG Doubling Time Calculator: Early Pregnancy Viability, DPO Percentiles &amp; Ultrasound Zone — Clinical Protocol &amp; Visual Reference Diagram</title>
+  <desc>Physician-reviewed clinical diagram and quantitative reference chart for Beta-hCG Doubling Time Calculator: Early Pregnancy Viability, DPO Percentiles &amp; Ultrasound Zone on BabieBlue.com, audited against ACOG, AAP, WHO, and CDC guidelines.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#f0fdfa"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.55"/>
+
+  <!-- Outer Clinical Frame -->
+  <rect x="36" y="32" width="1128" height="566" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="36" y="32" width="1128" height="10" rx="5" fill="#0369a1"/>
+
+  <!-- Left Column: Header Kicker, Title &amp; 3 Article-Specific Quantitative KPIs -->
+  <g transform="translate(68, 72)">
+    <rect x="0" y="0" width="42" height="42" rx="10" fill="#0369a1"/>
+    <path d="M13 21h16M21 13v16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <text x="56" y="17" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="12.5" font-weight="800" fill="#0369a1" letter-spacing="1.2">INTERACTIVE CLINICAL CALCULATOR • EVIDENCE-VALIDATED EQUATION</text>
+    <text x="56" y="36" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#475569">ICD-10-CM: Z32.01 • CANONICAL: /calculators/hcg-calculator/</text>
+  </g>
+
+  <!-- Wrapped Article Title -->
+  <g transform="translate(68, 152)">
+    <text x="0" y="0" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">Beta-hCG Doubling Time Calculator:</text>
+    <text x="0" y="34" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">Early Pregnancy Viability, DPO</text>
+    <text x="0" y="68" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">Percentiles &amp; Ultrasound Zone</text>
+  </g>
+
+  <line x1="68" y1="246" x2="612" y2="246" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- 3 Article-Specific Quantitative Benchmark Cards -->
+  <g transform="translate(68, 264)">
+    <rect width="544" height="62" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#0f766e"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">48–72 hrs</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Expected Beta-hCG Doubling Time Below 1,200</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">mIU/mL Baseline</text>
+  </g>
+  <g transform="translate(68, 336)">
+    <rect width="544" height="62" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#0369a1"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">≥49% Rise</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Minimum 48-Hr Viable Serial Increase for</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">Initial hCG &lt;1,500 mIU/mL</text>
+  </g>
+  <g transform="translate(68, 408)">
+    <rect width="544" height="62" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#b45309"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">1,500–2,000</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Transvaginal Ultrasound Discriminatory Zone</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">(mIU/mL) for Sac</text>
+  </g>
+
+  <!-- Right Column: Bespoke Topic-Matched Clinical Vector Illustration &amp; Chart -->
+  
+    <g transform="translate(636, 82)">
+      <rect width="484" height="394" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+      <rect x="0" y="0" width="484" height="44" rx="16" fill="#0f766e"/>
+      <rect x="0" y="24" width="484" height="20" fill="#0f766e"/>
+      <text x="20" y="27" font-family="JetBrains Mono, monospace" font-size="12.5" font-weight="700" fill="#ffffff" letter-spacing="0.8">FIG 1 • SERUM BETA-hCG 48-HR DOUBLING &amp; DPO TRAJECTORY</text>
+
+      <!-- Discriminatory Ultrasound Zone Highlight -->
+      <rect x="56" y="72" width="398" height="46" fill="#fef3c7" fill-opacity="0.65" stroke="#fcd34d" stroke-dasharray="4 3"/>
+      <text x="66" y="92" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#92400e">TVUS DISCRIMINATORY ZONE (1,500–2,000 mIU/mL • Gestational Sac Visible)</text>
+
+      <!-- Axes &amp; Grid -->
+      <line x1="56" y1="150" x2="454" y2="150" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+      <line x1="56" y1="195" x2="454" y2="195" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+      <line x1="56" y1="235" x2="454" y2="235" stroke="#0284c7" stroke-dasharray="3 3" stroke-width="1.5"/>
+      <text x="448" y="230" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#0369a1">Urine Strip Threshold (25 mIU/mL)</text>
+
+      <line x1="56" y1="264" x2="454" y2="264" stroke="#334155" stroke-width="1.5"/>
+      <line x1="56" y1="68" x2="56" y2="264" stroke="#334155" stroke-width="1.5"/>
+
+      <!-- Y Axis Labels -->
+      <text x="48" y="95" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#475569">2,000</text>
+      <text x="48" y="153" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#475569">500</text>
+      <text x="48" y="198" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#475569">100</text>
+      <text x="48" y="238" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#0369a1">25</text>
+      <text x="48" y="264" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#475569">5</text>
+
+      <!-- Twin Median Curve (Dashed Teal) -->
+      <path d="M 80 258 C 145 245, 215 204, 290 142 C 345 102, 395 82, 442 74" fill="none" stroke="#0369a1" stroke-width="2.8" stroke-dasharray="6 4"/>
+      <text x="348" y="114" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#0369a1">Twin Median (1.85x)</text>
+
+      <!-- Singleton Median Curve (Solid Deep Teal) -->
+      <path d="M 80 260 C 145 254, 215 228, 290 176 C 345 138, 395 106, 442 90" fill="none" stroke="#0f766e" stroke-width="3.8" stroke-linecap="round"/>
+      <text x="355" y="158" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#0f766e">Singleton Median</text>
+
+      <!-- Key DPO Data Points -->
+      <circle cx="110" cy="256" r="5.5" fill="#0f766e" stroke="#fff" stroke-width="2"/>
+      <text x="110" y="246" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="700" fill="#0f172a">8–9 DPO Implantation</text>
+
+      <circle cx="235" cy="212" r="6" fill="#0f766e" stroke="#fff" stroke-width="2"/>
+      <text x="235" y="200" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#0f766e">14 DPO (~100 mIU)</text>
+
+      <circle cx="345" cy="138" r="6" fill="#0f766e" stroke="#fff" stroke-width="2"/>
+      <text x="345" y="128" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#0f766e">18 DPO (~600 mIU)</text>
+
+      <!-- X Axis Labels -->
+      <text x="80" y="282" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="600" fill="#334155">6 DPO</text>
+      <text x="160" y="282" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="600" fill="#334155">10 DPO</text>
+      <text x="235" y="282" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="600" fill="#334155">14 DPO</text>
+      <text x="345" y="282" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="600" fill="#334155">18 DPO</text>
+      <text x="435" y="282" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="600" fill="#334155">22 DPO</text>
+
+      <!-- ASRM Serial Rise Velocity Reference Box -->
+      <rect x="20" y="298" width="444" height="78" rx="10" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+      <text x="34" y="320" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="700" fill="#0f766e">ASRM / BARNHART 48-HOUR MINIMUM VIABLE RISE SLOPES</text>
+      <text x="34" y="341" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#0f172a">• &lt;1,500 mIU/mL: ≥49% rise in 48h (T½ = 48–72h) • 1,500–3,000: ≥40% rise</text>
+      <text x="34" y="361" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">• &gt;3,000 mIU/mL: ≥33% rise in 48h (Confirm viability via transvaginal scan)</text>
+    </g>
+
+  <!-- Bottom Clinical Triage &amp; Medical Review Bar -->
+  <rect x="68" y="492" width="1052" height="42" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="86" y="518" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" fill="#b91c1c">Clinical Triage Rule: <tspan font-weight="600" fill="#1e293b">Seek immediate OB-GYN evaluation for plateauing/falling hCG, unilateral pelvic pain, or spotting to</tspan></text>
+
+  <text x="68" y="568" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#334155">Medically Reviewed by Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA &amp; Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM</text>
+  <text x="1120" y="568" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="13.5" font-weight="800" fill="#0369a1">BabieBlue.com</text>
+</svg>

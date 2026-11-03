@@ -1,0 +1,151 @@
+{
+  "publisher": "Babie Blue",
+  "license": "CC-BY-4.0",
+  "canonical": "https://babieblue.com/datasets/",
+  "data": [
+    {
+      "weight_lbs": 6,
+      "weight_kg": 2.72,
+      "acetaminophen_160mg_5ml_dose_ml": 1.06,
+      "acetaminophen_mg": 34,
+      "ibuprofen_100mg_5ml_dose_ml": 0,
+      "ibuprofen_50mg_1_25ml_drops_ml": 0,
+      "clinical_rule": "Consult pediatrician before antipyretics; immediate ER if <60 days old with rectal temp >=38.0C (100.4F)"
+    },
+    {
+      "weight_lbs": 8,
+      "weight_kg": 3.63,
+      "acetaminophen_160mg_5ml_dose_ml": 1.42,
+      "acetaminophen_mg": 45.4,
+      "ibuprofen_100mg_5ml_dose_ml": 0,
+      "ibuprofen_50mg_1_25ml_drops_ml": 0,
+      "clinical_rule": "Consult pediatrician before antipyretics; immediate ER if <60 days old with rectal temp >=38.0C (100.4F)"
+    },
+    {
+      "weight_lbs": 10,
+      "weight_kg": 4.54,
+      "acetaminophen_160mg_5ml_dose_ml": 1.77,
+      "acetaminophen_mg": 56.8,
+      "ibuprofen_100mg_5ml_dose_ml": 0,
+      "ibuprofen_50mg_1_25ml_drops_ml": 0,
+      "clinical_rule": "Consult pediatrician before antipyretics; immediate ER if <60 days old with rectal temp >=38.0C (100.4F)"
+    },
+    {
+      "weight_lbs": 12,
+      "weight_kg": 5.44,
+      "acetaminophen_160mg_5ml_dose_ml": 2.13,
+      "acetaminophen_mg": 68,
+      "ibuprofen_100mg_5ml_dose_ml": 2.72,
+      "ibuprofen_50mg_1_25ml_drops_ml": 1.36,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    },
+    {
+      "weight_lbs": 14,
+      "weight_kg": 6.35,
+      "acetaminophen_160mg_5ml_dose_ml": 2.48,
+      "acetaminophen_mg": 79.4,
+      "ibuprofen_100mg_5ml_dose_ml": 3.17,
+      "ibuprofen_50mg_1_25ml_drops_ml": 1.59,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    },
+    {
+      "weight_lbs": 16,
+      "weight_kg": 7.26,
+      "acetaminophen_160mg_5ml_dose_ml": 2.84,
+      "acetaminophen_mg": 90.8,
+      "ibuprofen_100mg_5ml_dose_ml": 3.63,
+      "ibuprofen_50mg_1_25ml_drops_ml": 1.81,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    },
+    {
+      "weight_lbs": 18,
+      "weight_kg": 8.16,
+      "acetaminophen_160mg_5ml_dose_ml": 3.19,
+      "acetaminophen_mg": 102,
+      "ibuprofen_100mg_5ml_dose_ml": 4.08,
+      "ibuprofen_50mg_1_25ml_drops_ml": 2.04,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    },
+    {
+      "weight_lbs": 20,
+      "weight_kg": 9.07,
+      "acetaminophen_160mg_5ml_dose_ml": 3.54,
+      "acetaminophen_mg": 113.4,
+      "ibuprofen_100mg_5ml_dose_ml": 4.54,
+      "ibuprofen_50mg_1_25ml_drops_ml": 2.27,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    },
+    {
+      "weight_lbs": 22,
+      "weight_kg": 9.98,
+      "acetaminophen_160mg_5ml_dose_ml": 3.9,
+      "acetaminophen_mg": 124.8,
+      "ibuprofen_100mg_5ml_dose_ml": 4.99,
+      "ibuprofen_50mg_1_25ml_drops_ml": 2.5,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    },
+    {
+      "weight_lbs": 24,
+      "weight_kg": 10.89,
+      "acetaminophen_160mg_5ml_dose_ml": 4.25,
+      "acetaminophen_mg": 136.1,
+      "ibuprofen_100mg_5ml_dose_ml": 5.45,
+      "ibuprofen_50mg_1_25ml_drops_ml": 2.72,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    },
+    {
+      "weight_lbs": 26,
+      "weight_kg": 11.79,
+      "acetaminophen_160mg_5ml_dose_ml": 4.61,
+      "acetaminophen_mg": 147.4,
+      "ibuprofen_100mg_5ml_dose_ml": 5.9,
+      "ibuprofen_50mg_1_25ml_drops_ml": 2.95,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    },
+    {
+      "weight_lbs": 28,
+      "weight_kg": 12.7,
+      "acetaminophen_160mg_5ml_dose_ml": 4.96,
+      "acetaminophen_mg": 158.8,
+      "ibuprofen_100mg_5ml_dose_ml": 6.35,
+      "ibuprofen_50mg_1_25ml_drops_ml": 3.17,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    },
+    {
+      "weight_lbs": 30,
+      "weight_kg": 13.61,
+      "acetaminophen_160mg_5ml_dose_ml": 5.32,
+      "acetaminophen_mg": 170.1,
+      "ibuprofen_100mg_5ml_dose_ml": 6.8,
+      "ibuprofen_50mg_1_25ml_drops_ml": 3.4,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    },
+    {
+      "weight_lbs": 32,
+      "weight_kg": 14.51,
+      "acetaminophen_160mg_5ml_dose_ml": 5.67,
+      "acetaminophen_mg": 181.4,
+      "ibuprofen_100mg_5ml_dose_ml": 7.25,
+      "ibuprofen_50mg_1_25ml_drops_ml": 3.63,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    },
+    {
+      "weight_lbs": 34,
+      "weight_kg": 15.42,
+      "acetaminophen_160mg_5ml_dose_ml": 6.03,
+      "acetaminophen_mg": 192.8,
+      "ibuprofen_100mg_5ml_dose_ml": 7.71,
+      "ibuprofen_50mg_1_25ml_drops_ml": 3.85,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    },
+    {
+      "weight_lbs": 36,
+      "weight_kg": 16.33,
+      "acetaminophen_160mg_5ml_dose_ml": 6.38,
+      "acetaminophen_mg": 204.1,
+      "ibuprofen_100mg_5ml_dose_ml": 8.17,
+      "ibuprofen_50mg_1_25ml_drops_ml": 4.08,
+      "clinical_rule": "Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h"
+    }
+  ]
+}

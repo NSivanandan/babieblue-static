@@ -1,4 +1,4 @@
-// BabieBlue — Top 1% Clinical UX, Speculation Rules, Dual-Unit Switcher, URL Deep-Links, .ics Export & AdSense Active-View Engine
+// Babie Blue — Clinical UX, Speculation Rules, Dual-Unit Switcher, & Academic Citation/Embed Engine
 (function () {
   const CORE_SEARCH_INDEX = [
     { title: "Wake Windows by Age & Nap Transitions (0–24 Months)", url: "/baby-care/wake-windows-nap-transitions-by-age/", cat: "Baby Care", desc: "Interactive 24-hour wake window schedule generator, cortisol science & nap transition quiz." },
@@ -22,9 +22,10 @@
     { title: "Beta hCG Doubling Time & Viability Calculator", url: "/calculators/hcg-calculator/", cat: "Calculators", desc: "Calculate 48-hour hCG percentage rise, doubling hours, and ultrasound discriminatory zones." },
     { title: "Baby Name Shortlist & Origin Finder Engine", url: "/calculators/baby-name-generator/", cat: "Calculators", desc: "Filter 300+ baby names by origin, gender, and style with persistent nursery shortlist." },
     { title: "Pregnancy Calorie & Trimester TDEE Calculator", url: "/calculators/pregnancy-calorie-deficit-calculator/", cat: "Calculators", desc: "Calculate trimester-adjusted caloric intake (+0, +340, +452 kcal) and safe maternal energy targets." },
+    { title: "Open Clinical Datasets (CSV/JSON), REST API & Clinic Widgets", url: "/datasets/", cat: "Datasets & API", desc: "Download CC-BY-4.0 clinical reference tables, explore OpenAPI 3.1 endpoints, or embed calculators on your site." },
     { title: "Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA — Senior Medical Reviewer", url: "/dr-mangala-devi/", cat: "Medical Board", desc: "Secretary (IFS Karnataka), Immediate Past President (BSOG), Consultant at Manipal Hospitals (MHEL)." },
     { title: "Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM — Senior Medical Reviewer", url: "/dr-anagha-nawal/", cat: "Medical Board", desc: "20+ yrs Consultant OB-GYN & Clinical Embryologist (Monash University Australia & Kiel University Germany)." },
-    { title: "Sivanandan N — Founder & Publisher", url: "/sivanandan-n/", cat: "Medical Board", desc: "Founder of BabieBlue & Shaynly, former Healthcare Project Head at Ferticare." },
+    { title: "Sivanandan N — Founder & Publisher", url: "/sivanandan-n/", cat: "Medical Board", desc: "Founder of Babie Blue & Shaynly, former Healthcare Project Head at Ferticare." },
     { title: "Madhuri B — Lead Healthcare Content Specialist", url: "/madhuri-b/", cat: "Medical Board", desc: "12+ yrs in Healthcare Leadership & Medical Billing (CPT/ICD-10/HCPCS)." },
     { title: "About Babie Blue — Leadership & Medical Review Board", url: "/about-us/", cat: "Medical Board", desc: "Meet our Medical Review Board, editorial verification standards, and leadership team." }
   ];
@@ -33,8 +34,9 @@
   let fullIndexLoaded = false;
   let activeCategoryFilter = 'All';
 
-  // 1. Speculation Rules API (Prefetch on Hover for <50ms Page Transitions + Full AdSense Pageview Auctions)
+  // 1. Speculation Rules API (Prefetch on Hover for <50ms Page Transitions)
   function injectSpeculationRules() {
+    if (window.self !== window.top) return;
     if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
       if (document.querySelector('script[type="speculationrules"]')) return;
       const specScript = document.createElement('script');
@@ -46,7 +48,8 @@
             where: {
               and: [
                 { href_matches: '/*' },
-                { not: { href_matches: '/wp-content/*' } }
+                { not: { href_matches: '/api/*' } },
+                { not: { href_matches: '/_*' } }
               ]
             },
             eagerness: 'moderate'
@@ -57,18 +60,31 @@
     }
   }
 
-  // 2. Register Offline-Ready Clinical Service Worker
+  // 2. Register Offline-Ready Clinical Service Worker (Auto-cleans inside preview iframes)
   function registerClinicalServiceWorker() {
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').catch(() => {});
-      });
-    }
-  }
+    if (!('serviceWorker' in navigator)) return;
+    const isPreview =
+      window.self !== window.top ||
+      window.location.hostname.includes('localhost') ||
+      window.location.hostname === '127.0.0.1';
 
-  // 3. AdSense Engine - Handled natively by Google Auto Ads & Official Script
-  function initAdSenseViewabilityEngine() {
-    // Native Auto Ads handling to protect Google Active View telemetry and prevent invalid slot errors
+    if (isPreview) {
+      navigator.serviceWorker
+        .getRegistrations()
+        .then((regs) => regs.forEach((r) => r.unregister()))
+        .catch(() => {});
+      if ('caches' in window) {
+        caches
+          .keys()
+          .then((keys) => keys.forEach((k) => caches.delete(k)))
+          .catch(() => {});
+      }
+      return;
+    }
+
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    });
   }
 
   function loadFullSearchIndex() {
@@ -102,7 +118,7 @@
   function updateUnitButtons() {
     const isMetric = getUnitSystem() === 'metric';
     document.querySelectorAll('.bb-unit-toggle').forEach((btn) => {
-      btn.innerHTML = isMetric ? '🌍 Units: kg / mL / °C' : '🇺🇸 Units: lbs / oz / °F';
+      btn.innerHTML = isMetric ? 'Units: Metric (kg / mL / °C)' : 'Units: US (lbs / oz / °F)';
       btn.setAttribute('aria-pressed', isMetric ? 'true' : 'false');
     });
   }
@@ -114,38 +130,25 @@
     if (typeof window.updateBbPediatricWidget === 'function') window.updateBbPediatricWidget();
   };
 
-  function initDimMode() {
-    const saved = localStorage.getItem('bb_dim_mode');
-    if (saved === '1') {
-      document.body.classList.add('bb-dim-mode');
+  window.copyBbText = function (idOrText, btnEl) {
+    let text = '';
+    const el = typeof idOrText === 'string' ? document.getElementById(idOrText) : null;
+    if (el) {
+      text = (el.innerText || el.textContent || '').trim();
+    } else if (typeof idOrText === 'string' && idOrText.length > 24) {
+      text = idOrText.trim();
+    } else {
+      const fallback = document.querySelector('.clinical-summary-box, .bb-subtitle');
+      if (fallback) text = (fallback.innerText || fallback.textContent || '').trim();
     }
-    updateDimButtons();
-    updateUnitButtons();
-  }
-
-  function updateDimButtons() {
-    const isDim = document.body.classList.contains('bb-dim-mode');
-    document.querySelectorAll('.bb-dim-toggle').forEach((btn) => {
-      btn.innerHTML = isDim ? '☀️ Day Mode' : '🌙 2 AM Dim Mode';
-      btn.setAttribute('aria-pressed', isDim ? 'true' : 'false');
-    });
-  }
-
-  window.toggleBbDimMode = function () {
-    document.body.classList.toggle('bb-dim-mode');
-    const isDim = document.body.classList.contains('bb-dim-mode');
-    localStorage.setItem('bb_dim_mode', isDim ? '1' : '0');
-    updateDimButtons();
-  };
-
-  window.copyBbText = function (elementId, btnEl) {
-    const target = document.getElementById(elementId) || document.querySelector('.clinical-summary-box, .bb-subtitle');
-    if (!target) return;
-    const text = (target.innerText || target.textContent || '').trim();
-    navigator.clipboard.writeText(text + '\n— Clinical Source: ' + window.location.href).then(() => {
+    if (!text) return;
+    const payload = text.includes('Babie Blue')
+      ? text
+      : text + '\n— Clinical Source: Babie Blue (' + window.location.href + ')';
+    navigator.clipboard.writeText(payload).then(() => {
       if (btnEl) {
         const orig = btnEl.innerHTML;
-        btnEl.innerHTML = '✓ Summary Copied';
+        btnEl.innerHTML = '✓ Copied to Clipboard';
         setTimeout(() => {
           btnEl.innerHTML = orig;
         }, 2200);
@@ -157,7 +160,7 @@
     navigator.clipboard.writeText(window.location.href).then(() => {
       if (btnEl) {
         const orig = btnEl.innerHTML;
-        btnEl.innerHTML = '✓ Shareable Link Copied!';
+        btnEl.innerHTML = '✓ Link Copied';
         setTimeout(() => {
           btnEl.innerHTML = orig;
         }, 2200);
@@ -165,66 +168,180 @@
     });
   };
 
-  // 5. .ics Calendar Milestone Generator for Obstetric & Pediatric Protocols
-  window.downloadBbIcsCalendar = function (mode) {
-    const now = new Date();
-    const fmtDate = (d) => d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-    const events = [];
-
-    if (mode === 'obstetric') {
-      const wkInput = parseInt(document.getElementById('bbWidgetGestWeek')?.value || '12', 10);
-      const daysRemaining = Math.max(7, (40 - wkInput) * 7);
-      const edd = new Date(now.getTime() + daysRemaining * 86400000);
-      const anatomyDate = new Date(edd.getTime() - 20 * 7 * 86400000);
-      const gdmDate = new Date(edd.getTime() - 14 * 7 * 86400000);
-      const gbsDate = new Date(edd.getTime() - 4 * 7 * 86400000);
-
-      events.push(
-        { date: anatomyDate, title: 'BabieBlue Clinical Milestone: 20-Week Fetal Anatomy Scan Window', desc: 'Comprehensive 20-week fetal anatomy ultrasound & cervical length check (ACOG Guideline).' },
-        { date: gdmDate, title: 'BabieBlue Clinical Milestone: 26-Week Gestational Diabetes & Ferritin Lab Check', desc: 'Glucola screening, CBC + Serum Ferritin check & Tdap vaccine window.' },
-        { date: gbsDate, title: 'BabieBlue Clinical Milestone: 36-Week Group B Strep (GBS) Screening', desc: '36–37 week GBS swab & hospital bag readiness check (https://babieblue.com/pregnancy/hospital-bag-checklist-mom-partner-baby-tracker/).' },
-        { date: edd, title: 'Estimated Due Date (40w0d) — Babie Blue', desc: 'Estimated delivery date calculated via Babie Blue Clinical Protocol (https://babieblue.com/calculators/due-date-calculator/).' }
-      );
+  window.shareBbPartnerBrief = function () {
+    const h1 = document.querySelector('h1')?.innerText || document.title;
+    const bluf = document.querySelector('.clinical-summary-box, .bb-subtitle')?.innerText?.slice(0, 260) || '';
+    const shareText = `Babie Blue Clinical Brief: ${h1}\n\n${bluf}...\n\nFull protocol: ${window.location.href}`;
+    if (navigator.share) {
+      navigator.share({ title: h1 + ' | Babie Blue', text: shareText, url: window.location.href }).catch(() => {});
     } else {
-      const check1 = new Date(now.getTime() + 14 * 86400000);
-      const check2 = new Date(now.getTime() + 60 * 86400000);
-      events.push(
-        { date: check1, title: 'BabieBlue Clinical Check-In: 2-Week Weight & Feeding / Lab Follow-Up', desc: 'Recalculate weight-based intake and developmental wake windows at https://babieblue.com/' },
-        { date: check2, title: 'BabieBlue Clinical Check-In: 60-Day Developmental & Wellness Milestone', desc: 'Review next-stage wake windows, immunization schedule, or postpartum thyroid/ferritin panel at https://babieblue.com/' }
-      );
+      navigator.clipboard.writeText(shareText).then(() => {
+        const btn = document.getElementById('bbPartnerShareBtn');
+        if (btn) {
+          const orig = btn.innerHTML;
+          btn.innerHTML = '✓ Brief Copied';
+          setTimeout(() => (btn.innerHTML = orig), 2200);
+        }
+      });
     }
+  };
 
-    const icsLines = [
+  window.toggleBbCiteEmbedDrawer = function (mode) {
+    const drawer = document.getElementById('bbCiteEmbedDrawer');
+    if (!drawer) return;
+    const isSameOpen = drawer.classList.contains('open') && drawer.getAttribute('data-mode') === mode;
+    if (isSameOpen) {
+      drawer.classList.remove('open');
+      return;
+    }
+    drawer.setAttribute('data-mode', mode);
+    drawer.classList.add('open');
+
+    const title = (document.querySelector('h1')?.innerText || document.title).replace(/\s*\|\s*Babie Blue.*$/i, '').trim();
+    const url = window.location.origin + window.location.pathname;
+    const path = window.location.pathname;
+    const toolType = path.includes('fever') ? 'fever' : path.includes('hcg') ? 'hcg' : path.includes('wake') || path.includes('sleep') ? 'wake' : 'edd';
+
+    if (mode === 'cite') {
+      const ama = `Madhuri B; reviewed by Devi KR M, Nawal A. ${title}. Babie Blue Clinical Protocols. Updated 2026. Accessed ${new Date().toISOString().split('T')[0]}. ${url}`;
+      const apa = `Madhuri, B., Devi K.R., M., & Nawal, A. (2026). ${title}. Babie Blue. ${url}`;
+      drawer.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
+          <strong>Academic &amp; Clinical Citation Formats (AMA / APA / RIS)</strong>
+          <button type="button" class="bb-utility-btn" onclick="document.getElementById('bbCiteEmbedDrawer').classList.remove('open')">Close &times;</button>
+        </div>
+        <div style="margin-top:10px;">
+          <div style="font-weight:700;font-size:12px;color:#0f766e;">AMA 11th Edition Style:</div>
+          <div class="bb-cite-box" id="bbAmaText">${ama}</div>
+          <div style="font-weight:700;font-size:12px;color:#0369a1;margin-top:10px;">APA 7th Edition Style:</div>
+          <div class="bb-cite-box" id="bbApaText">${apa}</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+            <button type="button" class="bb-utility-btn" onclick="navigator.clipboard.writeText(document.getElementById('bbAmaText').innerText);this.innerText='✓ AMA Copied'">Copy AMA</button>
+            <button type="button" class="bb-utility-btn" onclick="navigator.clipboard.writeText(document.getElementById('bbApaText').innerText);this.innerText='✓ APA Copied'">Copy APA</button>
+            <a href="/api/cite.ris?title=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}" class="bb-utility-btn" onclick="event.preventDefault();downloadBbCiteFile('ris')">Download .RIS</a>
+            <a href="/api/cite.bib?title=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}" class="bb-utility-btn" onclick="event.preventDefault();downloadBbCiteFile('bib')">Download .BIB</a>
+          </div>
+        </div>
+      `;
+    } else {
+      const snippet = `<div class="babieblue-clinical-widget" data-tool="${toolType}"></div>\n<p style="font-size:12px;margin-top:6px;">Clinical Reference: <a href="${url}" rel="dofollow">${title} — Babie Blue</a></p>\n<script async src="https://babieblue.com/embed/clinical-widget.js"><\/script>`;
+      drawer.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
+          <strong>Embed Clinical Calculator Widget</strong>
+          <button type="button" class="bb-utility-btn" onclick="document.getElementById('bbCiteEmbedDrawer').classList.remove('open')">Close &times;</button>
+        </div>
+        <p style="margin:6px 0;font-size:12.5px;">Copy and paste this snippet into any clinic or patient education page:</p>
+        <div class="bb-cite-box" id="bbEmbedBox">${snippet.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;">
+          <button type="button" class="bb-utility-btn" onclick="navigator.clipboard.writeText(document.getElementById('bbEmbedBox').innerText);this.innerText='✓ Embed Code Copied'">Copy HTML Snippet</button>
+          <a href="/datasets/" class="bb-utility-btn">Open Clinical Datasets &rarr;</a>
+        </div>
+      `;
+    }
+  };
+
+  function triggerClientBlobDownload(filename, mimeType, content) {
+    try {
+      const blob = new Blob([content], { type: mimeType });
+      const blobUrl = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = blobUrl;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 1500);
+    } catch {}
+  }
+
+  window.downloadBbCiteFile = function (fmt, customTitle, customUrl) {
+    const title = (customTitle || document.querySelector('h1')?.innerText || document.title || 'Babie Blue Clinical Protocol')
+      .replace(/\s*\|\s*Babie Blue.*$/i, '')
+      .trim();
+    const url = customUrl || window.location.origin + window.location.pathname;
+    if (fmt === 'bib') {
+      const cleanTitle = title.replace(/[{}]/g, '');
+      const bib = `@misc{babieblue2026,\n  author = {Madhuri B and Mangala Devi K.R. and Anagha Nawal},\n  title = {{${cleanTitle}}},\n  publisher = {Babie Blue},\n  year = {2026},\n  url = {${url}},\n  note = {Medically reviewed against ACOG, AAP, and WHO clinical guidelines}\n}`;
+      triggerClientBlobDownload('babie-blue-citation.bib', 'application/x-bibtex;charset=utf-8', bib);
+    } else {
+      const ris = [
+        'TY  - ELEC',
+        `TI  - ${title}`,
+        'AU  - Madhuri, B.',
+        'A2  - Devi K.R., Mangala',
+        'A2  - Nawal, Anagha',
+        'PB  - Babie Blue Medical Review Board',
+        'PY  - 2026',
+        `UR  - ${url}`,
+        'ER  - '
+      ].join('\r\n');
+      triggerClientBlobDownload('babie-blue-citation.ris', 'application/x-research-info-systems;charset=utf-8', ris);
+    }
+  };
+
+  window.downloadBbIcsCalendar = function (mode, customParam) {
+    const now = new Date();
+    const fmt = (d) => d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+    const lines = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//Babie Blue Clinical Protocols//EN',
-      'CALSCALE:GREGORIAN'
+      'PRODID:-//Babie Blue Clinical Milestone Feed//EN',
+      'CALSCALE:GREGORIAN',
+      'X-WR-CALNAME:Babie Blue Clinical Milestones'
     ];
 
-    events.forEach((ev, idx) => {
-      const end = new Date(ev.date.getTime() + 3600000);
-      icsLines.push(
-        'BEGIN:VEVENT',
-        `UID:babieblue-${Date.now()}-${idx}@babieblue.com`,
-        `DTSTAMP:${fmtDate(now)}`,
-        `DTSTART:${fmtDate(ev.date)}`,
-        `DTEND:${fmtDate(end)}`,
-        `SUMMARY:${ev.title}`,
-        `DESCRIPTION:${ev.desc}`,
-        'END:VEVENT'
+    if (mode === 'obstetric' || mode === 'pregnancy' || !mode) {
+      const startWk = Math.min(
+        39,
+        Math.max(4, parseInt(String(customParam || document.getElementById('bbWidgetGestWeek')?.value || localStorage.getItem('bb_saved_preg_week') || '12'), 10) || 12)
       );
-    });
-    icsLines.push('END:VCALENDAR');
+      const milestones = [
+        { wk: 12, title: 'Week 12: NIPT & Nuchal Translucency Window', url: 'https://babieblue.com/pregnancy/week-by-week/12-weeks/' },
+        { wk: 20, title: 'Week 20: Comprehensive Fetal Anatomy Scan', url: 'https://babieblue.com/pregnancy/week-by-week/20-weeks/' },
+        { wk: 26, title: 'Week 26: Glucola GDM Screen & Serum Ferritin Check', url: 'https://babieblue.com/pregnancy/week-by-week/26-weeks/' },
+        { wk: 28, title: 'Week 28: Third Trimester Kick Counts & Tdap Window', url: 'https://babieblue.com/pregnancy/week-by-week/28-weeks/' },
+        { wk: 36, title: 'Week 36: Group B Strep (GBS) Swab & Hospital Bag Ready', url: 'https://babieblue.com/pregnancy/hospital-bag-checklist-mom-partner-baby-tracker/' },
+        { wk: 40, title: 'Week 40: Estimated Due Date (40w0d) — Babie Blue', url: 'https://babieblue.com/calculators/due-date-calculator/' }
+      ];
+      milestones.forEach((m, i) => {
+        const diffDays = (m.wk - startWk) * 7;
+        const evDate = new Date(now.getTime() + diffDays * 86400000);
+        const evEnd = new Date(evDate.getTime() + 3600000);
+        lines.push(
+          'BEGIN:VEVENT',
+          `UID:babieblue-preg-${m.wk}w-${i}@babieblue.com`,
+          `DTSTAMP:${fmt(now)}`,
+          `DTSTART:${fmt(evDate)}`,
+          `DTEND:${fmt(evEnd)}`,
+          `SUMMARY:${m.title} (Babie Blue)`,
+          `DESCRIPTION:Review your physician-verified ACOG checklist at ${m.url}`,
+          `URL:${m.url}`,
+          'END:VEVENT'
+        );
+      });
+    } else {
+      const curMonths = Math.min(23, Math.max(0, parseInt(String(customParam || '2'), 10) || 2));
+      [2, 4, 6, 9, 12, 15, 18, 24].forEach((m, i) => {
+        if (m < curMonths) return;
+        const evDate = new Date(now.getTime() + (m - curMonths) * 30 * 86400000);
+        const evEnd = new Date(evDate.getTime() + 3600000);
+        const url = `https://babieblue.com/calculators/wake-window-matrix/${m}-months/`;
+        lines.push(
+          'BEGIN:VEVENT',
+          `UID:babieblue-ped-${m}m-${i}@babieblue.com`,
+          `DTSTAMP:${fmt(now)}`,
+          `DTSTART:${fmt(evDate)}`,
+          `DTEND:${fmt(evEnd)}`,
+          `SUMMARY:Month ${m} Pediatric Sleep, Feeding & Developmental Check (Babie Blue)`,
+          `DESCRIPTION:Check Month ${m} wake windows, nap transitions & dosing at ${url}`,
+          `URL:${url}`,
+          'END:VEVENT'
+        );
+      });
+    }
 
-    const blob = new Blob([icsLines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'babieblue-clinical-milestones.ics';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    lines.push('END:VCALENDAR');
+    triggerClientBlobDownload('babie-blue-clinical-schedule.ics', 'text/calendar;charset=utf-8', lines.join('\r\n'));
   };
 
   window.printBbSheet = function () {
@@ -239,86 +356,67 @@
     renderSearchResults(input ? input.value : '');
   };
 
-  // 6. Inject Cryptographic-Style Clinical Audit Trail, Utility Bar, Micro-Widgets & Contextual Next-Step Cards
+  window.handleBbStageSelect = function (url) {
+    if (!url) return;
+    localStorage.setItem('bb_personal_stage', url);
+    window.location.href = url;
+  };
+
   function injectArticleUtilitiesAndWidgets() {
     const article = document.querySelector('article.single-post, main.bb-article-shell');
     if (!article) return;
+    const path = window.location.pathname;
+    const isCalculatorPage = path.startsWith('/calculators/');
+    const hasDedicatedTool = Boolean(
+      article.querySelector('.bb-calc-workbench, .bb-tool-card, .bb-interactive-tool, .bb-interactive-scorecard')
+    );
 
-    // A. Inject Cryptographic-Style Clinical Audit Trail Drawer inside .bb-eeat-bar or .bb-trust-strip
-    const eeatHost = article.querySelector('.bb-eeat-bar, .bb-trust-strip');
-    if (eeatHost && !article.querySelector('.bb-audit-drawer')) {
-      const auditDrawer = document.createElement('details');
-      auditDrawer.className = 'bb-audit-drawer';
-      auditDrawer.innerHTML = `
-        <summary>
-          <span>🛡️ Verified Clinical Audit Trail &amp; Guideline Provenance (Protocol v2026.4)</span>
-          <span style="font-size:11.5px;opacity:0.85;">View Verification Log &darr;</span>
-        </summary>
-        <div class="bb-audit-grid">
-          <div>
-            <strong>Primary Medical Reviewers:</strong><br>
-            <a href="/dr-mangala-devi/">Dr. Mangala Devi K.R., MS (OBG)</a> (KMC #58341) &amp; <a href="/dr-anagha-nawal/">Dr. Anagha Nawal, MD, MCE, FRM</a>
-          </div>
-          <div>
-            <strong>Coding &amp; Ontology Audit:</strong><br>
-            <a href="/madhuri-b/">Madhuri B</a> (ICD-10-CM / HCPCS / MeSH Clinical Indexing)
-          </div>
-          <div>
-            <strong>Clinical Guideline Alignment:</strong><br>
-            ACOG Practice Bulletins, AAP 2025–2026 Clinical Reports &amp; WHO Standards
-          </div>
-          <div>
-            <strong>Machine-Readable Formats:</strong><br>
-            <a href="${window.location.pathname.endsWith('/') ? window.location.pathname + 'index.md' : window.location.pathname}">Markdown Mirror (.md)</a> &bull; <a href="/llms-full.txt">LLM Corpus</a>
-          </div>
-        </div>
-      `;
-      eeatHost.appendChild(auditDrawer);
-    }
-
-    // B. Inject Clinical Utility Bar (Unit Toggle, Copy Summary, Print Fridge Sheet, 2 AM Dim Mode)
+    // Subtle Utility Bar on Editorial Articles (not on standalone calculator pages which have their own action bar)
     const targetAnchor = article.querySelector('.clinical-summary-box, .bb-trust-strip');
-    if (targetAnchor && !article.querySelector('.bb-article-utility-bar')) {
+    if (!isCalculatorPage && targetAnchor && !article.querySelector('.bb-article-utility-bar')) {
       const bar = document.createElement('div');
       bar.className = 'bb-article-utility-bar';
       bar.innerHTML = `
-        <span><strong>Clinical Protocol Tools:</strong> Switch units, share calculations, or print a 1-page fridge sheet</span>
+        <span><strong>Clinical Reference Utilities:</strong></span>
         <div class="bb-utility-actions">
-          <button type="button" class="bb-utility-btn bb-unit-toggle" onclick="toggleBbUnitSystem()">🇺🇸 Units: lbs / oz / °F</button>
-          <button type="button" class="bb-utility-btn" onclick="copyBbText('', this)">📋 Copy Summary</button>
-          <button type="button" class="bb-utility-btn" onclick="printBbSheet()">🖨️ Print Fridge Sheet</button>
-          <button type="button" class="bb-utility-btn bb-dim-toggle" onclick="toggleBbDimMode()">🌙 2 AM Dim Mode</button>
+          <button type="button" class="bb-utility-btn bb-unit-toggle" onclick="toggleBbUnitSystem()">Units: US / Metric</button>
+          <button type="button" class="bb-utility-btn" id="bbPartnerShareBtn" onclick="shareBbPartnerBrief()">Share Brief</button>
+          <button type="button" class="bb-utility-btn" onclick="toggleBbCiteEmbedDrawer('cite')">Cite (AMA / APA)</button>
+          <button type="button" class="bb-utility-btn" onclick="printBbSheet()">Print Protocol</button>
         </div>
       `;
       targetAnchor.insertAdjacentElement('afterend', bar);
+
+      const drawer = document.createElement('div');
+      drawer.id = 'bbCiteEmbedDrawer';
+      drawer.className = 'bb-cite-embed-panel';
+      bar.insertAdjacentElement('afterend', drawer);
       updateUnitButtons();
     }
 
-    // C. Inject Context-Aware Interactive Clinical Micro-Widget with URL Deep-Link State & .ics Export
-    if (article.classList.contains('single-post') && !article.querySelector('.bb-micro-widget')) {
-      const path = window.location.pathname;
+    // Only inject a micro-widget if the article does NOT already have a calculator, tool card, or interactive scorecard
+    if (!isCalculatorPage && !hasDedicatedTool && article.classList.contains('single-post') && !article.querySelector('.bb-micro-widget')) {
       const params = new URLSearchParams(window.location.search);
       const contentArea = article.querySelector('.entry-content');
       const firstH2 = contentArea ? contentArea.querySelector('h2') : null;
       if (contentArea && firstH2) {
         const widget = document.createElement('section');
         widget.className = 'bb-micro-widget';
-        widget.setAttribute('aria-label', 'Interactive Clinical Calculator');
+        widget.setAttribute('aria-label', 'Interactive Clinical Reference Tool');
 
         if (path.startsWith('/baby-care/')) {
-          const initW = params.get('w') || '10';
+          const initW = params.get('w') || '12';
           const initF = params.get('feeds') || '8';
           widget.innerHTML = `
             <div class="bb-micro-widget-header">
-              <span class="bb-micro-widget-kicker">Interactive Pediatric Calculator • AAP Protocol</span>
-              <a href="/baby-care/paced-bottle-feeding-combo-feeding-schedule/" style="font-size:12.5px;font-weight:700;">Full Feeding &amp; Dosing Suite &rarr;</a>
+              <span class="bb-micro-widget-kicker">Pediatric Reference Tool • AAP Protocol</span>
+              <a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/" style="font-size:12.5px;font-weight:700;">Full Dosing &amp; Feeding Suite &rarr;</a>
             </div>
-            <h3>Instant Weight-Based Daily Intake &amp; Paced Bottle Estimator</h3>
-            <p style="font-size:13.5px;margin:0;">Enter your baby's weight and daily feeding frequency (auto-converts between <code>lbs / fl oz</code> and <code>kg / mL</code>):</p>
+            <h3>Weight-Based Daily Intake &amp; Acetaminophen Estimator</h3>
             <div class="bb-micro-widget-controls">
               <div>
                 <label for="bbWidgetWeight" id="bbWidgetWeightLabel">Infant Weight (lbs)</label>
-                <input type="number" id="bbWidgetWeight" min="2" max="35" step="0.5" value="${initW}" oninput="updateBbPediatricWidget(true)" />
+                <input type="number" id="bbWidgetWeight" min="4" max="36" step="0.5" value="${initW}" oninput="updateBbPediatricWidget(true)" />
               </div>
               <div>
                 <label for="bbWidgetFeeds">Feeds per 24 Hours</label>
@@ -331,11 +429,6 @@
               </div>
             </div>
             <div class="bb-micro-widget-output" id="bbWidgetPedOutput"></div>
-            <div class="bb-widget-action-row">
-              <button type="button" class="bb-utility-btn" onclick="copyBbShareLink(this)">🔗 Copy Shareable Result Link</button>
-              <button type="button" class="bb-utility-btn" onclick="downloadBbIcsCalendar('pediatric')">📅 Add Pediatric Check-Ins (.ics)</button>
-              <button type="button" class="bb-utility-btn bb-unit-toggle" onclick="toggleBbUnitSystem()">🇺🇸 Units: lbs / oz / °F</button>
-            </div>
           `;
           firstH2.insertAdjacentElement('beforebegin', widget);
           window.updateBbPediatricWidget(false);
@@ -343,10 +436,10 @@
           const initWk = params.get('wk') || '12';
           widget.innerHTML = `
             <div class="bb-micro-widget-header">
-              <span class="bb-micro-widget-kicker">Interactive Obstetric Tool • ACOG Trimester Milestones</span>
+              <span class="bb-micro-widget-kicker">Obstetric Milestone Lookup • ACOG Guidelines</span>
               <a href="/calculators/due-date-calculator/" style="font-size:12.5px;font-weight:700;">Full Due Date Calculator &rarr;</a>
             </div>
-            <h3>Gestational Week &amp; Trimester Clinical Checkpoint Lookup</h3>
+            <h3>Gestational Week &amp; Trimester Clinical Checkpoint</h3>
             <div class="bb-micro-widget-controls">
               <div>
                 <label for="bbWidgetGestWeek">Current Gestational Week (4–41 wks)</label>
@@ -354,10 +447,6 @@
               </div>
             </div>
             <div class="bb-micro-widget-output" id="bbWidgetObOutput"></div>
-            <div class="bb-widget-action-row">
-              <button type="button" class="bb-utility-btn" onclick="copyBbShareLink(this)">🔗 Copy Shareable Week Link</button>
-              <button type="button" class="bb-utility-btn" onclick="downloadBbIcsCalendar('obstetric')">📅 Export Prenatal Milestones (.ics)</button>
-            </div>
           `;
           firstH2.insertAdjacentElement('beforebegin', widget);
           window.updateBbObstetricWidget(false);
@@ -366,10 +455,10 @@
           const initTsh = params.get('tsh') || '1.8';
           widget.innerHTML = `
             <div class="bb-micro-widget-header">
-              <span class="bb-micro-widget-kicker">Interactive Maternal Biomarker Check • Postpartum &amp; Women's Health</span>
-              <a href="/maternal-health/postpartum-blood-work-panel-ferritin-thyroiditis-vitamin-d/" style="font-size:12.5px;font-weight:700;">Full Lab Panel Guide &rarr;</a>
+              <span class="bb-micro-widget-kicker">Maternal Biomarker Reference • Fourth Trimester</span>
+              <a href="/maternal-health/postpartum-blood-work-panel-ferritin-thyroiditis-vitamin-d/" style="font-size:12.5px;font-weight:700;">Full Postpartum Lab Guide &rarr;</a>
             </div>
-            <h3>Quick Serum Ferritin &amp; TSH Clinical Target Evaluator</h3>
+            <h3>Serum Ferritin &amp; TSH Clinical Target Evaluator</h3>
             <div class="bb-micro-widget-controls">
               <div>
                 <label for="bbWidgetFerritin">Serum Ferritin (ng/mL)</label>
@@ -381,10 +470,6 @@
               </div>
             </div>
             <div class="bb-micro-widget-output" id="bbWidgetMatOutput"></div>
-            <div class="bb-widget-action-row">
-              <button type="button" class="bb-utility-btn" onclick="copyBbShareLink(this)">🔗 Copy Shareable Lab Link</button>
-              <button type="button" class="bb-utility-btn" onclick="downloadBbIcsCalendar('pediatric')">📅 Add 6-Week Lab Reminder (.ics)</button>
-            </div>
           `;
           firstH2.insertAdjacentElement('beforebegin', widget);
           window.updateBbMaternalWidget(false);
@@ -392,7 +477,7 @@
           const initAge = params.get('age') || '7-12m';
           widget.innerHTML = `
             <div class="bb-micro-widget-header">
-              <span class="bb-micro-widget-kicker">Interactive Pediatric Sleep &amp; Routine Finder • AAP Guidelines</span>
+              <span class="bb-micro-widget-kicker">Pediatric Sleep &amp; Routine Reference • AAP Guidelines</span>
               <a href="/baby-care/wake-windows-nap-transitions-by-age/" style="font-size:12.5px;font-weight:700;">Full 0–24m Sleep Matrix &rarr;</a>
             </div>
             <h3>Age-Calibrated Sleep &amp; Daily Routine Target Lookup</h3>
@@ -409,10 +494,6 @@
               </div>
             </div>
             <div class="bb-micro-widget-output" id="bbWidgetParOutput"></div>
-            <div class="bb-widget-action-row">
-              <button type="button" class="bb-utility-btn" onclick="copyBbShareLink(this)">🔗 Copy Shareable Schedule Link</button>
-              <button type="button" class="bb-utility-btn" onclick="downloadBbIcsCalendar('pediatric')">📅 Export Routine Reminder (.ics)</button>
-            </div>
           `;
           firstH2.insertAdjacentElement('beforebegin', widget);
           window.updateBbParentingWidget(false);
@@ -421,8 +502,8 @@
       }
     }
 
-    // D. Inject Contextual "Recommended Next Clinical Steps & High-RPM Interactive Tools" 3-Card Grid before Bottom Ad Slot
-    if (!article.querySelector('.bb-next-steps-section')) {
+    // Only inject Next Steps if page does not already have .bb-related-articles or .bb-cluster-nav
+    if (!article.querySelector('.bb-next-steps-section, .bb-related-articles, .bb-cluster-nav')) {
       const curUrl = window.location.pathname;
       const cat =
         curUrl.startsWith('/pregnancy/') ? 'Pregnancy' :
@@ -435,14 +516,14 @@
 
       const nextSec = document.createElement('section');
       nextSec.className = 'bb-next-steps-section';
-      nextSec.setAttribute('aria-label', 'Recommended Next Clinical Steps and Calculators');
+      nextSec.setAttribute('aria-label', 'Related Clinical Protocols');
       nextSec.innerHTML = `
         <div class="bb-next-steps-header">
           <div>
-            <span class="bb-next-steps-kicker">Next Clinical Steps &amp; Interactive Tools</span>
-            <h3 style="margin:4px 0 0 0;font-size:19px;">Continue Your Personalized Care Protocol</h3>
+            <span class="bb-next-steps-kicker">Related Clinical Protocols</span>
+            <h3 style="margin:4px 0 0 0;font-size:19px;">Continue Reading</h3>
           </div>
-          <a href="/calculators/" style="font-size:13px;font-weight:700;">All 10 Clinical Calculators &rarr;</a>
+          <a href="/calculators/" style="font-size:13px;font-weight:700;">All Calculators &rarr;</a>
         </div>
         <div class="bb-next-steps-grid">
           ${picks
@@ -454,7 +535,7 @@
                 <div class="bb-next-step-title">${p.title}</div>
                 <p style="font-size:12.5px;margin:0 0 12px 0;opacity:0.85;">${p.desc}</p>
               </div>
-              <span class="bb-next-step-cta">Open Interactive Protocol &rarr;</span>
+              <span class="bb-next-step-cta">Read Clinical Guide &rarr;</span>
             </a>
           `
             )
@@ -462,9 +543,9 @@
         </div>
       `;
 
-      const bottomAd = article.querySelector('.bottom-post-ad, .bb-references-block');
-      if (bottomAd) {
-        bottomAd.insertAdjacentElement('beforebegin', nextSec);
+      const refBlock = article.querySelector('.bb-references-block');
+      if (refBlock) {
+        refBlock.insertAdjacentElement('beforebegin', nextSec);
       } else {
         article.appendChild(nextSec);
       }
@@ -481,7 +562,7 @@
   window.updateBbPediatricWidget = function (pushUrl) {
     const wInput = document.getElementById('bbWidgetWeight');
     const lbl = document.getElementById('bbWidgetWeightLabel');
-    const w = parseFloat(wInput?.value || '10');
+    const w = parseFloat(wInput?.value || '12');
     const f = parseInt(document.getElementById('bbWidgetFeeds')?.value || '8', 10);
     const out = document.getElementById('bbWidgetPedOutput');
     if (!out || isNaN(w) || isNaN(f)) return;
@@ -493,18 +574,30 @@
     const rawDailyMl = Math.round(rawDailyOz * 29.5735);
     const perFeedOz = (rawDailyOz / f).toFixed(1);
     const perFeedMl = Math.round((rawDailyOz / f) * 29.5735);
-    const feverThreshold = isMetric ? '38.0°C (100.4°F)' : '100.4°F (38.0°C)';
+    const roundedLbs = Math.min(34, Math.max(6, Math.round(w)));
 
     if (pushUrl) syncUrlParams({ w, feeds: f });
+
+    if (w < 12) {
+      // Hard Safety Gate: Neonatal Fever (<60–90 Days / <12 lbs)
+      out.innerHTML = '<strong>Weight:</strong> <code>' + (isMetric ? weightKg + ' kg' : w + ' lbs') + '</code> &bull; <strong>24-Hr Feeding:</strong> <code>' + (isMetric ? rawDailyMl + ' mL/day' : rawDailyOz.toFixed(1) + ' fl oz/day') + '</code> (' + (isMetric ? perFeedMl + ' mL' : perFeedOz + ' oz') + '/feed)<br>' +
+        '<div class="bb-emergency-alert" style="color:#991b1b;background:#fef2f2;border:1px solid #fecaca;padding:10px 14px;border-radius:8px;margin-top:8px;font-size:13px;line-height:1.5;">' +
+        '<strong>🚨 Neonatal Fever Emergency Stop (&lt;60–90 Days):</strong> Any rectal fever &ge;100.4&deg;F (38.0&deg;C) in infants under 12 lbs requires <strong>immediate Pediatric ER evaluation</strong> to rule out systemic infection. Do NOT administer home antipyretics to mask a fever without direct physician direction.<br>' +
+        '<strong>Ibuprofen Safety Rule:</strong> Strictly <code>CONTRAINDICATED</code> under 6 months of age regardless of weight.</div>';
+      return;
+    }
+
+    const acetMl = ((w / 2.20462 * 12.5) / 32).toFixed(2);
     out.innerHTML = isMetric
-      ? `<strong>Weight:</strong> <code>${weightKg} kg</code> (${w} lbs) &bull; <strong>Target 24-Hr Volume:</strong> <code>${rawDailyMl} mL/day</code> (${rawDailyOz.toFixed(1)} fl oz)<br><strong>Per Paced Bottle:</strong> <code>${perFeedMl} mL</code> (${perFeedOz} fl oz) over 15–20 mins &bull; <strong>Rectal Fever Escalation:</strong> <code>&ge; ${feverThreshold}</code>`
-      : `<strong>Weight:</strong> <code>${w} lbs</code> (${weightKg} kg) &bull; <strong>Target 24-Hr Volume:</strong> <code>${rawDailyOz.toFixed(1)} fl oz/day</code> (${rawDailyMl} mL)<br><strong>Per Paced Bottle:</strong> <code>${perFeedOz} fl oz</code> (~${perFeedMl} mL) over 15–20 mins &bull; <strong>Rectal Fever Escalation:</strong> <code>&ge; ${feverThreshold}</code>`;
+      ? '<strong>Weight:</strong> <code>' + weightKg + ' kg</code> (' + w + ' lbs) &bull; <strong>24-Hr Intake:</strong> <code>' + rawDailyMl + ' mL/day</code> (' + perFeedMl + ' mL/feed)<br><strong>Acetaminophen (160mg/5mL) Dose:</strong> <code>' + acetMl + ' mL</code> (every 4–6h, max 5/24h)<br><small style="color:#b91c1c;font-weight:600;">⚠️ Ibuprofen: Strictly CONTRAINDICATED under 6 months of age regardless of weight.</small> &bull; <a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/" style="font-weight:700;color:#0f766e;">Open Complete AAP Dosing Suite &rarr;</a>'
+      : '<strong>Weight:</strong> <code>' + w + ' lbs</code> (' + weightKg + ' kg) &bull; <strong>24-Hr Intake:</strong> <code>' + rawDailyOz.toFixed(1) + ' fl oz/day</code> (' + perFeedOz + ' oz / ~' + perFeedMl + ' mL per bottle)<br><strong>Acetaminophen (160mg/5mL) Dose:</strong> <code>' + acetMl + ' mL</code> (every 4–6h, max 5/24h)<br><small style="color:#b91c1c;font-weight:600;">⚠️ Ibuprofen: Strictly CONTRAINDICATED under 6 months of age regardless of weight.</small> &bull; <a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/" style="font-weight:700;color:#0f766e;">Open Complete AAP Dosing Suite &rarr;</a>';
   };
 
   window.updateBbObstetricWidget = function (pushUrl) {
-    const wk = parseInt(document.getElementById('bbWidgetGestWeek')?.value || '12', 10);
+    const wk = Math.min(41, Math.max(4, parseInt(document.getElementById('bbWidgetGestWeek')?.value || '12', 10)));
     const out = document.getElementById('bbWidgetObOutput');
     if (!out || isNaN(wk)) return;
+    localStorage.setItem('bb_saved_preg_week', String(wk));
     if (pushUrl) syncUrlParams({ wk });
     const trimester = wk <= 13 ? 'First Trimester (Organogenesis)' : wk <= 27 ? 'Second Trimester (Fetal Growth & Anatomy)' : 'Third Trimester (Maturation & Delivery Prep)';
     const milestone =
@@ -514,7 +607,7 @@
       wk <= 28 ? 'Gestational diabetes screening (24–28w Glucola), CBC/Ferritin re-check & Tdap immunization window (27–36w).' :
       wk <= 36 ? 'Monitor daily fetal kick counts (10 movements in <=2 hours), RSV maternal vaccine discussion (32–36w) & Group B Strep swab (36–37w).' :
       'Full-term readiness: monitor labor contraction periodicity (5-1-1 rule), blood pressure (<140/90 mmHg), and amniotic fluid integrity.';
-    out.innerHTML = `<strong>Stage:</strong> <code>Week ${wk} — ${trimester}</code><br><strong>Key Clinical Protocol:</strong> ${milestone}`;
+    out.innerHTML = `<strong>Stage:</strong> <code>Week ${wk} — ${trimester}</code> &bull; <a href="/pregnancy/week-by-week/${wk}-weeks/" style="font-weight:700;color:#0f766e;">Open Week ${wk} Guide &rarr;</a><br><strong>Key Clinical Protocol:</strong> ${milestone}`;
   };
 
   window.updateBbMaternalWidget = function (pushUrl) {
@@ -523,8 +616,8 @@
     const out = document.getElementById('bbWidgetMatOutput');
     if (!out) return;
     if (pushUrl) syncUrlParams({ fer, tsh });
-    const ferStatus = fer < 30 ? '⚠️ Depleted Iron Stores (<30 ng/mL — strongly linked to maternal fatigue, hair shedding & mood depletion even if Hemoglobin is normal)' : fer < 50 ? 'Sub-optimal Recovery Reserve (30–49 ng/mL — target >=50 ng/mL postpartum)' : '✓ Optimal Maternal Ferritin Reserve (>=50 ng/mL)';
-    const tshStatus = tsh < 0.45 ? '⚠️ Suppressed TSH (<0.45 mIU/L — screen for hyperthyroid phase of Postpartum Thyroiditis)' : tsh > 2.5 ? '⚠️ Elevated TSH (>2.5 mIU/L — evaluate Free T4 & TPO antibodies for postpartum/subclinical hypothyroidism)' : '✓ Optimal Maternal Functional TSH Range (0.45–2.5 mIU/L)';
+    const ferStatus = fer < 30 ? 'Depleted Iron Stores (<30 ng/mL — strongly linked to maternal fatigue, hair shedding & mood depletion even if Hemoglobin is normal)' : fer < 50 ? 'Sub-optimal Recovery Reserve (30–49 ng/mL — target >=50 ng/mL postpartum)' : 'Optimal Maternal Ferritin Reserve (>=50 ng/mL)';
+    const tshStatus = tsh < 0.45 ? 'Suppressed TSH (<0.45 mIU/L — screen for hyperthyroid phase of Postpartum Thyroiditis)' : tsh > 2.5 ? 'Elevated TSH (>2.5 mIU/L — evaluate Free T4 & TPO antibodies for postpartum/subclinical hypothyroidism)' : 'Optimal Maternal Functional TSH Range (0.45–2.5 mIU/L)';
     out.innerHTML = `<strong>Ferritin Assessment:</strong> ${ferStatus}<br><strong>Thyroid (TSH) Assessment:</strong> ${tshStatus}`;
   };
 
@@ -534,11 +627,11 @@
     if (!out) return;
     if (pushUrl) syncUrlParams({ age });
     const map = {
-      '0-3m': '<strong>Wake Window:</strong> <code>45–90 mins</code> &bull; <strong>Total Sleep:</strong> <code>14–17 hrs/day</code> &bull; <strong>Focus:</strong> Responsive cue-based feeds (8–12x/day), supine safe sleep, and early circadian daylight exposure.',
-      '4-6m': '<strong>Wake Window:</strong> <code>1.75–2.75 hrs</code> &bull; <strong>Total Sleep:</strong> <code>13.5–15 hrs/day (3–4 naps)</code> &bull; <strong>Focus:</strong> High-iron solid readiness check at ~6m and consistent 20-minute wind-down routine.',
-      '7-12m': '<strong>Wake Window:</strong> <code>2.75–4.0 hrs</code> &bull; <strong>Total Sleep:</strong> <code>13–14 hrs/day (2 naps)</code> &bull; <strong>Focus:</strong> Early allergen maintenance (peanut/egg 2–3x/wk), iron-rich finger foods, and 3-to-2 nap transition.',
-      '1-2y': '<strong>Wake Window:</strong> <code>4.5–6.0 hrs</code> &bull; <strong>Total Sleep:</strong> <code>12–13.5 hrs/day (1 midday nap)</code> &bull; <strong>Focus:</strong> Whole milk/water cup transition (wean bottle by 12–15m), co-regulated boundaries, and zero screen time <18m.',
-      '3-5y': '<strong>Wake Window:</strong> <code>Full Day / Quiet Time</code> &bull; <strong>Total Sleep:</strong> <code>10–13 hrs/day</code> &bull; <strong>Focus:</strong> Predictable visual bedtime chart, balanced division-of-responsibility meals, and <=1 hr co-viewed educational media.'
+      '0-3m': '<strong>Wake Window:</strong> <code>45–90 mins</code> &bull; <strong>Total Sleep:</strong> <code>14–17 hrs/day</code> &bull; <a href="/calculators/wake-window-matrix/2-months/" style="font-weight:700;color:#0f766e;">2-Month Schedule &rarr;</a>',
+      '4-6m': '<strong>Wake Window:</strong> <code>1.75–2.75 hrs</code> &bull; <strong>Total Sleep:</strong> <code>13.5–15 hrs/day (3–4 naps)</code> &bull; <a href="/calculators/wake-window-matrix/5-months/" style="font-weight:700;color:#0f766e;">5-Month Schedule &rarr;</a>',
+      '7-12m': '<strong>Wake Window:</strong> <code>2.75–4.0 hrs</code> &bull; <strong>Total Sleep:</strong> <code>13–14 hrs/day (2 naps)</code> &bull; <a href="/calculators/wake-window-matrix/9-months/" style="font-weight:700;color:#0f766e;">9-Month Schedule &rarr;</a>',
+      '1-2y': '<strong>Wake Window:</strong> <code>4.5–6.0 hrs</code> &bull; <strong>Total Sleep:</strong> <code>12–13.5 hrs/day (1 midday nap)</code> &bull; <a href="/calculators/wake-window-matrix/18-months/" style="font-weight:700;color:#0f766e;">18-Month Schedule &rarr;</a>',
+      '3-5y': '<strong>Wake Window:</strong> <code>Full Day / Quiet Time</code> &bull; <strong>Total Sleep:</strong> <code>10–13 hrs/day</code> &bull; Predictable bedtime routine &amp; <=1 hr co-viewed educational media.'
     };
     out.innerHTML = map[age] || map['7-12m'];
   };
@@ -547,17 +640,32 @@
     injectSpeculationRules();
     registerClinicalServiceWorker();
 
+    const mainEl = document.querySelector('main');
+    if (mainEl && !mainEl.id) {
+      mainEl.id = 'main-content';
+    }
+    if (!document.querySelector('.bb-skip-link')) {
+      const skip = document.createElement('a');
+      skip.href = '#' + (mainEl && mainEl.id ? mainEl.id : 'main-content');
+      skip.className = 'bb-skip-link';
+      skip.textContent = 'Skip to Clinical Content';
+      document.body.insertAdjacentElement('afterbegin', skip);
+    }
+
+    document.body.classList.remove('bb-dim-mode');
+    try { localStorage.removeItem('bb_dim_mode'); } catch {}
+    document.querySelectorAll('.bb-dim-toggle').forEach((el) => el.remove());
+
     const headerInner = document.querySelector('.header-inner');
     if (headerInner && !headerInner.querySelector('.bb-header-actions')) {
       const actions = document.createElement('div');
       actions.className = 'bb-header-actions';
       actions.innerHTML = `
-        <button type="button" class="bb-search-trigger" onclick="openBbSearch()" aria-label="Search clinical guides and calculators">
+        <button type="button" class="bb-search-trigger" onclick="openBbSearch()" aria-label="Search Babie Blue clinical guides and calculators">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           <span>Search</span>
           <kbd class="bb-search-kbd">⌘K</kbd>
         </button>
-        <button type="button" class="bb-dim-toggle" onclick="toggleBbDimMode()">🌙 2 AM Dim Mode</button>
       `;
       headerInner.appendChild(actions);
     }
@@ -568,16 +676,16 @@
       modal.id = 'bbSearchModal';
       modal.setAttribute('role', 'dialog');
       modal.setAttribute('aria-modal', 'true');
-      modal.setAttribute('aria-label', 'Search Clinical Protocols and Calculators');
+      modal.setAttribute('aria-label', 'Search Babie Blue Clinical Protocols and Calculators');
       modal.innerHTML = `
         <div class="bb-search-modal" onclick="event.stopPropagation()">
           <div class="bb-search-input-wrap">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="bbSearchInput" placeholder="Search 175+ clinical guides, fever dosing, wake windows, calculators..." autocomplete="off" />
+            <input type="text" id="bbSearchInput" placeholder="Search Babie Blue clinical guides, fever dosing, wake windows, calculators..." autocomplete="off" />
             <button type="button" class="bb-btn-secondary" onclick="closeBbSearch()">Esc</button>
           </div>
           <div class="bb-search-filters" role="tablist" aria-label="Filter search by clinical category">
-            <button type="button" class="bb-search-filter-btn active" onclick="setBbSearchCat('All', this)">All (175+)</button>
+            <button type="button" class="bb-search-filter-btn active" onclick="setBbSearchCat('All', this)">All (278)</button>
             <button type="button" class="bb-search-filter-btn" onclick="setBbSearchCat('Baby Care', this)">Baby Care</button>
             <button type="button" class="bb-search-filter-btn" onclick="setBbSearchCat('Pregnancy', this)">Pregnancy</button>
             <button type="button" class="bb-search-filter-btn" onclick="setBbSearchCat('Maternal Health', this)">Maternal Health</button>
@@ -596,9 +704,342 @@
       }
     }
 
-    initDimMode();
+    // Intercept any direct <a href="/api/calendar.ics..."> or <a href="/api/cite..."> clicks for 100% static Cloudflare Pages support
+    document.addEventListener('click', (e) => {
+      const link = e.target && e.target.closest ? e.target.closest('a[href^="/api/calendar.ics"], a[href^="/api/cite."]') : null;
+      if (!link) return;
+      const href = link.getAttribute('href') || '';
+      if (href.startsWith('/api/calendar.ics')) {
+        e.preventDefault();
+        const qIdx = href.indexOf('?');
+        const params = new URLSearchParams(qIdx !== -1 ? href.slice(qIdx + 1) : '');
+        const mode = params.get('mode') || 'pregnancy';
+        const wkOrMo = params.get('week') || params.get('months') || '12';
+        window.downloadBbIcsCalendar(mode, wkOrMo);
+      } else if (href.startsWith('/api/cite.ris')) {
+        e.preventDefault();
+        window.downloadBbCiteFile('ris');
+      } else if (href.startsWith('/api/cite.bib')) {
+        e.preventDefault();
+        window.downloadBbCiteFile('bib');
+      }
+    });
+
+    updateUnitButtons();
     injectArticleUtilitiesAndWidgets();
-    initAdSenseViewabilityEngine();
+    initInteractiveSvgAnatomyExplorer();
+    initInteractiveTablesAndAccordions();
+    initClinicalAdSenseSlots();
+  }
+
+  // Hybrid Google AdSense Engine (Display Slot 8819104303 + In-Article Fluid Slot 8216469075 + Clinical Zone Protection)
+  const BABIEBLUE_ADSENSE_CONFIG = {
+    enabled: true,
+    client: 'ca-pub-4453876229797223',
+    displaySlot: '8819104303',
+    inArticleSlot: '8216469075'
+  };
+
+  function createAdContainer({ type, slotId, label }) {
+    const aside = document.createElement('aside');
+    aside.className = `bb-ad-container ${type === 'in-article' ? 'bb-ad-in-article' : type === 'sidebar' ? 'bb-ad-sidebar-sticky' : 'bb-ad-display'}`;
+    aside.setAttribute('aria-label', label || 'Sponsored Advertisement');
+    aside.setAttribute('data-nosnippet', '');
+
+    const insHtml =
+      type === 'in-article'
+        ? `<ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="${BABIEBLUE_ADSENSE_CONFIG.client}"
+             data-ad-slot="${slotId}"></ins>`
+        : `<ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="${BABIEBLUE_ADSENSE_CONFIG.client}"
+             data-ad-slot="${slotId}"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>`;
+
+    aside.innerHTML = `
+      <div class="bb-ad-header">
+        <span>Advertisement &bull; Strictly Separated from Clinical Content</span>
+        <a href="/affiliate-links/">Ad Policy</a>
+      </div>
+      <div class="bb-ad-slot-inner">${insHtml}</div>
+    `;
+
+    return aside;
+  }
+
+  function pushAdSenseUnit() {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch {}
+  }
+
+  function initClinicalAdSenseSlots() {
+    if (!BABIEBLUE_ADSENSE_CONFIG.enabled) return;
+
+    const pathName = window.location.pathname || '/';
+    // Never mount ads on legal/governance/author/error/embed pages
+    const adFreePrefixes = [
+      '/privacy-policy',
+      '/terms-and-conditions',
+      '/affiliate-links',
+      '/contact-us',
+      '/about-us',
+      '/site-map',
+      '/dr-mangala-devi',
+      '/dr-anagha-nawal',
+      '/madhuri-b',
+      '/sivanandan-n',
+      '/embed/',
+      '/404',
+      '/410'
+    ];
+    if (adFreePrefixes.some((p) => pathName.startsWith(p))) return;
+
+    // 1. Mark all YMYL Clinical Safety Zones with data-ad-exclude="true" so Auto Ads never splits calculators or triage
+    const protectedSelectors = [
+      '.site-header',
+      '#clinical-summary',
+      '.clinical-summary-box',
+      '.bb-bluf-box',
+      '#interactive-clinical-tool',
+      '#calculator-workbench',
+      '#dosing-calculator',
+      '.bb-calc-workbench',
+      '.bb-interactive-tool',
+      '.calc-shell',
+      '.tool-card',
+      '.bb-tool-card',
+      'figure.bb-clinical-infographic',
+      '#pediatric-triage',
+      '#obstetric-triage',
+      '.bb-triage-section',
+      '.bb-visit-checklist',
+      '.bb-eeat-bar'
+    ];
+    document.querySelectorAll(protectedSelectors.join(',')).forEach((el) => {
+      el.setAttribute('data-ad-exclude', 'true');
+    });
+
+    if (document.querySelector('aside.bb-ad-container')) return;
+
+    // Ensure global AdSense library is loaded in <head>
+    if (!document.querySelector('script[src*="adsbygoogle.js"]')) {
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${BABIEBLUE_ADSENSE_CONFIG.client}`;
+      s.crossOrigin = 'anonymous';
+      document.head.appendChild(s);
+    }
+
+    // 2. Placement A: In-Article Fluid Unit (Slot 8216469075) after Interactive Tool / SVG Anatomy Pathway or 2nd H2 section
+    const pathwayFig = document.querySelector('figure.bb-clinical-infographic');
+    const interactiveTool = document.querySelector('#interactive-clinical-tool, #calculator-workbench, #dosing-calculator, .bb-calc-workbench, .bb-tool-card, .calc-shell');
+    const h2List = Array.from(document.querySelectorAll('.entry-content h2, article h2'));
+
+    let inArticleAnchor = pathwayFig || interactiveTool || (h2List.length >= 2 ? h2List[1] : null);
+    if (inArticleAnchor && inArticleAnchor.parentNode) {
+      const inArticleAd = createAdContainer({
+        type: 'in-article',
+        slotId: BABIEBLUE_ADSENSE_CONFIG.inArticleSlot,
+        label: 'In-Article Advertisement'
+      });
+      if (inArticleAnchor.tagName === 'H2') {
+        inArticleAnchor.insertAdjacentElement('beforebegin', inArticleAd);
+      } else {
+        inArticleAnchor.insertAdjacentElement('afterend', inArticleAd);
+      }
+      pushAdSenseUnit();
+    }
+
+    // 3. Placement B: Responsive Display Unit (Slot 8819104303) before Quantitative Clinical Matrix, FAQ, or Footer Directory
+    const matrixOrFaq =
+      document.querySelector('#clinical-matrix, #clinical-faq, #faq, .bb-next-steps-section') ||
+      document.querySelector('.hub-articles-grid, .post-grid, .posts-grid');
+    if (matrixOrFaq && matrixOrFaq.parentNode) {
+      const displayAd = createAdContainer({
+        type: 'display',
+        slotId: BABIEBLUE_ADSENSE_CONFIG.displaySlot,
+        label: 'Display Advertisement'
+      });
+      if (matrixOrFaq.classList.contains('hub-articles-grid') || matrixOrFaq.classList.contains('post-grid') || matrixOrFaq.classList.contains('posts-grid')) {
+        matrixOrFaq.insertAdjacentElement('afterend', displayAd);
+      } else {
+        matrixOrFaq.insertAdjacentElement('beforebegin', displayAd);
+      }
+      pushAdSenseUnit();
+    }
+
+    // 4. Placement C: Desktop Sticky Sidebar Rail Display Unit (Slot 8819104303) on viewports >= 1080px
+    const sidebarRail = document.querySelector('aside.sidebar, aside.toc-sidebar');
+    if (sidebarRail && window.innerWidth >= 1080) {
+      const sidebarAd = createAdContainer({
+        type: 'sidebar',
+        slotId: BABIEBLUE_ADSENSE_CONFIG.displaySlot,
+        label: 'Sidebar Advertisement'
+      });
+      sidebarRail.appendChild(sidebarAd);
+      pushAdSenseUnit();
+    }
+  }
+
+  // Interactive SVG Anatomical & Clinical Stage Explorer (Anatomy + Answer-Me-With-HTML Skill)
+  function initInteractiveSvgAnatomyExplorer() {
+    const figures = document.querySelectorAll('figure.bb-clinical-infographic');
+    figures.forEach((fig, figIdx) => {
+      if (fig.querySelector('.bb-svg-explorer')) return;
+      const svg = fig.querySelector('svg');
+      if (!svg) return;
+      const groups = Array.from(svg.querySelectorAll('g[transform^="translate"]'));
+      if (groups.length < 2) return;
+
+      const allTexts = Array.from(svg.querySelectorAll('text'));
+      let escalationText = '';
+      for (const t of allTexts) {
+        const raw = (t.textContent || '').trim();
+        if (raw.startsWith('Escalation Threshold:')) {
+          escalationText = raw.replace(/^Escalation Threshold:\s*/i, '').trim();
+          break;
+        }
+      }
+
+      const stages = groups.map((g, idx) => {
+        g.classList.add('bb-svg-stage-node');
+        g.setAttribute('tabindex', '0');
+        g.setAttribute('role', 'button');
+        const texts = Array.from(g.querySelectorAll('text')).map((t) => (t.textContent || '').trim()).filter(Boolean);
+        const badge = texts[0] || `STAGE 0${idx + 1}`;
+        const titleParts = [];
+        const bullets = [];
+        for (let i = 1; i < texts.length; i++) {
+          if (texts[i].startsWith('•')) {
+            bullets.push(texts[i].replace(/^•\s*/, '').trim());
+          } else if (bullets.length === 0) {
+            titleParts.push(texts[i]);
+          } else {
+            bullets.push(texts[i]);
+          }
+        }
+        const title = titleParts.join(' ') || `Clinical Phase ${idx + 1}`;
+        const combinedBullet = bullets.join(' ').replace(/\s+/g, ' ').trim();
+        g.setAttribute('aria-label', `${badge}: ${title}`);
+        return {
+          idx,
+          badge,
+          title,
+          detail: combinedBullet || 'Evidence-based clinical evaluation and monitoring phase.',
+          isEscalation: idx === groups.length - 1
+        };
+      });
+
+      const explorer = document.createElement('div');
+      explorer.className = 'bb-svg-explorer';
+      explorer.setAttribute('role', 'region');
+      explorer.setAttribute('aria-label', 'Interactive Clinical Pathway Stage Dissector');
+
+      const tabsHtml = stages
+        .map(
+          (s, i) =>
+            `<button type="button" class="bb-svg-stage-btn${i === 0 ? ' active' : ''}" data-stage-idx="${i}"><strong>0${i + 1}:</strong> ${s.title}</button>`
+        )
+        .join('');
+
+      explorer.innerHTML = `
+        <div class="bb-svg-explorer-head">
+          <span class="bb-svg-explorer-kicker">Interactive Clinical Stage Dissector &bull; Tap Any SVG Node or Stage Below</span>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);">Stage <span class="bb-svg-cur-num">1</span> of ${stages.length}</span>
+        </div>
+        <div class="bb-svg-explorer-tabs">${tabsHtml}</div>
+        <div class="bb-svg-inspector-card" id="bbSvgInspector_${figIdx}"></div>
+      `;
+
+      const caption = fig.querySelector('figcaption');
+      if (caption) {
+        caption.insertAdjacentElement('beforebegin', explorer);
+      } else {
+        fig.appendChild(explorer);
+      }
+
+      const btns = Array.from(explorer.querySelectorAll('.bb-svg-stage-btn'));
+      const inspector = explorer.querySelector('.bb-svg-inspector-card');
+      const curNumEl = explorer.querySelector('.bb-svg-cur-num');
+
+      function selectStage(activeIdx) {
+        const s = stages[activeIdx] || stages[0];
+        groups.forEach((g, i) => {
+          g.classList.toggle('active', i === activeIdx);
+          g.style.opacity = i === activeIdx ? '1' : '0.78';
+        });
+        btns.forEach((b, i) => b.classList.toggle('active', i === activeIdx));
+        if (curNumEl) curNumEl.textContent = String(activeIdx + 1);
+        if (inspector) {
+          inspector.className = 'bb-svg-inspector-card' + (s.isEscalation ? ' stage-escalation' : '');
+          inspector.innerHTML = `
+            <div class="bb-svg-inspector-title">
+              <span>${s.badge} &mdash; ${s.title}</span>
+              <code style="font-size:11px;">${s.isEscalation ? 'ACUTE / ACTION PHASE' : 'PHYSIOLOGICAL CHECKPOINT'}</code>
+            </div>
+            <p style="margin:4px 0 0 0;font-size:13.5px;color:var(--text-secondary);"><strong>Clinical Mechanism &amp; Target:</strong> ${s.detail}</p>
+            ${
+              escalationText
+                ? `<p style="margin:6px 0 0 0;font-size:12.5px;color:${s.isEscalation ? 'var(--crimson)' : 'var(--primary-hover)'};"><strong>Escalation Rule:</strong> ${escalationText}</p>`
+                : ''
+            }
+          `;
+        }
+      }
+
+      groups.forEach((g, i) => {
+        g.addEventListener('click', () => selectStage(i));
+        g.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectStage(i);
+          }
+        });
+      });
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener('click', () => selectStage(i));
+      });
+
+      selectStage(0);
+    });
+  }
+
+  function initInteractiveTablesAndAccordions() {
+    document.querySelectorAll('table tbody tr').forEach((row) => {
+      if (row.children.length >= 2) {
+        row.classList.add('bb-row-interactive');
+        row.setAttribute('title', 'Tap to pin/highlight this clinical reference row');
+        row.addEventListener('click', (e) => {
+          if (e.target.closest('a, button, input, select')) return;
+          row.classList.toggle('bb-row-pinned');
+        });
+      }
+    });
+
+    document.querySelectorAll('button.accordion-header, .faq-toggle').forEach((btn) => {
+      if (btn.dataset.bbWired) return;
+      btn.dataset.bbWired = '1';
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.accordion-item, .faq-item');
+        if (!item) return;
+        const content = item.querySelector('.accordion-content, .faq-content');
+        const icon = btn.querySelector('.accordion-icon');
+        const isOpen = item.classList.toggle('open');
+        if (content) {
+          content.style.display = isOpen ? 'block' : 'none';
+        }
+        if (icon) {
+          icon.textContent = isOpen ? '−' : '+';
+        }
+      });
+    });
   }
 
   function renderSearchResults(query) {
@@ -619,7 +1060,7 @@
       : pool;
 
     if (matches.length === 0) {
-      container.innerHTML = `<div class="bb-search-empty">No matching clinical protocols found. Try "fever", "wake windows", "formula", "preeclampsia", or "due date".</div>`;
+      container.innerHTML = `<div class="bb-search-empty">No matching Babie Blue protocols found. Try "fever", "wake windows", "formula", "preeclampsia", or "due date".</div>`;
       return;
     }
 
@@ -668,6 +1109,89 @@
     if (panel) panel.classList.add('active');
   };
 
+  // Interactive OB-GYN & Pediatrician Appointment Question Checklist Handlers
+  window.updateBbVisitChecklist = function (el) {
+    const container = el ? el.closest('.bb-visit-checklist') : document.querySelector('.bb-visit-checklist');
+    if (!container) return;
+    const boxes = container.querySelectorAll('input[type="checkbox"]');
+    const checked = container.querySelectorAll('input[type="checkbox"]:checked');
+    const counter = container.querySelector('.bb-visit-counter');
+    if (counter) {
+      counter.textContent = `${checked.length} / ${boxes.length} selected`;
+    }
+  };
+
+  window.copyBbVisitQuestions = function (btnEl) {
+    const container = btnEl ? btnEl.closest('.bb-visit-checklist') : document.querySelector('.bb-visit-checklist');
+    if (!container) return;
+    const checked = Array.from(container.querySelectorAll('input[type="checkbox"]:checked'));
+    const all = Array.from(container.querySelectorAll('input[type="checkbox"]'));
+    const targetBoxes = checked.length > 0 ? checked : all;
+    const h1 = (document.querySelector('h1')?.innerText || document.title).trim();
+    const lines = targetBoxes.map((cb, idx) => {
+      const label = cb.closest('.bb-visit-item')?.querySelector('.bb-visit-q-text, .bb-visit-item-text');
+      return `${idx + 1}. ${(label ? label.innerText : '').trim()}`;
+    });
+    const isPed = window.location.pathname.startsWith('/baby-care/') || window.location.pathname.startsWith('/parenting/');
+    const headerLabel = isPed ? 'Pediatrician / Well-Baby Visit Discussion Sheet' : 'OB-GYN / Midwife Appointment Discussion Sheet';
+    const text = `${headerLabel} — ${h1}\n` +
+      `Source: ${window.location.href}\n\n` +
+      lines.join('\n\n');
+    navigator.clipboard.writeText(text).then(() => {
+      if (btnEl) {
+        const orig = btnEl.innerHTML;
+        btnEl.innerHTML = '✓ Questions Copied to Clipboard';
+        setTimeout(() => {
+          btnEl.innerHTML = orig;
+        }, 2200);
+      }
+    });
+  };
+
+  // Interactive Category Hub Filter & Search (Pregnancy, Baby Care, Parenting, Maternal Health)
+  let activeHubCat = 'all';
+  window.filterBbPregnancyHub = function (cat, btnEl) {
+    activeHubCat = cat || 'all';
+    document.querySelectorAll('.bb-hub-filter-btn').forEach((b) => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    if (btnEl) {
+      btnEl.classList.add('active');
+      btnEl.setAttribute('aria-pressed', 'true');
+    }
+    const searchInput = document.getElementById('bbHubSearchInput');
+    window.applyBbPregnancyHubFilter(searchInput ? searchInput.value : '');
+  };
+  window.filterBbCategoryHub = window.filterBbPregnancyHub;
+
+  window.searchBbPregnancyHub = function (query) {
+    window.applyBbPregnancyHubFilter(query);
+  };
+  window.searchBbCategoryHub = window.searchBbPregnancyHub;
+
+  window.applyBbPregnancyHubFilter = function (query) {
+    const q = (query || '').toLowerCase().trim();
+    const cards = document.querySelectorAll('.hub-articles-grid .post-card, .post-grid .post-card, .posts-grid .post-card');
+    let visibleCount = 0;
+    cards.forEach((card) => {
+      const cardCat = card.getAttribute('data-subcat') || 'all';
+      const text = (card.innerText || '').toLowerCase();
+      const matchesCat = activeHubCat === 'all' || cardCat === activeHubCat;
+      const matchesQuery = !q || text.includes(q);
+      if (matchesCat && matchesQuery) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    const status = document.getElementById('bbHubCountStatus');
+    if (status) {
+      status.textContent = `Showing ${visibleCount} of ${cards.length} Peer-Reviewed Clinical Guides`;
+    }
+  };
+
   document.addEventListener('keydown', (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
       e.preventDefault();
@@ -683,3 +1207,5 @@
     injectGlobalUX();
   }
 })();
+
+

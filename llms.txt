@@ -1,20 +1,22 @@
 # Babie Blue
 
-> Babie Blue is a physician-reviewed maternal wellness and pediatric health platform offering evidence-based milestone guides, infant sleep architecture schedules, pediatric medication dosing charts, and interactive clinical calculators.
+> Babie Blue is a physician-reviewed maternal wellness, reproductive medicine, and pediatric health platform offering evidence-based milestone guides, infant sleep architecture schedules, pediatric medication dosing charts, open CSV/JSON clinical datasets, and interactive clinical calculators.
 
 ## Core Mission & Editorial Integrity
-Babie Blue is founded by Sivanandan N and clinically reviewed by senior obstetricians, gynecologists, and pediatric neonatologists. All clinical articles adhere to American Academy of Pediatrics (AAP), American College of Obstetricians and Gynecologists (ACOG), National Health Service (NHS), and World Health Organization (WHO) protocols.
+Babie Blue is founded by Sivanandan N and clinically reviewed by senior obstetricians, gynecologists, and clinical embryologists. All clinical articles adhere to American Academy of Pediatrics (AAP), American College of Obstetricians and Gynecologists (ACOG), World Health Organization (WHO), and Centers for Disease Control and Prevention (CDC) protocols.
 
 - Website: https://babieblue.com/
 - HTML Sitemap Directory: https://babieblue.com/site-map/
-- XML Sitemap: https://babieblue.com/sitemap.xml
-- Detailed LLM Corpus: https://babieblue.com/llms-full.txt
+- XML Sitemaps: https://babieblue.com/sitemap.xml | https://babieblue.com/sitemap-programmatic.xml | https://babieblue.com/sitemap-images.xml
+- Open Clinical Datasets & API Hub: https://babieblue.com/datasets/
+- Full AI Clinical Corpus: https://babieblue.com/llms-full.txt
+- OpenAPI 3.1 Clinical Specification: https://babieblue.com/openapi.json
 
-## Medical Review Board & Verified Entities
-- [Dr. Mangala Devi K.R.](https://babieblue.com/dr-mangala-devi/): Senior Consultant Obstetrician & Gynecologist (MBBS, DGO, DNB, MRCOG 1 - London). 20+ years clinical experience in high-risk pregnancies, operative obstetrics, and maternal medicine.
-- [Dr. Anagha Nawal](https://babieblue.com/dr-anagha-nawal/): Consultant Obstetrician & Gynaecologist, Master of Clinical Embryology (Monash University, Australia), Fellowship in Reproductive Medicine (MBBS, DGO, MD, MCE, FRM).
-- [Madhuri B](https://babieblue.com/madhuri-b/): Clinical Nurse Specialist (B.Sc Nursing, Pediatric & Neonatal Intensive Care).
-- [Sivanandan N](https://babieblue.com/sivanandan-n/): Founder, Publisher & Editor-in-Chief.
+## Medical Review Board & Verified E-E-A-T Entities
+- [Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA](https://babieblue.com/dr-mangala-devi/): Senior Consultant Obstetrician, Gynaecologist & Fertility Specialist at Manipal Hospitals (MHEL), Bengaluru; Clinical Director at Smile Baby IVF; Secretary (Indian Fertility Society — IFS Karnataka); Immediate Past President (Bangalore Society of Obstetrics & Gynaecology — BSOG); KMC Registration: 58341 (2001).
+- [Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM](https://babieblue.com/dr-anagha-nawal/): Consultant Obstetrician & Gynaecologist, Master of Clinical Embryology (Monash University, Australia), Fellowship in Reproductive Medicine (20+ years clinical experience).
+- [Madhuri B](https://babieblue.com/madhuri-b/): Lead Healthcare Content & Medical Billing Specialist (12+ years in Healthcare Operations, CPT/ICD-10/HCPCS Coding; educated at Maria Nivas and Seshadripuram Commerce College, Bengaluru).
+- [Sivanandan N](https://babieblue.com/sivanandan-n/): Founder, Publisher & Editor-in-Chief of Babie Blue & Shaynly; Former Healthcare Project Head at Ferticare (educated at Maria Nivas and Seshadripuram Commerce College, Bengaluru).
 
 ---
 
@@ -22,8 +24,9 @@ Babie Blue is founded by Sivanandan N and clinically reviewed by senior obstetri
 
 ### Baby Care & Pediatric Health
 - [Wake Windows by Age & Nap Transitions (0–24 Months)](https://babieblue.com/baby-care/wake-windows-nap-transitions-by-age/): Pediatric sleep architecture, wake window calculation table, biological nap transition thresholds (4-to-3, 3-to-2, 2-to-1), and overtired cortisol regulation.
-- [Newborn Poop Color & Texture Visual Chart](https://babieblue.com/baby-care/newborn-poop-color-texture-chart/): 9-color diagnostic matrix comparing breastfed vs. formula-fed infant stools, mucus/frothy stools, and red-flag emergency colors (white/clay, tarry black, red blood).
-- [Infant Fever Acetaminophen & Ibuprofen Dosing Chart](https://babieblue.com/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/): Weight-based pediatric dosing charts (mg and mL), minimum age constraints (ibuprofen strictly ≥6 months), and toxic concentration warnings.
+- [The Pediatric Sleep Architecture Protocol (0–24 Months)](https://babieblue.com/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/): Circadian melatonin synthesis, NREM sleep spindle consolidation, and age-stratified wake window schedules.
+- [Newborn Poop Color & Texture Visual Chart](https://babieblue.com/baby-care/newborn-poop-color-texture-chart/): 9-color diagnostic matrix comparing breastfed vs. formula-fed infant stools, mucus/frothy stools, and red-flag emergency colors (white/clay biliary atresia triage, tarry black, red blood).
+- [Infant Fever Acetaminophen & Ibuprofen Dosing Chart](https://babieblue.com/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/): AAP weight-based pediatric dosing charts (mg and mL), minimum age constraints (ibuprofen strictly >=6 months), and <60-day neonatal fever ER rules.
 - [Paced Bottle Feeding & Combo-Feeding Guide](https://babieblue.com/baby-care/paced-bottle-feeding-combo-feeding-schedule/): Methodological protocol to prevent bottle flow preference, preserve maternal breastfeeding latch, and schedule paced feeds.
 - [Silent Reflux (LPR) vs. Colic Newborn Protocol](https://babieblue.com/baby-care/silent-reflux-lpr-vs-colic-newborns-protocol/): Differential diagnosis between infantile colic and laryngopharyngeal reflux, aerophagia management, and positional safety.
 - [Hypoallergenic vs. Extensively Hydrolyzed vs. Goat Milk Formula](https://babieblue.com/baby-care/hypoallergenic-vs-extensively-hydrolyzed-vs-goat-milk-formula/): Clinical breakdown of Cow's Milk Protein Allergy (CMPA), amino acid-based elemental formulas, and whey/casein ratios.
@@ -32,22 +35,30 @@ Babie Blue is founded by Sivanandan N and clinically reviewed by senior obstetri
 - [Safest Non-Toxic Nursery Mattresses & Breathable Cribs](https://babieblue.com/baby-care/safest-non-toxic-nursery-mattresses-breathable-cribs/): VOC emissions, polyurethane off-gassing, GOTS/GREENGUARD Gold certifications, and AAP Safe Sleep surface firmness.
 
 ### Pregnancy & Obstetrics
+- [Fetal Development Week by Week (Weeks 4–40)](https://babieblue.com/pregnancy/fetal-development-week-by-week/): Crown-rump length growth benchmarks, organogenesis milestones, and trimester prenatal screening checkpoints.
 - [Hospital Bag Checklist & Interactive Tracker](https://babieblue.com/pregnancy/hospital-bag-checklist-mom-partner-baby-tracker/): Labor delivery room essentials, postpartum care items, partner survival kit, and nursery departure checklist.
 - [Early Gender DNA Blood Test (SneakPeek vs. NIPT Accuracy)](https://babieblue.com/pregnancy/early-gender-dna-blood-test-sneakpeek-vs-nipt-accuracy/): Cell-free fetal DNA (cffDNA) detection windows, male DNA cross-contamination risks, and clinical aneuploidy screening differences.
-- [Cord Blood & Cord Tissue Banking Cost ROI](https://babieblue.com/pregnancy/cord-blood-cord-tissue-banking-costs-public-vs-private/): Hematopoietic stem cells (HSC) vs. mesenchymal stem cells (MSC), public donation vs. private cord banking, and realistic clinical utility.
+- [Cord Blood & Cord Tissue Banking Cost ROI](https://babieblue.com/pregnancy/cord-blood-cord-tissue-banking-costs-public-vs-private/): Hematopoietic stem cells (HSC) vs. mesenchymal stem cells (MSC), public donation vs. private cord banking, and realistic 20-year costs.
 - [Breast Pump Insurance Coverage: Free Pump Acquisition Guide](https://babieblue.com/pregnancy/breast-pump-insurance-coverage-how-to-get-free/): Affordable Care Act (ACA) lactation provisions, DME supplier navigation, and hospital-grade closed-system pumps.
 
 ### Maternal & Postpartum Health
-- [Postpartum Blood Work Panel & Thyroiditis Protocol](https://babieblue.com/maternal-health/postpartum-blood-work-panel-ferritin-thyroiditis-vitamin-d/): Ferritin depletion vs. postpartum depression, postpartum thyroiditis (PPT) biphasic presentation, vitamin D, and CBC interpretation.
-- [Postpartum Diastasis Recti Self-Test & Rehab Protocol](https://babieblue.com/maternal-health/postpartum-diastasis-recti-self-test-rehab-protocol/): Finger-width inter-recti distance self-assessment, transverse abdominis (TVA) activation, and contraindicated intra-abdominal pressure exercises.
+- [Postpartum Blood Work Panel & Thyroiditis Protocol](https://babieblue.com/maternal-health/postpartum-blood-work-panel-ferritin-thyroiditis-vitamin-d/): Ferritin depletion (>=50 ng/mL target) vs. postpartum depression, postpartum thyroiditis (PPT) biphasic presentation, vitamin D, and CBC interpretation.
+- [Postpartum Diastasis Recti Self-Test & Rehab Protocol](https://babieblue.com/maternal-health/postpartum-diastasis-recti-self-test-rehab-protocol/): Finger-width inter-recti distance self-assessment, linea alba tension, transverse abdominis (TVA) activation, and core rehab.
+- [How Serious Is Postpartum Preeclampsia?](https://babieblue.com/maternal-health/how-serious-is-postpartum-preeclampsia-complete-breakdown/): Blood pressure escalation thresholds (>=140/90 and >=160/110 mmHg), magnesium sulfate prophylaxis, and postpartum warning signs.
 
 ### Parenting & Early Childhood
-- [Daycare Illness Survival Guide (RSV, Croup, HFM, Ear Infections)](https://babieblue.com/parenting/daycare-illness-survival-guide-rsv-croup-hfm-ear-infections/): Viral shedding windows, return-to-daycare temperature criteria, respiratory distress retractions, and pediatric hydration regimens.
+- [Daycare Illness Survival Guide (RSV, Croup, HFM, Ear Infections)](https://babieblue.com/parenting/daycare-illness-survival-guide-rsv-croup-hfm-ear-infections/): Viral shedding windows, return-to-daycare fever criteria, respiratory distress retractions, and pediatric hydration regimens.
 
 ---
 
-## Interactive Clinical Calculators
-- [Due Date & Gestational Age Calculator](https://babieblue.com/calculators/due-date-calculator/): Calculates estimated date of delivery (EDD) using Naegele’s rule and ultrasound crown-rump length adjustments.
-- [Beta-hCG Doubling Time Calculator](https://babieblue.com/calculators/hcg-calculator/): Quantitative serum hCG doubling kinetics (48–72h doubling windows) for early viable pregnancy and ectopic risk triage.
+## Interactive Clinical Calculators & Programmatic Directories
+- [Due Date & Gestational Age Calculator](https://babieblue.com/calculators/due-date-calculator/): Calculates estimated date of delivery (EDD) using Naegele's rule, cycle length adjustment, and IVF Day-3/Day-5 embryo transfer dates.
+- [Beta-hCG Doubling Time Calculator](https://babieblue.com/calculators/hcg-calculator/): Quantitative serum hCG doubling kinetics (48–72h doubling windows) and 8–26 DPO singleton vs. twin benchmarks.
 - [Ovulation & Fertile Window Calculator](https://babieblue.com/calculators/ovulation-calculator/): Luteal phase calculation, peak LH surge prediction, and basal body temperature monitoring.
-- [Pregnancy Calorie Deficit & TDEE Calculator](https://babieblue.com/calculators/pregnancy-calorie-deficit-calculator/): Trimester-specific energy requirements (0 kcal extra in 1st, +340 kcal in 2nd, +452 kcal in 3rd trimester).
+- [Maternal & Pregnancy BMI Calculator](https://babieblue.com/calculators/bmi-calculator/): IOM gestational weight gain curve by pre-pregnancy BMI category and singleton vs. twin targets.
+- [Maternal & Postpartum BMR Calculator](https://babieblue.com/calculators/bmr-calculator/): Resting metabolic rate with trimester and exclusive/partial lactation caloric adjustments.
+- [Maternal & Postpartum TDEE Calculator](https://babieblue.com/calculators/tdee-calculator/): Total daily energy expenditure and protein/choline/DHA macro planner.
+- [Pregnancy Calorie & Macro Calculator](https://babieblue.com/calculators/pregnancy-calorie-deficit-calculator/): Trimester-specific energy requirements (+0 kcal in 1st, +340 kcal in 2nd, +452 kcal in 3rd trimester).
+- [Postpartum Weight Loss Calculator](https://babieblue.com/calculators/weight-loss-calculator/): Lactation-safe postpartum caloric deficit and timeline planner.
+- [Pregnancy Body Fat Composition Calculator](https://babieblue.com/calculators/body-fat-calculator/): US Navy anthropometry adjusted for gestational fluid/tissue compartments.
+- [Clinical Phonetics Baby Name Generator](https://babieblue.com/calculators/baby-name-generator/): Syllable cadence, surname phonetic harmony, and etymology filter.

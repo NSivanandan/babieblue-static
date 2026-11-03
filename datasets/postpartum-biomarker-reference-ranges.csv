@@ -1,0 +1,6 @@
+biomarker,lab_cutoff,babie_blue_functional_target,clinical_significance
+Serum Ferritin,>=12-15 ng/mL,>=50 ng/mL,"Levels <30 ng/mL cause severe postpartum fatigue, telogen effluvium hair loss, and mood depletion even when Hemoglobin is normal."
+TSH (Thyroid Stimulating Hormone),0.45-4.50 mIU/L,0.50-2.50 mIU/L,Biphasic postpartum thyroiditis peaks between 6 weeks and 6 months postpartum; screen with Free T4 and TPOAb.
+25-Hydroxy Vitamin D,>=20 ng/mL,40-60 ng/mL,"Supports maternal immune modulation, bone mineralization, and breastmilk antirachitic activity (at 4,000-6,400 IU/day maternal intake)."
+Hemoglobin (Postpartum),>=11.0 g/dL,>=12.2 g/dL,Screen for acute peripartum blood loss anemia; pair with reticulocyte count and serum ferritin.
+Vitamin B12 (Cobalamin),>=200 pg/mL,>=500 pg/mL,Essential for infant myelination and maternal methylation; pair with serum folate.

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Sleeping Position During Pregnancy: Left-Lateral SOS, IVC Hemodynamics &amp; 3-Pillow Setup — Babie Blue Clinical Reference Diagram">
+  <title>Sleeping Position During Pregnancy: Left-Lateral SOS, IVC Hemodynamics &amp; 3-Pillow Setup — Clinical Protocol &amp; Visual Reference Diagram</title>
+  <desc>Physician-reviewed clinical diagram and quantitative reference chart for Sleeping Position During Pregnancy: Left-Lateral SOS, IVC Hemodynamics &amp; 3-Pillow Setup on BabieBlue.com, audited against ACOG, AAP, WHO, and CDC guidelines.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#f0fdfa"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.55"/>
+
+  <!-- Outer Clinical Frame -->
+  <rect x="36" y="32" width="1128" height="566" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="36" y="32" width="1128" height="10" rx="5" fill="#0369a1"/>
+
+  <!-- Left Column: Header Kicker, Title &amp; 3 Article-Specific Quantitative KPIs -->
+  <g transform="translate(68, 72)">
+    <rect x="0" y="0" width="42" height="42" rx="10" fill="#0369a1"/>
+    <path d="M13 21h16M21 13v16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <text x="56" y="17" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="12.5" font-weight="800" fill="#0369a1" letter-spacing="1.2">OBSTETRICS &amp; PRENATAL PROTOCOL • ACOG / WHO VERIFIED</text>
+    <text x="56" y="36" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#475569">ICD-10-CM: Z34.90 • CANONICAL: /pregnancy/sleeping-position-during-pregnancy/</text>
+  </g>
+
+  <!-- Wrapped Article Title -->
+  <g transform="translate(68, 152)">
+    <text x="0" y="0" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">Sleeping Position During</text>
+    <text x="0" y="34" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">Pregnancy: Left-Lateral SOS, IVC</text>
+    <text x="0" y="68" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">Hemodynamics &amp; 3-Pillow Setup</text>
+  </g>
+
+  <line x1="68" y1="246" x2="612" y2="246" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- 3 Article-Specific Quantitative Benchmark Cards -->
+  <g transform="translate(68, 264)">
+    <rect width="544" height="62" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#0f766e"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">20–28 Wks</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Gestational Window When Side-Going-to-Sleep</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">Position Becomes Critical</text>
+  </g>
+  <g transform="translate(68, 336)">
+    <rect width="544" height="62" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#0369a1"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">15°–30°</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Lateral Hip/Back Wedge Angle Needed to</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">Relieve Vena Cava Compression</text>
+  </g>
+  <g transform="translate(68, 408)">
+    <rect width="544" height="62" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#b45309"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">+24% Output</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Maternal Cardiac Output Preservation in</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">Lateral vs. Flat Supine Posture</text>
+  </g>
+
+  <!-- Right Column: Bespoke Topic-Matched Clinical Vector Illustration &amp; Chart -->
+  
+    <g transform="translate(636, 82)">
+      <rect width="484" height="394" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+      <rect x="0" y="0" width="484" height="44" rx="16" fill="#0369a1"/>
+      <rect x="0" y="24" width="484" height="20" fill="#0369a1"/>
+      <text x="20" y="27" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="0.8">FIG 1 • 0–24M WAKE WINDOW STAIRCASE &amp; ADENOSINE SLEEP DRIVE</text>
+
+      <!-- Wake Window Progression Staircase Bars -->
+      <g transform="translate(32, 64)">
+        <rect x="0" y="0" width="420" height="214" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+        <text x="18" y="24" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#0369a1">AGE-CALIBRATED WAKE WINDOW &amp; DAILY NAP CONSOLIDATION</text>
+
+        <!-- 0-3m -->
+        <text x="18" y="56" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#0f172a">0–3 Mos</text>
+        <rect x="92" y="42" width="86" height="22" rx="5" fill="#38bdf8"/>
+        <text x="188" y="57" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#0369a1">60–90 min (4–5 Naps • 14–17h Total)</text>
+
+        <!-- 4-6m -->
+        <text x="18" y="92" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#0f172a">4–6 Mos</text>
+        <rect x="92" y="78" width="136" height="22" rx="5" fill="#0284c7"/>
+        <text x="238" y="93" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#0369a1">1.75–2.5 hrs (3 Naps • 14h Total)</text>
+
+        <!-- 7-12m -->
+        <text x="18" y="128" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#0f172a">7–12 Mos</text>
+        <rect x="92" y="114" width="190" height="22" rx="5" fill="#0f766e"/>
+        <text x="290" y="129" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#0f766e">2.75–4.0 hrs (2 Naps)</text>
+
+        <!-- 13-24m -->
+        <text x="18" y="164" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#0f172a">13–24m</text>
+        <rect x="92" y="150" width="250" height="22" rx="5" fill="#115e59"/>
+        <text x="350" y="165" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#115e59">4.5–6.0h (1 Nap)</text>
+
+        <text x="18" y="198" font-family="Plus Jakarta Sans, sans-serif" font-size="11.5" font-weight="600" fill="#475569">Circadian Rule: Longest wake window precedes bedtime to maximize adenosine pressure.</text>
+      </g>
+
+      <!-- AAP Safe Sleep ABCs Box -->
+      <rect x="32" y="292" width="420" height="84" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+      <text x="46" y="314" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="800" fill="#166534">AAP SAFE SLEEP &amp; SIDS REDUCTION PROTOCOL (2022–2026)</text>
+      <text x="46" y="336" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#0f172a">• Supine (Back) Only on Firm, Flat Crib Surface (0° Incline • Greenguard Gold)</text>
+      <text x="46" y="356" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#14532d">• Stop Swaddling at First Roll Attempt (8–12 wks) • Room-Share 6m • 68–72°F</text>
+    </g>
+
+  <!-- Bottom Clinical Triage &amp; Medical Review Bar -->
+  <rect x="68" y="492" width="1052" height="42" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="86" y="518" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" fill="#b91c1c">Clinical Triage Rule: <tspan font-weight="600" fill="#1e293b">If you wake up on your back in the middle of the night, do NOT panic—your body woke you before fetal</tspan></text>
+
+  <text x="68" y="568" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#334155">Medically Reviewed by Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA &amp; Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM</text>
+  <text x="1120" y="568" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="13.5" font-weight="800" fill="#0369a1">BabieBlue.com</text>
+</svg>

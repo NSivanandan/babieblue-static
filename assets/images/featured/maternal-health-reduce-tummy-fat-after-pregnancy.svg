@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="How to Reduce Tummy Fat After Pregnancy Safely: Diastasis Recti vs. Subcutaneous Fat vs. Cortisol Belly, Lactation Calories &amp; TVA Rehab — Babie Blue Clinical Reference Diagram">
+  <title>How to Reduce Tummy Fat After Pregnancy Safely: Diastasis Recti vs. Subcutaneous Fat vs. Cortisol Belly, Lactation Calories &amp; TVA Rehab — Clinical Protocol &amp; Visual Reference Diagram</title>
+  <desc>Physician-reviewed clinical diagram and quantitative reference chart for How to Reduce Tummy Fat After Pregnancy Safely: Diastasis Recti vs. Subcutaneous Fat vs. Cortisol Belly, Lactation Calories &amp; TVA Rehab on BabieBlue.com, audited against ACOG, AAP, WHO, and CDC guidelines.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#f0fdfa"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.55"/>
+
+  <!-- Outer Clinical Frame -->
+  <rect x="36" y="32" width="1128" height="566" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="36" y="32" width="1128" height="10" rx="5" fill="#0f766e"/>
+
+  <!-- Left Column: Header Kicker, Title &amp; 3 Article-Specific Quantitative KPIs -->
+  <g transform="translate(68, 72)">
+    <rect x="0" y="0" width="42" height="42" rx="10" fill="#0f766e"/>
+    <path d="M13 21h16M21 13v16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <text x="56" y="17" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="12.5" font-weight="800" fill="#0f766e" letter-spacing="1.2">MATERNAL-FETAL &amp; FOURTH-TRIMESTER MEDICINE • ACOG VERIFIED</text>
+    <text x="56" y="36" font-family="JetBrains Mono, monospace" font-size="12" font-weight="600" fill="#475569">ICD-10-CM: O90.89 • CANONICAL: /maternal-health/reduce-tummy-fat-after-pregnancy/</text>
+  </g>
+
+  <!-- Wrapped Article Title -->
+  <g transform="translate(68, 152)">
+    <text x="0" y="0" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">How to Reduce Tummy Fat After</text>
+    <text x="0" y="34" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">Pregnancy Safely: Diastasis Recti</text>
+    <text x="0" y="68" font-family="Fraunces, Georgia, serif" font-size="26.5" font-weight="700" fill="#0f172a">vs. Subcutaneous Fat vs. Cortisol…</text>
+  </g>
+
+  <line x1="68" y1="246" x2="612" y2="246" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- 3 Article-Specific Quantitative Benchmark Cards -->
+  <g transform="translate(68, 264)">
+    <rect width="544" height="62" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#0f766e"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">1,800+ kcal</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Minimum Daily Caloric Floor to Protect</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">Exclusive Breastmilk Supply</text>
+  </g>
+  <g transform="translate(68, 336)">
+    <rect width="544" height="62" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#0369a1"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">1.4–1.6 g/kg</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Postpartum Protein Target (100–120g/day) to</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">Preserve Lean Muscle &amp; Repair Fascia</text>
+  </g>
+  <g transform="translate(68, 408)">
+    <rect width="544" height="62" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+    <rect x="12" y="11" width="156" height="40" rx="7" fill="#b45309"/>
+    <text x="90" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14.5" font-weight="800" fill="#ffffff">&lt; 0.5 kg / wk</text>
+    <text x="182" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a">Safe Postpartum Fat-Loss Rate (~1 lb/week)</text>
+    <text x="182" y="45" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">After the 6-Week Healing Window</text>
+  </g>
+
+  <!-- Right Column: Bespoke Topic-Matched Clinical Vector Illustration &amp; Chart -->
+  
+    <g transform="translate(636, 82)">
+      <rect width="484" height="394" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+      <rect x="0" y="0" width="484" height="44" rx="16" fill="#0f766e"/>
+      <rect x="0" y="24" width="484" height="20" fill="#0f766e"/>
+      <text x="20" y="27" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="0.8">FIG 1 • MATERNAL ENERGETICS, IOM WEIGHT GAIN &amp; MACRO MATRIX</text>
+
+      <!-- Left Sub-Chart: Trimester &amp; Lactation Caloric Step Chart -->
+      <rect x="20" y="58" width="222" height="222" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+      <text x="34" y="80" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#0f766e">ACOG DAILY ENERGY INCREMENTS</text>
+
+      <!-- Bars -->
+      <rect x="38" y="218" width="36" height="24" rx="4" fill="#94a3b8"/>
+      <text x="56" y="212" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#334155">+0</text>
+      <text x="56" y="258" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#334155">T1</text>
+
+      <rect x="86" y="150" width="36" height="92" rx="4" fill="#0284c7"/>
+      <text x="104" y="143" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#0369a1">+340</text>
+      <text x="104" y="258" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#334155">T2</text>
+
+      <rect x="134" y="122" width="36" height="120" rx="4" fill="#0f766e"/>
+      <text x="152" y="115" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#0f766e">+452</text>
+      <text x="152" y="258" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#334155">T3</text>
+
+      <rect x="182" y="110" width="42" height="132" rx="4" fill="#b45309"/>
+      <text x="203" y="103" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#b45309">+500</text>
+      <text x="203" y="258" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700" fill="#334155">Milk</text>
+
+      <line x1="30" y1="242" x2="232" y2="242" stroke="#475569" stroke-width="1.5"/>
+
+      <!-- Right Sub-Chart: Micronutrient &amp; IOM Partitioning Dials -->
+      <rect x="252" y="58" width="212" height="222" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+      <text x="266" y="80" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#0369a1">RDA MICRONUTRIENT TARGETS</text>
+
+      <g transform="translate(266, 94)">
+        <rect width="184" height="36" rx="6" fill="#f0fdfa" stroke="#99f6e4"/>
+        <text x="10" y="22" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Folate (L-5-MTHF)</text>
+        <text x="174" y="22" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="12" font-weight="800" fill="#0f766e">600 mcg</text>
+      </g>
+      <g transform="translate(266, 138)">
+        <rect width="184" height="36" rx="6" fill="#f0f9ff" stroke="#bae6fd"/>
+        <text x="10" y="22" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Elemental Iron</text>
+        <text x="174" y="22" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="12" font-weight="800" fill="#0369a1">27 mg/d</text>
+      </g>
+      <g transform="translate(266, 182)">
+        <rect width="184" height="36" rx="6" fill="#fef3c7" stroke="#fde68a"/>
+        <text x="10" y="22" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Choline + DHA</text>
+        <text x="174" y="22" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="12" font-weight="800" fill="#b45309">450 / 300mg</text>
+      </g>
+      <g transform="translate(266, 226)">
+        <rect width="184" height="38" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+        <text x="10" y="23" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#7f1d1d">Min Carbs (No Ketosis)</text>
+        <text x="174" y="23" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="12" font-weight="800" fill="#b91c1c">≥175 g/d</text>
+      </g>
+
+      <!-- Bottom IOM BMI Gain Corridor Box -->
+      <rect x="20" y="294" width="444" height="82" rx="10" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+      <text x="34" y="316" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="700" fill="#0f766e">IOM / ACOG SINGLETON GESTATIONAL WEIGHT GAIN CORRIDORS</text>
+      <text x="34" y="337" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#0f172a">• BMI &lt;18.5: 28–40 lbs • BMI 18.5–24.9: 25–35 lbs (0.8–1.0 lb/wk T2/T3)</text>
+      <text x="34" y="357" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="600" fill="#334155">• BMI 25.0–29.9: 15–25 lbs • BMI ≥30.0: 11–20 lbs (Safe Floor ≥1,800 kcal/d)</text>
+    </g>
+
+  <!-- Bottom Clinical Triage &amp; Medical Review Bar -->
+  <rect x="68" y="492" width="1052" height="42" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="86" y="518" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" fill="#b91c1c">Clinical Triage Rule: <tspan font-weight="600" fill="#1e293b">Consult a physician or Pelvic Floor PT if your lower belly protrudes in a football-shaped ridge during</tspan></text>
+
+  <text x="68" y="568" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#334155">Medically Reviewed by Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA &amp; Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM</text>
+  <text x="1120" y="568" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="13.5" font-weight="800" fill="#0f766e">BabieBlue.com</text>
+</svg>

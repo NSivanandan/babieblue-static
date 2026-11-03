@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Canonical Domain Guard: strictly enforce https://babieblue.com -->
-  <script>
-    if (location.hostname !== 'babieblue.com' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-      location.replace('https://babieblue.com' + location.pathname + location.search + location.hash);
-    }
-  </script>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infant & Newborn Care - Babie Blue</title>
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="description" content="Pediatrician-backed clinical advice on newborn sleep routines, breastfeeding, allergen introduction, and early developmental cues.">
   <link rel="canonical" href="https://babieblue.com/baby-care/">
+  <link rel="alternate" hreflang="en-US" href="https://babieblue.com/baby-care/">
+  <link rel="alternate" hreflang="x-default" href="https://babieblue.com/baby-care/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
-  <link rel="stylesheet" href="/assets/flagship-protocol.css">
+  <link rel="stylesheet" href="/assets/style.css?v=20260421">
+  <link rel="stylesheet" href="/assets/flagship-protocol.css?v=20260421">
   
   <meta property="og:title" content="Infant & Newborn Care - Babie Blue">
   <meta property="og:description" content="Pediatrician-backed clinical advice on newborn sleep routines, breastfeeding, allergen introduction, and early developmental cues.">
@@ -25,24 +21,37 @@
   <meta property="og:site_name" content="Babie Blue">
   <meta property="og:type" content="website">
 
-  <!-- Google AdSense Official Script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223" crossorigin="anonymous" data-cfasync="false"></script>
-
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": "https://babieblue.com/baby-care/#webpage",
-    "url": "https://babieblue.com/baby-care/",
-    "name": "Infant & Newborn Care",
-    "description": "Pediatrician-backed clinical advice on newborn sleep routines, breastfeeding, allergen introduction, and early developmental cues.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "BabieBlue",
-      "url": "https://babieblue.com/"
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://babieblue.com/baby-care/#webpage",
+  "url": "https://babieblue.com/baby-care/",
+  "name": "Infant & Newborn Care",
+  "description": "Pediatrician-backed clinical advice on newborn sleep routines, breastfeeding, allergen introduction, and early developmental cues.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Babie Blue",
+    "url": "https://babieblue.com/"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".bb-bluf-box",
+      "#clinical-summary",
+      ".archive-header"
+    ]
+  },
+  "reviewedBy": [
+    {
+      "@type": "Person",
+      "name": "Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA",
+      "url": "https://babieblue.com/dr-mangala-devi/"
     }
-  }
-  </script>
+  ]
+}
+</script>
   <!-- Google Analytics 4 (GA4: G-7ZRLCL74GN) -->
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZRLCL74GN"></script>
@@ -62,415 +71,639 @@
   <meta name="twitter:description" content="Pediatrician-backed clinical advice on newborn sleep routines, breastfeeding, allergen introduction, and early developmental cues.">
   <link rel="alternate" type="application/rss+xml" title="Babie Blue RSS Feed" href="https://babieblue.com/feed.xml">
   <link rel="alternate" type="text/markdown" title="Babie Blue Clinical Protocol (Markdown)" href="https://babieblue.com/baby-care/index.md">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223" crossorigin="anonymous" data-cfasync="false"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://babieblue.com/baby-care/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://babieblue.com/"},{"@type":"ListItem","position":2,"name":"Infant & Newborn Care","item":"https://babieblue.com/baby-care/"}]}</script>
 </head>
-<body>
+<body data-page-type="hub">
 
   
     <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="site-logo">Babie<span>Blue</span></a>
-      <nav class="main-nav">
+      <a href="/" class="site-logo">Babie<span>Blue</span><small class="site-logo-tag">Clinical Protocols</small></a>
+      <nav class="main-nav" aria-label="Primary Clinical Navigation">
         <ul>
-          <li><a href="/">Home</a></li>
           <li><a href="/pregnancy/">Pregnancy</a></li>
-          <li><a href="/baby-care/">Baby Care</a></li>
+          <li><a href="/baby-care/" class="active" aria-current="page">Baby Care</a></li>
           <li><a href="/parenting/">Parenting</a></li>
           <li><a href="/maternal-health/">Maternal Health</a></li>
           <li><a href="/calculators/">Calculators</a></li>
-          <li><a href="/about-us/">About Us</a></li>
-          <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/about-us/">Medical Board</a></li>
         </ul>
       </nav>
+      <div class="bb-header-actions">
+        <button type="button" class="bb-search-trigger" onclick="openBbSearch()" aria-label="Search Babie Blue clinical guides and calculators">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search Protocols</span>
+          <kbd class="bb-search-kbd">⌘K</kbd>
+        </button>
+      </div>
     </div>
   </header>
   <div class="container">
     <main class="content-area">
       <div class="hub-hero">
         <span class="hub-hero-icon">👶</span>
-        <h1 class="hub-hero-title">Infant & Newborn Care</h1>
-        <p class="hub-hero-desc">Pediatrician-backed clinical advice on newborn sleep routines, breastfeeding, allergen introduction, and early developmental cues.</p>
+        <h1 class="hub-hero-title">Infant &amp; Newborn Care</h1>
+        <p class="hub-hero-desc">Board-reviewed pediatric &amp; neonatal clinical protocols, weight-based medication dosing calculators, wake window planners, and infant nutrition workbenches reviewed by Dr. Mangala Devi K.R., MS (OBG) &amp; Dr. Anagha Nawal, MD, MCE, FRM.</p>
         <div class="hub-hero-badge">
-          ✓ 31 Evidence-Based Guides &amp; Interactive Tools
+          32 Physician-Reviewed Pediatric Protocols • 100% Interactive Clinical Workbenches • AAP / WHO / CDC Aligned
         </div>
       </div>
 
+      <section class="bb-hub-controls" aria-label="Filter Infant &amp; Newborn Clinical Guides by Specialty">
+        <div class="bb-hub-controls-top">
+          <div class="bb-hub-filter-bar" role="tablist" aria-label="Infant &amp; Newborn Topic Filters">
+            <button type="button" class="bb-hub-filter-btn active" data-filter="all" onclick="window.filterBbPregnancyHub('all', this)">All Guides (32)</button>
+            <button type="button" class="bb-hub-filter-btn" data-filter="feeding-formula" onclick="window.filterBbPregnancyHub('feeding-formula', this)">Feeding, Formula &amp; Allergens (9)</button>
+            <button type="button" class="bb-hub-filter-btn" data-filter="sleep-routines" onclick="window.filterBbPregnancyHub('sleep-routines', this)">Sleep, Wake Windows &amp; Safe Crib (6)</button>
+            <button type="button" class="bb-hub-filter-btn" data-filter="nicu-growth-neuro" onclick="window.filterBbPregnancyHub('nicu-growth-neuro', this)">NICU, Milestones &amp; Safety (7)</button>
+            <button type="button" class="bb-hub-filter-btn" data-filter="gi-fever-acute" onclick="window.filterBbPregnancyHub('gi-fever-acute', this)">Fever, Stool, Reflux &amp; Acute Care (5)</button>
+            <button type="button" class="bb-hub-filter-btn" data-filter="genetics-congenital" onclick="window.filterBbPregnancyHub('genetics-congenital', this)">Genetics, Hematology &amp; Teratology (5)</button>
+          </div>
+          <div class="bb-hub-search-wrap">
+            <input type="search" id="bbHubSearchInput" class="bb-hub-search-input" placeholder="Search 32 pediatric protocols, fever dosing, wake windows, formula, or ICD-10..." aria-label="Search Infant &amp; Newborn Care Guides" oninput="window.searchBbPregnancyHub(this.value)" />
+            <span id="bbHubCountStatus" class="bb-hub-count-status">Showing all 32 of 32 Peer-Reviewed Clinical Guides</span>
+          </div>
+        </div>
+      </section>
+
       <div class="hub-articles-grid post-grid">
-        <article class="post-card post-card--flagship">
-          <a href="/baby-care/wake-windows-nap-transitions-by-age/" class="post-card-thumb-wrap"><span class="post-card-badge">Flagship Sleep Planner</span>
-            <img src="/wp-content/uploads/2025/12/creating-a-routine-for-your-newborn.png" alt="Wake Windows by Age & Nap Transitions (0–24 Months)" loading="lazy"  onerror="this.style.display='none';" /></a>
+        <article class="post-card post-card--flagship" data-subcat="sleep-routines">
+          <a href="/baby-care/wake-windows-nap-transitions-by-age/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-wake-windows-nap-transitions-by-age.svg" alt="The Complete Baby Wake Window &amp; Nap Transition Master Guide (0–24 Months) — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant Sleep &amp; Circadian Science</span>
-            <h3 class="post-card-title"><a href="/baby-care/wake-windows-nap-transitions-by-age/">Wake Windows by Age &amp; Nap Transitions (0–24 Months): Interactive Sleep Planner</a></h3>
-            <p class="post-card-excerpt">Generate a custom clock-time nap and bedtime schedule from your baby's wake time + Nap Transition Readiness Quiz.</p>
-            <a href="/baby-care/wake-windows-nap-transitions-by-age/" class="post-card-action">Launch Sleep Planner &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Infant Sleep, Wake Windows &amp; Safe Crib Setup</span>
+              <span>•</span>
+              <span>Flagship Interactive Suite</span>
+              <span>•</span>
+              <span>ICD-10: G47.9</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/wake-windows-nap-transitions-by-age/">The Complete Baby Wake Window &amp; Nap Transition Master Guide (0–24 Months)</a></h3>
+            <p class="post-card-excerpt">Generate a custom 24-hour infant nap and bedtime schedule from your baby's wake time + use our Nap Transition Readiness Quiz (4-to-3, 3-to-2, and 2-to-1 naps).</p>
+            <a href="/baby-care/wake-windows-nap-transitions-by-age/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
 
-        <article class="post-card post-card--flagship">
-          <a href="/baby-care/paced-bottle-feeding-combo-feeding-schedule/" class="post-card-thumb-wrap"><span class="post-card-badge">Flagship Feeding Calculator</span>
-            <img src="/wp-content/uploads/2025/12/Bottle-Refusal-Fixes.png" alt="Paced Bottle Feeding & Combo Feeding Schedule" loading="lazy"  onerror="this.style.display='none';" /></a>
+        <article class="post-card post-card--flagship" data-subcat="feeding-formula">
+          <a href="/baby-care/paced-bottle-feeding-combo-feeding-schedule/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-paced-bottle-feeding-combo-feeding-schedule.svg" alt="Paced Bottle Feeding &amp; Combo Feeding Schedule: How to Combine Breastmilk and Formula Without Losing Your Supply — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
           <div class="post-card-body">
-            <span class="post-card-category">Lactation &amp; Bottle Feeding</span>
-            <h3 class="post-card-title"><a href="/baby-care/paced-bottle-feeding-combo-feeding-schedule/">Paced Bottle Feeding &amp; Combo Feeding Schedule: Breastmilk + Formula Without Losing Supply</a></h3>
-            <p class="post-card-excerpt">Weight-Based 24-Hour Milk/Formula Ounce Calculator, Paced Horizontal Angle SVG, and Slowest Nipple Flow Matrix.</p>
-            <a href="/baby-care/paced-bottle-feeding-combo-feeding-schedule/" class="post-card-action">Calculate Daily Ounces &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Lactation, Bottle Pacing &amp; Infant Nutrition</span>
+              <span>•</span>
+              <span>Flagship Interactive Suite</span>
+              <span>•</span>
+              <span>ICD-10: Z39.1</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/paced-bottle-feeding-combo-feeding-schedule/">Paced Bottle Feeding &amp; Combo Feeding Schedule: How to Combine Breastmilk and Formula Without Losing Your Supply</a></h3>
+            <p class="post-card-excerpt">Weight-based 24-hour breastmilk &amp; formula calculator, horizontal paced bottle feeding mechanics, slowest nipple flow rate table, and supply-safe combo schedules.</p>
+            <a href="/baby-care/paced-bottle-feeding-combo-feeding-schedule/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
 
-        <article class="post-card post-card--flagship">
-          <a href="/baby-care/newborn-poop-color-texture-chart/" class="post-card-thumb-wrap"><span class="post-card-badge">Visual Stool Decoder</span>
-            <img src="/wp-content/uploads/2024/08/Creating-a-Routine-for-Your-Newborn.jpeg" alt="Newborn Poop Color & Texture Chart" loading="lazy"  onerror="this.style.display='none';" /></a>
+        <article class="post-card post-card--flagship" data-subcat="gi-fever-acute">
+          <a href="/baby-care/newborn-poop-color-texture-chart/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-newborn-poop-color-texture-chart.svg" alt="Newborn Poop Color &amp; Texture Visual Chart: Breastfed vs. Formula-Fed Guide (Day 1 to 6 Months) — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
           <div class="post-card-body">
-            <span class="post-card-category">Newborn GI &amp; Hydration</span>
-            <h3 class="post-card-title"><a href="/baby-care/newborn-poop-color-texture-chart/">Newborn Poop Color &amp; Texture Chart: Visual Stool Triage (Meconium to CMPA Mucus)</a></h3>
-            <p class="post-card-excerpt">Interactive 9-Color Stool Swatch Decoder, Day 1–7 Wet/Dirty Diaper Hydration Tracker, and Biliary Atresia Pale Stool Screening.</p>
-            <a href="/baby-care/newborn-poop-color-texture-chart/" class="post-card-action">Open Stool Decoder &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Newborn GI, Stool Triage &amp; Hydration</span>
+              <span>•</span>
+              <span>Flagship Interactive Suite</span>
+              <span>•</span>
+              <span>ICD-10: R19.5</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/newborn-poop-color-texture-chart/">Newborn Poop Color &amp; Texture Visual Chart: Breastfed vs. Formula-Fed Guide (Day 1 to 6 Months)</a></h3>
+            <p class="post-card-excerpt">Interactive 9-color newborn stool triage decoder (meconium to seedy yellow, iron green, CMPA mucus &amp; biliary atresia white clay alert) + Day 1–7 diaper tracker.</p>
+            <a href="/baby-care/newborn-poop-color-texture-chart/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
 
-        <article class="post-card">
+        <article class="post-card post-card--flagship" data-subcat="gi-fever-acute">
           <a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/" class="post-card-thumb-wrap">
-            <span class="post-card-badge">Weight-Based mL Dosing</span>
-            <img src="/wp-content/uploads/2025/07/Top-Safety-Tips-for-New-Parents-The-Ultimate-Guide.png" alt="Infant Fever & Exact Acetaminophen / Ibuprofen Dosing Chart" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/baby-care-infant-fever-acetaminophen-ibuprofen-dosing-chart.svg" alt="Infant Fever &amp; Pediatric Acetaminophen / Ibuprofen Weight-Based Dosing Guide — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category post-card-category--urgent">Acute Pediatric Pharmacology</span>
-            <h3 class="post-card-title"><a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/">Infant Fever Guide &amp; Exact Acetaminophen (Tylenol) / Ibuprofen (Motrin) Dosing Chart by Weight</a></h3>
-            <p class="post-card-excerpt">Interactive mL Syringe Fill Visualizer + AAP Clinical Practice Guideline for Febrile Infants (0–60 Days).</p>
-            <a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/" class="post-card-action post-card-action--urgent">Calculate Exact mL Dose &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Acute Pediatric Pharmacology &amp; Fever Triage</span>
+              <span>•</span>
+              <span>Flagship Interactive Suite</span>
+              <span>•</span>
+              <span>ICD-10: R50.9</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/">Infant Fever &amp; Pediatric Acetaminophen / Ibuprofen Weight-Based Dosing Guide</a></h3>
+            <p class="post-card-excerpt">AAP-aligned weight-based infant Acetaminophen (160mg/5mL) and Ibuprofen (50mg/1.25mL &amp; 100mg/5mL) mL dosing calculator + under-60-day neonatal fever protocol.</p>
+            <a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
 
-        <article class="post-card post-card--flagship">
-          <a href="/baby-care/nicu-preemie-discharge-checklist-corrected-age-guide/" class="post-card-thumb-wrap"><span class="post-card-badge">Corrected Age Calculator</span>
-            <img src="/wp-content/uploads/2023/03/NeonatalCare-1.png" alt="NICU Preemie Discharge Checklist & Corrected Age Guide" loading="lazy"  onerror="this.style.display='none';" /></a>
-          <div class="post-card-body">
-            <span class="post-card-category">Neonatology &amp; Preemie Care</span>
-            <h3 class="post-card-title"><a href="/baby-care/nicu-preemie-discharge-checklist-corrected-age-guide/">NICU Preemie Discharge Checklist &amp; Corrected Age Milestone Guide (2026)</a></h3>
-            <p class="post-card-excerpt">Calculate Adjusted vs. Chronological Age, 22–24 kcal/oz Fortification Recipes, and 5 NICU Physiological Readiness Milestones.</p>
-            <a href="/baby-care/nicu-preemie-discharge-checklist-corrected-age-guide/" class="post-card-action">Calculate Corrected Age &rarr;</a>
-          </div>
-        </article>
-
-        <article class="post-card post-card--flagship">
-          <a href="/baby-care/silent-reflux-lpr-vs-colic-newborns-protocol/" class="post-card-thumb-wrap"><span class="post-card-badge">LPR vs. Colic Scorer</span>
-            <img src="/wp-content/uploads/2025/11/5-Gentle-Ways-to-Get-Your-Newborn-to-Burp.png" alt="Silent Reflux (LPR) vs. Colic in Newborns" loading="lazy"  onerror="this.style.display='none';" /></a>
-          <div class="post-card-body">
-            <span class="post-card-category">Pediatric Gastroenterology</span>
-            <h3 class="post-card-title"><a href="/baby-care/silent-reflux-lpr-vs-colic-newborns-protocol/">Silent Reflux (LPR) vs. Colic in Newborns: Symptoms, Sandifer Syndrome &amp; Relief Protocol</a></h3>
-            <p class="post-card-excerpt">Interactive 4-Way Symptom Differentiator (Silent LPR vs. Happy Spitter vs. Colic vs. CMPA) and 14-Day Conservative Plan.</p>
-            <a href="/baby-care/silent-reflux-lpr-vs-colic-newborns-protocol/" class="post-card-action">Run Reflux Scorer &rarr;</a>
-          </div>
-        </article>
-
-        <article class="post-card post-card--flagship">
-          <a href="/baby-care/hypoallergenic-vs-extensively-hydrolyzed-vs-goat-milk-formula/" class="post-card-thumb-wrap"><span class="post-card-badge">CMPA Protein Ladder</span>
-            <img src="/wp-content/uploads/2023/03/Baby-Formula.png" alt="Hypoallergenic vs Extensively Hydrolyzed vs Goat Milk Formula" loading="lazy"  onerror="this.style.display='none';" /></a>
-          <div class="post-card-body">
-            <span class="post-card-category">Allergy &amp; Clinical Formula</span>
-            <h3 class="post-card-title"><a href="/baby-care/hypoallergenic-vs-extensively-hydrolyzed-vs-goat-milk-formula/">Hypoallergenic vs. Extensively Hydrolyzed vs. Goat Milk Formula: The CMPA Clinical Guide</a></h3>
-            <p class="post-card-excerpt">Compare Nutramigen, Corn-Free Alimentum RTF, Pepticate, EleCare &amp; PurAmino + HCPCS B4161 Insurance Reimbursement Calculator.</p>
-            <a href="/baby-care/hypoallergenic-vs-extensively-hydrolyzed-vs-goat-milk-formula/" class="post-card-action">Match Formula Tier &rarr;</a>
-          </div>
-        </article>
-
-        <article class="post-card post-card--flagship">
-          <a href="/baby-care/best-organic-baby-formulas-us-vs-european-standards/" class="post-card-thumb-wrap"><span class="post-card-badge">US vs. EU Formula Audit</span>
-            <img src="/wp-content/uploads/2023/07/Babie-Blue-babybrezza-powder-setting.png" alt="Best Organic Baby Formulas: US vs. European Standards" loading="lazy"  onerror="this.style.display='none';" /></a>
-          <div class="post-card-body">
-            <span class="post-card-category">Regulatory Toxicology &amp; Nutrition</span>
-            <h3 class="post-card-title"><a href="/baby-care/best-organic-baby-formulas-us-vs-european-standards/">Best Organic Baby Formulas (2026): US vs. European Standards, Heavy Metal Audit &amp; Brand Comparison</a></h3>
-            <p class="post-card-excerpt">Interactive US vs. EU Formula Matcher (Bobbie, Kendamil, ByHeart, HiPP, Holle, Kabrita) + 2025 Consumer Reports Heavy Metal Audit.</p>
-            <a href="/baby-care/best-organic-baby-formulas-us-vs-european-standards/" class="post-card-action">Audit Organic Formulas &rarr;</a>
-          </div>
-        </article>
-
-        <article class="post-card post-card--flagship">
-          <a href="/baby-care/safest-non-toxic-nursery-mattresses-breathable-cribs/" class="post-card-thumb-wrap"><span class="post-card-badge">GOTS &amp; CPSC Audit</span>
-            <img src="/assets/images/clinical/clinical-pediatric-neonatal.svg" alt="Safest Non-Toxic Crib Mattresses & Breathable Cribs" loading="lazy"  onerror="this.style.display='none';" /></a>
-          <div class="post-card-body">
-            <span class="post-card-category">Environmental Toxicology &amp; Safe Sleep</span>
-            <h3 class="post-card-title"><a href="/baby-care/safest-non-toxic-nursery-mattresses-breathable-cribs/">Safest Non-Toxic Crib Mattresses &amp; Breathable Cribs (2026): CPSC Standards, GOTS vs. Greenguard Gold</a></h3>
-            <p class="post-card-excerpt">Compare Naturepedic, Newton Wovenaire, Avocado, Lullaby Earth &amp; Babyletto + CPSC 16 CFR 1241 Two-Finger Fit Audit.</p>
-            <a href="/baby-care/safest-non-toxic-nursery-mattresses-breathable-cribs/" class="post-card-action">Audit Crib Mattresses &rarr;</a>
-          </div>
-        </article>
-
-        <article class="post-card post-card--flagship">
-          <a href="/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/" class="post-card-thumb-wrap"><span class="post-card-badge">Flagship Protocol</span>
-            <img src="/wp-content/uploads/2025/12/creating-a-routine-for-your-newborn.png" alt="The Pediatric Sleep Architecture Protocol" loading="lazy"  onerror="this.style.display='none';" /></a>
-          <div class="post-card-body">
-            <span class="post-card-category">Infant Sleep Protocol</span>
-            <h3 class="post-card-title"><a href="/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/">The Pediatric Sleep Architecture Protocol: Wake Windows &amp; Cortisol Rhythms (0–24 Months)</a></h3>
-            <p class="post-card-excerpt">Clinical reference guide: master adenosine sleep pressure, cortisol dysregulation, and nap transition schedules.</p>
-            <a href="/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/" class="post-card-action">Read Full Protocol &rarr;</a>
-          </div>
-        </article>
-
-        <article class="post-card">
-          <a href="/baby-care/creating-a-routine-for-your-newborn/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2024/08/Creating-a-Routine-for-Your-Newborn.jpeg" alt="Creating a Routine for Your Newborn" loading="lazy"  onerror="this.style.display='none';" />
+        <article class="post-card post-card--flagship" data-subcat="nicu-growth-neuro">
+          <a href="/baby-care/nicu-preemie-discharge-checklist-corrected-age-guide/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-nicu-preemie-discharge-checklist-corrected-age-guide.svg" alt="NICU Preemie Discharge Checklist &amp; Corrected Age Milestone Guide (Neonatologist-Reviewed) — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/creating-a-routine-for-your-newborn/">Creating a Routine for Your Newborn</a></h3>
-          <p class="post-card-excerpt">Welcoming a newborn into your life is an exciting yet challenging experience. One of the most effective ways to navigate this new chapter is by...</p>
-            <a href="/baby-care/creating-a-routine-for-your-newborn/" class="post-card-action">Read Creating a Routine for Your Newborn Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>NICU Preemie Care, IUGR &amp; Catch-Up Growth</span>
+              <span>•</span>
+              <span>Flagship Interactive Suite</span>
+              <span>•</span>
+              <span>ICD-10: P07.30</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/nicu-preemie-discharge-checklist-corrected-age-guide/">NICU Preemie Discharge Checklist &amp; Corrected Age Milestone Guide (Neonatologist-Reviewed)</a></h3>
+            <p class="post-card-excerpt">Calculate Preemie Corrected Age vs. Chronological Age, Postmenstrual Age (PMA), 22–24 kcal fortification recipes, and the 4 physiological NICU graduation pillars.</p>
+            <a href="/baby-care/nicu-preemie-discharge-checklist-corrected-age-guide/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/should-i-wake-a-sleeping-newborn-to-feed/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2025/12/Should-I-Wake-a-Sleeping-Newborn-to-Feed.png" alt="Should I Wake a Sleeping Newborn to Feed?" loading="lazy"  onerror="this.style.display='none';" />
+
+        <article class="post-card post-card--flagship" data-subcat="gi-fever-acute">
+          <a href="/baby-care/silent-reflux-lpr-vs-colic-newborns-protocol/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-silent-reflux-lpr-vs-colic-newborns-protocol.svg" alt="Silent Reflux (LPR) vs. Colic in Newborns: How to Tell the Difference &amp; Follow a Safe Feeding/Positioning Protocol — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/should-i-wake-a-sleeping-newborn-to-feed/">Should I Wake a Sleeping Newborn to Feed?</a></h3>
-          <p class="post-card-excerpt">The old adage says &quot;never wake a sleeping baby,&quot; but in the precious first few weeks, that's not always the best advice. We're here to gently guide you...</p>
-            <a href="/baby-care/should-i-wake-a-sleeping-newborn-to-feed/" class="post-card-action">Read Should I Wake a Sleeping Newborn to Feed Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Pediatric Gastroenterology &amp; Reflux</span>
+              <span>•</span>
+              <span>Flagship Interactive Suite</span>
+              <span>•</span>
+              <span>ICD-10: K21.9</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/silent-reflux-lpr-vs-colic-newborns-protocol/">Silent Reflux (LPR) vs. Colic in Newborns: How to Tell the Difference &amp; Follow a Safe Feeding/Positioning Protocol</a></h3>
+            <p class="post-card-excerpt">Differentiate Silent Reflux (LPR), GERD, Rome IV Colic, and Cow's Milk Protein Allergy (CMPA) + follow the 5-step NASPGHAN conservative positioning and feeding protocol.</p>
+            <a href="/baby-care/silent-reflux-lpr-vs-colic-newborns-protocol/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/bottle-refusal-fixes/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2025/12/Bottle-Refusal-Fixes.png" alt="Bottle Refusal Fixes: A Guide for Breastfed Babies" loading="lazy"  onerror="this.style.display='none';" />
+
+        <article class="post-card post-card--flagship" data-subcat="feeding-formula">
+          <a href="/baby-care/hypoallergenic-vs-extensively-hydrolyzed-vs-goat-milk-formula/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-hypoallergenic-vs-extensively-hydrolyzed-vs-goat-milk-formula.svg" alt="Hypoallergenic vs. Extensively Hydrolyzed vs. Goat Milk Formula: The Complete Pediatric Protein Breakdown — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/bottle-refusal-fixes/">Bottle Refusal Fixes: A Guide for Breastfed Babies</a></h3>
-            <p class="post-card-excerpt">Struggling with bottle refusal? BabieBlue offers gentle, effective tips for a breastfed baby who won&#x27;t take a bottle. Learn about paced...</p>
-            <a href="/baby-care/bottle-refusal-fixes/" class="post-card-action">Read Bottle Refusal Fixes Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Allergy, CMPA &amp; Clinical Formula</span>
+              <span>•</span>
+              <span>Flagship Interactive Suite</span>
+              <span>•</span>
+              <span>ICD-10: K52.29</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/hypoallergenic-vs-extensively-hydrolyzed-vs-goat-milk-formula/">Hypoallergenic vs. Extensively Hydrolyzed vs. Goat Milk Formula: The Complete Pediatric Protein Breakdown</a></h3>
+            <p class="post-card-excerpt">Compare intact goat milk, partially hydrolyzed, extensively hydrolyzed (eHF &lt;3,000 Daltons), and elemental amino acid formulas for CMPA + insurance coverage.</p>
+            <a href="/baby-care/hypoallergenic-vs-extensively-hydrolyzed-vs-goat-milk-formula/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/baby-formula/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/03/Baby-Formula.png" alt="A Complete Guide to Baby Formula: Everything You want to Know" loading="lazy"  onerror="this.style.display='none';" />
+
+        <article class="post-card post-card--flagship" data-subcat="feeding-formula">
+          <a href="/baby-care/best-organic-baby-formulas-us-vs-european-standards/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-best-organic-baby-formulas-us-vs-european-standards.svg" alt="Best Organic Baby Formulas (2026): Complete US vs. European Standards Comparison — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/baby-formula/">A Complete Guide to Baby Formula: Everything You want to Know</a></h3>
-            <p class="post-card-excerpt">Looking for the best baby formula for your little one? Our article covers everything you need to know about baby formula, including types, i...</p>
-            <a href="/baby-care/baby-formula/" class="post-card-action">Read A Complete Guide to Baby Formula Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Regulatory Toxicology &amp; Clinical Formula</span>
+              <span>•</span>
+              <span>Flagship Interactive Suite</span>
+              <span>•</span>
+              <span>ICD-10: Z72.4</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/best-organic-baby-formulas-us-vs-european-standards/">Best Organic Baby Formulas (2026): Complete US vs. European Standards Comparison</a></h3>
+            <p class="post-card-excerpt">Updated for FDA Operation Stork Speed (2026): Compare US vs. European organic baby formula standards, carbs, DHA, iron, heavy-metal data &amp; top safe picks.</p>
+            <a href="/baby-care/best-organic-baby-formulas-us-vs-european-standards/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/babybrezza-formula-maker-for-perfect-baby-feedings/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/07/Babie-Blue-babybrezza-powder-setting.png" alt="BabyBrezza Formula Maker: Optimizing Your Formula Pro Global Settings for Perfect Baby Feedings" loading="lazy"  onerror="this.style.display='none';" />
+
+        <article class="post-card post-card--flagship" data-subcat="sleep-routines">
+          <a href="/baby-care/safest-non-toxic-nursery-mattresses-breathable-cribs/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-safest-non-toxic-nursery-mattresses-breathable-cribs.svg" alt="Safest Non-Toxic Nursery Mattresses &amp; Breathable Cribs (2026 CPSC &amp; Pediatric Safety Guide) — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/babybrezza-formula-maker-for-perfect-baby-feedings/">BabyBrezza Formula Maker: Optimizing Your Formula Pro Global Settings for Perfect Baby Feedings</a></h3>
-          <p class="post-card-excerpt">When it comes to providing optimal nutrition for your baby, understanding how to optimize the settings of your BabyBrezza Formula maker Pro Global is...</p>
-            <a href="/baby-care/babybrezza-formula-maker-for-perfect-baby-feedings/" class="post-card-action">Read BabyBrezza Formula Maker Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Environmental Toxicology &amp; Safe Sleep</span>
+              <span>•</span>
+              <span>Flagship Interactive Suite</span>
+              <span>•</span>
+              <span>ICD-10: Z00.129</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/safest-non-toxic-nursery-mattresses-breathable-cribs/">Safest Non-Toxic Nursery Mattresses &amp; Breathable Cribs (2026 CPSC &amp; Pediatric Safety Guide)</a></h3>
+            <p class="post-card-excerpt">Compare GOTS, GOLS, and GREENGUARD Gold certifications, the CPSC 16 CFR 1241 firmness rule, and Newton vs. Naturepedic vs. Avocado crib mattresses.</p>
+            <a href="/baby-care/safest-non-toxic-nursery-mattresses-breathable-cribs/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
+
+        <article class="post-card post-card--flagship" data-subcat="sleep-routines">
+          <a href="/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-pediatric-sleep-architecture-wake-windows-0-24-months.svg" alt="The Pediatric Sleep Architecture Protocol: Wake Windows, Cortisol Rhythms &amp; Nap Consolidation (0–24 Months) — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>Infant Sleep, Wake Windows &amp; Safe Crib Setup</span>
+              <span>•</span>
+              <span>Flagship Interactive Suite</span>
+              <span>•</span>
+              <span>ICD-10: G47.9</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/">The Pediatric Sleep Architecture Protocol: Wake Windows, Cortisol Rhythms &amp; Nap Consolidation (0–24 Months)</a></h3>
+            <p class="post-card-excerpt">Clinical reference guide to infant sleep neurobiology (Process S adenosine sleep pressure vs. Process C pineal melatonin), overtired cortisol spikes, and 0–24m wake windows.</p>
+            <a href="/baby-care/pediatric-sleep-architecture-wake-windows-0-24-months/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-subcat="feeding-formula">
           <a href="/baby-care/5-gentle-ways-to-get-your-newborn-to-burp/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2025/11/5-Gentle-Ways-to-Get-Your-Newborn-to-Burp.png" alt="5 Gentle Ways to Get Your Newborn to Burp: A Complete Guide for New Parents" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/baby-care-5-gentle-ways-to-get-your-newborn-to-burp.svg" alt="5 Gentle Ways to Burp a Newborn: Esophageal Alignment, Gas Relief &amp; Paced Feeding Protocol — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/5-gentle-ways-to-get-your-newborn-to-burp/">5 Gentle Ways to Get Your Newborn to Burp: A Complete Guide for New Parents</a></h3>
-          <p class="post-card-excerpt">Select the specific behavior your baby is demonstrating right now for immediate step-by-step clinical triage:</p>
-            <a href="/baby-care/5-gentle-ways-to-get-your-newborn-to-burp/" class="post-card-action">Read 5 Gentle Ways to Get Your Newborn to Burp Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Lactation, Bottle Pacing &amp; Infant Nutrition</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: R14.2</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/5-gentle-ways-to-get-your-newborn-to-burp/">5 Gentle Ways to Burp a Newborn: Esophageal Alignment, Gas Relief &amp; Paced Feeding Protocol</a></h3>
+            <p class="post-card-excerpt">Pediatrician-reviewed guide to 5 gentle newborn burping positions, lower esophageal sphincter physiology, mid-feed burp intervals, and gas vs. reflux triage.</p>
+            <a href="/baby-care/5-gentle-ways-to-get-your-newborn-to-burp/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/safest-way-to-introduce-allergens-to-babies/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2025/06/Whats-the-Safest-Way-to-Introduce-Allergens-to-Babies.png" alt="What’s the Safest Way to Introduce Allergens to Babies?" loading="lazy"  onerror="this.style.display='none';" />
+
+        <article class="post-card" data-subcat="feeding-formula">
+          <a href="/baby-care/baby-formula/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-baby-formula.svg" alt="Complete Clinical Guide to Baby Formula: Protein Tiers, FDA/WHO Preparation &amp; Volume Math — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/safest-way-to-introduce-allergens-to-babies/">What’s the Safest Way to Introduce Allergens to Babies?</a></h3>
-          <p class="post-card-excerpt">A Modern, Evidence-Based Guide for Parents on Early, Safe, and Confident Allergen Introduction</p>
-            <a href="/baby-care/safest-way-to-introduce-allergens-to-babies/" class="post-card-action">Read What’s the Safest Way to Introduce Aller Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Lactation, Bottle Pacing &amp; Infant Nutrition</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: Z72.4</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/baby-formula/">Complete Clinical Guide to Baby Formula: Protein Tiers, FDA/WHO Preparation &amp; Volume Math</a></h3>
+            <p class="post-card-excerpt">Evidence-based pediatric guide to cow's milk, partially/extensively hydrolyzed, and amino acid infant formulas, safe 158°F/70°C preparation, and daily oz math.</p>
+            <a href="/baby-care/baby-formula/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/what-foods-should-i-avoid-giving-my-baby/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2025/06/What-Foods-Should-I-Avoid-Giving-My-Baby.png" alt="What Foods Should I Avoid Giving My Baby? The Ultimate Guide" loading="lazy"  onerror="this.style.display='none';" />
+
+        <article class="post-card" data-subcat="feeding-formula">
+          <a href="/baby-care/babybrezza-formula-maker-for-perfect-baby-feedings/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-babybrezza-formula-maker-for-perfect-baby-feedings.svg" alt="Baby Brezza Formula Pro Calibration &amp; Safety Audit: Powder Setting Verification &amp; Funnel Hygiene Protocol — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/what-foods-should-i-avoid-giving-my-baby/">What Foods Should I Avoid Giving My Baby? The Ultimate Guide</a></h3>
-            <p class="post-card-excerpt">The definitive, science-backed guide for parents on foods to avoid giving your baby. Learn about choking hazards, allergens, and unsafe ingr...</p>
-            <a href="/baby-care/what-foods-should-i-avoid-giving-my-baby/" class="post-card-action">Read What Foods Should I Avoid Giving My Baby Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Lactation, Bottle Pacing &amp; Infant Nutrition</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: Z72.4</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/babybrezza-formula-maker-for-perfect-baby-feedings/">Baby Brezza Formula Pro Calibration &amp; Safety Audit: Powder Setting Verification &amp; Funnel Hygiene Protocol</a></h3>
+            <p class="post-card-excerpt">Clinical safety and calibration guide for automated formula dispensers (Baby Brezza Formula Pro): gram-scale weight audit, funnel cleaning every 4 bottles, and Cronobacter rules.</p>
+            <a href="/baby-care/babybrezza-formula-maker-for-perfect-baby-feedings/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/when-do-babies-start-to-crawl/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2024/10/When-Do-Babies-Start-to-Crawl.png" alt="When Do Babies Start to Crawl? A Comprehensive Guide for Parents" loading="lazy"  onerror="this.style.display='none';" />
+
+        <article class="post-card" data-subcat="feeding-formula">
+          <a href="/baby-care/bottle-refusal-fixes/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-bottle-refusal-fixes.svg" alt="Bottle Refusal in Breastfed Babies: Oral-Motor Reflexes, Lipase Taste &amp; Paced Introduction Protocol — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/when-do-babies-start-to-crawl/">When Do Babies Start to Crawl? A Comprehensive Guide for Parents</a></h3>
-            <p class="post-card-excerpt">In this Comprehensive guide know When Do Babies Start to Crawl. learn about different crawling styles</p>
-            <a href="/baby-care/when-do-babies-start-to-crawl/" class="post-card-action">Read When Do Babies Start to Crawl Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Lactation, Bottle Pacing &amp; Infant Nutrition</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: R63.3</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/bottle-refusal-fixes/">Bottle Refusal in Breastfed Babies: Oral-Motor Reflexes, Lipase Taste &amp; Paced Introduction Protocol</a></h3>
+            <p class="post-card-excerpt">IBCLC &amp; pediatrician-reviewed protocol to overcome bottle refusal in breastfed babies: sucking reflex maturation, high-lipase milk scalding, and zero-pressure pacing.</p>
+            <a href="/baby-care/bottle-refusal-fixes/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/what-does-fussy-mean/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2025/12/What-Does-Fussy-Mean-A-New-Parents-Guide-to-Baby-Cues.png" alt="What Does Fussy Mean? A New Parent&#x27;s Guide to Baby Cues" loading="lazy"  onerror="this.style.display='none';" />
+
+        <article class="post-card" data-subcat="sleep-routines">
+          <a href="/baby-care/creating-a-routine-for-your-newborn/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-creating-a-routine-for-your-newborn.svg" alt="Creating a Newborn Daily Routine (0–16 Weeks): Eat-Play-Sleep, Circadian Light &amp; Cue-Based Rhythm — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/what-does-fussy-mean/">What Does Fussy Mean? A New Parent&#x27;s Guide to Baby Cues</a></h3>
-            <p class="post-card-excerpt">Feeling lost when your newborn is fussy? BabieBlue helps you interpret the subtle differences between hunger cues and tired cues, so you can...</p>
-            <a href="/baby-care/what-does-fussy-mean/" class="post-card-action">Read What Does Fussy Mean Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Infant Sleep, Wake Windows &amp; Safe Crib Setup</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: Z00.110</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/creating-a-routine-for-your-newborn/">Creating a Newborn Daily Routine (0–16 Weeks): Eat-Play-Sleep, Circadian Light &amp; Cue-Based Rhythm</a></h3>
+            <p class="post-card-excerpt">Pediatrician-reviewed guide to building a flexible newborn routine (0–16 weeks): responsive feeding intervals, morning daylight entrainment, and safe sleep rituals.</p>
+            <a href="/baby-care/creating-a-routine-for-your-newborn/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/neonatal-care/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/03/NeonatalCare-1.png" alt="The Power of Neonatal Medicine in Promoting Healthy Development for Premature and Sick Newborns" loading="lazy"  onerror="this.style.display='none';" />
-          </a>
-          <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/neonatal-care/">The Power of Neonatal Medicine in Promoting Healthy Development for Premature and Sick Newborns</a></h3>
-            <p class="post-card-excerpt">This article explores the critical importance of neonatal care in supporting the health and development of premature and sick newborns. With...</p>
-            <a href="/baby-care/neonatal-care/" class="post-card-action">Read The Power of Neonatal Medicine in Promot Guide &rarr;</a>
-          </div>
-        </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/iugr-baby/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/03/IUGR.png" alt="IUGR: Understanding Intrauterine Growth Restriction and Its Implications for Your Baby&#x27;s Health" loading="lazy"  onerror="this.style.display='none';" />
-          </a>
-          <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/iugr-baby/">IUGR: Understanding Intrauterine Growth Restriction and Its Implications for Your Baby&#x27;s Health</a></h3>
-            <p class="post-card-excerpt">Learn about Intrauterine Growth Restriction (IUGR) and its potential effects on your baby&#x27;s health. Discover the causes, symptoms, and ...</p>
-            <a href="/baby-care/iugr-baby/" class="post-card-action">Read IUGR Guide &rarr;</a>
-          </div>
-        </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/mrsa-in-newborn-babies/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2025/08/MRSA-in-Newborn-Babies.jpeg" alt="MRSA in Newborn Babies: A Comprehensive Guide to Treatment and Care" loading="lazy"  onerror="this.style.display='none';" />
-          </a>
-          <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/mrsa-in-newborn-babies/">MRSA in Newborn Babies: A Comprehensive Guide to Treatment and Care</a></h3>
-            <p class="post-card-excerpt">An authoritative, empathetic guide for parents on the treatment of MRSA in newborns. Explore symptoms, diagnosis, antibiotic therapy, NICU c...</p>
-            <a href="/baby-care/mrsa-in-newborn-babies/" class="post-card-action">Read MRSA in Newborn Babies Guide &rarr;</a>
-          </div>
-        </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/understanding-sudden-infant-death-syndrome-sids/" class="post-card-thumb-wrap">
-            <img src="/assets/images/clinical/clinical-pediatric-neonatal.svg" alt="Understanding Sudden Infant Death Syndrome (SIDS)" loading="lazy"  onerror="this.style.display='none';" />
-          </a>
-          <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/understanding-sudden-infant-death-syndrome-sids/">Understanding Sudden Infant Death Syndrome (SIDS)</a></h3>
-            <p class="post-card-excerpt">Delve into the complexities of sudden infant death syndrome (SIDS), covering risk factors, preventive measures, and available support resour...</p>
-            <a href="/baby-care/understanding-sudden-infant-death-syndrome-sids/" class="post-card-action">Read Understanding Sudden Infant Death Syndro Guide &rarr;</a>
-          </div>
-        </article>
-        
-        <article class="post-card">
+
+        <article class="post-card" data-subcat="nicu-growth-neuro">
           <a href="/baby-care/essential-tips-for-traveling-with-a-baby/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2025/03/Essential-Tips-for-Traveling-with-a-Baby.jpg" alt="Essential Tips for Traveling with a Baby: A Parent’s Guide" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/baby-care-essential-tips-for-traveling-with-a-baby.svg" alt="Traveling with a Baby (Car &amp; Flight Clinical Guide): 2-Hour Car Seat Rule, Cabin Ear Pressure &amp; Milk Transport — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/essential-tips-for-traveling-with-a-baby/">Essential Tips for Traveling with a Baby: A Parent’s Guide</a></h3>
-            <p class="post-card-excerpt">This guide, &quot;Essential Tips for Traveling with a Baby: A Parent’s Guide,&quot; is your ultimate resource for navigating the complexitie...</p>
-            <a href="/baby-care/essential-tips-for-traveling-with-a-baby/" class="post-card-action">Read Essential Tips for Traveling with a Baby Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Infant Safety, Milestones &amp; Travel</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: Z00.129</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/essential-tips-for-traveling-with-a-baby/">Traveling with a Baby (Car &amp; Flight Clinical Guide): 2-Hour Car Seat Rule, Cabin Ear Pressure &amp; Milk Transport</a></h3>
+            <p class="post-card-excerpt">Pediatric safety protocol for road trips and flights with an infant: the 2-hour car seat positional asphyxiation rule, cabin barotrauma relief, and TSA breastmilk transport.</p>
+            <a href="/baby-care/essential-tips-for-traveling-with-a-baby/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/top-safety-tips-for-new-parents/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2025/07/Top-Safety-Tips-for-New-Parents-The-Ultimate-Guide.png" alt="Top Safety Tips for New Parents: The Ultimate Guide" loading="lazy"  onerror="this.style.display='none';" />
-          </a>
-          <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/top-safety-tips-for-new-parents/">Top Safety Tips for New Parents: The Ultimate Guide</a></h3>
-          <p class="post-card-excerpt">The New Parent's Safety Bible A definitive guide to navigating the world of baby safety. Move from anxiety to empowerment with comprehensive, actionable...</p>
-            <a href="/baby-care/top-safety-tips-for-new-parents/" class="post-card-action">Read Top Safety Tips for New Parents Guide &rarr;</a>
-          </div>
-        </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/unlocking-the-secrets-of-baby-brains-how-early-development-mirrors-ai-learning-models/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2024/06/a-thought-provoking-image-that-juxtaposes-a-young-afYqizBDSMKeQ1uy7h6p1g-zKPlI5HeS1iTY2AUEn_-hA.png" alt="Unlocking the Secrets of Baby Brains: How Early Development Mirrors AI Learning Models" loading="lazy"  onerror="this.style.display='none';" />
-          </a>
-          <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/unlocking-the-secrets-of-baby-brains-how-early-development-mirrors-ai-learning-models/">Unlocking the Secrets of Baby Brains: How Early Development Mirrors AI Learning Models</a></h3>
-          <p class="post-card-excerpt">In a world increasingly dominated by artificial intelligence, understanding how machines learn has become a key focus of research. But what if the key...</p>
-            <a href="/baby-care/unlocking-the-secrets-of-baby-brains-how-early-development-mirrors-ai-learning-models/" class="post-card-action">Read Unlocking the Secrets of Baby Brains Guide &rarr;</a>
-          </div>
-        </article>
-        
-        <article class="post-card">
+
+        <article class="post-card" data-subcat="genetics-congenital">
           <a href="/baby-care/fetal-alcohol-spectrum-disorders/" class="post-card-thumb-wrap">
-            <img src="/assets/images/clinical/clinical-pediatric-neonatal.svg" alt="Navigating Fetal Alcohol Spectrum Disorders: Awareness and Support" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/baby-care-fetal-alcohol-spectrum-disorders.svg" alt="Fetal Alcohol Spectrum Disorders (FASD): Pediatric Diagnostic Criteria, Neurobehavioral Support &amp; Early Intervention — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/fetal-alcohol-spectrum-disorders/">Navigating Fetal Alcohol Spectrum Disorders: Awareness and Support</a></h3>
-            <p class="post-card-excerpt">Delve into the complexities of fetal alcohol spectrum disorders, raising awareness and providing support.</p>
-            <a href="/baby-care/fetal-alcohol-spectrum-disorders/" class="post-card-action">Read Navigating Fetal Alcohol Spectrum Disord Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Pediatric Genetics, Neurodevelopment &amp; Teratology</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: Q86.0</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/fetal-alcohol-spectrum-disorders/">Fetal Alcohol Spectrum Disorders (FASD): Pediatric Diagnostic Criteria, Neurobehavioral Support &amp; Early Intervention</a></h3>
+            <p class="post-card-excerpt">Clinical pediatric guide to Fetal Alcohol Spectrum Disorders (FASD): Hoyme 4-domain diagnostic criteria, craniofacial features, executive function therapy, and IDEA Part C support.</p>
+            <a href="/baby-care/fetal-alcohol-spectrum-disorders/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
+
+        <article class="post-card" data-subcat="genetics-congenital">
           <a href="/baby-care/foetal-alcohol-syndrome-understanding-the-effects/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/06/Foetal-Alcohol-Syndrome-2.png" alt="Foetal Alcohol Syndrome (FAS): Understanding the Effects of Alcohol on Pregnancy" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/baby-care-foetal-alcohol-syndrome-understanding-the-effects.svg" alt="Foetal Alcohol Syndrome (FAS): Embryonic Teratogenicity, Trimester Vulnerability &amp; Clinical Prevention — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/foetal-alcohol-syndrome-understanding-the-effects/">Foetal Alcohol Syndrome (FAS): Understanding the Effects of Alcohol on Pregnancy</a></h3>
-            <p class="post-card-excerpt">Learn about the detrimental effects of Foetal Alcohol Syndrome (FAS) caused by alcohol consumption during pregnancy. Understand the physical...</p>
-            <a href="/baby-care/foetal-alcohol-syndrome-understanding-the-effects/" class="post-card-action">Read Foetal Alcohol Syndrome (FAS) Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Pediatric Genetics, Neurodevelopment &amp; Teratology</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: Q86.0</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/foetal-alcohol-syndrome-understanding-the-effects/">Foetal Alcohol Syndrome (FAS): Embryonic Teratogenicity, Trimester Vulnerability &amp; Clinical Prevention</a></h3>
+            <p class="post-card-excerpt">Clinical guide to Foetal Alcohol Syndrome (FAS): placental ethanol kinetics, neural crest cell apoptosis, trimester-specific organ vulnerability, and neonatal care.</p>
+            <a href="/baby-care/foetal-alcohol-syndrome-understanding-the-effects/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/understanding-tay-sachs-disease-causes-and-support/" class="post-card-thumb-wrap">
-            <img src="/assets/images/clinical/clinical-pediatric-neonatal.svg" alt="Understanding Tay" loading="lazy"  onerror="this.style.display='none';" />
+
+        <article class="post-card" data-subcat="nicu-growth-neuro">
+          <a href="/baby-care/iugr-baby/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-iugr-baby.svg" alt="IUGR (Intrauterine Growth Restriction) Baby Guide: Symmetric vs. Asymmetric Doppler, Neonatal Hypoglycemia &amp; Catch-Up Growth — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/understanding-tay-sachs-disease-causes-and-support/">Understanding Tay</a></h3>
-            <p class="post-card-excerpt">Delve into the complexities of Tay-Sachs disease, covering causes and available support. This guide provides valuable information for indivi...</p>
-            <a href="/baby-care/understanding-tay-sachs-disease-causes-and-support/" class="post-card-action">Read Understanding Tay Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>NICU Preemie Care, IUGR &amp; Catch-Up Growth</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: P05.9</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/iugr-baby/">IUGR (Intrauterine Growth Restriction) Baby Guide: Symmetric vs. Asymmetric Doppler, Neonatal Hypoglycemia &amp; Catch-Up Growth</a></h3>
+            <p class="post-card-excerpt">Clinical guide to Intrauterine Growth Restriction (IUGR / FGR) newborns: brain-sparing asymmetric vs. symmetric growth, neonatal glucose checks, and 22–24 kcal catch-up nutrition.</p>
+            <a href="/baby-care/iugr-baby/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/baby-care/understanding-hexosaminidase-a-deficiency/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2025/10/clean-modern-conceptual-gaffi-word-art-brand-logo-_Understanding-Hexosaminidase-A-Deficiency_.jpg" alt="Understanding Hexosaminidase A Deficiency" loading="lazy"  onerror="this.style.display='none';" />
-          </a>
-          <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/understanding-hexosaminidase-a-deficiency/">Understanding Hexosaminidase A Deficiency</a></h3>
-            <p class="post-card-excerpt">An in-depth guide to Hexosaminidase A Deficiency, including Tay-Sachs disease. Explore the genetics, the full spectrum of infantile to late-...</p>
-            <a href="/baby-care/understanding-hexosaminidase-a-deficiency/" class="post-card-action">Read Understanding Hexosaminidase A Deficiency Guide &rarr;</a>
-          </div>
-        </article>
-        
-        <article class="post-card">
+
+        <article class="post-card" data-subcat="genetics-congenital">
           <a href="/baby-care/living-with-thalassemia-symptoms-and-lifestyle/" class="post-card-thumb-wrap">
-            <img src="/assets/images/clinical/clinical-pediatric-neonatal.svg" alt="Living with Thalassemia: Symptoms and Lifestyle" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/baby-care-living-with-thalassemia-symptoms-and-lifestyle.svg" alt="Thalassemia in Infants &amp; Children: Newborn Hemoglobin Electrophoresis, Alpha vs. Beta Trait &amp; Iron Rules — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Infant</span>
-            <h3 class="post-card-title"><a href="/baby-care/living-with-thalassemia-symptoms-and-lifestyle/">Living with Thalassemia: Symptoms and Lifestyle</a></h3>
-            <p class="post-card-excerpt">This guide empowers individuals with thalassemia to navigate daily life, providing information on managing symptoms and promoting overall we...</p>
-            <a href="/baby-care/living-with-thalassemia-symptoms-and-lifestyle/" class="post-card-action">Read Living with Thalassemia Guide &rarr;</a>
+            <div class="post-card-meta-line">
+              <span>Pediatric Hematology &amp; Genetic Screening</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: D56.9</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/living-with-thalassemia-symptoms-and-lifestyle/">Thalassemia in Infants &amp; Children: Newborn Hemoglobin Electrophoresis, Alpha vs. Beta Trait &amp; Iron Rules</a></h3>
+            <p class="post-card-excerpt">Clinical pediatric hematology guide to Alpha and Beta Thalassemia: newborn screening (Hb Bart's / HbA2), microcytic anemia vs. iron deficiency (Mentzer Index), and care.</p>
+            <a href="/baby-care/living-with-thalassemia-symptoms-and-lifestyle/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
           </div>
         </article>
-        
+
+        <article class="post-card" data-subcat="gi-fever-acute">
+          <a href="/baby-care/mrsa-in-newborn-babies/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-mrsa-in-newborn-babies.svg" alt="MRSA in Newborn Babies: Pustulosis Recognition, Umbilical Omphalitis Triage &amp; Decolonization Protocol — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>Neonatal Infectious Disease &amp; Skin Triage</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: P36.2</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/mrsa-in-newborn-babies/">MRSA in Newborn Babies: Pustulosis Recognition, Umbilical Omphalitis Triage &amp; Decolonization Protocol</a></h3>
+            <p class="post-card-excerpt">Neonatal infectious disease guide to MRSA in newborns: differentiating MRSA pustules from erythema toxicum, antibiotic selection (Mupirocin/Vancomycin), and NICU hygiene.</p>
+            <a href="/baby-care/mrsa-in-newborn-babies/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-subcat="nicu-growth-neuro">
+          <a href="/baby-care/neonatal-care/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-neonatal-care.svg" alt="Neonatal Care &amp; NICU Levels (I–IV): Golden Hour Stabilization, Kangaroo Care &amp; Premature Neuroprotection — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>NICU Preemie Care, IUGR &amp; Catch-Up Growth</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: P07.30</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/neonatal-care/">Neonatal Care &amp; NICU Levels (I–IV): Golden Hour Stabilization, Kangaroo Care &amp; Premature Neuroprotection</a></h3>
+            <p class="post-card-excerpt">Comprehensive neonatology guide to the 4 AAP NICU levels of care, Golden Hour delivery room thermoregulation, surfactant &amp; CPAP respiratory support, and Kangaroo Care.</p>
+            <a href="/baby-care/neonatal-care/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-subcat="feeding-formula">
+          <a href="/baby-care/safest-way-to-introduce-allergens-to-babies/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-safest-way-to-introduce-allergens-to-babies.svg" alt="Safest Way to Introduce Allergens to Babies (4–6 Months): LEAP/EAT Protocol, Big 9 Dosing &amp; Reaction Triage — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>Allergy, CMPA &amp; Clinical Formula</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: Z72.4</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/safest-way-to-introduce-allergens-to-babies/">Safest Way to Introduce Allergens to Babies (4–6 Months): LEAP/EAT Protocol, Big 9 Dosing &amp; Reaction Triage</a></h3>
+            <p class="post-card-excerpt">Evidence-based pediatric immunology guide to early allergen introduction at 4–6 months (LEAP &amp; EAT trials): Big 9 dosing recipes, 3x/week maintenance, and hives vs. anaphylaxis.</p>
+            <a href="/baby-care/safest-way-to-introduce-allergens-to-babies/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-subcat="sleep-routines">
+          <a href="/baby-care/should-i-wake-a-sleeping-newborn-to-feed/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-should-i-wake-a-sleeping-newborn-to-feed.svg" alt="Should I Wake a Sleeping Newborn to Feed? Birth Weight Recovery, Glucose &amp; Bilirubin Clinical Rules — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>Lactation, Bottle Pacing &amp; Infant Sleep</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: Z00.110</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/should-i-wake-a-sleeping-newborn-to-feed/">Should I Wake a Sleeping Newborn to Feed? Birth Weight Recovery, Glucose &amp; Bilirubin Clinical Rules</a></h3>
+            <p class="post-card-excerpt">AAP-aligned clinical guide on when to wake a sleeping newborn to feed (every 2–3h day / 3–4h night) vs. when you can safely let your baby sleep longer stretches.</p>
+            <a href="/baby-care/should-i-wake-a-sleeping-newborn-to-feed/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-subcat="nicu-growth-neuro">
+          <a href="/baby-care/top-safety-tips-for-new-parents/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-top-safety-tips-for-new-parents.svg" alt="Top Pediatric Safety Protocol for New Parents: Safe Sleep (ABC), 120°F Bath Scald Prevention, Car Seat &amp; Choking — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>Infant Safety, Milestones &amp; Travel</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: Z00.129</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/top-safety-tips-for-new-parents/">Top Pediatric Safety Protocol for New Parents: Safe Sleep (ABC), 120°F Bath Scald Prevention, Car Seat &amp; Choking</a></h3>
+            <p class="post-card-excerpt">Comprehensive AAP &amp; CPSC infant safety manual: Safe Sleep ABCs, 120°F water heater scald prevention, rear-facing car seat geometry, button battery &amp; poison hazards.</p>
+            <a href="/baby-care/top-safety-tips-for-new-parents/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-subcat="genetics-congenital">
+          <a href="/baby-care/understanding-hexosaminidase-a-deficiency/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-understanding-hexosaminidase-a-deficiency.svg" alt="Hexosaminidase A (Hex-A) Deficiency: HEXA Gene Biochemistry, GM2 Gangliosidosis Spectrum &amp; Carrier Screening — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>Pediatric Genetics &amp; Lysosomal Storage Disorders</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: E75.02</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/understanding-hexosaminidase-a-deficiency/">Hexosaminidase A (Hex-A) Deficiency: HEXA Gene Biochemistry, GM2 Gangliosidosis Spectrum &amp; Carrier Screening</a></h3>
+            <p class="post-card-excerpt">Clinical genetics guide to Hexosaminidase A (Hex-A) deficiency: alpha-subunit HEXA mutations, neuronal GM2 ganglioside accumulation, infantile vs. juvenile/LOTS forms, and testing.</p>
+            <a href="/baby-care/understanding-hexosaminidase-a-deficiency/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-subcat="sleep-routines">
+          <a href="/baby-care/understanding-sudden-infant-death-syndrome-sids/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-understanding-sudden-infant-death-syndrome-sids.svg" alt="Understanding Sudden Infant Death Syndrome (SIDS): Triple-Risk Neurobiology, 2022–2026 AAP Safe Sleep Rules &amp; Protective Factors — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>Infant Sleep, Wake Windows &amp; Safe Crib Setup</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: R99</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/understanding-sudden-infant-death-syndrome-sids/">Understanding Sudden Infant Death Syndrome (SIDS): Triple-Risk Neurobiology, 2022–2026 AAP Safe Sleep Rules &amp; Protective Factors</a></h3>
+            <p class="post-card-excerpt">Evidence-based AAP clinical guide to SIDS/SUID prevention: the Filiano-Kinney Triple-Risk Model, supine airway anatomy, room-sharing, pacifier &amp; breastfeeding protection.</p>
+            <a href="/baby-care/understanding-sudden-infant-death-syndrome-sids/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-subcat="genetics-congenital">
+          <a href="/baby-care/understanding-tay-sachs-disease-causes-and-support/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-understanding-tay-sachs-disease-causes-and-support.svg" alt="Understanding Tay-Sachs Disease: Neurodegenerative Progression, Palliative Airway/Feeding Care &amp; Family Support — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>Pediatric Genetics &amp; Lysosomal Storage Disorders</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: E75.02</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/understanding-tay-sachs-disease-causes-and-support/">Understanding Tay-Sachs Disease: Neurodegenerative Progression, Palliative Airway/Feeding Care &amp; Family Support</a></h3>
+            <p class="post-card-excerpt">Compassionate clinical guide to Tay-Sachs disease: infantile, juvenile &amp; late-onset timelines, seizure &amp; secretion management, G-tube nutrition, and NTSAD support.</p>
+            <a href="/baby-care/understanding-tay-sachs-disease-causes-and-support/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-subcat="nicu-growth-neuro">
+          <a href="/baby-care/unlocking-the-secrets-of-baby-brains-how-early-development-mirrors-ai-learning-models/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-unlocking-the-secrets-of-baby-brains-how-early-development-mirrors-ai-learning-models.svg" alt="Infant Brain Development &amp; Synaptogenesis (0–24 Months): fMRI Cortical Networks, Serve-and-Return &amp; Visual Plasticity — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>Infant Neurodevelopment &amp; Cognitive Science</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: Z00.129</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/unlocking-the-secrets-of-baby-brains-how-early-development-mirrors-ai-learning-models/">Infant Brain Development &amp; Synaptogenesis (0–24 Months): fMRI Cortical Networks, Serve-and-Return &amp; Visual Plasticity</a></h3>
+            <p class="post-card-excerpt">Neuroscience guide to infant brain development (0–24 months): 1 million synapses/second synaptogenesis, awake fMRI visual/default-mode networks, and Serve-and-Return.</p>
+            <a href="/baby-care/unlocking-the-secrets-of-baby-brains-how-early-development-mirrors-ai-learning-models/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-subcat="gi-fever-acute">
+          <a href="/baby-care/what-does-fussy-mean/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-what-does-fussy-mean.svg" alt="What Does Fussy Mean? Decoding Newborn Hunger vs. Tired Cues, PURPLE Crying &amp; Hair Tourniquet Triage — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>Newborn Cues, Colic &amp; Acute Triage</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: R68.12</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/what-does-fussy-mean/">What Does Fussy Mean? Decoding Newborn Hunger vs. Tired Cues, PURPLE Crying &amp; Hair Tourniquet Triage</a></h3>
+            <p class="post-card-excerpt">Pediatric guide to decoding infant fussiness: early vs. late hunger cues, overtired cortisol signs, the Period of PURPLE Crying, and occult physical causes (hair tourniquet, corneal abrasion).</p>
+            <a href="/baby-care/what-does-fussy-mean/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-subcat="feeding-formula">
+          <a href="/baby-care/what-foods-should-i-avoid-giving-my-baby/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-what-foods-should-i-avoid-giving-my-baby.svg" alt="What Foods Should I Avoid Giving My Baby Under 1 Year? Infant Botulism (Honey), Renal Solutes &amp; Choking Matrix — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>Infant Toxicology, Botulism &amp; Choking Prevention</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: Z72.4</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/what-foods-should-i-avoid-giving-my-baby/">What Foods Should I Avoid Giving My Baby Under 1 Year? Infant Botulism (Honey), Renal Solutes &amp; Choking Matrix</a></h3>
+            <p class="post-card-excerpt">Clinical pediatric nutrition &amp; toxicology guide to foods strictly contraindicated under 12 months: honey (Clostridium botulinum spores), liquid cow's milk, added salt/sugar, and choking cuts.</p>
+            <a href="/baby-care/what-foods-should-i-avoid-giving-my-baby/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-subcat="nicu-growth-neuro">
+          <a href="/baby-care/when-do-babies-start-to-crawl/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/baby-care-when-do-babies-start-to-crawl.svg" alt="When Do Babies Start to Crawl? Quadruped Biomechanics (6–10 Months), Crawling Styles &amp; Motor Red Flags — Pediatric Clinical Protocol &amp; Interactive Guide" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <div class="post-card-meta-line">
+              <span>Infant Gross Motor Milestones &amp; Neurodevelopment</span>
+              <span>•</span>
+              <span>Interactive Clinical Tool</span>
+              <span>•</span>
+              <span>ICD-10: Z00.129</span>
+            </div>
+            <h3 class="post-card-title"><a href="/baby-care/when-do-babies-start-to-crawl/">When Do Babies Start to Crawl? Quadruped Biomechanics (6–10 Months), Crawling Styles &amp; Motor Red Flags</a></h3>
+            <p class="post-card-excerpt">Pediatric physical therapy &amp; neurology guide to baby crawling (6–10 months): 4 biomechanical stages, reciprocal cross-crawl corpus callosum benefits, and asymmetry red flags.</p>
+            <a href="/baby-care/when-do-babies-start-to-crawl/" class="post-card-action">Open Pediatric Protocol &amp; Interactive Tool &rarr;</a>
+          </div>
+        </article>
       </div>
     </main>
   </div>
@@ -530,10 +763,12 @@
           <li><a href="/contact-us/">Contact &amp; Clinical Feedback</a></li>
           <li><a href="/privacy-policy/">Privacy &amp; Data Policy</a></li>
           <li><a href="/terms-and-conditions/">Terms &amp; Medical Disclaimer</a></li>
-          <li><a href="/affiliate-links.html">Affiliate &amp; Ad Disclosure</a></li>
+          <li><a href="/affiliate-links/">Affiliate &amp; Ad Disclosure</a></li>
+          <li><a href="/datasets/">Open Clinical Datasets &amp; API</a></li>
           <li><a href="/site-map/">Site Directory</a></li>
               <li><a href="/sitemap.xml">XML Sitemap</a></li>
               <li><a href="/llms.txt">AI Index (llms.txt)</a></li>
+          <li><a href="/llms-full.txt">AI Corpus (llms-full.txt)</a></li>
               <li><a href="/feed.xml">RSS Feed</a></li>
         </ul>
       </div>
@@ -544,6 +779,6 @@
     </div>
   </footer>
 
-  <script src="/assets/flagship-tools.js" defer></script>
+  <script src="/assets/flagship-tools.js?v=20260421" defer></script>
 </body>
 </html>

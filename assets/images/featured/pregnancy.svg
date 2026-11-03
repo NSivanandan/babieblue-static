@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Pregnancy Guide &amp; Prenatal Care — Babie Blue Clinical Reference Diagram">
+  <title>Pregnancy Guide &amp; Prenatal Care — Clinical Protocol &amp; Visual Guide</title>
+  <desc>Physician-reviewed clinical overview for Pregnancy Guide &amp; Prenatal Care covering Physiological &amp; Diagnostic Baseline, Evidence-Graded Clinical Protocol, Dosing, Nutrition &amp; Safety Targets. Verified against ACOG, AAP, and WHO guidelines on BabieBlue.com.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0fdfa"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.55"/>
+
+  <!-- Outer Clinical Card Frame -->
+  <rect x="44" y="40" width="1112" height="550" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="44" y="40" width="1112" height="10" rx="5" fill="#0f766e"/>
+
+  <!-- Header Bar: Specialty Kicker + Ontology Code Badge -->
+  <g transform="translate(84, 82)">
+    <rect x="0" y="0" width="44" height="44" rx="10" fill="#0f766e"/>
+    <g transform="translate(10, 10)"><path d="M22 12h-4l-3 9L9 3l-3 9H2" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="60" y="18" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-size="13.5" font-weight="800" fill="#0f766e" letter-spacing="1.6">BABIE BLUE • OBSTETRICS &amp; PRENATAL MEDICINE</text>
+    <text x="60" y="38" font-family="JetBrains Mono, monospace" font-size="12.5" font-weight="600" fill="#475569">ICD-10-CM: Z34.90 • ACOG PROTOCOL • CANONICAL: /pregnancy/</text>
+  </g>
+
+  <!-- Main Article Title -->
+  <text x="84" y="176" font-family="Fraunces, Georgia, serif" font-size="36" font-weight="700" fill="#0f172a">Pregnancy Guide &amp; Prenatal Care</text>
+  
+
+  <line x1="84" y1="238" x2="1116" y2="238" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- 3 Article-Specific Clinical Evaluation Pillars -->
+  <g transform="translate(84, 260)">
+    <rect width="324" height="206" rx="14" fill="#f0fdfa" stroke="#99f6e4" stroke-width="2"/>
+    <circle cx="38" cy="38" r="18" fill="#0f766e"/>
+    <text x="38" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#ffffff">01</text>
+    <text x="68" y="43" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" fill="#0f766e">CORE ASSESSMENT</text>
+    <text x="24" y="88" font-family="Plus Jakarta Sans, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Physiological &amp; Diagnostic</text>
+    <text x="24" y="112" font-family="Plus Jakarta Sans, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Baseline</text>
+    <text x="24" y="152" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" fill="#334155">Evidence-graded diagnostic criteria</text>
+    <text x="24" y="174" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" fill="#334155">&amp; physiological baseline workup</text>
+  </g>
+
+  <g transform="translate(438, 260)">
+    <rect width="324" height="206" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <circle cx="38" cy="38" r="18" fill="#0369a1"/>
+    <text x="38" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#ffffff">02</text>
+    <text x="68" y="43" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" fill="#0369a1">CLINICAL PROTOCOL</text>
+    <text x="24" y="88" font-family="Plus Jakarta Sans, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Evidence-Graded Clinical</text>
+    <text x="24" y="112" font-family="Plus Jakarta Sans, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Protocol</text>
+    <text x="24" y="152" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" fill="#334155">Step-by-step therapeutic action</text>
+    <text x="24" y="174" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" fill="#334155">&amp; quantitative dosing / targets</text>
+  </g>
+
+  <g transform="translate(792, 260)">
+    <rect width="324" height="206" rx="14" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+    <circle cx="38" cy="38" r="18" fill="#b91c1c"/>
+    <text x="38" y="44" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#ffffff">03</text>
+    <text x="68" y="43" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" fill="#b91c1c">SAFETY &amp; TRIAGE</text>
+    <text x="24" y="88" font-family="Plus Jakarta Sans, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Dosing, Nutrition &amp; Safety</text>
+    <text x="24" y="112" font-family="Plus Jakarta Sans, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Targets</text>
+    <text x="24" y="152" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" fill="#7f1d1d">Red-flag escalation thresholds</text>
+    <text x="24" y="174" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" fill="#7f1d1d">&amp; physician consultation timing</text>
+  </g>
+
+  <!-- Bottom Clinical Triage &amp; Reviewer Bar -->
+  <rect x="84" y="486" width="1032" height="44" rx="8" fill="#f1f5f9"/>
+  <text x="104" y="513" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Clinical Escalation Rule: <tspan font-weight="500" fill="#334155">Escalate for BP &gt;= 140/90 mmHg, vaginal bleeding, fluid leakage, or reduced fetal movement</tspan></text>
+
+  <text x="84" y="564" font-family="Plus Jakarta Sans, sans-serif" font-size="13.5" font-weight="700" fill="#334155">Medically Reviewed by Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA &amp; Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM</text>
+  <text x="1116" y="564" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#0f766e">BabieBlue.com</text>
+</svg>

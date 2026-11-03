@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Canonical Domain Guard: strictly enforce https://babieblue.com -->
-  <script>
-    if (location.hostname !== 'babieblue.com' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-      location.replace('https://babieblue.com' + location.pathname + location.search + location.hash);
-    }
-  </script>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Babie Blue - Evidence-Based Maternal Wellness, Baby Care &amp; Clinical Calculators</title>
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="description" content="Babie Blue is your physician-reviewed guide for pregnancy milestones, newborn routines, toddler development, postpartum wellness, and clinical calculators.">
   <link rel="canonical" href="https://babieblue.com/">
+  <link rel="alternate" hreflang="en-US" href="https://babieblue.com/">
+  <link rel="alternate" hreflang="x-default" href="https://babieblue.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
-  <link rel="stylesheet" href="/assets/flagship-protocol.css">
+  <link rel="stylesheet" href="/assets/style.css?v=20260421">
+  <link rel="stylesheet" href="/assets/flagship-protocol.css?v=20260421">
   
   <meta property="og:title" content="Babie Blue - Evidence-Based Maternal Wellness &amp; Baby Care">
   <meta property="og:description" content="Physician-reviewed pregnancy milestones, newborn routines, toddler development, postpartum wellness, and clinical health calculators.">
@@ -25,11 +21,77 @@
   <meta property="og:site_name" content="Babie Blue">
   <meta property="og:type" content="website">
 
-  <!-- Google AdSense Official Script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223" crossorigin="anonymous" data-cfasync="false"></script>
-
   <!-- Structured Data: Organization & MedicalWebSite -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MedicalOrganization","@id":"https://babieblue.com/#organization","name":"Babie Blue","url":"https://babieblue.com/","founder":{"@type":"Person","@id":"https://babieblue.com/sivanandan-n/#person","name":"Sivanandan N","jobTitle":"Founder & Owner","url":"https://babieblue.com/about-us/"},"publishingPrinciples":"https://babieblue.com/about-us/","logo":"https://babieblue.com/assets/images/babieblue-og-clinical.svg"},{"@type":"WebSite","@id":"https://babieblue.com/#website","url":"https://babieblue.com/","name":"Babie Blue","publisher":{"@id":"https://babieblue.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://babieblue.com/calculators/?q={search_term_string}","query-input":"required name=search_term_string"}}]}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalOrganization",
+      "@id": "https://babieblue.com/#organization",
+      "name": "Babie Blue",
+      "url": "https://babieblue.com/",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://babieblue.com/sivanandan-n/#person",
+        "name": "Sivanandan N",
+        "jobTitle": "Founder & Owner",
+        "url": "https://babieblue.com/about-us/"
+      },
+      "publishingPrinciples": "https://babieblue.com/about-us/",
+      "logo": "https://babieblue.com/assets/images/babieblue-og-clinical.svg"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://babieblue.com/#website",
+      "url": "https://babieblue.com/",
+      "name": "Babie Blue",
+      "publisher": {
+        "@id": "https://babieblue.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://babieblue.com/calculators/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".bb-bluf-box",
+          "#clinical-summary",
+          ".archive-header",
+          ".entry-header"
+        ]
+      },
+      "reviewedBy": [
+        {
+          "@type": "Person",
+          "name": "Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA",
+          "url": "https://babieblue.com/dr-mangala-devi/"
+        },
+        {
+          "@type": "Person",
+          "name": "Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM",
+          "url": "https://babieblue.com/dr-anagha-nawal/"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://babieblue.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://babieblue.com/"
+        }
+      ]
+    }
+  ]
+}
+</script>
   <!-- Google Analytics 4 (GA4: G-7ZRLCL74GN) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZRLCL74GN"></script>
   <script>
@@ -38,38 +100,46 @@
     gtag('js', new Date());
     gtag('config', 'G-7ZRLCL74GN', { link_ad_clicks: true, send_page_view: true });
   </script>
+  <meta property="og:image" content="https://babieblue.com/assets/images/babieblue-og-clinical.svg">
   <meta property="og:image" content="https://babieblue.com/assets/images/babieblue-og-clinical.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://babieblue.com/assets/images/babieblue-og-clinical.png">
+  <meta name="twitter:image" content="https://babieblue.com/assets/images/babieblue-og-clinical.svg">
   <meta name="twitter:title" content="Clinical Protocols, Interactive Decision Tools &amp; Physician-Reviewed Guides">
   <meta name="twitter:description" content="Babie Blue is your physician-reviewed guide for pregnancy milestones, newborn routines, toddler development, postpartum wellness, and clinical calculators.">
   <link rel="alternate" type="application/rss+xml" title="Babie Blue RSS Feed" href="https://babieblue.com/feed.xml">
   <link rel="alternate" type="text/markdown" title="Babie Blue Clinical Protocol (Markdown)" href="https://babieblue.com/index.md">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223" crossorigin="anonymous" data-cfasync="false"></script>
 </head>
-<body>
+<body data-page-type="home">
 
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="site-logo">Babie<span>Blue</span></a>
-      <nav class="main-nav">
+      <a href="/" class="site-logo">Babie<span>Blue</span><small class="site-logo-tag">Clinical Protocols</small></a>
+      <nav class="main-nav" aria-label="Primary Clinical Navigation">
         <ul>
-          <li><a href="/" class="active">Home</a></li>
           <li><a href="/pregnancy/">Pregnancy</a></li>
           <li><a href="/baby-care/">Baby Care</a></li>
           <li><a href="/parenting/">Parenting</a></li>
           <li><a href="/maternal-health/">Maternal Health</a></li>
           <li><a href="/calculators/">Calculators</a></li>
-          <li><a href="/about-us/">About Us</a></li>
-          <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/about-us/">Medical Board</a></li>
         </ul>
       </nav>
+      <div class="bb-header-actions">
+        <button type="button" class="bb-search-trigger" onclick="openBbSearch()" aria-label="Search Babie Blue clinical guides and calculators">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search Protocols</span>
+          <kbd class="bb-search-kbd">⌘K</kbd>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="bb-homepage-main">
+  <main class="container">
     
     <!-- Hero Section -->
     <section class="bb-hero-editorial">
@@ -84,9 +154,9 @@
       </p>
       <div class="bb-hero-actions">
         <button type="button" class="bb-btn bb-btn--primary" onclick="openBbSearch()">
-          <svg class="bb-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           Search Protocols &amp; Calculators
-          <kbd class="bb-search-kbd">⌘K</kbd>
+          <kbd class="bb-search-kbd" style="margin-left:10px;font-size:11px;background:rgba(255,255,255,0.22);padding:2px 6px;border-radius:4px;">⌘K</kbd>
         </button>
         <a href="/calculators/" class="bb-btn bb-btn--outline">Clinical Calculators Suite &rarr;</a>
         <a href="/about-us/" class="bb-btn bb-btn--accent">Review Board &amp; Ethics</a>
@@ -95,13 +165,10 @@
       <div class="bb-trust-pills-row">
         <span class="bb-trust-pill"><span class="icon-check">✓</span> 100% Board-Certified Medical Review</span>
         <span class="bb-trust-pill"><span class="icon-check">✓</span> Exact Weight-Based mL Pediatric Dosing</span>
-        <span class="bb-trust-pill"><span class="icon-check">✓</span> 16 Interactive Clinical Decision Engines</span>
-        <span class="bb-trust-pill"><span class="icon-check">✓</span> 2:00 AM Night-Feed Dim Mode</span>
+        <span class="bb-trust-pill"><span class="icon-check">✓</span> 160+ Interactive Clinical Decision Engines</span>
+        <span class="bb-trust-pill"><span class="icon-check">✓</span> Bespoke Clinical SVG Diagrams &amp; Reference Charts</span>
       </div>
     </section>
-
-    <!-- AdSense Leaderboard Placement (Auto Ads Enabled) -->
-    <div class="bb-homepage-ad-leaderboard"></div>
 
     <!-- Interactive Clinical Quick-Navigator / Triage Engine -->
     <section class="bb-quick-navigator" aria-label="Clinical Quick Navigator">
@@ -114,11 +181,11 @@
       </div>
 
       <div class="bb-stage-tabs" role="tablist">
-        <button type="button" class="bb-stage-tab active" role="tab" aria-selected="true" onclick="switchBbStage('stage-prenatal', this)">🤰 Pregnancy &amp; Prenatal</button>
-        <button type="button" class="bb-stage-tab" role="tab" aria-selected="false" onclick="switchBbStage('stage-newborn', this)">🍼 Newborn (0–3 Months)</button>
-        <button type="button" class="bb-stage-tab" role="tab" aria-selected="false" onclick="switchBbStage('stage-infant', this)">👶 Infant (4–12 Months)</button>
-        <button type="button" class="bb-stage-tab" role="tab" aria-selected="false" onclick="switchBbStage('stage-toddler', this)">🧒 Toddler &amp; Early Child</button>
-        <button type="button" class="bb-stage-tab" role="tab" aria-selected="false" onclick="switchBbStage('stage-postpartum', this)">🌸 Postpartum &amp; Mother</button>
+        <button type="button" class="bb-stage-tab active" role="tab" aria-selected="true" onclick="switchBbStage('stage-prenatal', this)">Pregnancy &amp; Prenatal</button>
+        <button type="button" class="bb-stage-tab" role="tab" aria-selected="false" onclick="switchBbStage('stage-newborn', this)">Newborn (0–3 Months)</button>
+        <button type="button" class="bb-stage-tab" role="tab" aria-selected="false" onclick="switchBbStage('stage-infant', this)">Infant (4–12 Months)</button>
+        <button type="button" class="bb-stage-tab" role="tab" aria-selected="false" onclick="switchBbStage('stage-toddler', this)">Toddler &amp; Early Child</button>
+        <button type="button" class="bb-stage-tab" role="tab" aria-selected="false" onclick="switchBbStage('stage-postpartum', this)">Postpartum &amp; Mother</button>
       </div>
 
       <!-- Prenatal Panel -->
@@ -223,7 +290,7 @@
     </section>
 
     <!-- Thematic Specialty Hubs -->
-    <section class="bb-section">
+    <section class="bb-section" style="margin-bottom:48px;">
       <div class="bb-section-head">
         <div>
           <span class="bb-kicker">Clinical Knowledge Architecture</span>
@@ -290,16 +357,13 @@
       </div>
     </section>
 
-    <!-- AdSense Mid-Page Placement (Auto Ads Enabled) -->
-    <div class="bb-homepage-ad-mid"></div>
-
     <!-- 2026 Flagship Interactive Clinical Protocols -->
     <section class="bb-section-box">
       <div class="bb-section-head">
         <div>
           <span class="bb-kicker">2026 Physician-Reviewed Flagship Series</span>
           <h2 class="bb-section-title">Featured Clinical Decision Engines &amp; Flagship Protocols</h2>
-          <p class="bb-section-lead">Longform YMYL clinical guides with built-in interactive calculators, 2:00 AM Dim Mode, and AAP / ACOG / NASPGHAN 2025–2026 guidelines.</p>
+          <p class="bb-section-lead">Comprehensive clinical guides with built-in interactive calculators, quantitative reference tables, and AAP / ACOG / NASPGHAN 2025–2026 guidelines.</p>
         </div>
       </div>
 
@@ -307,52 +371,52 @@
       <div class="bb-flagship-spotlight-grid">
         <div class="bb-spotlight-card bb-spotlight-card--urgent">
           <div class="bb-spotlight-header">
-            <span class="bb-spotlight-badge">🚨 Acute Pediatric Dosing</span>
+            <span class="bb-spotlight-badge">Acute Pediatric Dosing</span>
             <span class="bb-spotlight-tag">Emergency Triage</span>
           </div>
           <h3><a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/">Infant Fever Guide &amp; Exact Tylenol / Motrin mL Dosing Chart</a></h3>
           <p>Weight-based mL syringe visualizer (160mg/5mL, 50mg/1.25mL, 100mg/5mL), concentrated drops trap warning, and AAP under-60-day fever emergency triage.</p>
           <div class="bb-spotlight-footer">
-            <span class="bb-spotlight-footer-meta">Oral Syringe Visualizer &bull; AAP Locked</span>
+            <span style="font-size:12px;color:var(--text-muted);">Oral Syringe Visualizer &bull; AAP Locked</span>
             <a href="/baby-care/infant-fever-acetaminophen-ibuprofen-dosing-chart/" class="bb-spotlight-cta">Calculate Exact mL Dose &rarr;</a>
           </div>
         </div>
 
         <div class="bb-spotlight-card">
           <div class="bb-spotlight-header">
-            <span class="bb-spotlight-badge">🌙 Circadian Science</span>
+            <span class="bb-spotlight-badge">Circadian Science</span>
             <span class="bb-spotlight-tag">Sleep Engine</span>
           </div>
           <h3><a href="/baby-care/wake-windows-nap-transitions-by-age/">Wake Windows by Age &amp; Nap Transitions (0–24 Months)</a></h3>
           <p>Interactive Daily Sleep Schedule Generator calibrated to adenosine pressure and cortisol curves, plus our 5-point Nap Transition Readiness Quiz.</p>
           <div class="bb-spotlight-footer">
-            <span class="bb-spotlight-footer-meta">Clock-Time Generator &bull; 0–24 Mo</span>
+            <span style="font-size:12px;color:var(--text-muted);">Clock-Time Generator &bull; 0–24 Mo</span>
             <a href="/baby-care/wake-windows-nap-transitions-by-age/" class="bb-spotlight-cta">Launch Sleep Planner &rarr;</a>
           </div>
         </div>
 
         <div class="bb-spotlight-card">
           <div class="bb-spotlight-header">
-            <span class="bb-spotlight-badge">🌸 Pelvic Floor PT</span>
+            <span class="bb-spotlight-badge">Pelvic Floor PT</span>
             <span class="bb-spotlight-tag">Core Rehab</span>
           </div>
           <h3><a href="/maternal-health/postpartum-diastasis-recti-self-test-rehab-protocol/">Postpartum Diastasis Recti Self-Test &amp; 12-Week Core Rehab</a></h3>
           <p>Interactive 3-Zone IRD Finger-Width &amp; Fascial Tension Scorer plus 360° Piston breathing progression tracker to safely restore linea alba integrity.</p>
           <div class="bb-spotlight-footer">
-            <span class="bb-spotlight-footer-meta">3-Zone Finger Scorer &bull; 12-Wk Plan</span>
+            <span style="font-size:12px;color:var(--text-muted);">3-Zone Finger Scorer &bull; 12-Wk Plan</span>
             <a href="/maternal-health/postpartum-diastasis-recti-self-test-rehab-protocol/" class="bb-spotlight-cta">Run Diastasis Self-Test &rarr;</a>
           </div>
         </div>
 
         <div class="bb-spotlight-card">
           <div class="bb-spotlight-header">
-            <span class="bb-spotlight-badge">🔍 Newborn GI Triage</span>
+            <span class="bb-spotlight-badge">Newborn GI Triage</span>
             <span class="bb-spotlight-tag">Visual Decoder</span>
           </div>
           <h3><a href="/baby-care/newborn-poop-color-texture-chart/">Newborn Poop Color &amp; Texture Chart: Visual Stool Triage</a></h3>
           <p>9-swatch visual triage engine from transitional stool to CMPA mucus and pale acholic stool alerts, plus Day 1–7 diaper hydration output tracker.</p>
           <div class="bb-spotlight-footer">
-            <span class="bb-spotlight-footer-meta">9-Swatch Palette &bull; Biliary Alert</span>
+            <span style="font-size:12px;color:var(--text-muted);">9-Swatch Palette &bull; Biliary Alert</span>
             <a href="/baby-care/newborn-poop-color-texture-chart/" class="bb-spotlight-cta">Open Stool Decoder &rarr;</a>
           </div>
         </div>
@@ -523,7 +587,7 @@
         <a href="/sivanandan-n/" class="bb-board-card">
           <span class="bb-kicker">Founder &amp; Publisher</span>
           <strong>Sivanandan N</strong>
-          <span class="bb-board-bio">Founder of BabieBlue &amp; Shaynly &bull; Former Healthcare Project Head at Ferticare &bull; Lean Six Sigma Clinical Systems Architect</span>
+          <span class="bb-board-bio">Founder of Babie Blue &amp; Shaynly &bull; Former Healthcare Project Head at Ferticare &bull; Lean Six Sigma Clinical Systems Architect</span>
           <span class="bb-board-link">View Founder Profile &rarr;</span>
         </a>
       </div>
@@ -618,10 +682,12 @@
           <li><a href="/contact-us/">Contact &amp; Clinical Feedback</a></li>
           <li><a href="/privacy-policy/">Privacy &amp; Data Policy</a></li>
           <li><a href="/terms-and-conditions/">Terms &amp; Medical Disclaimer</a></li>
-          <li><a href="/affiliate-links.html">Affiliate &amp; Ad Disclosure</a></li>
+          <li><a href="/affiliate-links/">Affiliate &amp; Ad Disclosure</a></li>
+          <li><a href="/datasets/">Open Clinical Datasets &amp; API</a></li>
           <li><a href="/site-map/">Site Directory</a></li>
           <li><a href="/sitemap.xml">XML Sitemap</a></li>
           <li><a href="/llms.txt">AI Index (llms.txt)</a></li>
+          <li><a href="/llms-full.txt">AI Corpus (llms-full.txt)</a></li>
           <li><a href="/feed.xml">RSS Feed</a></li>
         </ul>
       </div>
@@ -632,6 +698,6 @@
     </div>
   </footer>
 
-  <script src="/assets/flagship-tools.js" defer></script>
+  <script src="/assets/flagship-tools.js?v=20260421" defer></script>
 </body>
 </html>

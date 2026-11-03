@@ -1,221 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Canonical Domain Guard: strictly enforce https://babieblue.com -->
-  <script>
-    if (location.hostname !== 'babieblue.com' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-      location.replace('https://babieblue.com' + location.pathname + location.search + location.hash);
-    }
-  </script>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Health & Due Date Calculators - Babie Blue</title>
+  <title>Interactive Pregnancy, Fertility &amp; Maternal Health Calculators - Babie Blue</title>
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="description" content="Interactive, clinical obstetric and fertility calculators, hCG doubling benchmarks, ovulation forecasting, and nursery name engines.">
+  <meta name="description" content="10 physician-reviewed obstetric, fertility, beta-hCG doubling, IOM gestational weight gain, BMR/TDEE calorimetry, postpartum weight timeline, and baby name calculators.">
   <link rel="canonical" href="https://babieblue.com/calculators/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="alternate" hreflang="en-US" href="https://babieblue.com/calculators/">
+  <link rel="alternate" hreflang="x-default" href="https://babieblue.com/calculators/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
-  <link rel="stylesheet" href="/assets/flagship-protocol.css">
-  
-  <meta property="og:title" content="Health & Due Date Calculators - Babie Blue">
-  <meta property="og:description" content="Interactive, clinical obstetric and fertility calculators, hCG doubling benchmarks, ovulation forecasting, and nursery name engines.">
+  <link rel="stylesheet" href="/assets/style.css?v=20260421">
+  <link rel="stylesheet" href="/assets/flagship-protocol.css?v=20260421">
+
+  <meta property="og:title" content="Interactive Pregnancy, Fertility &amp; Maternal Health Calculators - Babie Blue">
+  <meta property="og:description" content="10 physician-reviewed obstetric, fertility, beta-hCG doubling, IOM gestational weight gain, BMR/TDEE calorimetry, postpartum weight timeline, and baby name calculators.">
   <meta property="og:url" content="https://babieblue.com/calculators/">
   <meta property="og:site_name" content="Babie Blue">
   <meta property="og:type" content="website">
-
-  <!-- Google AdSense Official Script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223" crossorigin="anonymous" data-cfasync="false"></script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": "https://babieblue.com/calculators/#webpage",
-    "url": "https://babieblue.com/calculators/",
-    "name": "Health & Due Date Calculators",
-    "description": "Interactive, clinical obstetric and fertility calculators, hCG doubling benchmarks, ovulation forecasting, and nursery name engines.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "BabieBlue",
-      "url": "https://babieblue.com/"
-    }
-  }
-  </script>
-  <!-- Google Analytics 4 (GA4: G-7ZRLCL74GN) -->
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZRLCL74GN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-7ZRLCL74GN', { link_ad_clicks: true, send_page_view: true });
-</script>
-    <meta property="og:image" content="https://babieblue.com/assets/images/babieblue-og-clinical.png">
+  <meta property="og:image" content="https://babieblue.com/assets/images/babieblue-og-clinical.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://babieblue.com/assets/images/babieblue-og-clinical.png">
-  <meta name="twitter:title" content="Health & Due Date Calculators">
-  <meta name="twitter:description" content="Interactive, clinical obstetric and fertility calculators, hCG doubling benchmarks, ovulation forecasting, and nursery name engines.">
+  <meta name="twitter:title" content="Interactive Pregnancy, Fertility &amp; Maternal Health Calculators - Babie Blue">
+  <meta name="twitter:description" content="10 physician-reviewed obstetric, fertility, beta-hCG doubling, IOM gestational weight gain, BMR/TDEE calorimetry, postpartum weight timeline, and baby name calculators.">
   <link rel="alternate" type="application/rss+xml" title="Babie Blue RSS Feed" href="https://babieblue.com/feed.xml">
   <link rel="alternate" type="text/markdown" title="Babie Blue Clinical Protocol (Markdown)" href="https://babieblue.com/calculators/index.md">
-</head>
-<body>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://babieblue.com/calculators/#webpage",
+  "url": "https://babieblue.com/calculators/",
+  "name": "Interactive Pregnancy, Fertility, Postpartum & Maternal Health Calculators - Babie Blue",
+  "description": "10 physician-reviewed obstetric, fertility, beta-hCG kinetics, IOM pregnancy weight gain, BMR/TDEE calorimetry, postpartum recovery, and psycholinguistic baby name calculators.",
+  "publisher": {
+    "@type": "MedicalOrganization",
+    "@id": "https://babieblue.com/#organization",
+    "name": "Babie Blue",
+    "url": "https://babieblue.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Pregnancy Due Date Calculator: ACOG LMP, IVF, Ultrasound & Conception Timeline",
+        "url": "https://babieblue.com/calculators/due-date-calculator/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Beta-hCG Doubling Time Calculator: Early Pregnancy Viability, DPO Percentiles & Ultrasound Zone",
+        "url": "https://babieblue.com/calculators/hcg-calculator/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Ovulation Calculator & Fertile Window Tracker: Wilcox Conception Probability & Luteal Phase Engine",
+        "url": "https://babieblue.com/calculators/ovulation-calculator/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Maternal & Pregnancy BMI Calculator: IOM Gestational Weight Gain Curve & Obstetric Risk Stratifier",
+        "url": "https://babieblue.com/calculators/bmi-calculator/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Maternal & Postpartum BMR Calculator: Resting Metabolic Rate, Trimester & Lactation Energy Engine",
+        "url": "https://babieblue.com/calculators/bmr-calculator/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Maternal & Postpartum TDEE Calculator: Total Daily Energy Expenditure, Macros & Micronutrient Planner",
+        "url": "https://babieblue.com/calculators/tdee-calculator/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "Pregnancy & Postpartum Calorie Calculator: ACOG Safe Energy Balance, GDM & Lactation Guardrails",
+        "url": "https://babieblue.com/calculators/pregnancy-calorie-deficit-calculator/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "name": "Maternal & Postpartum Body Fat Calculator: US Navy Tape Method, Lean Mass & Fertility Adipose Analysis",
+        "url": "https://babieblue.com/calculators/body-fat-calculator/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "name": "Postpartum & Maternal Weight Loss Calculator: Safe Lactation Deficit, Delivery Drop & Timeline Planner",
+        "url": "https://babieblue.com/calculators/weight-loss-calculator/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "name": "Baby Name Generator: Clinical Phonetics, Surname Harmony, Cultural Origins & Etymology Finder",
+        "url": "https://babieblue.com/calculators/baby-name-generator/"
+      }
+    ]
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".bb-bluf-box",
+      "#clinical-summary",
+      ".archive-header"
+    ]
+  },
+  "reviewedBy": [
+    {
+      "@type": "Person",
+      "name": "Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA",
+      "url": "https://babieblue.com/dr-mangala-devi/"
+    }
+  ]
+}
+</script>
 
-  
-    <header class="site-header">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZRLCL74GN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZRLCL74GN', { link_ad_clicks: true, send_page_view: true });
+  </script>
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4453876229797223" crossorigin="anonymous" data-cfasync="false"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://babieblue.com/calculators/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://babieblue.com/"},{"@type":"ListItem","position":2,"name":"Interactive Clinical Calculators & Perinatal Decision Tools","item":"https://babieblue.com/calculators/"}]}</script>
+</head>
+<body data-page-type="hub">
+
+  <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="site-logo">Babie<span>Blue</span></a>
-      <nav class="main-nav">
+      <a href="/" class="site-logo">Babie<span>Blue</span><small class="site-logo-tag">Clinical Protocols</small></a>
+      <nav class="main-nav" aria-label="Primary Clinical Navigation">
         <ul>
-          <li><a href="/">Home</a></li>
           <li><a href="/pregnancy/">Pregnancy</a></li>
           <li><a href="/baby-care/">Baby Care</a></li>
           <li><a href="/parenting/">Parenting</a></li>
           <li><a href="/maternal-health/">Maternal Health</a></li>
-          <li><a href="/calculators/">Calculators</a></li>
-          <li><a href="/about-us/">About Us</a></li>
-          <li><a href="/contact-us/">Contact</a></li>
+          <li><a href="/calculators/" class="active" aria-current="page">Calculators</a></li>
+          <li><a href="/about-us/">Medical Board</a></li>
         </ul>
       </nav>
+      <div class="bb-header-actions">
+        <button type="button" class="bb-search-trigger" onclick="openBbSearch()" aria-label="Search Babie Blue clinical guides and calculators">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search Protocols</span>
+          <kbd class="bb-search-kbd">⌘K</kbd>
+        </button>
+      </div>
     </div>
   </header>
+
   <div class="container">
     <main class="content-area">
       <div class="hub-hero">
-        <span class="hub-hero-icon">📊</span>
-        <h1 class="hub-hero-title">Health & Due Date Calculators</h1>
-        <p class="hub-hero-desc">Interactive, clinical obstetric and fertility calculators, hCG doubling benchmarks, ovulation forecasting, and nursery name engines.</p>
+        <span class="hub-hero-icon">🩺</span>
+        <h1 class="hub-hero-title">Interactive Clinical Calculators &amp; Perinatal Decision Tools</h1>
+        <figure class="bb-featured-banner"><img src="/assets/images/featured/calculators.svg" alt="Babie Blue Interactive Clinical Calculators Suite" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async"></figure>
+        <p class="hub-hero-desc">Physician-reviewed obstetric dating, serial beta-hCG doubling kinetics, Wilcox ovulation probability, IOM gestational weight gain curves, maternal BMR/TDEE calorimetry, postpartum recovery timelines, and phonetic baby name engines.</p>
         <div class="hub-hero-badge">
-          ✓ 10 Evidence-Based Guides &amp; Interactive Tools
+          ✓ 10 Evidence-Based Interactive Clinical Workbenches • Audited by OB-GYN &amp; Embryology Board
         </div>
       </div>
 
       <div class="hub-articles-grid post-grid">
-
-        <article class="post-card">
-          <a href="/calculators/ovulation-calculator/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/02/Ovulation-Calculator.png" alt="Ovulation Calculator: Unlock Your Fertility Potential with the Best Free Ovulation Calculator" loading="lazy"  onerror="this.style.display='none';" />
-          </a>
-          <div class="post-card-body">
-            <span class="post-card-category">Health</span>
-            <h3 class="post-card-title"><a href="/calculators/ovulation-calculator/">Ovulation Calculator: Unlock Your Fertility Potential with the Best Free Ovulation Calculator</a></h3>
-            <p class="post-card-excerpt">Are you looking for a free and easy way to track your ovulation? Look no further than a free ovulation calculator. These online tools allow ...</p>
-            <a href="/calculators/ovulation-calculator/" class="post-card-action">Read Ovulation Calculator Guide &rarr;</a>
-          </div>
-        </article>
         
         <article class="post-card">
           <a href="/calculators/due-date-calculator/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/02/Due-Date.png" alt="Due Date Calculator: Discover Your Baby&#x27;s Arrival With our Ultimate Free Tool" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/calculators-due-date-calculator.svg" alt="Pregnancy Due Date Calculator: ACOG LMP, IVF, Ultrasound &amp; Conception Timeline" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Health</span>
-            <h3 class="post-card-title"><a href="/calculators/due-date-calculator/">Due Date Calculator: Discover Your Baby&#x27;s Arrival With our Ultimate Free Tool</a></h3>
-            <p class="post-card-excerpt">Looking for a Free due date calculator? Our comprehensive guide provides information on due date calculation methods, tips for preparing for...</p>
-            <a href="/calculators/due-date-calculator/" class="post-card-action">Read Due Date Calculator Guide &rarr;</a>
+            <span class="post-card-category">Obstetrics &amp; Gestational Dating</span>
+            <h3 class="post-card-title"><a href="/calculators/due-date-calculator/">Pregnancy Due Date Calculator: ACOG LMP, IVF, Ultrasound &amp; Conception Timeline</a></h3>
+            <p class="post-card-excerpt">Calculate your Estimated Due Date (EDD), current gestational age, trimester progress, and 10-stage ACOG prenatal screening schedule using LMP, IVF Day-3/Day-5 transfer, conception, or ultrasound dating.</p>
+            <a href="/calculators/due-date-calculator/" class="post-card-action">Launch Pregnancy Due Date Calculator &rarr;</a>
           </div>
         </article>
-        
+
         <article class="post-card">
           <a href="/calculators/hcg-calculator/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/06/HCG-calculator-1.png" alt="HCG Calculator" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/calculators-hcg-calculator.svg" alt="Beta-hCG Doubling Time Calculator: Early Pregnancy Viability, DPO Percentiles &amp; Ultrasound Zone" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Health</span>
-            <h3 class="post-card-title"><a href="/calculators/hcg-calculator/">HCG Calculator</a></h3>
-            <p class="post-card-excerpt">In this article, we will delve into the details of the HCG calculator, how it works, and what it can tell us about pregnancy.</p>
-            <a href="/calculators/hcg-calculator/" class="post-card-action">Read HCG Calculator Guide &rarr;</a>
+            <span class="post-card-category">Reproductive Endocrinology &amp; Early Pregnancy</span>
+            <h3 class="post-card-title"><a href="/calculators/hcg-calculator/">Beta-hCG Doubling Time Calculator: Early Pregnancy Viability, DPO Percentiles &amp; Ultrasound Zone</a></h3>
+            <p class="post-card-excerpt">Calculate serial quantitative beta-hCG doubling time, 48-hour percentage rise, ASRM baseline-adjusted viability thresholds, DPO percentiles, and transvaginal ultrasound discriminatory zones.</p>
+            <a href="/calculators/hcg-calculator/" class="post-card-action">Launch Beta-hCG Doubling Time Calculator &rarr;</a>
           </div>
         </article>
-        
+
         <article class="post-card">
-          <a href="/calculators/baby-name-generator/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/06/Baby-Name-Generator.png" alt="Baby Name Generator: 1 Simplified  Process of Choosing the Perfect Name" loading="lazy"  onerror="this.style.display='none';" />
+          <a href="/calculators/ovulation-calculator/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/calculators-ovulation-calculator.svg" alt="Ovulation Calculator &amp; Fertile Window Tracker: Wilcox Conception Probability &amp; Luteal Phase Engine" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Health</span>
-            <h3 class="post-card-title"><a href="/calculators/baby-name-generator/">Baby Name Generator: 1 Simplified  Process of Choosing the Perfect Name</a></h3>
-            <p class="post-card-excerpt">With an endless array of options available, it&#x27;s no wonder many parents find themselves overwhelmed when it comes to making this import...</p>
-            <a href="/calculators/baby-name-generator/" class="post-card-action">Read Baby Name Generator Guide &rarr;</a>
+            <span class="post-card-category">Reproductive Endocrinology &amp; Fertility</span>
+            <h3 class="post-card-title"><a href="/calculators/ovulation-calculator/">Ovulation Calculator &amp; Fertile Window Tracker: Wilcox Conception Probability &amp; Luteal Phase Engine</a></h3>
+            <p class="post-card-excerpt">Calculate your exact ovulation date, 6-day fertile window, Wilcox NEJM daily conception probabilities, blastocyst implantation window, and earliest beta-hCG test date with luteal phase calibration.</p>
+            <a href="/calculators/ovulation-calculator/" class="post-card-action">Launch Ovulation &amp; Fertile Window Calculator &rarr;</a>
           </div>
         </article>
-        
+
         <article class="post-card">
           <a href="/calculators/bmi-calculator/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/02/BMI-Calculator-1.png" alt="Unlocking the Mystery of BMI Calculator: How to Calculate and Interpret Your Body Mass Index" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/calculators-bmi-calculator.svg" alt="Maternal &amp; Pregnancy BMI Calculator: IOM Gestational Weight Gain Curve &amp; Obstetric Risk Stratifier" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Health</span>
-            <h3 class="post-card-title"><a href="/calculators/bmi-calculator/">Unlocking the Mystery of BMI Calculator: How to Calculate and Interpret Your Body Mass Index</a></h3>
-            <p class="post-card-excerpt">Are you curious about your body mass index (BMI) and what it means for your health? Use our BMI Calculator, Learn everything you need to kno...</p>
-            <a href="/calculators/bmi-calculator/" class="post-card-action">Read Unlocking the Mystery of BMI Calculator Guide &rarr;</a>
+            <span class="post-card-category">Maternal-Fetal Nutrition &amp; Anthropometry</span>
+            <h3 class="post-card-title"><a href="/calculators/bmi-calculator/">Maternal &amp; Pregnancy BMI Calculator: IOM Gestational Weight Gain Curve &amp; Obstetric Risk Stratifier</a></h3>
+            <p class="post-card-excerpt">Calculate pre-pregnancy BMI, Institute of Medicine (IOM) total and week-by-week gestational weight gain targets for singleton or twin pregnancies, WHO Asian-Pacific cutoffs, and ACOG prophylaxis guidance.</p>
+            <a href="/calculators/bmi-calculator/" class="post-card-action">Launch Maternal &amp; Pregnancy BMI Calculator &rarr;</a>
           </div>
         </article>
-        
+
         <article class="post-card">
           <a href="/calculators/bmr-calculator/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/03/BMR-Calculator.png" alt="Transform Your Body with BMR Calculator: How to Use It to Reach Your Goals" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/calculators-bmr-calculator.svg" alt="Maternal &amp; Postpartum BMR Calculator: Resting Metabolic Rate, Trimester &amp; Lactation Energy Engine" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Health</span>
-            <h3 class="post-card-title"><a href="/calculators/bmr-calculator/">Transform Your Body with BMR Calculator: How to Use It to Reach Your Goals</a></h3>
-            <p class="post-card-excerpt">Discover how to calculate your basal metabolic rate using a BMR calculator. Learn about the factors that affect your BMR and how to use this...</p>
-            <a href="/calculators/bmr-calculator/" class="post-card-action">Read Transform Your Body with BMR Calculator Guide &rarr;</a>
+            <span class="post-card-category">Maternal Metabolism &amp; Clinical Nutrition</span>
+            <h3 class="post-card-title"><a href="/calculators/bmr-calculator/">Maternal &amp; Postpartum BMR Calculator: Resting Metabolic Rate, Trimester &amp; Lactation Energy Engine</a></h3>
+            <p class="post-card-excerpt">Calculate Basal Metabolic Rate (BMR) using Mifflin-St Jeor, Revised Harris-Benedict, or Katch-McArdle equations with trimester pregnancy and breastfeeding energy adjustments, hydration, and anti-ketosis macro floors.</p>
+            <a href="/calculators/bmr-calculator/" class="post-card-action">Launch Maternal &amp; Postpartum BMR Calculator &rarr;</a>
           </div>
         </article>
-        
+
         <article class="post-card">
           <a href="/calculators/tdee-calculator/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/03/sdsd.png" alt="Utilizing the TDEE Calculator for best Optimal Health and Nutrition" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/calculators-tdee-calculator.svg" alt="Maternal &amp; Postpartum TDEE Calculator: Total Daily Energy Expenditure, Macros &amp; Micronutrient Planner" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Health</span>
-            <h3 class="post-card-title"><a href="/calculators/tdee-calculator/">Utilizing the TDEE Calculator for best Optimal Health and Nutrition</a></h3>
-            <p class="post-card-excerpt">This article explores the benefits of using the TDEE calculator for a healthy pregnancy. Learn how to optimize your nutrition and maintain a...</p>
-            <a href="/calculators/tdee-calculator/" class="post-card-action">Read Utilizing the TDEE Calculator for best O Guide &rarr;</a>
+            <span class="post-card-category">Maternal Energy &amp; Macronutrient Partitioning</span>
+            <h3 class="post-card-title"><a href="/calculators/tdee-calculator/">Maternal &amp; Postpartum TDEE Calculator: Total Daily Energy Expenditure, Macros &amp; Micronutrient Planner</a></h3>
+            <p class="post-card-excerpt">Calculate your Total Daily Energy Expenditure (TDEE), daily protein/carbohydrate/lipid macronutrient targets, and ACOG pregnancy or lactation micronutrient requirements (Folate, Iron, Choline, DHA).</p>
+            <a href="/calculators/tdee-calculator/" class="post-card-action">Launch Maternal &amp; Postpartum TDEE Calculator &rarr;</a>
           </div>
         </article>
-        
-        <article class="post-card">
-          <a href="/calculators/body-fat-calculator/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/03/Body-Fat-Calculator.png" alt="Body Fat Calculator in Pregnancy: How to Monitor Your Weight Gain for a Healthy Pregnancy" loading="lazy"  onerror="this.style.display='none';" />
-          </a>
-          <div class="post-card-body">
-            <span class="post-card-category">Health</span>
-            <h3 class="post-card-title"><a href="/calculators/body-fat-calculator/">Body Fat Calculator in Pregnancy: How to Monitor Your Weight Gain for a Healthy Pregnancy</a></h3>
-            <p class="post-card-excerpt">In this article, we discuss the use of a body fat calculator during pregnancy, including its benefits, potential risks, and common misconcep...</p>
-            <a href="/calculators/body-fat-calculator/" class="post-card-action">Read Body Fat Calculator in Pregnancy Guide &rarr;</a>
-          </div>
-        </article>
-        
+
         <article class="post-card">
           <a href="/calculators/pregnancy-calorie-deficit-calculator/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2024/03/Pregnancy-Calorie-Deficit-Calculator.jpg" alt="Pregnancy Calorie Deficit Calculator: How to Stay Healthy and Fit During Pregnancy" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/calculators-pregnancy-calorie-deficit-calculator.svg" alt="Pregnancy &amp; Postpartum Calorie Calculator: ACOG Safe Energy Balance, GDM &amp; Lactation Guardrails" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Health</span>
-            <h3 class="post-card-title"><a href="/calculators/pregnancy-calorie-deficit-calculator/">Pregnancy Calorie Deficit Calculator: How to Stay Healthy and Fit During Pregnancy</a></h3>
-            <p class="post-card-excerpt">Learn about the importance of maintaining a healthy weight during pregnancy and how a  pregnancy calorie deficit calculator can help. Get an...</p>
-            <a href="/calculators/pregnancy-calorie-deficit-calculator/" class="post-card-action">Read Pregnancy Calorie Deficit Calculator Guide &rarr;</a>
+            <span class="post-card-category">Maternal-Fetal Nutrition &amp; Glycemic Safety</span>
+            <h3 class="post-card-title"><a href="/calculators/pregnancy-calorie-deficit-calculator/">Pregnancy &amp; Postpartum Calorie Calculator: ACOG Safe Energy Balance, GDM &amp; Lactation Guardrails</a></h3>
+            <p class="post-card-excerpt">Calculate safe daily calorie targets during pregnancy (with ACOG anti-ketosis 1,800 kcal safety floors and GDM meal distribution) or plan a prolactin-safe postpartum calorie deficit.</p>
+            <a href="/calculators/pregnancy-calorie-deficit-calculator/" class="post-card-action">Launch Pregnancy &amp; Postpartum Calorie Balance Calculator &rarr;</a>
           </div>
         </article>
-        
+
+        <article class="post-card">
+          <a href="/calculators/body-fat-calculator/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/calculators-body-fat-calculator.svg" alt="Maternal &amp; Postpartum Body Fat Calculator: US Navy Tape Method, Lean Mass &amp; Fertility Adipose Analysis" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <span class="post-card-category">Maternal Body Composition &amp; Reproductive Endocrinology</span>
+            <h3 class="post-card-title"><a href="/calculators/body-fat-calculator/">Maternal &amp; Postpartum Body Fat Calculator: US Navy Tape Method, Lean Mass &amp; Fertility Adipose Analysis</a></h3>
+            <p class="post-card-excerpt">Calculate female body fat percentage, lean body mass (LBM), Waist-to-Hip Ratio (WHR), ovulatory leptin fertility zones, and pregnancy 30-lb non-fat weight component breakdown.</p>
+            <a href="/calculators/body-fat-calculator/" class="post-card-action">Launch Maternal &amp; Postpartum Body Fat Calculator &rarr;</a>
+          </div>
+        </article>
+
         <article class="post-card">
           <a href="/calculators/weight-loss-calculator/" class="post-card-thumb-wrap">
-            <img src="/wp-content/uploads/2023/03/Weight-Loss-Calculator-for-Pregnancy.png" alt="Weight Loss Calculator for Pregnancy: A Helpful Tool for Healthy Weight Management" loading="lazy"  onerror="this.style.display='none';" />
+            <img src="/assets/images/featured/calculators-weight-loss-calculator.svg" alt="Postpartum &amp; Maternal Weight Loss Calculator: Safe Lactation Deficit, Delivery Drop &amp; Timeline Planner" width="1200" height="630" loading="lazy" decoding="async">
           </a>
           <div class="post-card-body">
-            <span class="post-card-category">Health</span>
-            <h3 class="post-card-title"><a href="/calculators/weight-loss-calculator/">Weight Loss Calculator for Pregnancy: A Helpful Tool for Healthy Weight Management</a></h3>
-            <p class="post-card-excerpt">A Free weight loss calculator for pregnancy is a helpful tool that assists expectant mothers in managing their weight gain during pregnancy ...</p>
-            <a href="/calculators/weight-loss-calculator/" class="post-card-action">Read Weight Loss Calculator for Pregnancy Guide &rarr;</a>
+            <span class="post-card-category">Postpartum Recovery &amp; Lactation Nutrition</span>
+            <h3 class="post-card-title"><a href="/calculators/weight-loss-calculator/">Postpartum &amp; Maternal Weight Loss Calculator: Safe Lactation Deficit, Delivery Drop &amp; Timeline Planner</a></h3>
+            <p class="post-card-excerpt">Calculate your realistic postpartum weight loss timeline, immediate 12–14 lb delivery and fluid diuresis weight drop, prolactin-safe breastfeeding calorie targets, and month-by-month recovery milestones.</p>
+            <a href="/calculators/weight-loss-calculator/" class="post-card-action">Launch Postpartum &amp; Maternal Weight Loss Calculator &rarr;</a>
           </div>
         </article>
-        
+
+        <article class="post-card">
+          <a href="/calculators/baby-name-generator/" class="post-card-thumb-wrap">
+            <img src="/assets/images/featured/calculators-baby-name-generator.svg" alt="Baby Name Generator: Clinical Phonetics, Surname Harmony, Cultural Origins &amp; Etymology Finder" width="1200" height="630" loading="lazy" decoding="async">
+          </a>
+          <div class="post-card-body">
+            <span class="post-card-category">Psycholinguistics, Phonetics &amp; Family Heritage</span>
+            <h3 class="post-card-title"><a href="/calculators/baby-name-generator/">Baby Name Generator: Clinical Phonetics, Surname Harmony, Cultural Origins &amp; Etymology Finder</a></h3>
+            <p class="post-card-excerpt">Discover baby names by gender, global cultural origin, stylistic vibe, syllable count, and starting letter with live Surname Phonetic Cadence testing, middle name pairings, and a printable nursery shortlist.</p>
+            <a href="/calculators/baby-name-generator/" class="post-card-action">Launch Clinical Phonetics &amp; Etymology Baby Name Generator &rarr;</a>
+          </div>
+        </article>
       </div>
     </main>
   </div>
@@ -275,11 +356,13 @@
           <li><a href="/contact-us/">Contact &amp; Clinical Feedback</a></li>
           <li><a href="/privacy-policy/">Privacy &amp; Data Policy</a></li>
           <li><a href="/terms-and-conditions/">Terms &amp; Medical Disclaimer</a></li>
-          <li><a href="/affiliate-links.html">Affiliate &amp; Ad Disclosure</a></li>
+          <li><a href="/affiliate-links/">Affiliate &amp; Ad Disclosure</a></li>
+          <li><a href="/datasets/">Open Clinical Datasets &amp; API</a></li>
           <li><a href="/site-map/">Site Directory</a></li>
-              <li><a href="/sitemap.xml">XML Sitemap</a></li>
-              <li><a href="/llms.txt">AI Index (llms.txt)</a></li>
-              <li><a href="/feed.xml">RSS Feed</a></li>
+          <li><a href="/sitemap.xml">XML Sitemap</a></li>
+          <li><a href="/llms.txt">AI Index (llms.txt)</a></li>
+          <li><a href="/llms-full.txt">AI Corpus (llms-full.txt)</a></li>
+          <li><a href="/feed.xml">RSS Feed</a></li>
         </ul>
       </div>
     </div>
@@ -289,6 +372,6 @@
     </div>
   </footer>
 
-  <script src="/assets/flagship-tools.js" defer></script>
+  <script src="/assets/flagship-tools.js?v=20260421" defer></script>
 </body>
 </html>

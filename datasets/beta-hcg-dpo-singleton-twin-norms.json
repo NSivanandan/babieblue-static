@@ -1,0 +1,159 @@
+{
+  "publisher": "Babie Blue",
+  "license": "CC-BY-4.0",
+  "canonical": "https://babieblue.com/datasets/",
+  "data": [
+    {
+      "dpo": 8,
+      "gestational_age": "3w1d",
+      "singleton_median_miu_ml": 5,
+      "singleton_10th_90th_range_miu_ml": "2-12",
+      "twin_median_miu_ml": 9,
+      "expected_48h_doubling_pct": ">=49-66%"
+    },
+    {
+      "dpo": 9,
+      "gestational_age": "3w2d",
+      "singleton_median_miu_ml": 8,
+      "singleton_10th_90th_range_miu_ml": "3-19",
+      "twin_median_miu_ml": 15,
+      "expected_48h_doubling_pct": ">=49-66%"
+    },
+    {
+      "dpo": 10,
+      "gestational_age": "3w3d",
+      "singleton_median_miu_ml": 12,
+      "singleton_10th_90th_range_miu_ml": "5-28",
+      "twin_median_miu_ml": 22,
+      "expected_48h_doubling_pct": ">=49-66%"
+    },
+    {
+      "dpo": 11,
+      "gestational_age": "3w4d",
+      "singleton_median_miu_ml": 18,
+      "singleton_10th_90th_range_miu_ml": "8-42",
+      "twin_median_miu_ml": 33,
+      "expected_48h_doubling_pct": ">=49-66%"
+    },
+    {
+      "dpo": 12,
+      "gestational_age": "3w5d",
+      "singleton_median_miu_ml": 26,
+      "singleton_10th_90th_range_miu_ml": "11-61",
+      "twin_median_miu_ml": 48,
+      "expected_48h_doubling_pct": ">=49-66%"
+    },
+    {
+      "dpo": 13,
+      "gestational_age": "3w6d",
+      "singleton_median_miu_ml": 39,
+      "singleton_10th_90th_range_miu_ml": "16-92",
+      "twin_median_miu_ml": 72,
+      "expected_48h_doubling_pct": ">=49-66%"
+    },
+    {
+      "dpo": 14,
+      "gestational_age": "4w0d",
+      "singleton_median_miu_ml": 58,
+      "singleton_10th_90th_range_miu_ml": "24-136",
+      "twin_median_miu_ml": 107,
+      "expected_48h_doubling_pct": ">=49-66%"
+    },
+    {
+      "dpo": 15,
+      "gestational_age": "4w1d",
+      "singleton_median_miu_ml": 85,
+      "singleton_10th_90th_range_miu_ml": "36-200",
+      "twin_median_miu_ml": 157,
+      "expected_48h_doubling_pct": ">=49-66%"
+    },
+    {
+      "dpo": 16,
+      "gestational_age": "4w2d",
+      "singleton_median_miu_ml": 126,
+      "singleton_10th_90th_range_miu_ml": "53-296",
+      "twin_median_miu_ml": 233,
+      "expected_48h_doubling_pct": ">=49-66%"
+    },
+    {
+      "dpo": 17,
+      "gestational_age": "4w3d",
+      "singleton_median_miu_ml": 187,
+      "singleton_10th_90th_range_miu_ml": "79-439",
+      "twin_median_miu_ml": 346,
+      "expected_48h_doubling_pct": ">=49-66%"
+    },
+    {
+      "dpo": 18,
+      "gestational_age": "4w4d",
+      "singleton_median_miu_ml": 276,
+      "singleton_10th_90th_range_miu_ml": "116-649",
+      "twin_median_miu_ml": 511,
+      "expected_48h_doubling_pct": ">=49-66%"
+    },
+    {
+      "dpo": 19,
+      "gestational_age": "4w5d",
+      "singleton_median_miu_ml": 409,
+      "singleton_10th_90th_range_miu_ml": "172-961",
+      "twin_median_miu_ml": 757,
+      "expected_48h_doubling_pct": ">=35-50%"
+    },
+    {
+      "dpo": 20,
+      "gestational_age": "4w6d",
+      "singleton_median_miu_ml": 605,
+      "singleton_10th_90th_range_miu_ml": "254-1422",
+      "twin_median_miu_ml": 1119,
+      "expected_48h_doubling_pct": ">=35-50%"
+    },
+    {
+      "dpo": 21,
+      "gestational_age": "5w0d",
+      "singleton_median_miu_ml": 895,
+      "singleton_10th_90th_range_miu_ml": "376-2103",
+      "twin_median_miu_ml": 1656,
+      "expected_48h_doubling_pct": ">=35-50%"
+    },
+    {
+      "dpo": 22,
+      "gestational_age": "5w1d",
+      "singleton_median_miu_ml": 1325,
+      "singleton_10th_90th_range_miu_ml": "557-3114",
+      "twin_median_miu_ml": 2451,
+      "expected_48h_doubling_pct": ">=35-50%"
+    },
+    {
+      "dpo": 23,
+      "gestational_age": "5w2d",
+      "singleton_median_miu_ml": 1961,
+      "singleton_10th_90th_range_miu_ml": "824-4608",
+      "twin_median_miu_ml": 3628,
+      "expected_48h_doubling_pct": ">=35-50%"
+    },
+    {
+      "dpo": 24,
+      "gestational_age": "5w3d",
+      "singleton_median_miu_ml": 2903,
+      "singleton_10th_90th_range_miu_ml": "1219-6822",
+      "twin_median_miu_ml": 5371,
+      "expected_48h_doubling_pct": ">=35-50%"
+    },
+    {
+      "dpo": 25,
+      "gestational_age": "5w4d",
+      "singleton_median_miu_ml": 4296,
+      "singleton_10th_90th_range_miu_ml": "1804-10096",
+      "twin_median_miu_ml": 7948,
+      "expected_48h_doubling_pct": ">=35-50%"
+    },
+    {
+      "dpo": 26,
+      "gestational_age": "5w5d",
+      "singleton_median_miu_ml": 6359,
+      "singleton_10th_90th_range_miu_ml": "2671-14944",
+      "twin_median_miu_ml": 11764,
+      "expected_48h_doubling_pct": ">=35-50%"
+    }
+  ]
+}

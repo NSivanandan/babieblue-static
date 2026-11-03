@@ -1,0 +1,17 @@
+weight_lbs,weight_kg,acetaminophen_160mg_5ml_dose_ml,acetaminophen_mg,ibuprofen_100mg_5ml_dose_ml,ibuprofen_50mg_1_25ml_drops_ml,clinical_rule
+6,2.72,1.06,34,0,0,Consult pediatrician before antipyretics; immediate ER if <60 days old with rectal temp >=38.0C (100.4F)
+8,3.63,1.42,45.4,0,0,Consult pediatrician before antipyretics; immediate ER if <60 days old with rectal temp >=38.0C (100.4F)
+10,4.54,1.77,56.8,0,0,Consult pediatrician before antipyretics; immediate ER if <60 days old with rectal temp >=38.0C (100.4F)
+12,5.44,2.13,68,2.72,1.36,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h
+14,6.35,2.48,79.4,3.17,1.59,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h
+16,7.26,2.84,90.8,3.63,1.81,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h
+18,8.16,3.19,102,4.08,2.04,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h
+20,9.07,3.54,113.4,4.54,2.27,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h
+22,9.98,3.9,124.8,4.99,2.5,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h
+24,10.89,4.25,136.1,5.45,2.72,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h
+26,11.79,4.61,147.4,5.9,2.95,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h
+28,12.7,4.96,158.8,6.35,3.17,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h
+30,13.61,5.32,170.1,6.8,3.4,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h
+32,14.51,5.67,181.4,7.25,3.63,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h
+34,15.42,6.03,192.8,7.71,3.85,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h
+36,16.33,6.38,204.1,8.17,4.08,Acetaminophen q4-6h (max 5 doses/24h); Ibuprofen only if >=6 months old q6-8h

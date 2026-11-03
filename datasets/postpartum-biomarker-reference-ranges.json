@@ -1,0 +1,37 @@
+{
+  "publisher": "Babie Blue",
+  "license": "CC-BY-4.0",
+  "canonical": "https://babieblue.com/datasets/",
+  "data": [
+    {
+      "biomarker": "Serum Ferritin",
+      "lab_cutoff": ">=12-15 ng/mL",
+      "babie_blue_functional_target": ">=50 ng/mL",
+      "clinical_significance": "Levels <30 ng/mL cause severe postpartum fatigue, telogen effluvium hair loss, and mood depletion even when Hemoglobin is normal."
+    },
+    {
+      "biomarker": "TSH (Thyroid Stimulating Hormone)",
+      "lab_cutoff": "0.45-4.50 mIU/L",
+      "babie_blue_functional_target": "0.50-2.50 mIU/L",
+      "clinical_significance": "Biphasic postpartum thyroiditis peaks between 6 weeks and 6 months postpartum; screen with Free T4 and TPOAb."
+    },
+    {
+      "biomarker": "25-Hydroxy Vitamin D",
+      "lab_cutoff": ">=20 ng/mL",
+      "babie_blue_functional_target": "40-60 ng/mL",
+      "clinical_significance": "Supports maternal immune modulation, bone mineralization, and breastmilk antirachitic activity (at 4,000-6,400 IU/day maternal intake)."
+    },
+    {
+      "biomarker": "Hemoglobin (Postpartum)",
+      "lab_cutoff": ">=11.0 g/dL",
+      "babie_blue_functional_target": ">=12.2 g/dL",
+      "clinical_significance": "Screen for acute peripartum blood loss anemia; pair with reticulocyte count and serum ferritin."
+    },
+    {
+      "biomarker": "Vitamin B12 (Cobalamin)",
+      "lab_cutoff": ">=200 pg/mL",
+      "babie_blue_functional_target": ">=500 pg/mL",
+      "clinical_significance": "Essential for infant myelination and maternal methylation; pair with serum folate."
+    }
+  ]
+}

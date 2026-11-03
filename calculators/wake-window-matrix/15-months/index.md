@@ -1,0 +1,141 @@
+# 15-Month-Old Wake Windows, Nap Schedule & Bedtime Chart
+> **Publisher:** Babie Blue (https://babieblue.com/)
+> **Canonical Clinical Reference:** https://babieblue.com/calculators/wake-window-matrix/15-months/
+> **Written by:** Madhuri B, Lead Healthcare Content Specialist
+> **Medically Reviewed by:** Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA (KMC: 58341) & Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM
+> **Evidence Standards:** ACOG, AAP, WHO & CDC Clinical Guidelines
+> **Executive Summary:** Evidence-based sleep architecture for a 15-month-old baby: 4.8–5.55 hour wake windows, 1 midday nap, total daytime sleep caps, and sample 7:00 AM daily clock schedule.
+---
+Clinical Reference Matrix
+             ACOG / AAP / WHO Verified
+
+Evidence-based sleep architecture for a 15-month-old baby: 4.8–5.55 hour wake windows, 1 midday nap, total daytime sleep caps, and sample 7:00 AM daily clock schedule.
+
+                Written by:   Madhuri B, Lead Healthcare Specialist
+                Medically Reviewed by:   Dr. Mangala Devi K.R., MBBS, MS (OBG), MBA (KMC: 58341)  &amp;  Dr. Anagha Nawal, MBBS, DGO, MD, MCE, FRM
+
+              Medical Disclaimer:  Educational clinical reference only; does not replace individualized care from your obstetrician or pediatrician.
+
+              Clinical Reference Chart:  15-Month-Old Wake Windows, Nap Schedule & Bedtime Chart
+             Medically Reviewed &bull; ACOG / AAP / WHO Aligned
+
+            4.8–5.55 hrs  15-Month Wake Window  Shortest before Nap 1; longest before bedtime    1 midday nap  Target Daily Naps  Prevents late-afternoon cortisol spikes    11.5–13.5 hrs  24-Hour Total Sleep  Combined night sleep + daytime naps    2.0–2.25 hrs  Daytime Nap Cap  Protects consolidated 11-hr overnight sleep
+
+## Clinical Summary: Bottom Line Up Front (BLUF)
+
+At 15 months old , your baby's optimal homeostatic sleep-pressure wake window is 4.8 to 5.55 hours between sleep periods, supporting 1 midday nap and 11.5–13.5 hrs of total 24-hour sleep. Use the shorter end of the window ( 4.8 hrs ) before the first morning nap and the longest window ( 5.55 hrs ) prior to bedtime to build sufficient adenosine sleep drive without triggering an overtired cortisol surge.
+
+           Interactive Circadian &amp; Homeostatic Sleep Planner
+
+## Live 15-Month-Old Nap & Bedtime Clock Generator
+
+Enter your 15-month-old's morning wake-up time and adjust age if needed (including preemie corrected age) to calculate exact Nap 1, Nap 2, and Bedtime windows.
+
+              Infant Age (Months, Corrected)
+
+              Morning Wake-Up Time
+
+           15-Month Wake Window:   4.8–5.55 hrs  &bull;  Target Naps:   1 midday nap  &bull;  First Nap Window (from 7:00 AM wake):   11:48 AM
+
+     4-Stage Pediatric Sleep Architecture Pathway (15-Month-Old Infant)
+     Adenosine sleep-pressure accumulation, early sleepy cues, nap consolidation, and overnight circadian protection
+
+     4-Stage Pediatric Sleep Architecture Pathway (15-Month-Old Infant)
+     Adenosine sleep-pressure accumulation, early sleepy cues, nap consolidation, and overnight circadian protection
+
+       STAGE 01 • MORNING ANCHOR
+       Circadian Reset
+       • Consistent 6:30–7:30 AM wake
+       • Morning natural daylight
+       • First window: 4.8 hrs
+
+       STAGE 02 • SLEEPY CUES
+       Pre-Cortisol Zone
+       • Red eyebrows / staring off
+       • Start wind-down 15m early
+       • Dark room + white noise
+
+       STAGE 03 • DAYTIME NAPS
+       1 midday nap
+       • Wake window: 4.8–5.55h
+       • Cap single nap at &lt;=2.0 hrs
+       • 24h total: 11.5–13.5 hrs
+
+       STAGE 04 • BEDTIME DRIVE
+       Longest Window
+       • Final window: 5.55 hrs
+       • Feed 20–30m before crib
+       • Alone, back, bare crib (AAP)
+
+     Escalation Threshold: Always place infants to sleep flat on their back in a bare crib; consult your pediatrician for habitual snoring, gasping, or pauses in breathing.
+
+     Clinical Decision Pathway:  4-Stage Pediatric Sleep Architecture Pathway (15-Month-Old Infant) — Medically reviewed by Dr. Mangala Devi K.R., MS (OBG) &amp; Dr. Anagha Nawal, MD.
+
+## Sample 15-Month-Old Daily Sleep & Feeding Schedule (7:00 AM Wake-Up)
+
+To customize this schedule for your baby's exact morning wake-up time (e.g., 6:15 AM or 7:30 AM), use the interactive clock planner above or our Master 24-Hour Wake Window Schedule Generator .
+
+                 Age Stage
+                 Wake Window Range
+                 Number of Naps
+                 Max Daytime Sleep Cap
+                 Key Developmental Milestone
+
+                  15 Months Old
+                  4.8 – 5.55 hours
+                 1 midday nap
+                 2.0 hours
+                 2-to-1 midday nap transition & toddler circadian stability
+
+## 3-Tier Pediatric Sleep & Airway Safety Triage (15-Month-Old)
+
+         TIER 1 &bull; PHYSIOLOGICAL NORM
+
+### Expected Developmental Sleep Pattern
+
+        - Wake windows of 4.8–5.55 hours with 1 midday nap and short 30–45 minute naps during developmental regressions.
+
+        - Brief 1–2 minute vocalizations between 45-minute NREM-REM sleep cycles while connecting naps.
+
+         TIER 2 &bull; SAME-WEEK MD CONSULT
+
+### Pediatrician Evaluation Recommended
+
+        - Hourly night wakings with extreme restlessness, leg kicking, or pica after 6 months (request Serum Ferritin check; target >=50 ng/mL).
+
+        - Persistent arches/crying when laid flat after feeds or poor weight velocity.
+
+         TIER 3 &bull; IMMEDIATE ER / L&amp;D TRIAGE
+
+### Urgent Airway / Medical Evaluation
+
+        - Habitual loud snoring, mouth breathing, witnessed apneic pauses, or gasping during sleep.
+
+        - Cyanosis (blue/dusky lips), stridor at rest, or lethargy / difficulty waking for feeds.
+
+## Frequently Asked Clinical Questions
+
+                How long should a 15-month-old stay awake between naps?
+A 15-month-old baby thrives on wake windows of 4.8 to 5.55 hours. Follow sleepy cues (red eyebrows, zoning out, decreased activity) 15 minutes before the end of the window.
+    How many naps does a 15-month-old need?
+At 15 months, most infants require 1 midday nap, with total 24-hour sleep averaging 11.5–13.5 hrs.
+
+## Explore Adjacent Clinical Parameters & Milestones
+
+             1-Month Wake Window  2-Month Wake Window  3-Month Wake Window  4-Month Wake Window  5-Month Wake Window  6-Month Wake Window  7-Month Wake Window  8-Month Wake Window  9-Month Wake Window  10-Month Wake Window  11-Month Wake Window  12-Month Wake Window  13-Month Wake Window  14-Month Wake Window  15-Month Wake Window  16-Month Wake Window  17-Month Wake Window  18-Month Wake Window  19-Month Wake Window  20-Month Wake Window  21-Month Wake Window  22-Month Wake Window  23-Month Wake Window  24-Month Wake Window
+
+               Continue Your Clinical Research
+
+### Master Clinical Guides, Calculators & Open Datasets
+
+                 Master Protocol
+                 0–24 Month Wake Windows Master Guide
+                 Open Interactive Workbench &rarr;
+
+                 Specialty Hub
+                 Pediatric Sleep Architecture Directory
+                 Browse All Guides &rarr;
+
+                 Open Data &amp; API
+                 CSV/JSON Reference Datasets &amp; Clinic Widgets
+                 Explore Datasets &rarr;

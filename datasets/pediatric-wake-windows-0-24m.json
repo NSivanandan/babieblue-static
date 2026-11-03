@@ -1,0 +1,119 @@
+{
+  "publisher": "Babie Blue",
+  "license": "CC-BY-4.0",
+  "canonical": "https://babieblue.com/datasets/",
+  "data": [
+    {
+      "age_months": 1,
+      "wake_window_min_hrs": 0.75,
+      "wake_window_max_hrs": 1.25,
+      "naps_per_day": "4-5",
+      "total_sleep_hrs": "14.5-17.0",
+      "aap_safe_sleep_stage": "Supine only, room-share without bed-sharing"
+    },
+    {
+      "age_months": 2,
+      "wake_window_min_hrs": 1,
+      "wake_window_max_hrs": 1.5,
+      "naps_per_day": "4-5",
+      "total_sleep_hrs": "14.0-16.5",
+      "aap_safe_sleep_stage": "Emerging pineal melatonin rhythm at 8-10 weeks"
+    },
+    {
+      "age_months": 3,
+      "wake_window_min_hrs": 1.25,
+      "wake_window_max_hrs": 1.75,
+      "naps_per_day": "4",
+      "total_sleep_hrs": "14.0-16.0",
+      "aap_safe_sleep_stage": "Transition out of swaddle at first sign of rolling"
+    },
+    {
+      "age_months": 4,
+      "wake_window_min_hrs": 1.5,
+      "wake_window_max_hrs": 2.25,
+      "naps_per_day": "3-4",
+      "total_sleep_hrs": "13.5-15.5",
+      "aap_safe_sleep_stage": "4-month NREM sleep spindle maturation"
+    },
+    {
+      "age_months": 5,
+      "wake_window_min_hrs": 2,
+      "wake_window_max_hrs": 2.5,
+      "naps_per_day": "3",
+      "total_sleep_hrs": "13.5-15.0",
+      "aap_safe_sleep_stage": "3-nap stabilization; cap daytime sleep at 3.5 hrs"
+    },
+    {
+      "age_months": 6,
+      "wake_window_min_hrs": 2.25,
+      "wake_window_max_hrs": 2.75,
+      "naps_per_day": "3",
+      "total_sleep_hrs": "13.0-14.5",
+      "aap_safe_sleep_stage": "Complementary iron-rich solids introduction"
+    },
+    {
+      "age_months": 7,
+      "wake_window_min_hrs": 2.5,
+      "wake_window_max_hrs": 3.25,
+      "naps_per_day": "2-3",
+      "total_sleep_hrs": "13.0-14.5",
+      "aap_safe_sleep_stage": "3-to-2 nap transition window begins"
+    },
+    {
+      "age_months": 8,
+      "wake_window_min_hrs": 2.75,
+      "wake_window_max_hrs": 3.5,
+      "naps_per_day": "2",
+      "total_sleep_hrs": "13.0-14.0",
+      "aap_safe_sleep_stage": "2 consolidated naps (morning + early afternoon)"
+    },
+    {
+      "age_months": 9,
+      "wake_window_min_hrs": 3,
+      "wake_window_max_hrs": 3.75,
+      "naps_per_day": "2",
+      "total_sleep_hrs": "13.0-14.0",
+      "aap_safe_sleep_stage": "Peak gross motor crawling sleep disruption check"
+    },
+    {
+      "age_months": 10,
+      "wake_window_min_hrs": 3,
+      "wake_window_max_hrs": 4,
+      "naps_per_day": "2",
+      "total_sleep_hrs": "12.5-14.0",
+      "aap_safe_sleep_stage": "Cap total daytime nap duration at 2.5-3.0 hrs"
+    },
+    {
+      "age_months": 12,
+      "wake_window_min_hrs": 3.25,
+      "wake_window_max_hrs": 4.25,
+      "naps_per_day": "2",
+      "total_sleep_hrs": "12.5-13.5",
+      "aap_safe_sleep_stage": "Avoid premature 1-nap drop at 12-month regression"
+    },
+    {
+      "age_months": 15,
+      "wake_window_min_hrs": 4.5,
+      "wake_window_max_hrs": 5.5,
+      "naps_per_day": "1",
+      "total_sleep_hrs": "12.0-13.5",
+      "aap_safe_sleep_stage": "2-to-1 midday nap consolidation (12:30-2:30 PM)"
+    },
+    {
+      "age_months": 18,
+      "wake_window_min_hrs": 5,
+      "wake_window_max_hrs": 6,
+      "naps_per_day": "1",
+      "total_sleep_hrs": "11.5-13.0",
+      "aap_safe_sleep_stage": "18-month language burst & separation reassurance"
+    },
+    {
+      "age_months": 24,
+      "wake_window_min_hrs": 5.5,
+      "wake_window_max_hrs": 6.5,
+      "naps_per_day": "1",
+      "total_sleep_hrs": "11.0-13.0",
+      "aap_safe_sleep_stage": "Cap midday nap at 2.0 hrs to protect 7:30 PM bedtime"
+    }
+  ]
+}
